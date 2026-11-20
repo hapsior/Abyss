@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Matka Roju, Królowa Grot: gigantyczna krolowa-osa z obrzmialym odwlokiem pelnym jaj. Boss Zalanych Grot. -->
+  <ellipse cx="256" cy="462" rx="200" ry="20" fill="#000000" opacity="0.25"/>
+  <!-- skrzydla (polprzezroczyste) -->
+  <g stroke-linejoin="round">
+    <ellipse cx="251" cy="132" rx="78" ry="34" fill="#8ff0ea" opacity="0.5" transform="rotate(60 251 132)"/>
+    <ellipse cx="251" cy="132" rx="78" ry="34" fill="none" stroke="#1a0f1f" stroke-width="10" opacity="0.75" transform="rotate(60 251 132)"/>
+    <ellipse cx="190" cy="155" rx="105" ry="42" fill="#8ff0ea" opacity="0.55" transform="rotate(32 190 155)"/>
+    <ellipse cx="190" cy="155" rx="105" ry="42" fill="none" stroke="#1a0f1f" stroke-width="12" opacity="0.8" transform="rotate(32 190 155)"/>
+  </g>
+  <g transform="rotate(32 190 155)" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6">
+    <path d="M100 155 L 280 155 M130 155 L 160 128 M160 155 L 196 176 M200 155 L 232 130"/>
+  </g>
+  <ellipse cx="136" cy="126" rx="10" ry="26" fill="#ffffff" opacity="0.5" transform="rotate(32 136 126)"/>
+  <!-- nogi -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M238 318 L 214 392 L 230 440" stroke="#1a0f1f" stroke-width="26"/>
+    <path d="M280 326 L 276 400 L 296 444" stroke="#1a0f1f" stroke-width="26"/>
+    <path d="M322 316 L 346 384 L 372 430" stroke="#1a0f1f" stroke-width="26"/>
+    <path d="M238 318 L 214 392 L 230 440" stroke="#4a4560" stroke-width="13"/>
+    <path d="M280 326 L 276 400 L 296 444" stroke="#4a4560" stroke-width="13"/>
+    <path d="M322 316 L 346 384 L 372 430" stroke="#4a4560" stroke-width="13"/>
+  </g>
+  <!-- odwlok -->
+  <g transform="translate(170 320) rotate(-22)">
+    <path d="M-112 -6 L -156 6 L -112 20 Z" fill="#2e2a3a" stroke="#1a0f1f" stroke-width="12" stroke-linejoin="round"/>
+    <ellipse cx="0" cy="0" rx="118" ry="92" fill="#ffd23f"/>
+    <g stroke="#2e2a3a" stroke-width="28">
+      <path d="M-40 -83 L -40 83"/><path d="M12 -90 L 12 90"/><path d="M64 -77 L 64 77"/>
+    </g>
+    <path d="M110 -36 C 124 10 70 84 -10 90 C 60 96 122 50 118 0 Z" fill="#d9a514"/>
+    <ellipse cx="-66" cy="-44" rx="12" ry="30" fill="#ffffff" opacity="0.55" transform="rotate(35 -66 -44)"/>
+    <ellipse cx="0" cy="0" rx="118" ry="92" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <!-- woreczek jaj -->
+    <ellipse cx="-2" cy="52" rx="72" ry="34" fill="#fff3c4" stroke="#1a0f1f" stroke-width="9" opacity="0.95"/>
+    <g fill="#f1e6c8" stroke="#1a0f1f" stroke-width="5">
+      <ellipse cx="-36" cy="52" rx="15" ry="19"/><ellipse cx="0" cy="56" rx="15" ry="19"/><ellipse cx="36" cy="52" rx="15" ry="19"/>
+    </g>
+    <g fill="#ffffff" opacity="0.8"><circle cx="-40" cy="46" r="4"/><circle cx="-4" cy="50" r="4"/><circle cx="32" cy="46" r="4"/></g>
+  </g>
+  <!-- tulow -->
+  <circle cx="285" cy="255" r="62" fill="#2e2a3a"/>
+  <path d="M338 276 C 330 316 290 322 250 306 C 296 312 326 296 336 262 Z" fill="#1d1a28"/>
+  <path d="M232 226 C 240 206 258 198 276 198" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="285" cy="255" r="62" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+  <!-- futerko -->
+  <path d="M236 244 L 250 262 L 238 270 L 256 284 L 244 296" fill="none" stroke="#ffd23f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- glowa -->
+  <circle cx="388" cy="258" r="76" fill="#ffd23f"/>
+  <path d="M456 286 C 440 330 392 342 352 326 C 396 326 436 304 446 262 Z" fill="#d9a514"/>
+  <ellipse cx="344" cy="226" rx="10" ry="26" fill="#ffffff" opacity="0.55" transform="rotate(30 344 226)"/>
+  <circle cx="388" cy="258" r="76" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+  <!-- czulki -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M360 192 C 350 156 366 128 396 120" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M408 188 C 420 150 442 138 468 140" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M360 192 C 350 156 366 128 396 120" stroke="#2e2a3a" stroke-width="7"/>
+    <path d="M408 188 C 420 150 442 138 468 140" stroke="#2e2a3a" stroke-width="7"/>
+  </g>
+  <circle cx="398" cy="120" r="12" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="7"/>
+  <circle cx="468" cy="140" r="12" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="7"/>
+  <!-- oczy zlozone -->
+  <ellipse cx="362" cy="242" rx="40" ry="48" fill="#e8453c" stroke="#1a0f1f" stroke-width="10" transform="rotate(-8 362 242)"/>
+  <ellipse cx="428" cy="250" rx="30" ry="40" fill="#e8453c" stroke="#1a0f1f" stroke-width="10" transform="rotate(-8 428 250)"/>
+  <g fill="#a8222c">
+    <circle cx="348" cy="232" r="7"/><circle cx="368" cy="224" r="7"/><circle cx="356" cy="254" r="7"/><circle cx="378" cy="246" r="7"/><circle cx="366" cy="268" r="7"/><circle cx="340" cy="252" r="6"/>
+    <circle cx="420" cy="238" r="6"/><circle cx="438" cy="244" r="6"/><circle cx="426" cy="260" r="6"/><circle cx="442" cy="266" r="5"/>
+  </g>
+  <ellipse cx="350" cy="222" rx="9" ry="14" fill="#ffffff" opacity="0.75" transform="rotate(20 350 222)"/>
+  <ellipse cx="420" cy="232" rx="6" ry="10" fill="#ffffff" opacity="0.7" transform="rotate(20 420 232)"/>
+  <!-- grozne brwi -->
+  <path d="M322 206 L 392 224" stroke="#1a0f1f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M462 226 L 410 224" stroke="#1a0f1f" stroke-width="14" stroke-linecap="round"/>
+  <!-- zuwaczki -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <path d="M394 314 C 380 338 394 362 424 366 C 416 346 418 330 424 316 Z" fill="#ff9a3c"/>
+    <path d="M440 306 C 456 330 448 358 424 366 C 428 346 424 330 420 316 Z" fill="#ff9a3c"/>
+  </g>
+  <path d="M400 322 C 396 336 402 348 414 354" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+</svg>

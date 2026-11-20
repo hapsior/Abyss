@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Krol Gluto: ogromny zielony szlam z zlota korona, sliniacy sie, ze szlamkami w galarecie. Boss Piwnic. -->
+  <ellipse cx="256" cy="456" rx="205" ry="26" fill="#000000" opacity="0.25"/>
+  <!-- korpus -->
+  <path d="M256 150 C 334 150 384 214 424 292 C 466 372 466 436 400 452 C 340 466 172 466 112 452 C 46 436 46 372 88 292 C 128 214 178 150 256 150 Z" fill="#7ee05a"/>
+  <path d="M446 350 C 464 400 454 440 400 452 C 340 466 172 466 112 452 C 88 446 72 434 64 418 C 160 452 360 456 446 350 Z" fill="#4fb33a"/>
+  <!-- szlamki w srodku -->
+  <g stroke="#2f7a2a" stroke-width="6" stroke-linejoin="round" opacity="0.9">
+    <path d="M110 372 C 112 350 146 346 152 372 C 158 396 108 398 110 372 Z" fill="#b6f59a"/>
+    <path d="M360 394 C 362 372 396 366 402 392 C 408 414 358 418 360 394 Z" fill="#b6f59a"/>
+    <path d="M276 424 C 278 408 304 404 308 424 C 312 440 274 442 276 424 Z" fill="#b6f59a"/>
+  </g>
+  <g fill="#1a0f1f">
+    <circle cx="124" cy="372" r="4"/><circle cx="140" cy="372" r="4"/>
+    <circle cx="374" cy="392" r="4"/><circle cx="390" cy="392" r="4"/>
+    <circle cx="287" cy="422" r="3"/><circle cx="299" cy="422" r="3"/>
+  </g>
+  <g fill="#ffffff" opacity="0.55">
+    <circle cx="96" cy="330" r="7"/><circle cx="420" cy="360" r="8"/><circle cx="240" cy="420" r="6"/><circle cx="410" cy="320" r="5"/>
+  </g>
+  <!-- polysk -->
+  <ellipse cx="140" cy="290" rx="18" ry="48" fill="#ffffff" opacity="0.6" transform="rotate(26 140 290)"/>
+  <circle cx="358" cy="214" r="10" fill="#ffffff" opacity="0.6"/>
+  <path d="M256 150 C 334 150 384 214 424 292 C 466 372 466 436 400 452 C 340 466 172 466 112 452 C 46 436 46 372 88 292 C 128 214 178 150 256 150 Z" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linejoin="round"/>
+  <!-- oczy -->
+  <g stroke="#1a0f1f" stroke-width="10">
+    <ellipse cx="195" cy="280" rx="36" ry="42" fill="#ffffff"/>
+    <ellipse cx="318" cy="280" rx="36" ry="42" fill="#ffffff"/>
+  </g>
+  <circle cx="205" cy="288" r="19" fill="#1a0f1f"/>
+  <circle cx="328" cy="288" r="19" fill="#1a0f1f"/>
+  <circle cx="211" cy="280" r="6" fill="#ffffff"/><circle cx="334" cy="280" r="6" fill="#ffffff"/>
+  <!-- brwi (zadowolone, ale grozne) -->
+  <path d="M150 238 L 226 262" stroke="#1a0f1f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M366 232 L 296 258" stroke="#1a0f1f" stroke-width="18" stroke-linecap="round"/>
+  <!-- slina -->
+  <path d="M340 372 C 342 400 336 412 338 428 C 340 444 364 444 364 428 C 364 412 360 400 362 366 Z" fill="#c6fba8" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <ellipse cx="346" cy="418" rx="3.5" ry="8" fill="#ffffff" opacity="0.8"/>
+  <!-- usta: pyszny szeroki ryj -->
+  <path d="M158 350 C 200 424 316 430 370 342 C 330 366 190 366 158 350 Z" fill="#2a1530" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M184 358 L 192 384 L 206 362 M222 366 L 230 392 L 244 368 M286 368 L 296 392 L 306 366 M324 360 L 332 382 L 346 356" fill="#ffffff" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M236 404 C 256 392 290 396 300 412 C 280 424 246 424 236 404 Z" fill="#ff4d5e" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <!-- korona -->
+  <g transform="rotate(-14 270 168)">
+    <path d="M186 168 L 176 84 L 218 118 L 256 62 L 296 118 L 338 84 L 328 168 Z" fill="#ffd23f"/>
+    <path d="M328 168 L 338 84 L 318 100 L 306 168 Z" fill="#d9a514"/>
+    <path d="M186 168 L 176 84 L 218 118 L 256 62 L 296 118 L 338 84 L 328 168 Z" fill="none" stroke="#1a0f1f" stroke-width="14" stroke-linejoin="round"/>
+    <rect x="184" y="136" width="146" height="36" rx="8" fill="#ffd23f" stroke="#1a0f1f" stroke-width="12" stroke-linejoin="round"/>
+    <rect x="186" y="138" width="40" height="8" fill="#ffffff" opacity="0.5"/>
+    <g stroke="#1a0f1f" stroke-width="8">
+      <circle cx="176" cy="84" r="12" fill="#ff4d5e"/><circle cx="256" cy="62" r="14" fill="#5b9cff"/><circle cx="338" cy="84" r="12" fill="#ff4d5e"/>
+    </g>
+    <ellipse cx="257" cy="154" rx="14" ry="10" fill="#e04fd6" stroke="#1a0f1f" stroke-width="6"/>
+    <circle cx="252" cy="150" r="3.5" fill="#ffffff" opacity="0.8"/>
+  </g>
+</svg>

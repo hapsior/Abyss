@@ -1038,12 +1038,13 @@ public sealed class RunSim
                 Fx.Ring(e.X, e.Y, new Color("ffd246"), 50, 0.4f);
         }
 
-        for (int i = 0; i < Bullets.Count; i++)
+        for (int i = 0, n = Bullets.Count; i < n; i++)
             if (Bullets[i].Alive) Bullets[i].Update(dt, this);
 
-        // kolizje pocisków
-        foreach (var b in Bullets)
+        // kolizje pocisków (po indeksie: trafienia mogą dodawać nowe pociski, np. rozszczepienie)
+        for (int bi = 0, bn = Bullets.Count; bi < bn; bi++)
         {
+            var b = Bullets[bi];
             if (!b.Alive) continue;
             if (b.Friendly)
             {

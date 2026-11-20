@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Licz, Pan Kosci: lewitujacy szkieletowy czarownik w postrzepionej fioletowej szacie, z kula magii. Boss Katakumb. -->
+  <ellipse cx="250" cy="468" rx="110" ry="14" fill="#000000" opacity="0.18"/>
+  <!-- aura kuli -->
+  <circle cx="404" cy="112" r="62" fill="#8dffb0" opacity="0.22"/>
+  <!-- ogon szaty (zanika) -->
+  <g stroke-linejoin="round">
+    <path d="M170 380 C 176 420 150 440 140 462 C 176 450 200 458 218 438 C 232 462 262 458 276 440 C 300 456 322 448 338 434 C 322 410 326 392 332 380 Z" fill="#7a4fb8" stroke="#1a0f1f" stroke-width="14" opacity="0.5"/>
+    <path d="M192 400 C 196 430 184 446 176 466 C 200 456 214 462 226 450 C 240 470 262 466 270 452 L 290 400 Z" fill="#7a4fb8" stroke="#1a0f1f" stroke-width="12" opacity="0.28"/>
+  </g>
+  <!-- szata -->
+  <path d="M170 238 C 190 214 316 214 336 238 C 366 286 352 340 332 392 C 300 410 206 410 170 392 C 150 340 142 286 170 238 Z" fill="#7a4fb8"/>
+  <path d="M336 296 C 346 340 342 368 332 392 C 300 410 206 410 170 392 C 176 384 180 380 184 372 C 240 392 320 372 336 296 Z" fill="#55348a"/>
+  <ellipse cx="186" cy="300" rx="9" ry="42" fill="#ffffff" opacity="0.4" transform="rotate(8 186 300)"/>
+  <path d="M170 238 C 190 214 316 214 336 238 C 366 286 352 340 332 392 C 300 410 206 410 170 392 C 150 340 142 286 170 238 Z" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linejoin="round"/>
+  <!-- postrzepiony brzeg -->
+  <path d="M176 388 L 190 414 L 208 392 L 228 418 L 248 394 L 268 420 L 288 394 L 308 416 L 326 390" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" opacity="0.5"/>
+  <!-- zlota/zielona lamowka -->
+  <path d="M214 232 L 252 330 L 290 232" fill="none" stroke="#8dffb0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <!-- zebra / klatka piersiowa -->
+  <g fill="none" stroke="#f1e6c8" stroke-width="8" stroke-linecap="round" opacity="0.9">
+    <path d="M232 262 C 252 270 272 270 290 262 M236 286 C 254 294 270 294 286 286"/>
+  </g>
+  <!-- lewa reka (po lewej, uniesiona z ogniem) -->
+  <path d="M184 262 C 150 250 124 230 112 198" fill="none" stroke="#1a0f1f" stroke-width="66" stroke-linecap="round"/>
+  <path d="M184 262 C 150 250 124 230 112 198" fill="none" stroke="#7a4fb8" stroke-width="50" stroke-linecap="round"/>
+  <path d="M170 258 C 146 246 128 232 118 212" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.35"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M110 178 L 100 138" stroke="#1a0f1f" stroke-width="20"/><path d="M110 178 L 100 138" stroke="#f1e6c8" stroke-width="10"/>
+  </g>
+  <!-- zielony plomien na dloni -->
+  <path d="M100 126 C 80 108 92 92 98 70 C 112 86 126 92 120 112 C 126 106 130 100 128 94 C 140 108 134 124 118 130 Z" fill="#8dffb0" stroke="#3fbf7f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M104 124 C 96 112 104 104 106 94 C 114 104 118 110 112 124 Z" fill="#ffffff" opacity="0.8"/>
+  <!-- palce lewej dloni -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M92 150 L 76 128 M104 146 L 96 120 M118 148 L 120 122 M128 160 L 142 142" stroke="#1a0f1f" stroke-width="18"/>
+    <path d="M92 150 L 76 128 M104 146 L 96 120 M118 148 L 120 122 M128 160 L 142 142" stroke="#f1e6c8" stroke-width="8"/>
+  </g>
+  <circle cx="110" cy="166" r="17" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="10"/>
+  <!-- prawa reka z kula -->
+  <path d="M326 262 C 360 250 380 226 390 188" fill="none" stroke="#1a0f1f" stroke-width="66" stroke-linecap="round"/>
+  <path d="M326 262 C 360 250 380 226 390 188" fill="none" stroke="#7a4fb8" stroke-width="50" stroke-linecap="round"/>
+  <path d="M338 276 C 370 262 394 238 404 200" fill="none" stroke="#55348a" stroke-width="14" stroke-linecap="round" opacity="0.9"/>
+  <path d="M394 168 L 400 144" stroke="#1a0f1f" stroke-width="20" stroke-linecap="round"/><path d="M394 168 L 400 144" stroke="#f1e6c8" stroke-width="10" stroke-linecap="round"/>
+  <!-- kula -->
+  <circle cx="404" cy="112" r="40" fill="#8dffb0" stroke="#1a0f1f" stroke-width="12"/>
+  <circle cx="410" cy="120" r="22" fill="#3fbf7f" opacity="0.7"/>
+  <ellipse cx="392" cy="98" rx="8" ry="14" fill="#ffffff" opacity="0.8" transform="rotate(30 392 98)"/>
+  <circle cx="404" cy="112" r="40" fill="none" stroke="#1a0f1f" stroke-width="12"/>
+  <g fill="none" stroke="#1a0f1f" stroke-width="12" stroke-linecap="round">
+    <path d="M370 156 C 378 138 392 140 396 154 M420 154 C 424 140 438 136 444 150 M434 138 L 446 146"/>
+  </g>
+  <g fill="none" stroke="#f1e6c8" stroke-width="6" stroke-linecap="round">
+    <path d="M370 156 C 378 138 392 140 396 154 M420 154 C 424 140 438 136 444 150"/>
+  </g>
+  <!-- kaptur/kolnierz -->
+  <path d="M176 242 C 166 200 190 160 252 160 C 314 160 340 200 330 242 C 310 230 196 230 176 242 Z" fill="#55348a" stroke="#1a0f1f" stroke-width="14" stroke-linejoin="round"/>
+  <!-- czaszka -->
+  <path d="M190 160 C 186 108 214 82 256 82 C 298 82 326 108 322 160 C 322 180 312 188 304 192 L 304 212 C 304 220 296 224 288 224 L 224 224 C 216 224 208 220 208 212 L 208 192 C 198 188 190 178 190 160 Z" fill="#f1e6c8"/>
+  <path d="M322 160 C 322 180 312 188 304 192 L 304 212 C 304 220 296 224 288 224 L 262 224 C 290 210 308 190 316 130 C 320 140 322 150 322 160 Z" fill="#c9b98f"/>
+  <ellipse cx="214" cy="124" rx="9" ry="22" fill="#ffffff" opacity="0.6" transform="rotate(18 214 124)"/>
+  <path d="M190 160 C 186 108 214 82 256 82 C 298 82 326 108 322 160 C 322 180 312 188 304 192 L 304 212 C 304 220 296 224 288 224 L 224 224 C 216 224 208 220 208 212 L 208 192 C 198 188 190 178 190 160 Z" fill="none" stroke="#1a0f1f" stroke-width="14" stroke-linejoin="round"/>
+  <!-- oczodoly -->
+  <ellipse cx="228" cy="152" rx="26" ry="28" fill="#1a0f1f"/>
+  <ellipse cx="288" cy="152" rx="26" ry="28" fill="#1a0f1f"/>
+  <circle cx="234" cy="154" r="14" fill="#8dffb0"/><circle cx="294" cy="154" r="14" fill="#8dffb0"/>
+  <circle cx="234" cy="154" r="22" fill="#8dffb0" opacity="0.3"/><circle cx="294" cy="154" r="22" fill="#8dffb0" opacity="0.3"/>
+  <circle cx="238" cy="149" r="4.5" fill="#ffffff"/><circle cx="298" cy="149" r="4.5" fill="#ffffff"/>
+  <path d="M198 120 L 246 138 M322 120 L 270 138" stroke="#1a0f1f" stroke-width="14" stroke-linecap="round"/>
+  <!-- nos i zeby -->
+  <path d="M256 176 L 246 194 L 266 194 Z" fill="#1a0f1f" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M216 206 L 296 206 M232 200 L 232 220 M248 202 L 248 222 M264 202 L 264 222 M280 200 L 280 220" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <!-- korona z kosci -->
+  <path d="M196 100 L 188 40 L 220 70 L 238 26 L 256 66 L 274 26 L 292 70 L 324 40 L 316 100 C 290 88 222 88 196 100 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M316 100 L 324 40 L 308 56 L 300 94 Z" fill="#c9b98f"/>
+  <circle cx="256" cy="86" r="9" fill="#8dffb0" stroke="#1a0f1f" stroke-width="6"/>
+  <circle cx="226" cy="90" r="6" fill="#8dffb0" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="286" cy="90" r="6" fill="#8dffb0" stroke="#1a0f1f" stroke-width="5"/>
+  <!-- duszki -->
+  <g fill="#8dffb0" stroke="#3fbf7f" stroke-width="4" stroke-linejoin="round" opacity="0.7">
+    <path d="M62 300 C 70 312 72 320 62 328 C 52 320 54 312 62 300 Z"/>
+    <path d="M456 300 C 464 312 466 320 456 328 C 446 320 448 312 456 300 Z"/>
+    <path d="M430 400 C 436 408 438 414 430 420 C 422 414 424 408 430 400 Z"/>
+  </g>
+</svg>
