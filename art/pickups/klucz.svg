@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Znajdźka: klucz. Płótno 64x64. -->
+  <path d="M30 30 L52 52" fill="none" stroke="#1a0f1f" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 30 L52 52" fill="none" stroke="#ffd23f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M42 42 L48 36" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M42 42 L48 36" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 50 L58 42" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 50 L58 42" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="21" cy="21" r="14" fill="#ffd23f"/>
+  <path d="M33.1 14 A14 14 0 0 1 14 33.1 A23.8 23.8 0 0 0 33.1 14 Z" fill="#d9a514"/>
+  <circle cx="21" cy="21" r="14" fill="none" stroke="#1a0f1f" stroke-width="4.5"/>
+  <ellipse cx="21" cy="21" rx="4.5" ry="4.5" fill="#2a1f35" stroke="#1a0f1f" stroke-width="3"/>
+  <ellipse cx="14" cy="14" rx="2" ry="4" fill="#ffffff" opacity="0.75" transform="rotate(40 14 14)"/>
+</svg>

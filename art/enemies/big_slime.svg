@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Wielki Glut: duży szlam z mniejszymi szlamami w środku. Po śmierci dzieli się na małe. -->
+  <ellipse cx="128" cy="230" rx="96" ry="13" fill="#000000" opacity="0.25"/>
+  <path d="M128 34 C 166 34 188 70 210 112 C 236 160 238 204 204 222 C 180 236 76 236 52 222 C 18 204 20 160 46 112 C 68 70 90 34 128 34 Z" fill="#5cc24a"/>
+  <path d="M230 160 C 236 190 224 214 204 222 C 180 236 76 236 52 222 C 40 214 32 204 28 190 C 76 222 190 222 230 160 Z" fill="#3e9a35"/>
+  <ellipse cx="72" cy="112" rx="11" ry="22" fill="#ffffff" opacity="0.55" transform="rotate(28 72 112)"/>
+  <circle cx="168" cy="68" r="7" fill="#ffffff" opacity="0.55"/>
+  <!-- małe szlamy w galarecie -->
+  <g stroke="#2f7a2c" stroke-width="5" stroke-linejoin="round" opacity="0.9">
+    <path d="M62 150 C 74 150 82 164 85 174 C 88 186 78 194 62 194 C 46 194 36 186 40 174 C 44 164 50 150 62 150 Z" fill="#a6f08a"/>
+    <path d="M194 156 C 204 156 211 168 213 176 C 215 186 207 192 194 192 C 181 192 173 186 175 176 C 178 168 184 156 194 156 Z" fill="#a6f08a"/>
+    <path d="M128 70 C 136 70 141 80 143 87 C 145 95 138 100 128 100 C 118 100 111 95 113 87 C 115 80 120 70 128 70 Z" fill="#a6f08a"/>
+  </g>
+  <g fill="#1a0f1f">
+    <circle cx="55" cy="176" r="3.5"/><circle cx="69" cy="176" r="3.5"/>
+    <circle cx="187" cy="177" r="3"/><circle cx="201" cy="177" r="3"/>
+    <circle cx="123" cy="89" r="3"/><circle cx="134" cy="89" r="3"/>
+  </g>
+  <path d="M128 34 C 166 34 188 70 210 112 C 236 160 238 204 204 222 C 180 236 76 236 52 222 C 18 204 20 160 46 112 C 68 70 90 34 128 34 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- oczy -->
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="98" cy="138" rx="17" ry="19" fill="#ffffff"/>
+    <ellipse cx="158" cy="138" rx="17" ry="19" fill="#ffffff"/>
+  </g>
+  <circle cx="104" cy="143" r="9" fill="#1a0f1f"/>
+  <circle cx="164" cy="143" r="9" fill="#1a0f1f"/>
+  <circle cx="107" cy="139" r="3" fill="#ffffff"/>
+  <circle cx="167" cy="139" r="3" fill="#ffffff"/>
+  <!-- gniewne, ciężkie brwi -->
+  <path d="M72 108 L 116 124" stroke="#1a0f1f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M184 108 L 140 124" stroke="#1a0f1f" stroke-width="12" stroke-linecap="round"/>
+  <!-- naburmuszone usta z kłami -->
+  <path d="M98 208 C 112 190 144 190 158 208" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linecap="round"/>
+  <path d="M110 198 L 114 212 L 121 200 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M135 200 L 142 212 L 146 198 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+</svg>

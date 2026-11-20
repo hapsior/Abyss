@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Krzyżak (D-pad), ramię down podświetlone. -->
+<g transform="translate(0 3)"><path d="M23 6 L41 6 L41 23 L58 23 L58 41 L41 41 L41 58 L23 58 L23 41 L6 41 L6 23 L23 23Z" fill="#1a0f1f"/></g><path d="M23 6 L41 6 L41 23 L58 23 L58 41 L41 41 L41 58 L23 58 L23 41 L6 41 L6 23 L23 23Z" fill="#2e2a3a" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M23 41 L41 41 L41 58 L23 58Z" fill="#ffffff"/><path d="M32 11 L27 18 L37 18Z" fill="#8e88a8"/><path d="M32 53 L27 46 L37 46Z" fill="#2e2a3a"/><path d="M11 32 L18 27 L18 37Z" fill="#8e88a8"/><path d="M53 32 L46 27 L46 37Z" fill="#8e88a8"/><path d="M23 6 L41 6 L41 23 L58 23 L58 41 L41 41 L41 58 L23 58 L23 41 L6 41 L6 23 L23 23Z" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

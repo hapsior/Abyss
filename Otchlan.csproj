@@ -1,0 +1,11 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>Otchlan</RootNamespace>
+    <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <!-- Kod gry jest po polsku; ostrzeżenia o nazwach nie są błędami. -->
+    <NoWarn>$(NoWarn);CA1050;IDE1006</NoWarn>
+  </PropertyGroup>
+</Project>

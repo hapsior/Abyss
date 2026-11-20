@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: serce. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M64 108 L24 70 L12 44 L24 20 L48 14 L64 30 L80 14 L104 20 L116 44 L104 70 Z" fill="#e04a52"/>
+  <path d="M116 44 L104 70 L64 108 L56 84 L84 80 L100 56 Z" fill="#ae3842"/>
+  <path d="M24 20 L48 14 L64 30 L46 40 L30 36 Z" fill="#f27d82"/>
+  <path d="M64 108 L24 70 L12 44 L24 20 L48 14 L64 30 L80 14 L104 20 L116 44 L104 70 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 30 L56 50 L72 62 L58 80 L66 94" fill="none" stroke="#1a0f1f" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 30 L56 50 L72 62 L58 80 L66 94" fill="none" stroke="#ffd23f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 30 L56 50 L72 62 L58 80 L66 94" fill="none" stroke="#fff6c0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 56 L40 60 L36 72" fill="none" stroke="#862a33" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M94 38 L88 48" fill="none" stroke="#862a33" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

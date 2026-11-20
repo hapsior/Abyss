@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Chochlik: mały latający ognisty diabełek, teleportuje się. Skrzydła nietoperza, rogi, płomień na głowie. -->
+  <ellipse cx="96" cy="174" rx="28" ry="5" fill="#000000" opacity="0.25"/>
+  <!-- ogon -->
+  <path d="M74 140 C 56 156 34 150 30 128" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M74 140 C 56 156 34 150 30 128" fill="none" stroke="#ff6a3d" stroke-width="7" stroke-linecap="round"/>
+  <path d="M30 110 L 40 130 L 20 130 Z" fill="#b02e1c" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <!-- skrzydła -->
+  <path d="M124 102 L 170 58 L 164 84 L 178 90 L 160 104 L 164 126 L 132 122 Z" fill="#b02e1c" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M124 106 L 164 66 M132 112 L 160 106" stroke="#1a0f1f" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(192 0) scale(-1 1)">
+    <path d="M124 102 L 170 58 L 164 84 L 178 90 L 160 104 L 164 126 L 132 122 Z" fill="#b02e1c" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M124 106 L 164 66 M132 112 L 160 106" stroke="#1a0f1f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- nóżki -->
+  <g stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" fill="#b02e1c">
+    <ellipse cx="80" cy="150" rx="11" ry="8"/><ellipse cx="114" cy="150" rx="11" ry="8"/>
+  </g>
+  <!-- płomień -->
+  <path d="M96 12 C 104 22 112 28 106 40 C 112 38 118 42 116 50 L 76 50 C 74 42 80 38 86 40 C 80 30 90 22 96 12 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M96 28 C 100 34 104 38 100 46 L 92 46 C 88 38 94 34 96 28 Z" fill="#ff9a3c"/>
+  <!-- rogi -->
+  <path d="M68 70 C 56 62 54 46 62 36 C 66 50 76 56 84 58 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M124 70 C 136 62 138 46 130 36 C 126 50 116 56 108 58 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <!-- ciało -->
+  <ellipse cx="96" cy="104" rx="38" ry="42" fill="#ff6a3d"/>
+  <path d="M132 100 C 136 126 118 148 96 148 C 80 148 68 140 60 130 C 86 142 118 132 132 100 Z" fill="#d94a22"/>
+  <ellipse cx="70" cy="84" rx="7" ry="14" fill="#ffffff" opacity="0.5" transform="rotate(26 70 84)"/>
+  <ellipse cx="96" cy="104" rx="38" ry="42" fill="none" stroke="#1a0f1f" stroke-width="9"/>
+  <!-- twarz -->
+  <g stroke="#1a0f1f" stroke-width="5">
+    <ellipse cx="82" cy="98" rx="11" ry="12" fill="#ffffff"/>
+    <ellipse cx="114" cy="98" rx="11" ry="12" fill="#ffffff"/>
+  </g>
+  <circle cx="86" cy="99" r="6" fill="#1a0f1f"/><circle cx="118" cy="99" r="6" fill="#1a0f1f"/>
+  <circle cx="88" cy="96" r="2" fill="#ffffff"/><circle cx="120" cy="96" r="2" fill="#ffffff"/>
+  <path d="M68 82 L 92 90" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M126 76 L 106 88" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M72 118 C 84 136 110 136 122 116 C 106 124 88 124 72 118 Z" fill="#3a1030" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M78 121 L 82 130 L 87 123 Z M108 123 L 112 131 L 116 120 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="3" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: klepsydra. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M36 26 L92 26 C 92 48 72 56 68 64 C 72 72 92 80 92 100 L36 100 C 36 80 56 72 60 64 C 56 56 36 48 36 26 Z" fill="#e6f6ff"/>
+  <path d="M44 34 L84 34 C 82 44 72 50 66 58 L62 58 C 56 50 46 44 44 34 Z" fill="#f2c35a"/>
+  <path d="M38 100 C 42 86 56 80 64 78 C 72 80 86 86 90 100 Z" fill="#f2c35a"/>
+  <path d="M64 78 C 72 80 86 86 90 100 L70 100 C 74 92 70 84 64 78 Z" fill="#c1984a"/>
+  <path d="M64 58 L64 80" fill="none" stroke="#f2c35a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <ellipse cx="44" cy="40" rx="3" ry="8" fill="#ffffff" opacity="0.8" transform="rotate(0 44 40)"/>
+  <path d="M36 26 L92 26 C 92 48 72 56 68 64 C 72 72 92 80 92 100 L36 100 C 36 80 56 72 60 64 C 56 56 36 48 36 26 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="24" y="12" width="80" height="14" rx="5" fill="#b9733c" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="24" y="100" width="80" height="14" rx="5" fill="#b9733c" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="30" y="17" width="24" height="3" rx="1.5" fill="#e0a366"/>
+  <rect x="30" y="105" width="24" height="3" rx="1.5" fill="#e0a366"/>
+</svg>

@@ -1,0 +1,13 @@
+# Godot
+.godot/
+/android/
+# .NET
+bin/
+obj/
+*.user
+.vs/
+.idea/
+# eksport / buildy
+/export/
+/build/
+*.tmp

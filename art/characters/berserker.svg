@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Berserker: wojownik w rogatym hełmie z rudą brodą i malowaniem wojennym. Patrzy w prawo (gra odbija w poziomie). -->
+  <!-- rogi -->
+  <path d="M70 96 C 38 96 22 64 32 30 C 50 46 68 56 88 66 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M186 96 C 218 96 234 64 224 30 C 206 46 188 56 168 66 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M38 44 C 40 58 50 70 60 76" fill="none" stroke="#c9b98f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M218 44 C 216 58 206 70 196 76" fill="none" stroke="#c9b98f" stroke-width="6" stroke-linecap="round"/>
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#3a3550"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#3a3550"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#ff7a5c"/>
+  <!-- cień (cel shading) -->
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#d4553a"/>
+  <!-- połysk -->
+  <ellipse cx="86" cy="150" rx="11" ry="20" fill="#ffffff" opacity="0.45" transform="rotate(18 86 150)"/>
+  <!-- obrys ciała -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- hełm -->
+  <path d="M52 118 C 48 76 82 52 128 52 C 174 52 208 76 204 118 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M190 80 C 200 92 204 104 203 114 L 176 114 C 184 104 188 92 190 80 Z" fill="#66627d"/>
+  <path d="M72 90 C 82 74 100 64 122 62" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  <rect x="48" y="104" width="160" height="22" rx="8" fill="#b97a4a" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="74" cy="115" r="4" fill="#ffd23f"/><circle cx="128" cy="115" r="4" fill="#ffd23f"/><circle cx="182" cy="115" r="4" fill="#ffd23f"/>
+  <!-- malowanie wojenne -->
+  <path d="M60 150 L 100 168" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <path d="M60 150 L 100 168" stroke="#ff4d5e" stroke-width="5" stroke-linecap="round"/>
+  <!-- oczy -->
+  <g>
+    <ellipse cx="102" cy="146" rx="14" ry="15" fill="#fff" stroke="#1a0f1f" stroke-width="7"/>
+    <circle cx="107" cy="149" r="7" fill="#1a0f1f"/>
+    <circle cx="104" cy="145" r="3" fill="#fff"/>
+    <ellipse cx="156" cy="146" rx="14" ry="15" fill="#fff" stroke="#1a0f1f" stroke-width="7"/>
+    <circle cx="161" cy="149" r="7" fill="#1a0f1f"/>
+    <circle cx="158" cy="145" r="3" fill="#fff"/>
+  </g>
+  <path d="M82 124 L 116 140" stroke="#1a0f1f" stroke-width="9" stroke-linecap="round"/>
+  <path d="M174 124 L 140 140" stroke="#1a0f1f" stroke-width="9" stroke-linecap="round"/>
+  <!-- broda -->
+  <path d="M52 166 C 70 160 90 170 128 168 C 166 170 186 160 204 166 C 214 196 196 226 170 236 C 156 242 148 232 128 238 C 108 232 100 242 86 236 C 60 226 42 196 52 166 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M198 186 C 196 210 184 226 166 234 C 182 228 196 214 204 196 Z" fill="#d9701b"/>
+  <path d="M66 184 C 66 196 72 208 82 216" fill="none" stroke="#ffd29a" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+  <path d="M110 214 C 114 224 120 228 124 232 M 146 212 C 144 222 138 228 134 232" fill="none" stroke="#d9701b" stroke-width="5" stroke-linecap="round"/>
+  <!-- wąsy -->
+  <path d="M128 176 C 112 164 84 166 74 184 C 92 186 114 186 128 176 Z M 128 176 C 144 164 172 166 182 184 C 164 186 142 186 128 176 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <!-- szeroki uśmiech z zębami -->
+  <path d="M100 190 C 112 214 144 214 156 190 C 140 196 116 196 100 190 Z" fill="#7a1c2a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M106 193 L 112 201 L 118 195 L 124 203 L 130 196 L 136 203 L 142 195 L 148 201 L 152 193 C 138 198 120 198 106 193 Z" fill="#fff"/>
+</svg>

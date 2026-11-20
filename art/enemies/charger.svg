@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Dzik: szarżujący knur. Pochylony do przodu, kły, obłoczki kurzu z tyłu. -->
+  <ellipse cx="96" cy="170" rx="68" ry="9" fill="#000000" opacity="0.25"/>
+  <!-- kurz -->
+  <g fill="#e8dcc4" stroke="#1a0f1f" stroke-width="5" opacity="0.9">
+    <circle cx="26" cy="150" r="12"/><circle cx="38" cy="164" r="9"/><circle cx="20" cy="132" r="7"/>
+  </g>
+  <!-- nogi -->
+  <g stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round" fill="#8a5530">
+    <path d="M48 140 L 44 168 L 66 168 L 70 140 Z"/>
+    <path d="M110 140 L 116 168 L 138 166 L 130 138 Z"/>
+  </g>
+  <g transform="rotate(5 96 110)">
+  <!-- grzywa -->
+  <path d="M40 78 L 44 56 L 56 70 L 62 48 L 74 66 L 84 46 L 92 66 L 104 52 L 106 72 Z" fill="#8a5530" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <!-- ciało -->
+  <path d="M30 108 C 26 76 56 64 90 64 C 124 64 144 82 146 108 C 148 136 122 150 88 150 C 54 150 32 138 30 108 Z" fill="#c98552"/>
+  <path d="M146 108 C 148 136 122 150 88 150 C 62 150 44 142 36 128 C 66 138 118 134 146 108 Z" fill="#a0653a"/>
+  <ellipse cx="54" cy="94" rx="7" ry="14" fill="#ffffff" opacity="0.45" transform="rotate(30 54 94)"/>
+  <path d="M30 108 C 26 76 56 64 90 64 C 124 64 144 82 146 108 C 148 136 122 150 88 150 C 54 150 32 138 30 108 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- ogonek -->
+  <path d="M32 104 C 20 100 16 90 22 84" fill="none" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M32 104 C 20 100 16 90 22 84" fill="none" stroke="#a0653a" stroke-width="3" stroke-linecap="round"/>
+  <!-- głowa -->
+  <path d="M112 80 C 124 66 154 70 164 88 C 168 100 166 118 156 126 C 140 134 118 130 110 116 C 106 102 106 90 112 80 Z" fill="#c98552" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <ellipse cx="124" cy="82" rx="5" ry="8" fill="#ffffff" opacity="0.45" transform="rotate(30 124 82)"/>
+  <!-- ucho -->
+  <path d="M116 78 L 112 54 L 134 70 Z" fill="#a0653a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <!-- ryj -->
+  <ellipse cx="164" cy="108" rx="14" ry="17" fill="#f2a08a" stroke="#1a0f1f" stroke-width="8"/>
+  <ellipse cx="166" cy="103" rx="3" ry="4.5" fill="#1a0f1f"/><ellipse cx="166" cy="116" rx="3" ry="4.5" fill="#1a0f1f"/>
+  <!-- kły -->
+  <path d="M146 124 C 150 136 156 140 166 138 C 160 132 158 128 156 122 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M128 126 C 128 138 134 144 144 144 C 140 138 140 132 140 126 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <!-- oko -->
+  <ellipse cx="138" cy="96" rx="9" ry="10" fill="#ffffff" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="141" cy="98" r="5" fill="#1a0f1f"/><circle cx="143" cy="96" r="1.8" fill="#ffffff"/>
+  <path d="M124 84 L 148 92" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

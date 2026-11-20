@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Kafel (podłoga mechanizmu): bezszwowy, bez konturów, niski kontrast. -->
+<rect width="128" height="128" fill="#2a251f"/>
+<rect x="1.5" y="1.5" width="61" height="61" rx="3" fill="#433b31"/>
+<path d="M3 3 L61 3" fill="none" stroke="#4c443a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M3 61 L61 61" fill="none" stroke="#322c25" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+<ellipse cx="7" cy="7" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="6.3" cy="6.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="57" cy="7" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="56.3" cy="6.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="7" cy="57" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="6.3" cy="56.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="57" cy="57" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="56.3" cy="56.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<rect x="65.5" y="1.5" width="61" height="61" rx="3" fill="#443c32"/>
+<path d="M67 3 L125 3" fill="none" stroke="#4d453b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M67 61 L125 61" fill="none" stroke="#332d25" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+<ellipse cx="71" cy="7" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="70.3" cy="6.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="121" cy="7" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="120.3" cy="6.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="71" cy="57" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="70.3" cy="56.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="121" cy="57" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="120.3" cy="56.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<rect x="1.5" y="65.5" width="61" height="61" rx="3" fill="#423a30"/>
+<path d="M3 67 L61 67" fill="none" stroke="#4b4339" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M3 125 L61 125" fill="none" stroke="#312b24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+<ellipse cx="7" cy="71" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="6.3" cy="70.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="57" cy="71" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="56.3" cy="70.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="7" cy="121" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="6.3" cy="120.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="57" cy="121" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="56.3" cy="120.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<rect x="65.5" y="65.5" width="61" height="61" rx="3" fill="#423a30"/>
+<path d="M67 67 L125 67" fill="none" stroke="#4b4339" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M67 125 L125 125" fill="none" stroke="#312b24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+<ellipse cx="71" cy="71" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="70.3" cy="70.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="121" cy="71" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="120.3" cy="70.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="71" cy="121" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="70.3" cy="120.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+<ellipse cx="121" cy="121" rx="2.4" ry="2.4" fill="#e6be50" opacity="0.45"/>
+<ellipse cx="120.3" cy="120.3" rx="1.08" ry="1.08" fill="#ffe678" opacity="0.45"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 96" width="192" height="96">
+  <!-- Łuk: Łowczyni. Łuk z boku z nałożoną strzałą mierzącą w prawo. -->
+  <!-- pivot: 66,48 -->
+  <!-- strzała -->
+  <path d="M30 48 L 156 48" stroke="#1a0f1f" stroke-width="13" stroke-linecap="round"/>
+  <path d="M30 48 L 156 48" stroke="#f1e6c8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M150 34 L 182 48 L 150 62 C 156 54 156 42 150 34 Z" fill="#c8d2e6" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M26 48 L 18 38 L 40 38 L 46 48 L 40 58 L 18 58 Z" fill="#ff4d5e" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <!-- cięciwa -->
+  <path d="M58 12 L 30 48 L 58 84" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M58 12 L 30 48 L 58 84" fill="none" stroke="#f1e6c8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- ramiona łuku -->
+  <path d="M58 12 C 112 16 112 80 58 84" fill="none" stroke="#1a0f1f" stroke-width="22" stroke-linecap="round"/>
+  <path d="M58 12 C 112 16 112 80 58 84" fill="none" stroke="#b97a4a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M66 15 C 100 20 104 36 100 46" fill="none" stroke="#e0a97a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100 56 C 102 66 94 76 80 80" fill="none" stroke="#8a5530" stroke-width="4" stroke-linecap="round"/>
+  <!-- chwyt -->
+  <rect x="82" y="36" width="16" height="24" rx="6" fill="#35a957" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+</svg>

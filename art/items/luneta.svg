@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: luneta. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="rotate(-35 64 64)">
+  <rect x="12" y="55" width="26" height="18" rx="5" fill="#6cc3f7"/><rect x="28.1" y="55" width="9.9" height="18" rx="5" fill="#5494c8"/><ellipse cx="17.7" cy="60.4" rx="1.8" ry="3.6" fill="#ffffff" opacity="0.6" transform="rotate(0 17.7 60.4)"/><rect x="12" y="55" width="26" height="18" rx="5" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="32" y="49" width="36" height="30" rx="5" fill="#6cc3f7"/><rect x="54.3" y="49" width="13.7" height="30" rx="5" fill="#5494c8"/><ellipse cx="39.9" cy="58" rx="2.5" ry="6" fill="#ffffff" opacity="0.6" transform="rotate(0 39.9 58)"/><rect x="32" y="49" width="36" height="30" rx="5" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="62" y="43" width="36" height="42" rx="6" fill="#6cc3f7"/><rect x="84.3" y="43" width="13.7" height="42" rx="6" fill="#5494c8"/><ellipse cx="69.9" cy="55.6" rx="2.5" ry="8.4" fill="#ffffff" opacity="0.6" transform="rotate(0 69.9 55.6)"/><rect x="62" y="43" width="36" height="42" rx="6" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="95" y="39" width="17" height="50" rx="6" fill="#ffd23f" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="103" y="42" width="6" height="44" rx="3" fill="#c69f33"/>
+  <rect x="28" y="50" width="8" height="28" rx="3" fill="#ffd23f" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="58" y="44" width="8" height="40" rx="3" fill="#ffd23f" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="103" cy="64" rx="3" ry="14" fill="#e8fbff" opacity="0.9"/>
+  </g>
+</svg>

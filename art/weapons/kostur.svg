@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 96" width="192" height="96">
+  <!-- Kostur: drewniany kostur Maga z fioletowym kryształem. -->
+  <!-- pivot: 52,48 -->
+  <circle cx="158" cy="48" r="26" fill="#a066ff" opacity="0.28"/>
+  <path d="M18 48 L 134 48" stroke="#1a0f1f" stroke-width="20" stroke-linecap="round"/>
+  <path d="M18 48 L 134 48" stroke="#b97a4a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M22 45 L 120 45" stroke="#e0a97a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M70 52 L 90 58" stroke="#8a5530" stroke-width="4" stroke-linecap="round"/>
+  <rect x="44" y="38" width="14" height="20" rx="5" fill="#ffd23f" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <!-- obejma -->
+  <path d="M128 34 C 136 22 150 24 148 30 M 128 62 C 136 74 150 72 148 66" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M128 34 C 136 22 150 24 148 30 M 128 62 C 136 74 150 72 148 66" fill="none" stroke="#ffd23f" stroke-width="7" stroke-linecap="round"/>
+  <!-- kryształ -->
+  <path d="M142 48 L 158 24 L 178 48 L 158 72 Z" fill="#a066ff"/>
+  <path d="M178 48 L 158 72 L 142 48 L 160 52 Z" fill="#7442d1"/>
+  <path d="M150 42 L 158 31" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M142 48 L 158 24 L 178 48 L 158 72 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M142 48 L 178 48" stroke="#1a0f1f" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+</svg>

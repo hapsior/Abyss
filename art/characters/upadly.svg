@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Upadły: upadły anioł z rogami, pękniętą aureolą i czerwonymi oczami. Patrzy w prawo (gra odbija w poziomie). -->
+  <!-- rogi -->
+  <path d="M78 84 C 62 74 58 50 66 34 C 78 46 90 56 98 68 Z" fill="#55348a" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M178 84 C 194 74 198 50 190 34 C 178 46 166 56 158 68 Z" fill="#55348a" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#3a3550"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#3a3550"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#9b6bdb"/>
+  <!-- cień (cel shading) -->
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#7448b3"/>
+  <!-- połysk -->
+  <ellipse cx="86" cy="150" rx="11" ry="20" fill="#ffffff" opacity="0.45" transform="rotate(18 86 150)"/>
+  <!-- obrys ciała -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- pęknięta aureola -->
+  <g transform="rotate(-14 136 44)" fill="none" stroke-linecap="round">
+    <path d="M92 44 C 92 28 112 20 136 20 C 150 20 162 22 170 26" stroke="#1a0f1f" stroke-width="20"/>
+    <path d="M178 38 C 180 44 176 52 166 58 C 156 62 144 64 136 64 C 112 64 92 58 92 44" stroke="#1a0f1f" stroke-width="20"/>
+    <path d="M92 44 C 92 28 112 20 136 20 C 150 20 162 22 170 26" stroke="#ffd23f" stroke-width="9"/>
+    <path d="M178 38 C 180 44 176 52 166 58 C 156 62 144 64 136 64 C 112 64 92 58 92 44" stroke="#ffd23f" stroke-width="9"/>
+    <path d="M110 30 C 120 24 132 22 144 22" stroke="#fff" stroke-width="3" opacity="0.8"/>
+  </g>
+  <path d="M170 18 L 164 34 L 174 36 L 168 52" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- oczy z czerwoną poświatą -->
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="102" cy="138" rx="15" ry="18" fill="#fff"/>
+    <ellipse cx="156" cy="138" rx="15" ry="18" fill="#fff"/>
+  </g>
+  <circle cx="107" cy="141" r="11" fill="#ff3c50" opacity="0.45"/><circle cx="161" cy="141" r="11" fill="#ff3c50" opacity="0.45"/>
+  <circle cx="107" cy="141" r="8" fill="#ff3c50"/><circle cx="161" cy="141" r="8" fill="#ff3c50"/>
+  <circle cx="108" cy="141" r="3.5" fill="#1a0f1f"/><circle cx="162" cy="141" r="3.5" fill="#1a0f1f"/>
+  <circle cx="104" cy="136" r="3" fill="#fff"/><circle cx="158" cy="136" r="3" fill="#fff"/>
+  <path d="M84 118 L 116 124" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M174 118 L 142 124" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <!-- psotny uśmiech z kłami -->
+  <path d="M104 174 C 118 192 146 192 160 172" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M112 182 L 116 192 L 122 186 Z M 148 186 L 152 192 L 156 180 Z" fill="#fff" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <ellipse cx="86" cy="170" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+  <ellipse cx="174" cy="170" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+</svg>

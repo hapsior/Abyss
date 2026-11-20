@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Nietoperz: mały latający wróg z rozpostartymi skrzydłami i kłami. -->
+  <ellipse cx="96" cy="172" rx="32" ry="6" fill="#000000" opacity="0.25"/>
+  <!-- skrzydła -->
+  <g id="w">
+    <path d="M126 92 C 142 76 158 64 172 56 C 170 72 174 84 170 98 C 164 94 158 96 154 102 C 154 112 148 120 140 124 C 136 116 130 116 126 120 Z" fill="#7b3fb5" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M126 96 L 168 62 M130 106 L 160 100 M130 114 L 148 116" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M140 84 C 150 76 158 70 164 66" stroke="#b98af0" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+  <g transform="translate(192 0) scale(-1 1)">
+    <path d="M126 92 C 142 76 158 64 172 56 C 170 72 174 84 170 98 C 164 94 158 96 154 102 C 154 112 148 120 140 124 C 136 116 130 116 126 120 Z" fill="#7b3fb5" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M126 96 L 168 62 M130 106 L 160 100 M130 114 L 148 116" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- uszy -->
+  <path d="M68 82 L 62 30 L 94 66 Z" fill="#9a5cd6" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M124 82 L 130 30 L 98 66 Z" fill="#9a5cd6" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M70 66 L 68 46 L 82 62 Z" fill="#ff9ac0"/>
+  <path d="M122 66 L 124 46 L 110 62 Z" fill="#ff9ac0"/>
+  <!-- ciało -->
+  <ellipse cx="96" cy="106" rx="36" ry="40" fill="#9a5cd6"/>
+  <path d="M130 100 C 132 126 116 144 96 146 C 80 146 68 138 62 128 C 84 138 112 130 130 100 Z" fill="#7442d1"/>
+  <ellipse cx="72" cy="90" rx="7" ry="13" fill="#ffffff" opacity="0.5" transform="rotate(24 72 90)"/>
+  <ellipse cx="96" cy="106" rx="36" ry="40" fill="none" stroke="#1a0f1f" stroke-width="9"/>
+  <!-- oczy -->
+  <g stroke="#1a0f1f" stroke-width="5">
+    <ellipse cx="82" cy="102" rx="11" ry="13" fill="#ffffff"/>
+    <ellipse cx="112" cy="102" rx="11" ry="13" fill="#ffffff"/>
+  </g>
+  <circle cx="86" cy="105" r="6" fill="#1a0f1f"/><circle cx="116" cy="105" r="6" fill="#1a0f1f"/>
+  <circle cx="88" cy="102" r="2" fill="#ffffff"/><circle cx="118" cy="102" r="2" fill="#ffffff"/>
+  <path d="M68 86 L 90 94" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M126 86 L 104 94" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <!-- paszcza z kłami -->
+  <path d="M80 126 C 90 134 104 134 114 126" fill="#3a1030" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M83 128 L 87 140 L 92 131 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M110 128 L 106 140 L 101 131 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round"/>
+</svg>

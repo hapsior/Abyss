@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: kielich. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M54 74 L74 74 L70 98 L58 98 Z" fill="#ffbe32" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <ellipse cx="64" cy="90" rx="17" ry="7" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6"/>
+  <path d="M30 104 C 30 96 98 96 98 104 L102 114 L26 114 Z" fill="#ffbe32" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M98 104 L102 114 L70 114 C 90 112 96 108 98 104 Z" fill="#cc9429"/>
+  <path d="M20 22 L108 22 C 108 58 90 74 64 76 C 38 74 20 58 20 22 Z" fill="#ffbe32"/>
+  <path d="M108 22 C 108 58 90 74 64 76 C 76 66 90 50 92 22 Z" fill="#d1982a"/>
+  <ellipse cx="34" cy="40" rx="4" ry="14" fill="#ffffff" opacity="0.7" transform="rotate(-15 34 40)"/>
+  <path d="M20 22 L108 22 C 108 58 90 74 64 76 C 38 74 20 58 20 22 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <ellipse cx="64" cy="22" rx="44" ry="9" fill="#a01830" stroke="#1a0f1f" stroke-width="6"/>
+  <ellipse cx="52" cy="21" rx="14" ry="3" fill="#e8566a"/>
+  <path d="M64 36 L74 48 L64 60 L54 48 Z" fill="#4fd0ff" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="36" cy="44" r="5" fill="#ff4d5e" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="92" cy="44" r="5" fill="#5ee07a" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M18 6 L19.7 12.3 L26 14 L19.7 15.7 L18 22 L16.3 15.7 L10 14 L16.3 12.3 Z" fill="#ffffff"/>
+  <path d="M112 8 L113.3 12.7 L118 14 L113.3 15.3 L112 20 L110.7 15.3 L106 14 L110.7 12.7 Z" fill="#ffffff"/>
+</svg>

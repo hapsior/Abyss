@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: widmowe. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M6 48 Q 14 42 22 48 T 30 48" fill="none" stroke="#c8c8ff" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+  <path d="M4 64 Q 12 58 20 64 T 28 64" fill="none" stroke="#c8c8ff" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+  <path d="M6 80 Q 14 74 22 80 T 30 80" fill="none" stroke="#c8c8ff" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+  <path d="M32 40 L74 40 C 100 40 116 52 116 64 C 116 76 100 88 74 88 L32 88 Z" fill="#c8c8ff" opacity="0.78"/>
+  <path d="M116 64 C 116 76 100 88 74 88 L32 88 L32 78 C 64 84 100 76 112 54 C 115 58 116 61 116 64 Z" fill="#9c9cf0" opacity="0.7"/>
+  <ellipse cx="82" cy="64" rx="22" ry="9" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="52" cy="49" rx="12" ry="3" fill="#ffffff" opacity="0.85" transform="rotate(0 52 49)"/>
+  <path d="M32 40 L74 40 C 100 40 116 52 116 64 C 116 76 100 88 74 88 L32 88 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M62 41 L62 87" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="28" y="36" width="10" height="56" rx="4" fill="#a8a8f0" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M104 16 L105.7 22.3 L112 24 L105.7 25.7 L104 32 L102.3 25.7 L96 24 L102.3 22.3 Z" fill="#ffffff"/>
+  <path d="M40 102 L41.3 106.7 L46 108 L41.3 109.3 L40 114 L38.7 109.3 L34 108 L38.7 106.7 Z" fill="#ffffff"/>
+</svg>

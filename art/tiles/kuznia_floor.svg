@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Kafel (podłoga kuźni): bezszwowy, bez konturów, niski kontrast. -->
+<rect width="128" height="128" fill="#33201c"/>
+<rect x="1.2" y="1.2" width="61.6" height="29.6" rx="2" fill="#4a2e28"/>
+<path d="M2 2 L62 2" fill="none" stroke="#523630" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M2 30 L62 30" fill="none" stroke="#3a241f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="65.2" y="1.2" width="61.6" height="29.6" rx="2" fill="#492d27"/>
+<path d="M66 2 L126 2" fill="none" stroke="#51352f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M66 30 L126 30" fill="none" stroke="#39231e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="33.2" y="33.2" width="61.6" height="29.6" rx="2" fill="#4a2e28"/>
+<path d="M34 34 L94 34" fill="none" stroke="#523630" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M34 62 L94 62" fill="none" stroke="#3a241f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="-30.8" y="33.2" width="61.6" height="29.6" rx="2" fill="#472b25"/>
+<rect x="97.2" y="33.2" width="61.6" height="29.6" rx="2" fill="#472b25"/>
+<path d="M-30 34 L30 34" fill="none" stroke="#4f332d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M98 34 L158 34" fill="none" stroke="#4f332d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M-30 62 L30 62" fill="none" stroke="#37211c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M98 62 L158 62" fill="none" stroke="#37211c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1.2" y="65.2" width="61.6" height="29.6" rx="2" fill="#4d312b"/>
+<path d="M2 66 L62 66" fill="none" stroke="#553933" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M2 94 L62 94" fill="none" stroke="#3c2621" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="65.2" y="65.2" width="61.6" height="29.6" rx="2" fill="#4d312b"/>
+<path d="M66 66 L126 66" fill="none" stroke="#553933" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M66 94 L126 94" fill="none" stroke="#3c2621" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="33.2" y="97.2" width="61.6" height="29.6" rx="2" fill="#4b2f29"/>
+<path d="M34 98 L94 98" fill="none" stroke="#533731" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M34 126 L94 126" fill="none" stroke="#3a2520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="-30.8" y="97.2" width="61.6" height="29.6" rx="2" fill="#462a24"/>
+<rect x="97.2" y="97.2" width="61.6" height="29.6" rx="2" fill="#462a24"/>
+<path d="M-30 98 L30 98" fill="none" stroke="#4e322c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M98 98 L158 98" fill="none" stroke="#4e322c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M-30 126 L30 126" fill="none" stroke="#37211c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M98 126 L158 126" fill="none" stroke="#37211c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M66.65 41.95 L58.91 46.21 L50.05 48.3 L42.18 53.09" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M87.79 84.72 L91.29 95.68 L92.01 101.07 L99.4 106.6" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M46.87 -13.03 L43.09 -7.88 L36.89 -2.67 L35.49 2.87" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M46.87 114.97 L43.09 120.12 L36.89 125.33 L35.49 130.87" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<ellipse cx="63.57" cy="104.7" rx="1.23" ry="1.17" fill="#ff8232" opacity="0.5"/>
+<ellipse cx="109.46" cy="19.16" rx="1.18" ry="1.09" fill="#ff8232" opacity="0.5"/>
+<ellipse cx="76.97" cy="14.45" rx="1.29" ry="0.95" fill="#ff8232" opacity="0.5"/>
+<ellipse cx="21.29" cy="103.35" rx="1.37" ry="1.12" fill="#ff8232" opacity="0.5"/>
+<ellipse cx="53" cy="31.42" rx="1.04" ry="1.21" fill="#ff8232" opacity="0.5"/>
+</svg>

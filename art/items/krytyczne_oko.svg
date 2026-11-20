@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: krytyczne oko. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <circle cx="64" cy="72" r="42" fill="#ffffff" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M100.4 51 A42 42 0 0 1 43 108.4 A71.4 71.4 0 0 0 100.4 51 Z" fill="#e6d6dc"/>
+  <ellipse cx="40" cy="48" rx="5" ry="10" fill="#ffffff" opacity="0.8" transform="rotate(40 40 48)"/>
+  <circle cx="64" cy="72" r="42" fill="none" stroke="#1a0f1f" stroke-width="7"/>
+  <circle cx="64" cy="72" r="30" fill="#eb3c3c" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="64" cy="72" r="20" fill="#ffffff" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round"/>
+  <circle cx="64" cy="72" r="11" fill="#eb3c3c" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round"/>
+  <circle cx="64" cy="72" r="3.5" fill="#1a0f1f"/>
+  <path d="M24 59 L100 50 A42 42 0 0 0 24 59 Z" fill="#d42a3a" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,109 @@
+OTCHŁAŃ 1.1 – roguelike na Windows
+==================================
+
+Zejdź przez 5 pięter Otchłani, zbieraj przedmioty, awansuj i pokonaj Serce Otchłani –
+sam albo we dwoje na jednym ekranie.
+Inspiracje: The Binding of Isaac (pokoje, piętra, przedmioty), Brotato (postacie, awanse,
+sklep), Hades i Enter the Gungeon (zryw z nietykalnością, wzory pocisków bossów).
+
+
+JAK URUCHOMIĆ
+-------------
+1. Rozpakuj CAŁE archiwum ZIP do jednego folderu (np. Pulpit\Otchlan).
+   Nie uruchamiaj gry z podglądu ZIP-a w Eksploratorze.
+2. Kliknij dwukrotnie Otchlan.exe.
+   Python jest wbudowany w folderze "python" – niczego nie trzeba instalować.
+
+Windows SmartScreen może pokazać „System Windows ochronił ten komputer”, bo plik nie jest
+podpisany cyfrowo. Kliknij „Więcej informacji”, a potem „Uruchom mimo to”.
+
+Jeśli gra się nie włącza, pokaże okienko z błędem, a szczegóły zapisze w:
+  %APPDATA%\Otchlan\crash.log
+Autotest: uruchom "Otchlan.exe --selftest" (wynik w pliku selftest.txt obok gry).
+Wymagania: Windows 10 lub 11 (64-bit).
+
+
+STEROWANIE – GRACZ 1
+--------------------
+WSAD ................ ruch
+Mysz + LPM .......... celowanie i strzał
+Strzałki ............ strzał w danym kierunku (jak w Isaacu)
+Spacja / Shift ...... zryw (chwilowa nietykalność)
+PPM / Q / E ......... umiejętność postaci
+F ................... auto-celowanie (postać sama strzela do najbliższego wroga)
+TAB (przytrzymaj) ... statystyki i zebrane przedmioty
+Esc / P ............. pauza (tu: Zapisz i wyjdź)
+M ................... wycisz / włącz muzykę
+F11 ................. pełny ekran
+
+Pad (Xbox / PlayStation): lewa gałka – ruch, prawa gałka – celowanie i strzał,
+A lub LB – zryw, B lub RB – umiejętność, Y – auto-celowanie, Start – pauza.
+
+Ekran awansu: 1/2/3 lub klik – wybór, R – losuj od nowa (za monety),
+B lub PPM – odrzuć ulepszenie na resztę wyprawy (2 razy na wyprawę).
+Na padzie: X – losuj od nowa, Y – odrzuć.
+
+
+CO-OP NA 2 OSOBY (JEDEN EKRAN)
+------------------------------
+Menu → „Co-op (2 graczy)” → każdy wybiera postać.
+Gracz 1: klawiatura + mysz (jak wyżej).
+Gracz 2: pad. Bez pada – prawa strona klawiatury:
+  strzałki .................... ruch (celowanie automatyczne)
+  I J K L / klawisze numeryczne  strzał w kierunku
+  prawy Ctrl / Num 0 .......... zryw
+  prawy Shift / Num Enter ..... umiejętność
+Z jednym padem: pad steruje graczem 2. Z dwoma: pierwszy pad – gracz 1, drugi – gracz 2.
+
+- Monety są wspólne, przedmioty i doświadczenie – osobne.
+- Wrogów jest więcej i mają więcej zdrowia; bossowie są wytrzymalsi.
+- Powalony gracz wstaje, gdy partner postoi obok niego 2 sekundy albo gdy pokój zostanie
+  oczyszczony. Leżąc, może zrywem zbić pobliskie pociski wrogów.
+- Wyprawa kończy się, gdy obaj gracze leżą.
+
+
+ZAPIS GRY
+---------
+Gra zapisuje wyprawę przy wejściu do pokoju, po jego oczyszczeniu i po pokonaniu bossa.
+W pauzie: „Zapisz i wyjdź”. W menu: „Kontynuuj” wraca do wyprawy.
+Śmierć kończy wyprawę i usuwa jej zapis (roguelike), ale odblokowania, rekordy
+i osiągnięcia zostają.
+
+Pliki: %APPDATA%\Otchlan\
+  save.json ......... postępy, odblokowania, osiągnięcia, ustawienia
+  run_save.json ..... przerwana wyprawa
+  runs_log.jsonl .... historia wypraw (statystyki do balansu)
+
+
+CO JEST W GRZE
+--------------
+- 7 postaci (5 od razu, 2 do odblokowania), każda z innymi statystykami, pasywką
+  i umiejętnością aktywną
+- 4 poziomy trudności: Łatwy, Normalny, Trudny, Koszmar
+- Pieczęcie Otchłani (po pierwszym zwycięstwie): 10 stopni dodatkowych utrudnień
+  dla weteranów – każda wygrana odblokowuje kolejną
+- 5 pięter generowanych losowo, każde z bossem
+- Pokoje specjalne: Skarbiec (darmowy przedmiot), Sklep, Ołtarz Krwi (rzadki dar za maks. HP)
+- 13 rodzajów wrogów + elity (złota obwódka), 5 bossów z fazami i wzorami pocisków
+- Wrogowie szukają linii strzału – snajper wychyli się zza skały, zamiast w nią strzelać
+- 44 przedmioty, które łączą się w synergie (np. naprowadzanie + przebicie + odbicia)
+- 44 osiągnięcia (lista w menu → Osiągnięcia; w wersji Steam także w Steamie)
+- Grafika i dźwięk w całości generowane w kodzie
+
+Postacie:
+  Rycerz     – tarcza blokująca pierwsze trafienie w pokoju; Fala Uderzeniowa
+  Łowczyni   – przebijające strzały, duży zasięg; Deszcz Strzał
+  Berserker  – im mniej HP, tym mocniej bije; Szał
+  Mag        – naprowadzane pociski, wyładowania; Burza
+  Złodziej   – więcej monet, tańszy sklep, 2 zrywy; Zasłona Dymna
+  Alchemik   – trucizna i trujące chmury; Mikstura   (odblokuj: dotrzyj do piętra 3)
+  Upadły     – pociski przez ściany, kradzież życia, mało HP; Ofiara Krwi
+               (odblokuj: pokonaj Serce Otchłani)
+
+
+LICENCJE
+--------
+Czcionka Inter – SIL Open Font License 1.1
+Python – PSF License
+pygame-ce – LGPL 2.1, https://github.com/pygame-community/pygame-ce
+Pełne teksty: folder licenses\

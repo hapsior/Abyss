@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Wybuchacz: chodząca bomba z zapalonym lontem i szalonym uśmiechem. -->
+  <ellipse cx="96" cy="176" rx="58" ry="9" fill="#000000" opacity="0.25"/>
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round" fill="#ff9a3c">
+    <ellipse cx="68" cy="166" rx="19" ry="11"/>
+    <ellipse cx="124" cy="166" rx="19" ry="11"/>
+  </g>
+  <!-- korpus -->
+  <circle cx="96" cy="108" r="56" fill="#5b64a8"/>
+  <path d="M150 90 C 156 126 132 160 94 164 C 74 164 58 156 48 144 C 84 156 134 140 150 90 Z" fill="#3f4780"/>
+  <ellipse cx="62" cy="80" rx="9" ry="17" fill="#ffffff" opacity="0.5" transform="rotate(34 62 80)"/>
+  <circle cx="84" cy="58" r="4.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="96" cy="108" r="56" fill="none" stroke="#1a0f1f" stroke-width="9"/>
+  <!-- nasadka i lont -->
+  <path d="M80 56 L 84 44 L 108 44 L 112 56 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M96 44 C 96 30 110 28 122 30" fill="none" stroke="#1a0f1f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M96 44 C 96 30 110 28 122 30" fill="none" stroke="#e0c080" stroke-width="5" stroke-linecap="round"/>
+  <!-- iskra -->
+  <path d="M132 14 L 136 24 L 147 22 L 140 30 L 148 38 L 137 36 L 133 46 L 129 36 L 118 38 L 125 30 L 117 22 L 128 24 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="132" cy="30" r="5" fill="#ffffff"/>
+  <!-- oczy: jedno duże, jedno małe -->
+  <ellipse cx="74" cy="100" rx="16" ry="19" fill="#ffffff" stroke="#1a0f1f" stroke-width="6"/>
+  <ellipse cx="118" cy="104" rx="12" ry="14" fill="#ffffff" stroke="#1a0f1f" stroke-width="6"/>
+  <circle cx="78" cy="102" r="5" fill="#1a0f1f"/><circle cx="121" cy="107" r="4" fill="#1a0f1f"/>
+  <path d="M54 80 L 90 92" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M136 84 L 108 94" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+  <!-- szalony uśmiech -->
+  <path d="M60 126 C 76 156 116 156 132 124 C 112 134 80 134 60 126 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M74 132 L 76 144 M88 135 L 89 150 M102 135 L 102 150 M116 132 L 114 144" stroke="#1a0f1f" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: blyskawica. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M32 38 L96 38 C 104 44 106 52 106 60 L106 98 C 106 108 100 112 92 112 L36 112 C 28 112 22 108 22 98 L22 60 C 22 52 24 44 32 38 Z" fill="#d8f0ff"/>
+  <path d="M106 60 L106 98 C 106 108 100 112 92 112 L70 112 C 98 106 98 62 92 40 L96 38 C 104 44 106 52 106 60 Z" fill="#a8d0ec"/>
+  <ellipse cx="32" cy="62" rx="3.5" ry="12" fill="#ffffff" opacity="0.8" transform="rotate(0 32 62)"/>
+  <path d="M32 38 L96 38 C 104 44 106 52 106 60 L106 98 C 106 108 100 112 92 112 L36 112 C 28 112 22 108 22 98 L22 60 C 22 52 24 44 32 38 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M70 46 L42 80 L58 80 L52 106 L84 66 L68 66 L76 46 Z" fill="#ffe650" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="30" y="18" width="68" height="20" rx="6" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="36" y="22" width="36" height="4" rx="2" fill="#c8c6dc"/>
+</svg>

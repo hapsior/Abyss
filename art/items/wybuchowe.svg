@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: wybuchowe. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M58 38 C 60 24 72 24 82 26" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M58 38 C 60 24 72 24 82 26" fill="none" stroke="#d2a46c" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="58" cy="80" r="33" fill="#ff9628"/><path d="M85 61.1 A33 33 0 0 1 39.1 107 A56.1 56.1 0 0 0 85 61.1 Z" fill="#c67220"/><ellipse cx="45.5" cy="66.8" rx="6.6" ry="10.6" fill="#ffffff" opacity="0.65" transform="rotate(40 45.5 66.8)"/><circle cx="58" cy="80" r="33" fill="none" stroke="#1a0f1f" stroke-width="7"/>
+  <rect x="44" y="34" width="28" height="16" rx="4" fill="#6e6a88" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="60" y="36" width="10" height="12" rx="2" fill="#524e6c"/>
+  <path d="M90.6 9.2 L91.9 19.4 L102.1 18.9 L93.9 25 L99.5 33.6 L90.1 29.6 L85.4 38.8 L84.1 28.6 L73.9 29.1 L82.1 23 L76.5 14.4 L85.9 18.4 Z" fill="#ffe14a" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="88" cy="24" r="4.5" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: serce. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M64 108 C 40 90 14 70 14 46 C 14 28 28 16 44 16 C 54 16 60 22 64 30 C 68 22 74 16 84 16 C 100 16 114 28 114 46 C 114 70 88 90 64 108 Z" fill="#ff4d6d"/>
+  <path d="M114 46 C 114 70 88 90 64 108 C 54 100 44 92 36 84 C 70 92 100 70 110 34 C 113 38 114 42 114 46 Z" fill="#d42e52"/>
+  <ellipse cx="38" cy="40" rx="8" ry="12" fill="#ffffff" opacity="0.7" transform="rotate(40 38 40)"/>
+  <path d="M64 108 C 40 90 14 70 14 46 C 14 28 28 16 44 16 C 54 16 60 22 64 30 C 68 22 74 16 84 16 C 100 16 114 28 114 46 C 114 70 88 90 64 108 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+</svg>

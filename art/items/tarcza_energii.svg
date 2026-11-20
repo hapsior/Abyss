@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: tarcza energii. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M64 12 L107.3 37 L107.3 87 L64 112 L20.7 87 L20.7 37 Z" fill="#50dcff" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M105.6 38 L105.6 86 L64 110 L64 62 Z" fill="#40abd3"/>
+  <ellipse cx="36" cy="38" rx="4" ry="11" fill="#ffffff" opacity="0.7" transform="rotate(60 36 38)"/>
+  <path d="M64 12 L107.3 37 L107.3 87 L64 112 L20.7 87 L20.7 37 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 29 L92.6 45.5 L92.6 78.5 L64 95 L35.4 78.5 L35.4 45.5 Z" fill="#c2f8ff" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M90.8 46.5 L90.8 77.5 L64 93 L64 62 Z" fill="#8fe6f6"/>
+  <path d="M64 29 L92.6 45.5 L92.6 78.5 L64 95 L35.4 78.5 L35.4 45.5 Z" fill="none" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 45 L67.5 58.5 L81 62 L67.5 65.5 L64 79 L60.5 65.5 L47 62 L60.5 58.5 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

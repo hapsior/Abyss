@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: podwojny. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M20 36 L92 36" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M20 36 L92 36" fill="none" stroke="#e6b66a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 22 L28 22 L38 36 L28 50 L8 50 L18 36 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M84 19 L114 36 L84 53 L90 36 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M114 36 L84 53 L90 36 Z" fill="#c69f33"/>
+  <path d="M84 19 L114 36 L84 53 L90 36 Z" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M20 88 L92 88" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M20 88 L92 88" fill="none" stroke="#e6b66a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 74 L28 74 L38 88 L28 102 L8 102 L18 88 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M84 71 L114 88 L84 105 L90 88 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M114 88 L84 105 L90 88 Z" fill="#c69f33"/>
+  <path d="M84 71 L114 88 L84 105 L90 88 Z" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

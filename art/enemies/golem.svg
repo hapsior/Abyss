@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Golem: duży, wolny kamienny wróg z żarzącym się rdzeniem i ogromnymi pięściami. -->
+  <ellipse cx="128" cy="230" rx="92" ry="10" fill="#000000" opacity="0.25"/>
+  <!-- nogi -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round" fill="#8c87a3">
+    <path d="M80 190 L 78 224 L 118 224 L 120 190 Z"/>
+    <path d="M136 190 L 138 224 L 178 224 L 176 190 Z"/>
+  </g>
+  <!-- ręce -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M68 100 C 40 112 36 144 46 168" stroke="#1a0f1f" stroke-width="42"/>
+    <path d="M188 100 C 216 112 220 144 210 168" stroke="#1a0f1f" stroke-width="42"/>
+    <path d="M68 100 C 40 112 36 144 46 168" stroke="#a29db5" stroke-width="32"/>
+    <path d="M188 100 C 216 112 220 144 210 168" stroke="#a29db5" stroke-width="32"/>
+  </g>
+  <!-- tors -->
+  <path d="M70 76 C 100 60 156 60 186 76 C 210 96 214 150 198 190 C 176 212 80 212 58 190 C 42 150 46 96 70 76 Z" fill="#a29db5"/>
+  <path d="M198 150 C 202 168 204 180 198 190 C 176 212 80 212 58 190 C 54 184 52 178 50 172 C 90 198 170 198 198 150 Z" fill="#7d789a"/>
+  <ellipse cx="78" cy="112" rx="9" ry="20" fill="#ffffff" opacity="0.4" transform="rotate(20 78 112)"/>
+  <path d="M70 76 C 100 60 156 60 186 76 C 210 96 214 150 198 190 C 176 212 80 212 58 190 C 42 150 46 96 70 76 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- pęknięcia -->
+  <path d="M84 84 L 94 100 L 84 112 L 92 126" fill="none" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M176 180 L 164 190 L 172 204 M60 160 L 76 164 L 72 176" fill="none" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- mech -->
+  <g fill="#5fb04a" stroke="#2f6b2a" stroke-width="4" stroke-linejoin="round">
+    <path d="M60 128 C 62 114 76 112 84 118 C 90 130 78 140 66 138 Z"/>
+    <path d="M150 190 C 156 182 172 182 182 190 C 178 202 158 204 150 196 Z"/>
+  </g>
+  <!-- głowa -->
+  <path d="M96 34 L 160 34 C 168 38 170 56 168 80 C 160 92 96 92 88 80 C 86 56 88 38 96 34 Z" fill="#a29db5" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M168 80 C 160 92 96 92 88 80 C 100 84 150 84 166 70 Z" fill="#7d789a"/>
+  <path d="M96 34 L 160 34 C 168 38 170 56 168 80 C 160 92 96 92 88 80 C 86 56 88 38 96 34 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M100 44 L 130 44" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <path d="M140 36 L 146 48 L 138 56" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M94 38 C 98 28 112 28 120 36 Z" fill="#5fb04a" stroke="#2f6b2a" stroke-width="4" stroke-linejoin="round"/>
+  <!-- oczy -->
+  <ellipse cx="112" cy="64" rx="14" ry="9" fill="#ffd23f" opacity="0.35"/>
+  <ellipse cx="148" cy="64" rx="14" ry="9" fill="#ffd23f" opacity="0.35"/>
+  <path d="M100 58 L 124 66 L 102 72 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M160 58 L 136 66 L 158 72 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M96 52 L 126 62 M162 52 L 134 62" stroke="#1a0f1f" stroke-width="9" stroke-linecap="round"/>
+  <!-- rdzeń -->
+  <circle cx="128" cy="140" r="30" fill="#ff9a3c" opacity="0.3"/>
+  <circle cx="128" cy="140" r="20" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="7"/>
+  <circle cx="128" cy="140" r="10" fill="#ffd23f"/>
+  <circle cx="124" cy="136" r="4" fill="#ffffff" opacity="0.8"/>
+  <!-- pięści -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <circle cx="46" cy="176" r="30" fill="#a29db5"/>
+    <circle cx="210" cy="176" r="30" fill="#a29db5"/>
+  </g>
+  <path d="M60 188 C 54 200 40 204 28 198 C 42 206 62 200 70 186 Z" fill="#7d789a"/>
+  <path d="M226 188 C 220 200 206 204 194 198 C 208 206 228 200 236 186 Z" fill="#7d789a"/>
+  <g fill="none" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round">
+    <path d="M52 160 L 56 176 M62 164 L 64 178 M200 160 L 204 176 M210 164 L 212 178"/>
+  </g>
+  <ellipse cx="34" cy="166" rx="5" ry="9" fill="#ffffff" opacity="0.5" transform="rotate(30 34 166)"/>
+  <ellipse cx="198" cy="166" rx="5" ry="9" fill="#ffffff" opacity="0.5" transform="rotate(30 198 166)"/>
+  <path d="M30 186 C 32 176 42 174 46 180 C 44 190 34 192 30 186 Z" fill="#5fb04a" stroke="#2f6b2a" stroke-width="3"/>
+</svg>

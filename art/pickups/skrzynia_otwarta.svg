@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Znajdźka: skrzynia otwarta. Płótno 128x128. -->
+  <ellipse cx="64" cy="116" rx="50" ry="5" fill="#000" opacity="0.25"/>
+  <path d="M24 8 L104 8 L110 46 L18 46 Z" fill="#7a4528" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M32 14 L96 14 L100 40 L28 40 Z" fill="#4f2a18" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="64" cy="50" r="36" fill="#fff2a0" opacity="0.55"/>
+  <circle cx="64" cy="50" r="24" fill="#ffffff" opacity="0.35"/>
+  <path d="M24 70 C 24 52 40 44 64 44 C 88 44 104 52 104 70 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M104 70 C 104 52 88 44 64 44 C 90 52 90 60 92 70 Z" fill="#d9a514"/>
+  <circle cx="44" cy="52" r="8" fill="#ffe266" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="84" cy="50" r="8" fill="#ffe266" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M60 36 L68 44 L60 54 L52 44 Z" fill="#ff4d6d" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M26 27 L27.9 34.1 L35 36 L27.9 37.9 L26 45 L24.1 37.9 L17 36 L24.1 34.1 Z" fill="#ffffff"/>
+  <path d="M102 22 L103.7 28.3 L110 30 L103.7 31.7 L102 38 L100.3 31.7 L94 30 L100.3 28.3 Z" fill="#fff7b0"/>
+  <path d="M16 66 L112 66 L112 106 C 112 110 108 112 104 112 L24 112 C 20 112 16 110 16 106 Z" fill="#b97a4a"/>
+  <path d="M88 66 L112 66 L112 106 C 112 110 108 112 104 112 L88 112 Z" fill="#945f3d"/>
+  <path d="M16 66 L112 66 L112 106 C 112 110 108 112 104 112 L24 112 C 20 112 16 110 16 106 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M34 66 L46 66 L46 112 L34 112 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M84 66 L96 66 L96 112 L84 112 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M52 64 L76 64 L76 88 C 76 92 72 94 64 94 C 56 94 52 92 52 88 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="64" cy="74" r="4.5" fill="#2a1f35"/>
+  <rect x="62" y="76" width="4" height="9" rx="1.5" fill="#2a1f35"/>
+</svg>

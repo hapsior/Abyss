@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 96" width="192" height="96">
+  <!-- Miecz: szeroki kreskówkowy miecz Rycerza ze świecącą niebieską końcówką. -->
+  <!-- pivot: 44,48 -->
+  <ellipse cx="164" cy="48" rx="22" ry="26" fill="#5b9cff" opacity="0.3"/>
+  <path d="M72 32 L 148 32 L 178 48 L 148 64 L 72 64 Z" fill="#c8d2e6"/>
+  <path d="M72 52 L 160 52 L 178 48 L 148 64 L 72 64 Z" fill="#9aa6c2"/>
+  <path d="M82 40 L 140 40" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M72 32 L 148 32 L 178 48 L 148 64 L 72 64 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M150 33 L 178 48 L 150 63 C 156 54 156 42 150 33 Z" fill="#5b9cff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M160 42 L 168 47" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <!-- jelec -->
+  <rect x="60" y="18" width="16" height="60" rx="8" fill="#5b9cff" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M71 28 L 71 68" stroke="#3f75d1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M65 26 L 65 40" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <!-- rękojeść -->
+  <rect x="26" y="40" width="36" height="16" rx="5" fill="#b97a4a" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M38 41 L 34 55 M 48 41 L 44 55" stroke="#8a5530" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="22" cy="48" r="10" fill="#ffd23f" stroke="#1a0f1f" stroke-width="8"/>
+</svg>

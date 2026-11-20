@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Znajdźka: krysztal xp. Płótno 64x64. -->
+  <path d="M20 6 L44 6 L58 22 L32 58 L6 22 Z" fill="#6fe04e"/>
+  <path d="M44 6 L58 22 L32 58 L36 22 Z" fill="#56aa3f"/>
+  <path d="M20 6 L44 6 L36 22 L28 22 Z" fill="#b7efa6"/>
+  <ellipse cx="15" cy="18" rx="2" ry="5" fill="#ffffff" opacity="0.8" transform="rotate(30 15 18)"/>
+  <path d="M20 6 L44 6 L58 22 L32 58 L6 22 Z" fill="none" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M6 22 L58 22 M20 6 L28 22 L32 58 M44 6 L36 22 L32 58" fill="none" stroke="#1a0f1f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

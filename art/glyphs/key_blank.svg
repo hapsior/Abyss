@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Klawisz klawiatury (etykietę drukuje gra na górze, środek ok. y=29). -->
+<rect x="6" y="12" width="52" height="46" rx="10" fill="#a9a3bd" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/><rect x="6" y="6" width="52" height="46" rx="10" fill="#e9e6f0" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round"/><path d="M14 13 L46 13" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/><path d="M51 22 L51 40" fill="none" stroke="#a9a3bd" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+</svg>

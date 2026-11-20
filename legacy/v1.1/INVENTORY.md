@@ -1,0 +1,587 @@
+# INVENTORY (reconstructed tree + shipped v1.1 bytecode)
+
+Line counts for `.py` files are exact (recovered from the transcript). For `game/*.py` and `main.py` the sources are NOT recoverable from the transcript; the figure is the highest source line number recorded in the shipped v1.1 `.pyc` (approx. length). Purposes come from docstrings, otherwise from names only.
+
+## Recovered files (exact line counts)
+
+- `.gitignore` — 2 lines
+- `CZYTAJ_MNIE.txt` — 109 lines
+- `README.md` — 39 lines
+- `tools/export_steam_assets.py` — 378 lines
+- `docs/STEAM_PUBLIKACJA.md` — 207 lines
+- `.claude/agents/balance-analyst.md` — 19 lines
+- `.claude/agents/code-reviewer.md` — 18 lines
+- `.claude/agents/qa-playtester.md` — 13 lines
+
+## Shipped bytecode modules (source not recovered)
+
+### game/__init__.py — ~1 lines (from bytecode); module doc: Otchłań – roguelike.
+
+### game/achievements.py — ~242 lines (from bytecode); module doc: Osiągnięcia: definicje, śledzenie postępów, powiadomienia, synchronizacja ze Steam.
+- class `Achievements` — Achievements
+  - def `__init__`
+  - def `unlocked`
+  - def `progress`
+  - def `unlock`
+  - def `sync_to_steam` — Osiągnięcia zdobyte bez Steama (offline) wysyłamy przy starcie.
+  - def `count`
+  - def `event`
+  - def `update`
+  - def `draw`
+
+### game/app.py — ~234 lines (from bytecode); module doc: Główna pętla aplikacji, sceny, zapis postępów, osiągnięcia, Steam, pady.
+- class `App` — App
+  - def `__init__`
+  - def `_set_icon`
+  - def `_init_controllers`
+  - def `_ctrl_added`
+  - def `pad` — (lx, ly, rx, ry, rt) z n-tego pada albo None.
+  - def `pad_index` — Numer pada (0, 1, ...) dla zdarzenia pygame (instance_id).
+  - def `goto`
+  - def `save`
+  - def `unlock`
+  - def `record_floor`
+  - def `on_win`
+  - def `save_run`
+  - def `toggle_fullscreen`
+  - def `quit`
+  - def `run`
+- def `main`
+
+### game/audio.py — ~304 lines (from bytecode); module doc: Proceduralnie generowane efekty dźwiękowe i muzyka (bez plików audio).
+- class `Audio` — Audio
+  - def `__init__`
+  - def `init`
+  - def `_to_sound` — samples: lista floatów -1..1
+  - def `_tone`
+  - def `_mix`
+  - def `_seq`
+  - def `_build_sfx`
+  - def `_note_freq`
+  - def `_render_track`
+  - def `_build_music`
+  - def `play`
+  - def `play_music`
+  - def `_try_music`
+  - def `update` — Wywoływane co klatkę – uruchamia muzykę gdy skończy się generować.
+  - def `stop_music`
+  - def `set_volumes`
+
+### game/balance.py — ~125 lines (from bytecode); module doc: Wszystkie najważniejsze liczby balansu w jednym miejscu.
+- def `_by_floor`
+- def `enemy_hp_scale`
+- def `enemy_dmg_scale`
+- def `enemy_speed_scale`
+- def `enemy_fire_scale`
+- def `boss_tempo`
+- def `boss_dps_cap`
+- def `seal_mods` — Łączne modyfikatory pieczęci 1..level.
+- def `effective_difficulty` — Słownik trudności z nałożonymi pieczęciami.
+
+### game/bosses.py — ~784 lines (from bytecode); module doc: Bossowie – ataki zapisane jako generatory (skrypty), kilka faz.
+- class `Boss` — Boss
+  - def `__init__`
+  - def `frac`
+  - def `next_attack`
+  - def `available_attacks`
+  - def `ai`
+  - def `reset_state` — Przywraca stan po przerwaniu ataku (np. przy zmianie fazy).
+  - def `phase_change`
+  - def `wait_time`
+  - def `on_death`
+- class `SlimeKing` — SlimeKing
+  - def `setup`
+  - def `land`
+  - def `atk_hops`
+  - def `atk_jump`
+  - def `atk_spit`
+  - def `ai`
+  - def `draw`
+- class `Lich` — Lich
+  - def `setup`
+  - def `available_attacks`
+  - def `atk_spiral`
+  - def `atk_cross`
+  - def `atk_teleport`
+  - def `atk_summon`
+  - def `ai`
+  - def `draw`
+  - def `_draw`
+- class `HiveMother` — HiveMother
+  - def `setup`
+  - def `atk_brood`
+  - def `atk_shotgun`
+  - def `atk_charge`
+  - def `atk_wave`
+  - def `ai`
+  - def `draw`
+- class `ForgeLord` — ForgeLord
+  - def `setup`
+  - def `available_attacks`
+  - def `atk_slam`
+  - def `atk_flame`
+  - def `atk_dash`
+  - def `atk_meteors`
+  - def `draw`
+- class `AbyssHeart` — AbyssHeart
+  - def `setup`
+  - def `available_attacks`
+  - def `atk_flower`
+  - def `atk_aimed`
+  - def `atk_spawn`
+  - def `atk_streams`
+  - def `atk_rain`
+  - def `atk_hell`
+  - def `phase_change`
+  - def `ai`
+  - def `draw`
+
+### game/characters.py — ~83 lines (from bytecode); module doc: Grywalne postacie – każda ma inne statystyki, pasywkę i umiejętność aktywną.
+
+### game/config.py — ~110 lines (from bytecode); module doc: Stałe, ścieżki, motywy pięter i poziomy trudności.
+- def `resource_path` — Ścieżka do zasobów, działa też po spakowaniu PyInstallerem.
+- def `save_dir`
+
+### game/dungeon.py — ~459 lines (from bytecode); module doc: Generowanie pięter (siatka pokoi jak w Isaacu) i układów przeszkód.
+- def `_forbidden`
+- class `Room` — Room
+  - def `__init__`
+  - def `tile_at`
+  - def `solid`
+  - def `resolve_circle`
+  - def `raycast` — Punkt, w którym promień trafia w ścianę lub kamień.
+  - def `los_thick` — Linia strzału dla pocisku o szerokości ~2w (środek i dwie linie równoległe).
+  - def `los`
+  - def `free_tiles`
+  - def `obstacles`
+  - def `remove_obstacle`
+  - def `flow_field`
+  - def `build_bg`
+  - def `stain`
+- def `_layout`
+- def `_connected`
+- def `make_layout`
+- class `Floor` — Floor
+  - def `__init__`
+  - def `_neighbors`
+  - def `_generate`
+  - def `_bfs`
+  - def `neighbor`
+- def `door_rect`
+
+### game/enemies.py — ~1045 lines (from bytecode); module doc: Zwykli przeciwnicy.
+- def `blob`
+- class `Enemy` — Enemy
+  - def `__init__`
+  - def `setup`
+  - def `fire`
+  - def `fire_spread`
+  - def `fire_ring`
+  - def `angle_to`
+  - def `dist_to`
+  - def `has_los` — Czy ma czystą linię strzału do celu (bez kamieni po drodze). Wynik buforowany na krótko.
+  - def `aim_at` — Kąt strzału; na wyższych poziomach trudności z wyprzedzeniem ruchu gracza.
+  - def `chase`
+  - def `flee`
+  - def `seek_firing_spot` — Idzie do najbliższego miejsca, z którego widać cel (wychylenie się zza osłony).
+  - def `update`
+  - def `ai`
+  - def `knock`
+  - def `on_death`
+  - def `draw`
+  - def `draw_body`
+- class `Slime` — Slime
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+- class `BigSlime` — BigSlime
+  - def `on_death`
+- class `Bat` — Bat
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+- class `Shooter` — Shooter
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+- class `Charger` — Charger
+  - def `setup`
+  - def `ai`
+  - def `draw`
+  - def `draw_body`
+- class `Turret` — Turret
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+- class `Bomber` — Bomber
+  - def `setup`
+  - def `ai`
+  - def `on_death`
+  - def `draw_body`
+- class `Summoner` — Summoner
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+  - def `_body`
+- class `Golem` — Golem
+  - def `setup`
+  - def `ai`
+  - def `draw`
+  - def `draw_body`
+- class `Sniper` — Sniper
+  - def `setup`
+  - def `ai`
+  - def `draw`
+  - def `draw_body`
+- class `Ghost` — Ghost
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+- class `Spinner` — Spinner
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+- class `Imp` — Imp
+  - def `setup`
+  - def `ai`
+  - def `draw_body`
+  - def `_body`
+- def `roll_wave`
+
+### game/entities.py — ~596 lines (from bytecode); module doc: Gracz, pociski, znajdźki, piedestały, przeszkody i efekty obszarowe.
+- def `clamp`
+- class `Bullet` — Bullet
+  - def `__init__`
+  - def `speed`
+  - def `kill`
+  - def `update`
+  - def `draw`
+- class `Pickup` — Pickup
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- class `Pedestal` — Pedestal
+  - def `__init__`
+  - def `draw`
+- class `Obstacle` — Obstacle
+  - def `__init__`
+  - def `draw`
+- class `Effect` — Effect
+  - def `update`
+  - def `draw`
+- class `PoisonCloud` — PoisonCloud
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- class `FirePool` — FirePool
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- class `BlackHole` — BlackHole
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- def `_part`
+- class `Flask` — Flask
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- class `Telegraph` — Telegraph
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- class `Familiar` — Familiar
+  - def `__init__`
+  - def `update`
+  - def `draw`
+
+### game/game.py — ~1565 lines (from bytecode); module doc: Stan jednej rozgrywki: piętra, pokoje, walka, nagrody, co-op, zapis, HUD.
+- class `Input` — Input
+  - def `__init__`
+- class `SpawnMarker` — SpawnMarker
+  - def `__init__`
+- class `Run` — Run
+  - def `__init__`
+  - def `player`
+  - def `char_key`
+  - def `cdef`
+  - def `pending_levelups`
+  - def `active_players`
+  - def `coop_hp_mult`
+  - def `coop_boss_mult`
+  - def `ach_event`
+  - def `to_dict`
+  - def `load_state`
+  - def `save_now`
+  - def `new_floor`
+  - def `enter_room`
+  - def `populate_special`
+  - def `roll_new_item`
+  - def `give_random_items`
+  - def `spawn_wave`
+  - def `spawn_enemy`
+  - def `check_doors`
+  - def `start_transition`
+  - def `banner`
+  - def `shake`
+  - def `on_level_up`
+  - def `on_player_down`
+  - def `write_log` — Lokalna telemetria (wzór Slay the Spire): jedna linia JSON na wyprawę.
+  - def `nearest_player`
+  - def `target_player` — Gracz, którego atakuje dany wróg (najbliższy, z histerezą; niewidzialny – mniej chętnie).
+  - def `target_pos`
+  - def `nearest_enemy`
+  - def `recompute_flows`
+  - def `chase_dir`
+  - def `firing_path` — Najkrótsza droga do kafla, z którego widać cel i który leży w zasięgu [min_d, max_d].
+  - def `random_free_pos`
+  - def `take_token` — System żetonów ataku: tylko kilku wrogów może naraz atakować (bossowie poza systemem).
+  - def `release_token`
+  - def `boss_damage_filter` — Limit DPS bossa (okno 3 s, nadwyżka zadaje 25%) + pancerz w trakcie wejścia.
+  - def `clear_enemy_bullets`
+  - def `damage_enemy`
+  - def `kill_enemy`
+  - def `remove_enemy`
+  - def `boss_defeated`
+  - def `explode`
+  - def `damage_obstacle`
+  - def `chain_lightning`
+  - def `bullet_hit_enemy`
+  - def `collect_pickup`
+  - def `update_pedestals`
+  - def `use_pedestal`
+  - def `take_item`
+  - def `update`
+  - def `room_cleared`
+  - def `draw_world`
+  - def `draw_doors`
+  - def `draw_shopkeeper`
+  - def `draw_altar`
+  - def `draw`
+  - def `draw_banner`
+  - def `draw_minimap`
+  - def `draw_player_hud` — Pasek zdrowia, XP, zrywy i umiejętność jednego gracza.
+  - def `draw_hud`
+  - def `draw_stats_panel`
+  - def `draw_items_panel`
+  - def `draw_overview` — Panele statystyk (TAB/pauza): solo – statystyki + przedmioty, co-op – obaj gracze.
+
+### game/gfx.py — ~526 lines (from bytecode); module doc: Pomocnicze funkcje rysowania: czcionki, tekst z obrysem, poświata, ikony, postacie.
+- def `init`
+- def `font`
+- def `text_surf`
+- def `draw_text`
+- def `wrap_text`
+- def `lerp`
+- def `lerp_color`
+- def `mul_color`
+- def `glow`
+- def `blit_glow`
+- def `shadow`
+- def `vignette`
+- def `panel`
+- def `bar`
+- def `rot`
+- def `poly`
+- def `outlined_circle`
+- def `outlined_ellipse`
+- def `eyes`
+- def `_weapon`
+- def `draw_character`
+- def `star_points`
+- def `draw_icon`
+
+### game/items.py — ~207 lines (from bytecode); module doc: Przedmioty (pasywne, jak w Isaacu) i ulepszenia przy awansie (jak w Brotato).
+- def `rarity_weights`
+- def `roll_rarity`
+- def `roll_item` — Losuje przedmiot, którego gracz jeszcze nie ma (gdy pula się wyczerpie – dowolny).
+- def `upgrade_min_rarity` — Co 5. poziom gwarantowane co najmniej "Niezwykłe", co 10. – "Rzadkie" (wzór Brotato).
+- def `roll_upgrades`
+- def `make_upgrade`
+- def `apply_upgrade`
+- def `item_price`
+
+### game/particles.py — ~172 lines (from bytecode); module doc: Cząsteczki, pierścienie i latające liczby obrażeń.
+- class `Particle` — Particle
+  - def `__init__`
+- class `Ring` — Ring
+  - def `__init__`
+- class `FloatText` — FloatText
+  - def `__init__`
+- class `Particles` — Particles
+  - def `__init__`
+  - def `clear`
+  - def `burst`
+  - def `spark`
+  - def `add`
+  - def `ring`
+  - def `text`
+  - def `bolt`
+  - def `update`
+  - def `_dec`
+  - def `draw`
+  - def `draw_texts`
+
+### game/player.py — ~574 lines (from bytecode); module doc: Postać gracza: statystyki, ruch, strzelanie, zryw, umiejętności, powalenie w co-op.
+- class `Player` — Player
+  - def `__init__`
+  - def `active` — Czy postać bierze udział w walce (żyje i nie jest powalona).
+  - def `tag`
+  - def `to_dict`
+  - def `load_dict`
+  - def `clamp_stats`
+  - def `xp_needed`
+  - def `add_xp`
+  - def `eff_damage`
+  - def `fire_interval`
+  - def `dps_estimate` — Przybliżone obrażenia na sekundę (do analizy balansu).
+  - def `move_speed`
+  - def `apply_item`
+  - def `update`
+  - def `update_downed` — Powalony gracz czeka, aż partner postoi obok (podniesienie).
+  - def `revive`
+  - def `orbital_positions`
+  - def `make_bullet`
+  - def `shoot`
+  - def `use_ability`
+  - def `hurt`
+  - def `heal`
+  - def `on_hit`
+  - def `draw`
+  - def `draw_downed`
+
+### game/save.py — ~49 lines (from bytecode); module doc: Zapis postępów (odblokowania, rekordy, ustawienia).
+- def `_path`
+- def `load`
+- def `save`
+
+### game/savegame.py — ~140 lines (from bytecode); module doc: Zapis i wczytywanie trwającej wyprawy ("Zapisz i wyjdź" / "Kontynuuj").
+- def `path`
+- def `room_to_dict`
+- def `room_from_dict`
+- def `floor_to_dict`
+- def `floor_from_dict`
+- def `rng_state_to_json`
+- def `rng_state_from_json`
+- def `exists`
+- def `write`
+- def `read`
+- def `summary` — Krótki opis zapisu do menu (albo None).
+- def `delete`
+
+### game/scenes.py — ~1318 lines (from bytecode); module doc: Sceny: menu, wybór trybu/postaci/trudności, osiągnięcia, ustawienia, gra, wyniki.
+- def `_btn`
+- def `ctrl_key` — Tłumaczy przyciski pada na klawisze (nawigacja po menu).
+- def `key_of`
+- class `MenuBG` — MenuBG
+  - def `__init__`
+  - def `update`
+  - def `draw`
+- class `Scene` — Scene
+  - def `__init__`
+  - def `on_enter`
+  - def `handle`
+  - def `update`
+  - def `draw`
+- def `button`
+- class `MenuList` — MenuList
+  - def `__init__`
+  - def `handle`
+  - def `draw`
+- class `MainMenu` — MainMenu
+  - def `__init__`
+  - def `on_enter`
+  - def `start_new`
+  - def `handle`
+  - def `continue_run`
+  - def `update`
+  - def `draw`
+- class `HowTo` — HowTo
+  - def `__init__`
+  - def `handle`
+  - def `update`
+  - def `draw`
+- class `AchievementsScene` — AchievementsScene
+  - def `__init__`
+  - def `handle`
+  - def `update`
+  - def `draw`
+- class `Options` — Options
+  - def `__init__`
+  - def `change`
+  - def `leave`
+  - def `handle`
+  - def `update`
+  - def `draw`
+- def `char_unlocked`
+- class `CharSelect` — CharSelect
+  - def `__init__`
+  - def `confirm`
+  - def `back`
+  - def `handle`
+  - def `update`
+  - def `draw`
+  - def `best_floor`
+  - def `draw_details`
+- class `DiffSelect` — DiffSelect
+  - def `__init__`
+  - def `change_seal`
+  - def `confirm`
+  - def `handle`
+  - def `update`
+  - def `draw_seals`
+  - def `draw`
+- class `InputState` — InputState
+  - def `__init__`
+- class `GameScene` — GameScene
+  - def `__init__`
+  - def `on_enter`
+  - def `on_app_exit` — Zamknięcie okna w trakcie wyprawy – zapisujemy stan.
+  - def `pad_owner` — Który gracz używa danego pada (indeks w app.controllers).
+  - def `player_pad`
+  - def `open_levelup`
+  - def `roll_for`
+  - def `banish` — Usuwa ulepszenie z puli do końca wyprawy i losuje w jego miejsce inne.
+  - def `pick_upgrade`
+  - def `reroll`
+  - def `open_pause`
+  - def `close_overlay`
+  - def `handle`
+  - def `_auto_aim`
+  - def `_apply_pad`
+  - def `build_inputs`
+  - def `update`
+  - def `card_rects`
+  - def `reroll_rect`
+  - def `draw`
+  - def `dim`
+  - def `draw_levelup`
+  - def `draw_pause`
+- class `ResultScene` — ResultScene
+  - def `__init__`
+  - def `on_enter`
+  - def `handle`
+  - def `update`
+  - def `draw`
+
+### game/selftest.py — ~99 lines (from bytecode); module doc: Autotest uruchamiany parametrem --selftest (np. na komputerze testowym lub w CI).
+- def `run_selftest`
+
+### game/steam.py — ~231 lines (from bytecode); module doc: Integracja ze Steamworks przez "flat API" (ctypes) – bez kompilowania wrappera.
+- def `game_dir`
+- class `Steam` — Steam
+  - def `__init__`
+  - def `init` — Wywołać PRZED utworzeniem okna (wymóg nakładki Steam dla D3D).
+  - def `_accessor`
+  - def `_call_init`
+  - def `_bind`
+  - def `_read_language`
+  - def `unlock`
+  - def `progress` — Okienko postępu Steam (np. 500/1000) – bez odblokowania.
+  - def `is_unlocked`
+  - def `clear` — Tylko do testów (reset osiągnięcia na koncie deweloperskim).
+  - def `store`
+  - def `run_callbacks`
+  - def `shutdown`
+
+### main.py — 64 lines (shipped as source, copied to spec/main.py.shipped)

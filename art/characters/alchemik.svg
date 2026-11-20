@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Alchemik: szalony naukowiec z mosiężnymi goglami, białą czupryną i zielonym eliksirem. Patrzy w prawo (gra odbija w poziomie). -->
+  
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#3a3550"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#3a3550"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#ffc24a"/>
+  <!-- cień (cel shading) -->
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#d99a20"/>
+  <!-- połysk -->
+  <ellipse cx="86" cy="150" rx="11" ry="20" fill="#ffffff" opacity="0.45" transform="rotate(18 86 150)"/>
+  <!-- obrys ciała -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- dzika fryzura -->
+  <path d="M54 108 C 36 100 30 78 40 64 C 44 76 54 80 62 78 C 56 56 70 40 84 40 C 86 52 94 56 100 54 C 100 34 120 24 132 30 C 138 38 140 46 146 48 C 156 34 178 34 188 46 C 186 58 192 64 200 66 C 214 66 224 84 216 104 C 208 98 202 100 196 102 L 190 112 C 160 100 100 100 66 112 Z" fill="#fff" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M196 70 C 206 76 212 88 210 100 L 196 102 L 190 112 C 196 98 198 84 196 70 Z" fill="#c9c6e8"/>
+  <path d="M70 70 C 76 56 86 48 96 46" fill="none" stroke="#c9c6e8" stroke-width="5" stroke-linecap="round" opacity="0.0"/>
+  <!-- gogle na czole -->
+  <path d="M58 100 C 100 90 156 90 198 100" fill="none" stroke="#1a0f1f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M58 100 C 100 90 156 90 198 100" fill="none" stroke="#7a4a1a" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#1a0f1f" stroke-width="8">
+    <circle cx="100" cy="100" r="21" fill="#e0a030"/>
+    <circle cx="156" cy="100" r="21" fill="#e0a030"/>
+  </g>
+  <circle cx="100" cy="100" r="13" fill="#8cff6e" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="156" cy="100" r="13" fill="#8cff6e" stroke="#1a0f1f" stroke-width="5"/>
+  <ellipse cx="95" cy="95" rx="4" ry="6" fill="#fff" opacity="0.85" transform="rotate(30 95 95)"/>
+  <ellipse cx="151" cy="95" rx="4" ry="6" fill="#fff" opacity="0.85" transform="rotate(30 151 95)"/>
+  <!-- oczy: szalone -->
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="100" cy="148" rx="17" ry="19" fill="#fff"/>
+    <ellipse cx="158" cy="148" rx="14" ry="16" fill="#fff"/>
+  </g>
+  <circle cx="106" cy="150" r="5" fill="#1a0f1f"/><circle cx="163" cy="150" r="5" fill="#1a0f1f"/>
+  <path d="M80 128 L 116 134" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M144 130 C 154 124 164 124 174 130" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <!-- szalony uśmiech -->
+  <path d="M96 178 C 112 204 150 206 170 174 C 150 184 118 186 96 178 Z" fill="#7a1c2a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M104 181 L 108 190 L 116 183 L 122 192 L 130 185 L 138 192 L 144 185 L 154 190 L 160 182 C 140 187 120 187 104 181 Z" fill="#fff"/>
+  <!-- zielona plama i bąbelki -->
+  <path d="M168 200 C 160 190 176 184 184 190 C 196 188 202 200 194 208 C 200 216 188 224 178 218 C 168 220 160 210 168 200 Z" fill="#8cff6e" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="178" cy="200" r="3.5" fill="#fff" opacity="0.8"/>
+  <circle cx="204" cy="168" r="9" fill="#8cff6e" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="201" cy="165" r="2.5" fill="#fff"/>
+  <circle cx="218" cy="144" r="6" fill="#8cff6e" stroke="#1a0f1f" stroke-width="4"/>
+  <ellipse cx="78" cy="176" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+</svg>

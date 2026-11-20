@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Kafel (podłoga kuźni, wariant): bezszwowy, bez konturów, niski kontrast. -->
+<rect width="128" height="128" fill="#33201c"/>
+<rect x="1.2" y="1.2" width="61.6" height="29.6" rx="2" fill="#482c26"/>
+<path d="M2 2 L62 2" fill="none" stroke="#50342e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M2 30 L62 30" fill="none" stroke="#38221d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="65.2" y="1.2" width="61.6" height="29.6" rx="2" fill="#492d27"/>
+<path d="M66 2 L126 2" fill="none" stroke="#51352f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M66 30 L126 30" fill="none" stroke="#39231e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="33.2" y="33.2" width="61.6" height="29.6" rx="2" fill="#4e322c"/>
+<path d="M34 34 L94 34" fill="none" stroke="#563a34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M34 62 L94 62" fill="none" stroke="#3c2722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="-30.8" y="33.2" width="61.6" height="29.6" rx="2" fill="#482c26"/>
+<rect x="97.2" y="33.2" width="61.6" height="29.6" rx="2" fill="#482c26"/>
+<path d="M-30 34 L30 34" fill="none" stroke="#50342e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M98 34 L158 34" fill="none" stroke="#50342e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M-30 62 L30 62" fill="none" stroke="#38221e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M98 62 L158 62" fill="none" stroke="#38221e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1.2" y="65.2" width="61.6" height="29.6" rx="2" fill="#492d27"/>
+<path d="M2 66 L62 66" fill="none" stroke="#51352f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M2 94 L62 94" fill="none" stroke="#39231e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="65.2" y="65.2" width="61.6" height="29.6" rx="2" fill="#4a2e28"/>
+<path d="M66 66 L126 66" fill="none" stroke="#523630" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M66 94 L126 94" fill="none" stroke="#39231f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="33.2" y="97.2" width="61.6" height="29.6" rx="2" fill="#452923"/>
+<path d="M34 98 L94 98" fill="none" stroke="#4d312b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M34 126 L94 126" fill="none" stroke="#35201b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="-30.8" y="97.2" width="61.6" height="29.6" rx="2" fill="#492d27"/>
+<rect x="97.2" y="97.2" width="61.6" height="29.6" rx="2" fill="#492d27"/>
+<path d="M-30 98 L30 98" fill="none" stroke="#51352f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M98 98 L158 98" fill="none" stroke="#51352f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M-30 126 L30 126" fill="none" stroke="#39231e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M98 126 L158 126" fill="none" stroke="#39231e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M80.62 101.5 L86.37 104.37 L91.09 110.78 L93.36 119.79" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M20.16 1.92 L14.46 5.41 L12.07 13.24 L5.62 19.55" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M63.97 84.79 L54.49 91.62 L44.66 92.21 L38.37 95.08" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M98.08 51.25 L102.77 41.46 L100.3 31.1 L95.53 23.9" fill="none" stroke="#ff8232" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+</svg>

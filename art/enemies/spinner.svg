@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Kolczak: stalowa kolczasta kula, która wiruje i sieje pociskami. -->
+  <ellipse cx="96" cy="172" rx="56" ry="9" fill="#000000" opacity="0.25"/>
+  <g fill="#8b95ad" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round">
+    <polygon points="131.3,73.2 169.4,72.3 136.0,90.6"/>
+    <polygon points="136.0,93.4 169.4,111.7 131.3,110.8"/>
+    <polygon points="129.9,113.2 149.7,145.7 117.2,125.9"/>
+    <polygon points="114.8,127.3 115.7,165.4 97.4,132.0"/>
+    <polygon points="94.6,132.0 76.3,165.4 77.2,127.3"/>
+    <polygon points="74.8,125.9 42.3,145.7 62.1,113.2"/>
+    <polygon points="60.7,110.8 22.6,111.7 56.0,93.4"/>
+    <polygon points="56.0,90.6 22.6,72.3 60.7,73.2"/>
+    <polygon points="62.1,70.8 42.3,38.3 74.8,58.1"/>
+    <polygon points="77.2,56.7 76.3,18.6 94.6,52.0"/>
+    <polygon points="97.4,52.0 115.7,18.6 114.8,56.7"/>
+    <polygon points="117.2,58.1 149.7,38.3 129.9,70.8"/>
+  </g>
+  <circle cx="96" cy="92" r="46" fill="#b4bccb"/>
+  <path d="M139.8 88.2 A 44 44 0 0 1 70.8 128.0 A 62 62 0 0 0 139.8 88.2 Z" fill="#8b95ad"/>
+  <ellipse cx="66" cy="66" rx="8" ry="15" fill="#ffffff" opacity="0.6" transform="rotate(40 66 66)"/>
+  <circle cx="96" cy="92" r="46" fill="none" stroke="#1a0f1f" stroke-width="9"/>
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.6" fill="none">
+    <path d="M53.6 109.8 L 37.3 112.1"/>
+    <path d="M50.4 86.2 L 35.2 80.1"/>
+    <path d="M59.4 64.2 L 49.3 51.2"/>
+    <path d="M78.2 49.6 L 75.9 33.3"/>
+    <path d="M101.8 46.4 L 107.9 31.2"/>
+  </g>
+  <!-- nity -->
+  <g fill="#6b7590" stroke="#1a0f1f" stroke-width="3">
+    <circle cx="68" cy="108" r="3.5"/><circle cx="124" cy="108" r="3.5"/><circle cx="96" cy="124" r="3.5"/>
+  </g>
+  <!-- oko -->
+  <ellipse cx="96" cy="88" rx="24" ry="20" fill="#ffffff" stroke="#1a0f1f" stroke-width="6"/>
+  <circle cx="103" cy="90" r="11" fill="#e0314f" stroke="#1a0f1f" stroke-width="3"/>
+  <circle cx="105" cy="91" r="5.5" fill="#1a0f1f"/>
+  <circle cx="102" cy="87" r="2.5" fill="#ffffff"/>
+  <path d="M68 68 L 110 82" stroke="#1a0f1f" stroke-width="9" stroke-linecap="round"/>
+</svg>

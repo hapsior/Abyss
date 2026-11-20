@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Snajper: kapturowy strzelec z długą kuszą/karabinem w prawo i wielkim okiem-lunetą. -->
+  <ellipse cx="80" cy="176" rx="52" ry="9" fill="#000000" opacity="0.25"/>
+  <!-- ciało -->
+  <path d="M72 24 C 100 24 112 48 112 72 C 124 106 124 142 114 166 C 94 176 50 176 30 166 C 20 142 22 106 32 72 C 32 48 44 24 72 24 Z" fill="#6f93c9"/>
+  <path d="M112 72 C 124 106 124 142 114 166 C 94 176 50 176 30 166 C 62 170 98 166 108 138 C 112 116 112 94 112 72 Z" fill="#4f72a8"/>
+  <ellipse cx="42" cy="104" rx="6" ry="17" fill="#ffffff" opacity="0.45" transform="rotate(10 42 104)"/>
+  <path d="M72 24 C 100 24 112 48 112 72 C 124 106 124 142 114 166 C 94 176 50 176 30 166 C 20 142 22 106 32 72 C 32 48 44 24 72 24 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- pas -->
+  <path d="M30 140 C 56 150 90 150 118 138" fill="none" stroke="#1a0f1f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M30 140 C 56 150 90 150 118 138" fill="none" stroke="#b97a4a" stroke-width="5" stroke-linecap="round"/>
+  <!-- twarz -->
+  <path d="M72 42 C 92 42 100 58 100 74 C 100 90 90 98 72 98 C 54 98 44 90 44 74 C 44 58 52 42 72 42 Z" fill="#2a1530" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M52 64 L 70 74 L 54 76 Z" fill="#cfe3ff" opacity="0.9"/>
+  <path d="M54 92 L 90 92" stroke="#cfe3ff" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <!-- wielkie oko-luneta -->
+  <circle cx="90" cy="76" r="22" fill="#ffd23f" stroke="#1a0f1f" stroke-width="7"/>
+  <circle cx="90" cy="76" r="15" fill="#ffffff" stroke="#1a0f1f" stroke-width="4"/>
+  <circle cx="94" cy="78" r="8" fill="#e0314f"/>
+  <circle cx="95" cy="79" r="4" fill="#1a0f1f"/>
+  <circle cx="91" cy="74" r="2.5" fill="#ffffff"/>
+  <path d="M90 58 L 90 64 M90 88 L 90 94 M72 76 L 78 76 M102 76 L 108 76" stroke="#1a0f1f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 52 L 106 62" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+  <!-- karabin -->
+  <path d="M84 126 L 100 128 L 100 142 L 84 142 Z" fill="#8a5530" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M96 122 L 172 112 L 172 122 L 100 138 Z" fill="#4a5068" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M112 118 L 112 110 L 144 106 L 144 114 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M118 112 L 138 109" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="108" cy="134" r="8" fill="#ffcf9e" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="140" cy="122" r="7" fill="#ffcf9e" stroke="#1a0f1f" stroke-width="5"/>
+</svg>

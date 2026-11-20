@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: kostka. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M20 38 L64 62 L64 114 L20 88 Z" fill="#e02e48"/>
+  <path d="M64 62 L108 38 L108 88 L64 114 Z" fill="#a81c34"/>
+  <path d="M64 12 L108 38 L64 62 L20 38 Z" fill="#ff6678"/>
+  <ellipse cx="40" cy="38" rx="8" ry="3" fill="#ffffff" opacity="0.7" transform="rotate(-28 40 38)"/>
+  <path d="M64 12 L108 38 L108 88 L64 114 L20 88 L20 38 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M20 38 L64 62 L108 38 M64 62 L64 114" fill="none" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <ellipse cx="64" cy="25" rx="6.5" ry="4" fill="#ffffff"/>
+  <ellipse cx="64" cy="25" rx="6.5" ry="4" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <ellipse cx="86" cy="38" rx="6.5" ry="4" fill="#ffffff"/>
+  <ellipse cx="86" cy="38" rx="6.5" ry="4" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <ellipse cx="42" cy="38" rx="6.5" ry="4" fill="#ffffff"/>
+  <ellipse cx="42" cy="38" rx="6.5" ry="4" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <ellipse cx="64" cy="51" rx="6.5" ry="4" fill="#ffffff"/>
+  <ellipse cx="64" cy="51" rx="6.5" ry="4" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <ellipse cx="64" cy="38" rx="6.5" ry="4" fill="#ffffff"/>
+  <ellipse cx="64" cy="38" rx="6.5" ry="4" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <circle cx="31" cy="54" r="5.5" fill="#ffffff"/>
+  <circle cx="31" cy="54" r="5.5" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <circle cx="42" cy="75" r="5.5" fill="#ffffff"/>
+  <circle cx="42" cy="75" r="5.5" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <circle cx="53" cy="96" r="5.5" fill="#ffffff"/>
+  <circle cx="53" cy="96" r="5.5" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <circle cx="77" cy="68" r="5.5" fill="#f0d0d6"/>
+  <circle cx="77" cy="68" r="5.5" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+  <circle cx="95" cy="84" r="5.5" fill="#f0d0d6"/>
+  <circle cx="95" cy="84" r="5.5" fill="none" stroke="#1a0f1f" stroke-width="2.5"/>
+</svg>

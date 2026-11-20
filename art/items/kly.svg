@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: kly. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M14 42 L114 42 L114 64 Q 114 78 100 78 L90 78 L81 110 L72 78 L56 78 L47 110 L38 78 L28 78 Q 14 78 14 64 Z" fill="#fffdf4"/>
+  <path d="M114 42 L114 64 Q 114 78 100 78 L90 78 L81 110 L76 90 C 90 80 96 60 90 42 Z" fill="#e0d6bc"/>
+  <path d="M14 42 L114 42 L114 64 Q 114 78 100 78 L90 78 L81 110 L72 78 L56 78 L47 110 L38 78 L28 78 Q 14 78 14 64 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M28 58 L28 76 M100 58 L100 76" fill="none" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 34 Q 64 12 120 34 L120 50 Q 94 60 64 54 Q 34 60 8 50 Z" fill="#d82838" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M120 34 L120 50 Q 94 60 64 54 Q 100 50 104 24 Z" fill="#ac1f2e"/>
+  <ellipse cx="30" cy="32" rx="5" ry="9" fill="#ffffff" opacity="0.55" transform="rotate(70 30 32)"/>
+  <path d="M8 34 Q 64 12 120 34 L120 50 Q 94 60 64 54 Q 34 60 8 50 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

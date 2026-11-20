@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: rozszczepienie. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M50 64 L92 28" fill="none" stroke="#1a0f1f" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 64 L92 28" fill="none" stroke="#c68cff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 64 L96 64" fill="none" stroke="#1a0f1f" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 64 L96 64" fill="none" stroke="#c68cff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 64 L92 100" fill="none" stroke="#1a0f1f" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 64 L92 100" fill="none" stroke="#c68cff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <g transform="rotate(40 92 28)"><path d="M92 12.600000000000001 L103 28 L92 43.4 L81 28 Z" fill="#c68cff"/><path d="M92 12.600000000000001 L103 28 L92 43.4 L92 28 Z" fill="#9a6ace"/><path d="M92 12.600000000000001 L103 28 L92 43.4 L81 28 Z" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/></g>
+  <g transform="rotate(90 98 64)"><path d="M98 48.6 L109 64 L98 79.4 L87 64 Z" fill="#c68cff"/><path d="M98 48.6 L109 64 L98 79.4 L98 64 Z" fill="#9a6ace"/><path d="M98 48.6 L109 64 L98 79.4 L87 64 Z" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/></g>
+  <g transform="rotate(140 92 100)"><path d="M92 84.6 L103 100 L92 115.4 L81 100 Z" fill="#c68cff"/><path d="M92 84.6 L103 100 L92 115.4 L92 100 Z" fill="#9a6ace"/><path d="M92 84.6 L103 100 L92 115.4 L81 100 Z" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/></g>
+  <g transform="rotate(90 34 64)"><path d="M34 38.0 L54 64 L34 90.0 L14 64 Z" fill="#c68cff"/><path d="M34 38.0 L54 64 L34 90.0 L34 64 Z" fill="#9a6ace"/><path d="M34 38.0 L54 64 L34 90.0 L14 64 Z" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/></g>
+  <ellipse cx="28" cy="58" rx="3" ry="7" fill="#ffffff" opacity="0.8" transform="rotate(0 28 58)"/>
+</svg>

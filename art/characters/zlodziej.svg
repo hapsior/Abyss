@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Złodziej: złodziej z ciemnym kapturem i czerwoną bandaną na twarzy. Patrzy w prawo (gra odbija w poziomie). -->
+  <!-- ogon kaptura -->
+  <path d="M70 100 C 40 90 22 112 18 142 C 36 132 52 134 70 148 Z" fill="#524d80" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#3a3550"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#3a3550"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#8fa3c7"/>
+  <!-- cień (cel shading) -->
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#6a7ea3"/>
+  <!-- połysk -->
+  <ellipse cx="86" cy="150" rx="11" ry="20" fill="#ffffff" opacity="0.45" transform="rotate(18 86 150)"/>
+  <!-- obrys ciała -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- kaptur ściągnięty -->
+  <path d="M50 150 C 44 96 80 56 128 56 C 176 56 212 96 206 150 L 188 146 C 186 120 176 100 160 96 L 96 96 C 80 100 70 120 68 146 Z" fill="#524d80" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M192 98 C 202 116 206 132 205 146 L 190 146 C 190 128 184 114 172 104 Z" fill="#3b3762"/>
+  <path d="M74 96 C 88 78 108 68 128 68" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+  <!-- oczy półprzymknięte -->
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="102" cy="140" rx="15" ry="15" fill="#fff"/>
+    <ellipse cx="156" cy="140" rx="15" ry="15" fill="#fff"/>
+  </g>
+  <circle cx="108" cy="144" r="8" fill="#1a0f1f"/><circle cx="162" cy="144" r="8" fill="#1a0f1f"/>
+  <circle cx="105" cy="141" r="2.5" fill="#fff"/><circle cx="159" cy="141" r="2.5" fill="#fff"/>
+  <path d="M84 138 L 120 138 L 120 124 C 108 118 92 122 84 132 Z" fill="#8fa3c7" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M138 138 L 174 138 L 174 132 C 166 122 150 118 138 124 Z" fill="#8fa3c7" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M82 116 L 120 124" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M138 118 C 150 108 166 108 176 114" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <!-- bandana -->
+  <path d="M60 162 L 66 158 C 96 172 160 172 190 158 L 196 162 C 192 186 160 214 128 218 C 96 214 64 186 60 162 Z" fill="#ff5a5a" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M176 176 C 174 192 160 206 142 214 C 168 208 184 192 190 174 Z" fill="#d93a44"/>
+  <circle cx="100" cy="184" r="4" fill="#fff" opacity="0.8"/><circle cx="128" cy="198" r="4" fill="#fff" opacity="0.8"/><circle cx="156" cy="184" r="4" fill="#fff" opacity="0.8"/>
+  <path d="M72 160 C 96 172 160 172 184 160" fill="none" stroke="#ff9a9a" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <!-- węzeł -->
+  <path d="M192 160 L 226 150 L 218 176 Z" fill="#ff5a5a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M192 160 L 220 188 L 232 172 Z" fill="#d93a44" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+</svg>

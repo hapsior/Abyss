@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: czarna dziura. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <circle cx="64" cy="64" r="48" fill="#c070ff" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <g transform="rotate(0 64 64)"><path d="M64 20 C 100 22 116 56 98 82" fill="none" stroke="#6a22b8" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M62 28 C 100 22 116 56 98 82" fill="none" stroke="#e8c4ff" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/></g>
+  <g transform="rotate(120 64 64)"><path d="M64 20 C 100 22 116 56 98 82" fill="none" stroke="#6a22b8" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M62 28 C 100 22 116 56 98 82" fill="none" stroke="#e8c4ff" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/></g>
+  <g transform="rotate(240 64 64)"><path d="M64 20 C 100 22 116 56 98 82" fill="none" stroke="#6a22b8" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><path d="M62 28 C 100 22 116 56 98 82" fill="none" stroke="#e8c4ff" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/></g>
+  <circle cx="64" cy="64" r="48" fill="none" stroke="#1a0f1f" stroke-width="7"/>
+  <circle cx="64" cy="64" r="19" fill="#150a22" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="58" cy="58" r="3" fill="#ffffff" opacity="0.9"/>
+  <circle cx="72" cy="70" r="2" fill="#c8a0ff"/>
+  <circle cx="66" cy="56" r="1.5" fill="#fff" opacity="0.7"/>
+</svg>

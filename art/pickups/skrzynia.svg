@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Znajdźka: skrzynia. Płótno 128x128. -->
+  <ellipse cx="64" cy="116" rx="50" ry="5" fill="#000" opacity="0.25"/>
+  <path d="M16 58 L112 58 L112 106 C 112 110 108 112 104 112 L24 112 C 20 112 16 110 16 106 Z" fill="#b97a4a"/>
+  <path d="M88 58 L112 58 L112 106 C 112 110 108 112 104 112 L88 112 Z" fill="#945f3d"/>
+  <path d="M16 58 L112 58 L112 106 C 112 110 108 112 104 112 L24 112 C 20 112 16 110 16 106 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M16 60 L16 46 C 16 28 36 18 64 18 C 92 18 112 28 112 46 L112 60 Z" fill="#b97a4a"/>
+  <path d="M112 46 C 112 28 92 18 64 18 C 96 22 104 34 100 60 L112 60 Z" fill="#945f3d"/>
+  <ellipse cx="34" cy="38" rx="5" ry="11" fill="#ffffff" opacity="0.6" transform="rotate(50 34 38)"/>
+  <path d="M16 60 L16 46 C 16 28 36 18 64 18 C 92 18 112 28 112 46 L112 60 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M20 60 L108 60" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M34 22 L46 22 L46 112 L34 112 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M84 22 L96 22 L96 112 L84 112 Z" fill="#8e8aa6" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M52 54 L76 54 L76 82 C 76 86 72 88 64 88 C 56 88 52 86 52 82 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="64" cy="66" r="4.5" fill="#2a1f35"/>
+  <rect x="62" y="68" width="4" height="9" rx="1.5" fill="#2a1f35"/>
+</svg>

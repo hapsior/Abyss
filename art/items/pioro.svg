@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: pioro. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="rotate(35 64 64)">
+  <path d="M64 98 L64 118" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 98 L64 118" fill="none" stroke="#cfd3ea" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 10 C 92 30 98 72 64 102 C 30 72 36 30 64 10 Z" fill="#ecedf8"/><path d="M64 10 C 92 30 98 72 64 102 C 74 80 74 40 64 10 Z" fill="#c4c8e6"/><ellipse cx="52" cy="38" rx="4" ry="12" fill="#ffffff" opacity="0.8" transform="rotate(8 52 38)"/><path d="M64 10 C 92 30 98 72 64 102 C 30 72 36 30 64 10 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 18 L64 112" fill="none" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 36 L78 44 M64 52 L82 60 M64 68 L80 76" fill="none" stroke="#a9aed4" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 40 L50 46 M64 56 L46 64" fill="none" stroke="#b8bde0" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

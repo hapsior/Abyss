@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Kafel (podłoga otchłani, wariant): bezszwowy, bez konturów, niski kontrast. -->
+<rect width="128" height="128" fill="#21162d"/>
+<path d="M40.2 24.02 L38.27 34.11 L29.76 38.05 L21.81 39.78 L13.1 37.6 L9.67 28.57 L8 18.94 L15.14 13.02 L21.92 9.12 L31.54 5.73 L37.59 14.42Z" fill="#2f213f"/>
+<path d="M12.06 22.18 L16.28 12.98 L25.57 9.3" fill="none" stroke="#382a48" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M38.87 65.41 L36.53 76.38 L28.76 83.59 L18.52 88.09 L11.07 78.89 L3.44 71.36 L6.22 60.37 L10.05 50.6 L18.85 45.29 L27.82 49.55 L32.97 57.01Z" fill="#291b39"/>
+<path d="M9.64 63.51 L13.85 54.02 L23.09 50.22" fill="none" stroke="#322442" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M36.64 -20.03 L34.16 -11.41 L28.06 -4.45 L18.26 0.9 L10.98 -7.88 L6.86 -15.68 L6.98 -24.33 L11.79 -31.21 L18.87 -36.58 L28.88 -37.45 L38.43 -31.48Z" fill="#2c1e3c"/>
+<path d="M36.64 107.97 L34.16 116.59 L28.06 123.55 L18.26 128.9 L10.98 120.12 L6.86 112.32 L6.98 103.67 L11.79 96.79 L18.87 91.42 L28.88 90.55 L38.43 96.52Z" fill="#2c1e3c"/>
+<path d="M8.59 106.12 L13.09 96.84 L22.98 93.13" fill="none" stroke="#352745" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M80.91 20.55 L76.18 29.72 L69.01 34.82 L60.18 41.67 L50.45 36.19 L43.71 26.67 L48.09 15.82 L51.26 5.93 L60.03 -1.68 L70.57 2.6 L80.64 8.29Z" fill="#281a38"/>
+<path d="M80.91 148.55 L76.18 157.72 L69.01 162.82 L60.18 169.67 L50.45 164.19 L43.71 154.67 L48.09 143.82 L51.26 133.93 L60.03 126.32 L70.57 130.6 L80.64 136.29Z" fill="#281a38"/>
+<path d="M50.7 18.65 L55.09 9.17 L64.74 5.38" fill="none" stroke="#312341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M82.32 66.85 L78.29 76.62 L70.98 85.21 L59.12 85.6 L47.98 81.97 L44.55 71.64 L41.16 61.13 L49.01 52.84 L59.63 51.44 L70.98 48.48 L76.23 58.31Z" fill="#251735"/>
+<path d="M49.49 65.18 L53.96 56.83 L63.79 53.49" fill="none" stroke="#2e203e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M82.8 104.12 L74.84 113.32 L68.07 118.72 L59.68 123.6 L52.52 116.67 L45.32 109.7 L43.36 97.89 L52.11 91.03 L59.79 85.55 L70.58 83.33 L76.3 93.87Z" fill="#2a1c3a"/>
+<path d="M50.1 102.18 L54.41 92.46 L63.88 88.57" fill="none" stroke="#332543" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M124.3 23.69 L123.36 34.65 L114.91 43.16 L102.81 43.33 L94.53 36.19 L88.86 28.48 L87.92 18.63 L91.56 7.87 L102.9 4.72 L113.93 6.31 L124.31 12.13Z" fill="#2e203e"/>
+<path d="M92.2 21.82 L97.03 12.47 L107.66 8.73" fill="none" stroke="#372947" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M120.6 64.79 L122.78 77.19 L110.51 78.97 L101.64 84.25 L92.11 79.52 L88.8 69.55 L86.28 59.25 L92.48 50.51 L101.77 46.26 L112.66 45.7 L116.36 56.7Z" fill="#281a38"/>
+<path d="M91.5 62.87 L96.08 53.3 L106.15 49.48" fill="none" stroke="#312341" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<path d="M126.7 108.38 L119.78 116.36 L113.74 123.72 L103.29 124.87 L95.65 119.01 L85.85 113.67 L87.63 103.56 L92.29 94.26 L103.15 91.02 L114.12 92.31 L122.3 98.95Z" fill="#261836"/>
+<path d="M92.46 106.66 L97.27 98.03 L107.85 94.58" fill="none" stroke="#2f213f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+<ellipse cx="38.12" cy="115.04" rx="0.76" ry="0.76" fill="#c35fff" opacity="0.5691540283378382"/>
+<ellipse cx="110.52" cy="63.72" rx="1.24" ry="1.24" fill="#c35fff" opacity="0.5183416691736006"/>
+<ellipse cx="77.45" cy="37.33" rx="0.92" ry="0.92" fill="#c35fff" opacity="0.437345042833581"/>
+<ellipse cx="38.68" cy="122.84" rx="0.94" ry="0.94" fill="#c35fff" opacity="0.44688755505307015"/>
+<ellipse cx="53.7" cy="104.51" rx="1.03" ry="1.03" fill="#c35fff" opacity="0.4884380830142503"/>
+<ellipse cx="32.7" cy="35.59" rx="0.76" ry="0.76" fill="#c35fff" opacity="0.4043146690227084"/>
+<ellipse cx="33.78" cy="109.09" rx="1.05" ry="1.05" fill="#c35fff" opacity="0.3775972869628339"/>
+<ellipse cx="59.23" cy="15.48" rx="1.1" ry="1.1" fill="#c35fff" opacity="0.460533511280251"/>
+<ellipse cx="109.86" cy="33.19" rx="1.3" ry="1.3" fill="#c35fff" opacity="0.4119006450519434"/>
+<ellipse cx="125.77" cy="81.17" rx="0.73" ry="0.73" fill="#c35fff" opacity="0.5517939390235393"/>
+<ellipse cx="35.28" cy="46.37" rx="0.8" ry="0.8" fill="#c35fff" opacity="0.5593585967646431"/>
+<ellipse cx="11.57" cy="94.5" rx="0.98" ry="0.98" fill="#c35fff" opacity="0.5198606132737624"/>
+<ellipse cx="37.51" cy="10.02" rx="1.34" ry="1.34" fill="#c35fff" opacity="0.5136879325006362"/>
+<ellipse cx="21.72" cy="124.95" rx="1.34" ry="1.34" fill="#c35fff" opacity="0.39565057342091614"/>
+<ellipse cx="2.44" cy="78.21" rx="0.8" ry="0.8" fill="#c35fff" opacity="0.5329725118252084"/>
+<ellipse cx="60.02" cy="90.76" rx="1.1" ry="1.1" fill="#c35fff" opacity="0.5426767659326719"/>
+<path d="M105.17 77.17 L97.2 74.85 L91.42 66.63 L81 60.3 L76.54 50.96 L74.11 36.23" fill="none" stroke="#c35fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+</svg>
