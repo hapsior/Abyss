@@ -1,0 +1,398 @@
+[
+ {
+  "api": "ACH_FIRST_BLOOD",
+  "name": "Pierwsza krew",
+  "desc": "Pokonaj pierwszego wroga.",
+  "icon": "blade",
+  "color": "#e65050",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_FLOOR_2",
+  "name": "W głąb",
+  "desc": "Dotrzyj do Katakumb (piętro 2).",
+  "icon": "skull",
+  "color": "#c8c8b4",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_FLOOR_3",
+  "name": "Pod powierzchnią",
+  "desc": "Dotrzyj do Zalanych Grot (piętro 3).",
+  "icon": "drop",
+  "color": "#5ad2dc",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_FLOOR_4",
+  "name": "Żar Kuźni",
+  "desc": "Dotrzyj do Kuźni (piętro 4).",
+  "icon": "flame",
+  "color": "#ff8232",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_FLOOR_5",
+  "name": "Na dnie",
+  "desc": "Dotrzyj do Otchłani (piętro 5).",
+  "icon": "swirl",
+  "color": "#c35fff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_1",
+  "name": "Królobójca",
+  "desc": "Pokonaj Króla Glutów.",
+  "icon": "crown",
+  "color": "#78d25a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_2",
+  "name": "Kości do grobu",
+  "desc": "Pokonaj Licza.",
+  "icon": "skull",
+  "color": "#be8cff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_3",
+  "name": "Bez żądła",
+  "desc": "Pokonaj Matkę Roju.",
+  "icon": "wing",
+  "color": "#f0c846",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_4",
+  "name": "Wystygły",
+  "desc": "Pokonaj Władcę Kuźni.",
+  "icon": "shield",
+  "color": "#ff8c3c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN",
+  "name": "Serce w kawałkach",
+  "desc": "Pokonaj Serce Otchłani.",
+  "icon": "heart",
+  "color": "#e6325a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_HARD",
+  "name": "Hartowany",
+  "desc": "Wygraj na poziomie Trudnym lub wyższym.",
+  "icon": "flame",
+  "color": "#ff8c3c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_NIGHTMARE",
+  "name": "Koszmar się kończy",
+  "desc": "Wygraj na poziomie Koszmar.",
+  "icon": "skull",
+  "color": "#eb3c50",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_FAST",
+  "name": "Sprinter",
+  "desc": "Wygraj w mniej niż 25 minut.",
+  "icon": "hourglass",
+  "color": "#e6c878",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_UNLOCK_ALCHEMIK",
+  "name": "Eureka!",
+  "desc": "Odblokuj Alchemika.",
+  "icon": "potion",
+  "color": "#96f05a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_NO_HIT",
+  "name": "Nietykalny",
+  "desc": "Pokonaj bossa, nie otrzymując obrażeń.",
+  "icon": "shield",
+  "color": "#78dcff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_FLOOR_NO_HIT",
+  "name": "Taniec w deszczu",
+  "desc": "Ukończ całe piętro bez otrzymania obrażeń.",
+  "icon": "wing",
+  "color": "#aae6ff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_LOW_HP",
+  "name": "Na włosku",
+  "desc": "Pokonaj bossa, mając mniej niż 10% zdrowia.",
+  "icon": "heart",
+  "color": "#ff5a64",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ITEMS_10",
+  "name": "Zbieracz",
+  "desc": "Zbierz 10 przedmiotów w jednej wyprawie.",
+  "icon": "gem",
+  "color": "#5aaaff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ITEMS_ALL",
+  "name": "Kolekcjoner",
+  "desc": "Znajdź każdy przedmiot co najmniej raz.",
+  "icon": "book",
+  "color": "#ffc83c",
+  "hidden": false,
+  "goal": 44
+ },
+ {
+  "api": "ACH_LEGENDARY",
+  "name": "Legenda",
+  "desc": "Zdobądź legendarny przedmiot.",
+  "icon": "star",
+  "color": "#ff5555",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_SHRINE",
+  "name": "Krwawa ofiara",
+  "desc": "Złóż ofiarę na Ołtarzu Krwi.",
+  "icon": "drop",
+  "color": "#dc1e32",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_SPENDER",
+  "name": "Stały klient",
+  "desc": "Wydaj 100 monet w jednej wyprawie.",
+  "icon": "coin",
+  "color": "#ffc846",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_RICH",
+  "name": "Skąpiec",
+  "desc": "Miej jednocześnie 150 monet.",
+  "icon": "coin",
+  "color": "#ffdc78",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_LEVEL_15",
+  "name": "Weteran",
+  "desc": "Osiągnij 15. poziom postaci w jednej wyprawie.",
+  "icon": "star",
+  "color": "#8cff8c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_KILLS_1000",
+  "name": "Rzeźnik Otchłani",
+  "desc": "Pokonaj łącznie 1000 wrogów.",
+  "icon": "blade",
+  "color": "#c83c3c",
+  "hidden": false,
+  "goal": 1000
+ },
+ {
+  "api": "ACH_ELITES_50",
+  "name": "Łowca elit",
+  "desc": "Pokonaj łącznie 50 elitarnych wrogów.",
+  "icon": "crown",
+  "color": "#ffd246",
+  "hidden": false,
+  "goal": 50
+ },
+ {
+  "api": "ACH_BARREL",
+  "name": "Pirotechnik",
+  "desc": "Zabij 3 wrogów jednym wybuchem beczki.",
+  "icon": "bomb",
+  "color": "#ff9628",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_SYNERGY",
+  "name": "Synergia",
+  "desc": "Miej jednocześnie naprowadzanie, przebicie i odbijanie pocisków.",
+  "icon": "eye",
+  "color": "#be69ff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_PHOENIX",
+  "name": "Z popiołów",
+  "desc": "Odrodź się dzięki Pióru Feniksa.",
+  "icon": "wing",
+  "color": "#ff7828",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_COOP_WIN",
+  "name": "Razem raźniej",
+  "desc": "Wygraj w trybie co-op.",
+  "icon": "heart",
+  "color": "#ff963c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_REVIVE",
+  "name": "Nie zostawiamy swoich",
+  "desc": "Podnieś partnera w trybie co-op.",
+  "icon": "plus",
+  "color": "#8cffa0",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ALL_CHARS",
+  "name": "Wszechstronny",
+  "desc": "Wygraj każdą postacią.",
+  "icon": "dice",
+  "color": "#ffffff",
+  "hidden": false,
+  "goal": 7
+ },
+ {
+  "api": "ACH_MINIMALIST",
+  "name": "Minimalista",
+  "desc": "Wygraj, mając najwyżej 5 przedmiotów.",
+  "icon": "ring",
+  "color": "#c8c8dc",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_NO_SHOP",
+  "name": "Bez zakupów",
+  "desc": "Wygraj, nie kupując niczego w sklepie.",
+  "icon": "coin",
+  "color": "#9696a0",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BLOOD_CULT",
+  "name": "Krwawy kult",
+  "desc": "Złóż 3 ofiary na Ołtarzu Krwi w jednej wyprawie.",
+  "icon": "drop",
+  "color": "#a01428",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_SEAL_5",
+  "name": "Pięć pieczęci",
+  "desc": "Wygraj z Pieczęcią Otchłani 5 lub wyższą.",
+  "icon": "rune",
+  "color": "#ff7878",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_SEAL_10",
+  "name": "Władca Otchłani",
+  "desc": "Wygraj z Pieczęcią Otchłani 10.",
+  "icon": "rune",
+  "color": "#ff3c50",
+  "hidden": true,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_RYCERZ",
+  "name": "Zwycięstwo: Rycerz",
+  "desc": "Wygraj, grając jako Rycerz.",
+  "icon": "crown",
+  "color": "#78a0e1",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_LOWCZYNI",
+  "name": "Zwycięstwo: Łowczyni",
+  "desc": "Wygraj, grając jako Łowczyni.",
+  "icon": "crown",
+  "color": "#6ec378",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_BERSERKER",
+  "name": "Zwycięstwo: Berserker",
+  "desc": "Wygraj, grając jako Berserker.",
+  "icon": "crown",
+  "color": "#dc5f4b",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_MAG",
+  "name": "Zwycięstwo: Mag",
+  "desc": "Wygraj, grając jako Mag.",
+  "icon": "crown",
+  "color": "#a073e6",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_ZLODZIEJ",
+  "name": "Zwycięstwo: Złodziej",
+  "desc": "Wygraj, grając jako Złodziej.",
+  "icon": "crown",
+  "color": "#5f5f73",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_ALCHEMIK",
+  "name": "Zwycięstwo: Alchemik",
+  "desc": "Wygraj, grając jako Alchemik.",
+  "icon": "crown",
+  "color": "#ebaf46",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_UPADLY",
+  "name": "Zwycięstwo: Upadły",
+  "desc": "Wygraj, grając jako Upadły.",
+  "icon": "crown",
+  "color": "#463255",
+  "hidden": true,
+  "goal": null
+ }
+]

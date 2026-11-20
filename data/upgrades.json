@@ -1,0 +1,197 @@
+[
+ {
+  "key": "sila",
+  "name": "Siła",
+  "desc": "+{v}% obrażeń",
+  "stat": "dmg_mult",
+  "op": "%",
+  "values": [
+   8,
+   12,
+   18,
+   28
+  ]
+ },
+ {
+  "key": "furia",
+  "name": "Furia",
+  "desc": "+{v}% szybkostrzelności",
+  "stat": "fire_mult",
+  "op": "%",
+  "values": [
+   7,
+   11,
+   16,
+   24
+  ]
+ },
+ {
+  "key": "witalnosc",
+  "name": "Witalność",
+  "desc": "+{v} maks. HP",
+  "stat": "max_hp",
+  "op": "+",
+  "values": [
+   10,
+   16,
+   24,
+   36
+  ]
+ },
+ {
+  "key": "zwinnosc",
+  "name": "Zwinność",
+  "desc": "+{v}% szybkości ruchu",
+  "stat": "speed",
+  "op": "%",
+  "values": [
+   5,
+   8,
+   11,
+   15
+  ]
+ },
+ {
+  "key": "hart",
+  "name": "Hart",
+  "desc": "+{v}% pancerza",
+  "stat": "armor",
+  "op": "p",
+  "values": [
+   3,
+   5,
+   7,
+   10
+  ]
+ },
+ {
+  "key": "odnowa",
+  "name": "Odnowa",
+  "desc": "+{v} HP/s regeneracji",
+  "stat": "regen",
+  "op": "+",
+  "values": [
+   0.3,
+   0.5,
+   0.8,
+   1.2
+  ]
+ },
+ {
+  "key": "sokoli",
+  "name": "Sokoli Wzrok",
+  "desc": "+{v}% zasięgu",
+  "stat": "range",
+  "op": "%",
+  "values": [
+   10,
+   15,
+   22,
+   32
+  ]
+ },
+ {
+  "key": "precyzja",
+  "name": "Precyzja",
+  "desc": "+{v}% szansy na krytyka",
+  "stat": "crit",
+  "op": "p",
+  "values": [
+   3,
+   5,
+   8,
+   12
+  ]
+ },
+ {
+  "key": "glod",
+  "name": "Głód Krwi",
+  "desc": "+{v}% kradzieży życia",
+  "stat": "lifesteal",
+  "op": "p",
+  "values": [
+   2,
+   3,
+   5,
+   7
+  ]
+ },
+ {
+  "key": "fart",
+  "name": "Fart",
+  "desc": "+{v} szczęścia",
+  "stat": "luck",
+  "op": "+",
+  "values": [
+   5,
+   8,
+   12,
+   18
+  ]
+ },
+ {
+  "key": "przyciaganie",
+  "name": "Przyciąganie",
+  "desc": "+{v}% zasięgu zbierania",
+  "stat": "pickup",
+  "op": "%",
+  "values": [
+   25,
+   35,
+   50,
+   70
+  ]
+ },
+ {
+  "key": "moc",
+  "name": "Moc",
+  "desc": "+{v}% prędkości pocisków",
+  "stat": "shot_speed",
+  "op": "%",
+  "values": [
+   8,
+   12,
+   16,
+   22
+  ]
+ },
+ {
+  "key": "uniki",
+  "name": "Uniki",
+  "desc": "+{v}% szansy na unik",
+  "stat": "dodge",
+  "op": "p",
+  "values": [
+   2,
+   4,
+   6,
+   9
+  ]
+ },
+ {
+  "key": "ostrze",
+  "name": "Ostrze",
+  "desc": "+{v} obrażeń bazowych",
+  "stat": "damage",
+  "op": "+",
+  "values": [
+   1,
+   2,
+   3,
+   5
+  ]
+ },
+ {
+  "key": "skupienie",
+  "name": "Skupienie",
+  "desc": "-{v}% odnowienia umiejętności",
+  "stat": "ability_cd_mult",
+  "op": "-%",
+  "values": [
+   6,
+   9,
+   13,
+   18
+  ]
+ }
+]

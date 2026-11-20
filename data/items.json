@@ -1,0 +1,727 @@
+[
+ {
+  "key": "ostry_kamien",
+  "name": "Ostry Kamień",
+  "desc": "+3 obrażeń",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "damage",
+    "op": "+",
+    "value": 3
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kawa",
+  "name": "Kubek Kawy",
+  "desc": "+15% szybkostrzelności, +5% szybkości ruchu",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.15
+   },
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.05
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "buty",
+  "name": "Buty Wędrowca",
+  "desc": "+15% szybkości ruchu",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "serce",
+  "name": "Serce Golema",
+  "desc": "+25 maks. HP",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "max_hp",
+    "op": "+",
+    "value": 25
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "luneta",
+  "name": "Luneta",
+  "desc": "+30% zasięgu, +15% prędkości pocisków",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "range",
+    "op": "*",
+    "value": 1.3
+   },
+   {
+    "stat": "shot_speed",
+    "op": "*",
+    "value": 1.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "koniczyna",
+  "name": "Czterolistna Koniczyna",
+  "desc": "+15 szczęścia (lepsze nagrody)",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "luck",
+    "op": "+",
+    "value": 15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "zbroja",
+  "name": "Skórzana Zbroja",
+  "desc": "+8% pancerza",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "armor",
+    "op": "+",
+    "value": 0.08
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "magnes",
+  "name": "Magnes",
+  "desc": "+80% zasięgu zbierania, +10% monet",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "pickup",
+    "op": "*",
+    "value": 1.8
+   },
+   {
+    "stat": "coin_mult",
+    "op": "+",
+    "value": 0.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "bandaz",
+  "name": "Bandaż",
+  "desc": "+0.6 HP/s regeneracji",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "regen",
+    "op": "+",
+    "value": 0.6
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "noz",
+  "name": "Nóż Rzeźnika",
+  "desc": "+2 obrażeń, +5% szansy na krytyka",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "damage",
+    "op": "+",
+    "value": 2
+   },
+   {
+    "stat": "crit",
+    "op": "+",
+    "value": 0.05
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "skarbonka",
+  "name": "Skarbonka",
+  "desc": "+15 monet od razu, +25% monet",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "coin_mult",
+    "op": "+",
+    "value": 0.25
+   }
+  ],
+  "special": "coins15"
+ },
+ {
+  "key": "pioro",
+  "name": "Lekkie Pióro",
+  "desc": "+1 ładunek zrywu",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "dash_charges",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "podwojny",
+  "name": "Podwójny Strzał",
+  "desc": "+1 pocisk, -10% obrażeń",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "projectiles",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 0.9
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "groty",
+  "name": "Przebijające Groty",
+  "desc": "Pociski przebijają +1 wroga",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "pierce",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "gumowe",
+  "name": "Gumowe Kule",
+  "desc": "Pociski odbijają się od ścian (+2)",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "bounce",
+    "op": "+",
+    "value": 2
+   },
+   {
+    "stat": "range",
+    "op": "*",
+    "value": 1.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "oko_szukacza",
+  "name": "Oko Szukacza",
+  "desc": "Pociski naprowadzają się na wrogów",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "homing",
+    "op": "+",
+    "value": 2.6
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "jad",
+  "name": "Jad Żmii",
+  "desc": "Pociski zatruwają wrogów",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "poison",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "esencja_ognia",
+  "name": "Esencja Ognia",
+  "desc": "25% szans na podpalenie wroga",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "burn",
+    "op": "+",
+    "value": 0.25
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "lodowy",
+  "name": "Lodowy Odłamek",
+  "desc": "Pociski spowalniają wrogów",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "slow",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "krytyczne_oko",
+  "name": "Oko Krytyka",
+  "desc": "+10% szansy na krytyka, +50% obrażeń krytycznych",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "crit",
+    "op": "+",
+    "value": 0.1
+   },
+   {
+    "stat": "crit_mult",
+    "op": "+",
+    "value": 0.5
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kolce",
+  "name": "Kolczasta Zbroja",
+  "desc": "Wrogowie dotykający cię obrywają, +5% pancerza",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "thorns",
+    "op": "+",
+    "value": 25
+   },
+   {
+    "stat": "armor",
+    "op": "+",
+    "value": 0.05
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "orbita",
+  "name": "Kryształowa Orbita",
+  "desc": "Kryształ krąży wokół ciebie i rani wrogów",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "orbitals",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "duszek",
+  "name": "Mały Duszek",
+  "desc": "Towarzysz, który strzela do wrogów",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "familiars",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "lustro",
+  "name": "Lustro",
+  "desc": "Dodatkowy pocisk leci do tyłu",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "backshot",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "klepsydra",
+  "name": "Klepsydra",
+  "desc": "-30% czasu odnowienia umiejętności",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "ability_cd_mult",
+    "op": "*",
+    "value": 0.7
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "ksiega",
+  "name": "Księga Zaklęć",
+  "desc": "+50% mocy umiejętności",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "ability_power",
+    "op": "+",
+    "value": 0.5
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kly",
+  "name": "Wampirze Kły",
+  "desc": "+4% kradzieży życia",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "lifesteal",
+    "op": "+",
+    "value": 0.04
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "tarcza_energii",
+  "name": "Tarcza Energii",
+  "desc": "Co 12 s blokuje jedno trafienie",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "eshield",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "gigant",
+  "name": "Grzyb Gigantyzmu",
+  "desc": "Większe pociski, +30% obrażeń, -15% szybkostrzelności",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "shot_size",
+    "op": "*",
+    "value": 1.4
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 1.3
+   },
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 0.85
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "mechanizm",
+  "name": "Mechanizm Zegarowy",
+  "desc": "+40% szybkostrzelności, -15% obrażeń",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.4
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 0.85
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "wybuchowe",
+  "name": "Wybuchowe Pociski",
+  "desc": "Pociski wybuchają przy trafieniu",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "explode",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 0.9
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "blyskawica",
+  "name": "Słoik Błyskawic",
+  "desc": "25% szans na wyładowanie łańcuchowe",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "chain",
+    "op": "+",
+    "value": 0.25
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "rozszczepienie",
+  "name": "Rozszczepienie",
+  "desc": "Pociski rozpadają się na 3 odłamki po trafieniu",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "split",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "widmowe",
+  "name": "Widmowe Pociski",
+  "desc": "Pociski przenikają przeszkody, +1 przebicie",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "spectral",
+    "op": "=",
+    "value": 1
+   },
+   {
+    "stat": "pierce",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "trzecie_oko",
+  "name": "Trzecie Oko",
+  "desc": "+2 pociski, lekkie naprowadzanie, -15% obrażeń",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "projectiles",
+    "op": "+",
+    "value": 2
+   },
+   {
+    "stat": "homing",
+    "op": "+",
+    "value": 1.2
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 0.85
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "czarna_dziura",
+  "name": "Czarna Dziura",
+  "desc": "Co 8 s tworzy wir wciągający i raniący wrogów",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "blackhole",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "rekawica",
+  "name": "Rękawica Tytana",
+  "desc": "+5 obrażeń, silniejszy odrzut",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "damage",
+    "op": "+",
+    "value": 5
+   },
+   {
+    "stat": "knockback",
+    "op": "*",
+    "value": 1.6
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "siedmiomilowe",
+  "name": "Buty Siedmiomilowe",
+  "desc": "+25% szybkości, -30% odnowienia zrywu",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.25
+   },
+   {
+    "stat": "dash_cd",
+    "op": "*",
+    "value": 0.7
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "korona",
+  "name": "Korona Króla",
+  "desc": "+25% obrażeń, +15% szybkostrzelności, +20 maks. HP",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 1.25
+   },
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.15
+   },
+   {
+    "stat": "max_hp",
+    "op": "+",
+    "value": 20
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "feniks",
+  "name": "Pióro Feniksa",
+  "desc": "Raz wskrzesza cię z połową zdrowia",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "revives",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kostka",
+  "name": "Kostka Chaosu",
+  "desc": "Daje 2 losowe przedmioty",
+  "rarity": 3,
+  "fx": [],
+  "special": "chaos"
+ },
+ {
+  "key": "krwawy_pakt",
+  "name": "Krwawy Pakt",
+  "desc": "+80% obrażeń, -25 maks. HP",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 1.8
+   },
+   {
+    "stat": "max_hp",
+    "op": "+",
+    "value": -25
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "burzowe_serce",
+  "name": "Burzowe Serce",
+  "desc": "+15% wyładowań, +20% szybkostrzelności, +10% szybkości",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "chain",
+    "op": "+",
+    "value": 0.15
+   },
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.2
+   },
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kielich",
+  "name": "Kielich Nieśmiertelności",
+  "desc": "+50 maks. HP, +1 HP/s regeneracji",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "max_hp",
+    "op": "+",
+    "value": 50
+   },
+   {
+    "stat": "regen",
+    "op": "+",
+    "value": 1.0
+   }
+  ],
+  "special": null
+ }
+]

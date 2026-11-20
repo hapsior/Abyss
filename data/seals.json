@@ -1,0 +1,72 @@
+[
+ {
+  "name": "Ostre kły",
+  "desc": "Wrogowie zadają +15% obrażeń",
+  "mods": {
+   "enemy_dmg": 1.15
+  }
+ },
+ {
+  "name": "Złote korony",
+  "desc": "Elity pojawiają się częściej",
+  "mods": {
+   "elite_add": 0.08
+  }
+ },
+ {
+  "name": "Chciwość",
+  "desc": "Sklep jest droższy o 20%",
+  "mods": {
+   "price": 1.2
+  }
+ },
+ {
+  "name": "Głód",
+  "desc": "Leczenie słabsze o 25%",
+  "mods": {
+   "heal": 0.75
+  }
+ },
+ {
+  "name": "Tytani",
+  "desc": "Bossowie mają +20% HP",
+  "mods": {
+   "boss_hp": 1.2
+  }
+ },
+ {
+  "name": "Pośpiech",
+  "desc": "Wrogowie poruszają się o 10% szybciej",
+  "mods": {
+   "enemy_speed": 1.1
+  }
+ },
+ {
+  "name": "Kruchość",
+  "desc": "Start z -15 maks. HP",
+  "mods": {
+   "start_hp": -15
+  }
+ },
+ {
+  "name": "Horda",
+  "desc": "Więcej wrogów w pokojach (+15%)",
+  "mods": {
+   "enemy_count": 1.15
+  }
+ },
+ {
+  "name": "Grad kul",
+  "desc": "Pociski wrogów szybsze o 10%",
+  "mods": {
+   "bullet_speed": 1.1
+  }
+ },
+ {
+  "name": "Furia bossów",
+  "desc": "Bossowie atakują o 15% szybciej",
+  "mods": {
+   "boss_tempo": 1.15
+  }
+ }
+]

@@ -1,0 +1,124 @@
+[
+ {
+  "key": "slime_king",
+  "cls": "SlimeKing",
+  "name": "Król Glutów",
+  "title": "Władca Piwnic",
+  "radius": 46,
+  "speed": 0,
+  "contact": 16,
+  "hp": 750,
+  "flying": false,
+  "color": "#64c85a",
+  "attacks": [
+   "hops",
+   "jump",
+   "spit"
+  ],
+  "phases": [
+   0.5
+  ],
+  "rest": [
+   0.7,
+   1.1
+  ]
+ },
+ {
+  "key": "lich",
+  "cls": "Lich",
+  "name": "Licz",
+  "title": "Pan Kości",
+  "radius": 34,
+  "speed": 0,
+  "contact": 14,
+  "hp": 1150,
+  "flying": true,
+  "color": "#6e50a0",
+  "attacks": [
+   "spiral",
+   "teleport",
+   "summon"
+  ],
+  "phases": [
+   0.5
+  ],
+  "rest": [
+   0.7,
+   1.1
+  ]
+ },
+ {
+  "key": "hive",
+  "cls": "HiveMother",
+  "name": "Matka Roju",
+  "title": "Królowa Grot",
+  "radius": 44,
+  "speed": 70,
+  "contact": 16,
+  "hp": 1550,
+  "flying": false,
+  "color": "#e6be3c",
+  "attacks": [
+   "brood",
+   "shotgun",
+   "charge",
+   "wave"
+  ],
+  "phases": [
+   0.5
+  ],
+  "rest": [
+   0.7,
+   1.1
+  ]
+ },
+ {
+  "key": "forge",
+  "cls": "ForgeLord",
+  "name": "Władca Kuźni",
+  "title": "Żelazny Tyran",
+  "radius": 44,
+  "speed": 80,
+  "contact": 18,
+  "hp": 2050,
+  "flying": false,
+  "color": "#5a555f",
+  "attacks": [
+   "slam",
+   "flame",
+   "dash"
+  ],
+  "phases": [
+   0.5
+  ],
+  "rest": [
+   0.7,
+   1.1
+  ]
+ },
+ {
+  "key": "abyss",
+  "cls": "AbyssHeart",
+  "name": "Serce Otchłani",
+  "title": "Koniec Wszystkiego",
+  "radius": 54,
+  "speed": 50,
+  "contact": 20,
+  "hp": 3300,
+  "flying": true,
+  "color": "#96285a",
+  "attacks": [
+   "flower",
+   "aimed",
+   "spawn"
+  ],
+  "phases": [
+   0.66,
+   0.33
+  ],
+  "rest": [
+   0.5,
+   0.9
+  ]
+ }
+]

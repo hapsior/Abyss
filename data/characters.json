@@ -1,0 +1,223 @@
+[
+ {
+  "key": "rycerz",
+  "name": "Rycerz",
+  "title": "Niezłomny obrońca",
+  "color": "#5b9cff",
+  "accent": "#bedcff",
+  "bullet": "orb",
+  "bullet_color": "#aad2ff",
+  "sound": "shoot",
+  "passive": "Bastion: pierwsze trafienie w każdym pokoju jest blokowane. +10% pancerza.",
+  "ability": "Fala Uderzeniowa",
+  "ability_desc": "Odpycha wrogów, rani ich i niszczy pobliskie pociski.",
+  "ability_cd": 9.0,
+  "stats": {
+   "max_hp": 110,
+   "damage": 10,
+   "fire_rate": 3.0,
+   "speed": 235,
+   "range": 430,
+   "shot_speed": 540,
+   "armor": 0.1,
+   "room_shield": 1
+  },
+  "unlock": null,
+  "weapon": "miecz",
+  "weapon_pivot": [
+   44,
+   48
+  ]
+ },
+ {
+  "key": "lowczyni",
+  "name": "Łowczyni",
+  "title": "Oko sokoła",
+  "color": "#5fcf6e",
+  "accent": "#c8ffbe",
+  "bullet": "arrow",
+  "bullet_color": "#e6e6b4",
+  "sound": "shoot_arrow",
+  "passive": "Przeszywające strzały: pociski przebijają 1 wroga. +12% szansy na krytyka, duży zasięg.",
+  "ability": "Deszcz Strzał",
+  "ability_desc": "Wystrzeliwuje pierścień 20 przebijających strzał.",
+  "ability_cd": 8.0,
+  "stats": {
+   "max_hp": 80,
+   "damage": 9,
+   "fire_rate": 3.5,
+   "speed": 250,
+   "range": 640,
+   "shot_speed": 720,
+   "crit": 0.17,
+   "pierce": 1
+  },
+  "unlock": null,
+  "weapon": "luk",
+  "weapon_pivot": [
+   66,
+   48
+  ]
+ },
+ {
+  "key": "berserker",
+  "name": "Berserker",
+  "title": "Ból to paliwo",
+  "color": "#ff7a5c",
+  "accent": "#ffaa78",
+  "bullet": "disc",
+  "bullet_color": "#ff785a",
+  "sound": "shoot_heavy",
+  "passive": "Gniew: im mniej masz zdrowia, tym mocniej bijesz (do +80% obrażeń). Krótki zasięg.",
+  "ability": "Szał",
+  "ability_desc": "Przez 5 s: +60% szybkostrzelności, +40% obrażeń i szybkości, kradzież życia.",
+  "ability_cd": 13.0,
+  "stats": {
+   "max_hp": 150,
+   "damage": 17,
+   "fire_rate": 1.9,
+   "speed": 240,
+   "range": 300,
+   "shot_speed": 500,
+   "shot_size": 1.45,
+   "knockback": 1.8,
+   "rage": 1
+  },
+  "unlock": null,
+  "weapon": "topor",
+  "weapon_pivot": [
+   44,
+   48
+  ]
+ },
+ {
+  "key": "mag",
+  "name": "Mag",
+  "title": "Władca żywiołów",
+  "color": "#a77bff",
+  "accent": "#c896ff",
+  "bullet": "magic",
+  "bullet_color": "#cd96ff",
+  "sound": "shoot_magic",
+  "passive": "Arkana: pociski naprowadzają się, 15% szans na wyładowanie łańcuchowe.",
+  "ability": "Burza",
+  "ability_desc": "Piorun przeskakuje między 7 wrogami, zadając ogromne obrażenia.",
+  "ability_cd": 7.5,
+  "stats": {
+   "max_hp": 85,
+   "damage": 12,
+   "fire_rate": 2.5,
+   "speed": 228,
+   "range": 500,
+   "shot_speed": 420,
+   "homing": 2.4,
+   "chain": 0.15
+  },
+  "unlock": null,
+  "weapon": "kostur",
+  "weapon_pivot": [
+   52,
+   48
+  ]
+ },
+ {
+  "key": "zlodziej",
+  "name": "Złodziej",
+  "title": "Szybkie ręce",
+  "color": "#8fa3c7",
+  "accent": "#ff5a5a",
+  "bullet": "dagger",
+  "bullet_color": "#ebebf5",
+  "sound": "shoot_arrow",
+  "passive": "Lepkie palce: +50% monet, -20% cen w sklepie, 2 ładunki zrywu, 10% szansy na unik.",
+  "ability": "Zasłona Dymna",
+  "ability_desc": "Znikasz na 2.5 s: nietykalność, +40% szybkości, same krytyki.",
+  "ability_cd": 11.0,
+  "stats": {
+   "max_hp": 80,
+   "damage": 8,
+   "fire_rate": 3.6,
+   "speed": 285,
+   "range": 400,
+   "shot_speed": 600,
+   "dodge": 0.1,
+   "dash_charges": 2,
+   "coin_mult": 1.5,
+   "price_mult": 0.8
+  },
+  "unlock": null,
+  "weapon": "sztylet",
+  "weapon_pivot": [
+   40,
+   52
+  ]
+ },
+ {
+  "key": "alchemik",
+  "name": "Alchemik",
+  "title": "Szalony naukowiec",
+  "color": "#ffc24a",
+  "accent": "#96ff6e",
+  "bullet": "drop",
+  "bullet_color": "#8cf05a",
+  "sound": "shoot_flask",
+  "passive": "Toksyny: pociski zatruwają, a zatruci wrogowie po śmierci uwalniają chmurę trucizny.",
+  "ability": "Mikstura",
+  "ability_desc": "Rzuca kolbę tworzącą trującą kałużę spowalniającą wrogów.",
+  "ability_cd": 6.5,
+  "stats": {
+   "max_hp": 95,
+   "damage": 7,
+   "fire_rate": 3.0,
+   "speed": 230,
+   "range": 420,
+   "shot_speed": 460,
+   "poison": 1,
+   "poison_burst": 1
+  },
+  "unlock": {
+   "kind": "floor",
+   "value": 11,
+   "text": "Dotrzyj do Zalanych Grot (piętro 11)"
+  },
+  "weapon": "miotacz",
+  "weapon_pivot": [
+   40,
+   48
+  ]
+ },
+ {
+  "key": "upadly",
+  "name": "Upadły",
+  "title": "Pakt z otchłanią",
+  "color": "#9b6bdb",
+  "accent": "#ff3c50",
+  "bullet": "dark",
+  "bullet_color": "#ff3c5a",
+  "sound": "shoot_dark",
+  "passive": "Pakt: widmowe pociski przenikają przeszkody, 6% kradzieży życia, ale bardzo mało zdrowia.",
+  "ability": "Ofiara Krwi",
+  "ability_desc": "Poświęca 8% zdrowia, by zadać potężne obrażenia wokół siebie.",
+  "ability_cd": 6.0,
+  "stats": {
+   "max_hp": 60,
+   "damage": 18,
+   "fire_rate": 2.6,
+   "speed": 245,
+   "range": 470,
+   "shot_speed": 560,
+   "spectral": 1,
+   "lifesteal": 0.06
+  },
+  "unlock": {
+   "kind": "win",
+   "value": 1,
+   "text": "Pokonaj Serce Otchłani (piętro 40)"
+  },
+  "weapon": "kosa",
+  "weapon_pivot": [
+   44,
+   70
+  ]
+ }
+]

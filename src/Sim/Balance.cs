@@ -1,0 +1,84 @@
+using System;
+
+namespace Otchlan.Sim;
+
+/// <summary>
+/// Wszystkie liczby balansu w jednym miejscu. Piętra: 1..40 (8 krain × 5), potem Głębia (41+).
+/// Wartości startowe – do strojenia symulatorem (etap 4).
+/// </summary>
+public static class Balance
+{
+    // --- wzrost siły wrogów z piętrem (wykładniczo, bo gracz też rośnie wykładniczo przez przedmioty) ---
+    public const float EnemyHpGrowth = 1.07f;     // piętro 10: ×1.8, 20: ×3.6, 40: ×14
+    public const float EnemyDmgGrowth = 1.03f;    // piętro 40: ×3.2
+    public const float DeepExtraGrowth = 1.04f;   // dodatkowo w Głębi (41+), na piętro
+
+    public static float EnemyHpScale(int depth)
+    {
+        float s = MathF.Pow(EnemyHpGrowth, depth - 1);
+        if (depth > C.StoryFloors)
+            s *= MathF.Pow(DeepExtraGrowth, depth - C.StoryFloors);
+        return s;
+    }
+
+    public static float EnemyDmgScale(int depth)
+    {
+        float s = MathF.Pow(EnemyDmgGrowth, depth - 1);
+        if (depth > C.StoryFloors)
+            s *= MathF.Pow(1.02f, depth - C.StoryFloors);
+        return s;
+    }
+
+    public static float EnemySpeedScale(int depth) => Math.Min(1.25f, 1 + 0.005f * (depth - 1));
+    public static float EnemyFireScale(int depth) => Math.Min(1.35f, 1 + 0.007f * (depth - 1));
+
+    public const float EliteHp = 2.3f;
+    public const float EliteChancePerFloor = 0.004f;
+    public const float SpawnGrace = 0.8f;
+
+    // --- liczba wrogów w pokoju (budżet „kosztu” wrogów) ---
+    public const float RoomBudgetBase = 4.5f;
+    public const float RoomBudgetRandom = 2.5f;
+
+    public static float RoomBudget(int depth, float rnd01, int roomDist)
+    {
+        int inBiome = (depth - 1) % C.FloorsPerBiome;          // 0..4 – rośnie w obrębie krainy
+        int biome = (depth - 1) / C.FloorsPerBiome;            // 0..7 – i lekko między krainami
+        float b = RoomBudgetBase + 1.6f * inBiome + 0.8f * Math.Min(biome, 10) + RoomBudgetRandom * rnd01 + Math.Min(3, roomDist) * 0.4f;
+        return Math.Min(b, 24f);
+    }
+
+    // --- bossowie ---
+    public const float BossHpBase = 700f;
+    public const float BossHpGrowth = 1.075f;
+    public static float BossHp(int depth) => BossHpBase * MathF.Pow(BossHpGrowth, depth - 1) * (depth > C.StoryFloors ? MathF.Pow(DeepExtraGrowth, depth - C.StoryFloors) : 1);
+    public static float BossTempo(int depth) => Math.Min(1.3f, 1 + 0.008f * (depth - 5));
+
+    /// <summary>Limit obrażeń na sekundę zadawanych bossowi (model Enter the Gungeon) – żeby nie znikał w 3 s.</summary>
+    public static float BossDpsCap(int depth) => 40f * MathF.Pow(1.065f, Math.Max(0, depth - 5));
+    public const float BossCapWindow = 3.0f;
+    public const float BossCapOverflow = 0.25f;
+    public const float BossCapMaxHit = 3.0f;
+    public const float BossIntroArmor = 0.1f;
+
+    // --- SI: żetony ataku (ilu wrogów naraz może strzelać / szarżować) ---
+    public static readonly int[] AttackTokens = { 2, 3, 4, 5 };
+    public static readonly int[] ChargeTokens = { 1, 1, 2, 2 };
+
+    // --- awanse ---
+    public const int GuaranteeEvery = 5;
+    public const int BanishesPerRun = 2;
+    public static float XpNeeded(int level) => 14 + level * 9;
+
+    // --- co-op ---
+    public const float CoopEnemyCount = 1.25f, CoopEnemyHp = 1.15f, CoopBossHp = 1.5f, CoopBossCap = 1.7f, CoopXp = 0.8f;
+    public const int CoopTokens = 1;
+
+    // --- ekonomia ---
+    public static int ItemPrice(int rarity, int depth, float priceMult)
+    {
+        float baseP = rarity switch { 0 => 15, 1 => 25, 2 => 40, _ => 60 };
+        float p = baseP * (1 + 0.06f * (depth - 1)) * priceMult;
+        return Math.Max(3, (int)MathF.Round(p));
+    }
+}

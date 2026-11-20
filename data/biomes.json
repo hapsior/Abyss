@@ -1,0 +1,402 @@
+[
+ {
+  "key": "piwnice",
+  "name": "Piwnice",
+  "floor": "#463832",
+  "floor2": "#3f322d",
+  "wall": "#281f1e",
+  "wall_top": "#382c29",
+  "accent": "#d2a064",
+  "decor": "pebbles",
+  "boss": "slime_king",
+  "pool": [
+   {
+    "enemy": "slime",
+    "weight": 5
+   },
+   {
+    "enemy": "bat",
+    "weight": 4
+   },
+   {
+    "enemy": "shooter",
+    "weight": 3
+   },
+   {
+    "enemy": "charger",
+    "weight": 2
+   },
+   {
+    "enemy": "big_slime",
+    "weight": 2
+   },
+   {
+    "enemy": "bomber",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.0,
+   "sat": 1.0,
+   "val": 1.0
+  }
+ },
+ {
+  "key": "katakumby",
+  "name": "Katakumby",
+  "floor": "#3a3a44",
+  "floor2": "#34343e",
+  "wall": "#20202a",
+  "wall_top": "#2f2f3c",
+  "accent": "#c8c8b4",
+  "decor": "bones",
+  "boss": "lich",
+  "pool": [
+   {
+    "enemy": "ghost",
+    "weight": 4
+   },
+   {
+    "enemy": "shooter",
+    "weight": 3
+   },
+   {
+    "enemy": "summoner",
+    "weight": 2
+   },
+   {
+    "enemy": "turret",
+    "weight": 3
+   },
+   {
+    "enemy": "slime",
+    "weight": 2
+   },
+   {
+    "enemy": "charger",
+    "weight": 2
+   },
+   {
+    "enemy": "bomber",
+    "weight": 2
+   },
+   {
+    "enemy": "bat",
+    "weight": 2
+   }
+  ],
+  "tint": {
+   "hue": 0.0,
+   "sat": 0.75,
+   "val": 1.0
+  }
+ },
+ {
+  "key": "groty",
+  "name": "Zalane Groty",
+  "floor": "#284248",
+  "floor2": "#243b41",
+  "wall": "#16282e",
+  "wall_top": "#1f353c",
+  "accent": "#5ad2dc",
+  "decor": "puddles",
+  "boss": "hive",
+  "pool": [
+   {
+    "enemy": "big_slime",
+    "weight": 3
+   },
+   {
+    "enemy": "turret",
+    "weight": 3
+   },
+   {
+    "enemy": "golem",
+    "weight": 2
+   },
+   {
+    "enemy": "sniper",
+    "weight": 3
+   },
+   {
+    "enemy": "bat",
+    "weight": 3
+   },
+   {
+    "enemy": "spinner",
+    "weight": 2
+   },
+   {
+    "enemy": "shooter",
+    "weight": 2
+   },
+   {
+    "enemy": "ghost",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.45,
+   "sat": 1.0,
+   "val": 1.0
+  }
+ },
+ {
+  "key": "kuznia",
+  "name": "Kuźnia",
+  "floor": "#4a2e28",
+  "floor2": "#432924",
+  "wall": "#2a1816",
+  "wall_top": "#3c221e",
+  "accent": "#ff8232",
+  "decor": "lava",
+  "boss": "forge",
+  "pool": [
+   {
+    "enemy": "imp",
+    "weight": 4
+   },
+   {
+    "enemy": "golem",
+    "weight": 2
+   },
+   {
+    "enemy": "bomber",
+    "weight": 3
+   },
+   {
+    "enemy": "charger",
+    "weight": 3
+   },
+   {
+    "enemy": "sniper",
+    "weight": 2
+   },
+   {
+    "enemy": "spinner",
+    "weight": 2
+   },
+   {
+    "enemy": "turret",
+    "weight": 2
+   },
+   {
+    "enemy": "shooter",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.92,
+   "sat": 1.15,
+   "val": 1.0
+  }
+ },
+ {
+  "key": "grzybnia",
+  "name": "Grzybnia",
+  "floor": "#34402a",
+  "floor2": "#2e3925",
+  "wall": "#1c2416",
+  "wall_top": "#283220",
+  "accent": "#aaff78",
+  "decor": "spores",
+  "boss": "spore_mother",
+  "pool": [
+   {
+    "enemy": "big_slime",
+    "weight": 3
+   },
+   {
+    "enemy": "turret",
+    "weight": 3
+   },
+   {
+    "enemy": "golem",
+    "weight": 2
+   },
+   {
+    "enemy": "sniper",
+    "weight": 3
+   },
+   {
+    "enemy": "bat",
+    "weight": 3
+   },
+   {
+    "enemy": "spinner",
+    "weight": 2
+   },
+   {
+    "enemy": "shooter",
+    "weight": 2
+   },
+   {
+    "enemy": "ghost",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.25,
+   "sat": 1.1,
+   "val": 1.0
+  }
+ },
+ {
+  "key": "lodowa_krypta",
+  "name": "Lodowa Krypta",
+  "floor": "#344254",
+  "floor2": "#2e3b4c",
+  "wall": "#1a222e",
+  "wall_top": "#263242",
+  "accent": "#b4e6ff",
+  "decor": "frost",
+  "boss": "frost_colossus",
+  "pool": [
+   {
+    "enemy": "imp",
+    "weight": 4
+   },
+   {
+    "enemy": "golem",
+    "weight": 2
+   },
+   {
+    "enemy": "bomber",
+    "weight": 3
+   },
+   {
+    "enemy": "charger",
+    "weight": 3
+   },
+   {
+    "enemy": "sniper",
+    "weight": 2
+   },
+   {
+    "enemy": "spinner",
+    "weight": 2
+   },
+   {
+    "enemy": "turret",
+    "weight": 2
+   },
+   {
+    "enemy": "shooter",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.55,
+   "sat": 0.6,
+   "val": 1.1
+  }
+ },
+ {
+  "key": "mechanizm",
+  "name": "Mechanizm",
+  "floor": "#423a30",
+  "floor2": "#3b342b",
+  "wall": "#241e18",
+  "wall_top": "#342c24",
+  "accent": "#e6be50",
+  "decor": "gears",
+  "boss": "clockmaker",
+  "pool": [
+   {
+    "enemy": "ghost",
+    "weight": 3
+   },
+   {
+    "enemy": "imp",
+    "weight": 3
+   },
+   {
+    "enemy": "golem",
+    "weight": 2
+   },
+   {
+    "enemy": "sniper",
+    "weight": 2
+   },
+   {
+    "enemy": "summoner",
+    "weight": 2
+   },
+   {
+    "enemy": "spinner",
+    "weight": 2
+   },
+   {
+    "enemy": "bomber",
+    "weight": 2
+   },
+   {
+    "enemy": "charger",
+    "weight": 2
+   },
+   {
+    "enemy": "turret",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.1,
+   "sat": 0.8,
+   "val": 1.05
+  }
+ },
+ {
+  "key": "otchlan",
+  "name": "Otchłań",
+  "floor": "#2c1e3c",
+  "floor2": "#271b36",
+  "wall": "#160e22",
+  "wall_top": "#221632",
+  "accent": "#c35fff",
+  "decor": "stars",
+  "boss": "abyss",
+  "pool": [
+   {
+    "enemy": "ghost",
+    "weight": 3
+   },
+   {
+    "enemy": "imp",
+    "weight": 3
+   },
+   {
+    "enemy": "golem",
+    "weight": 2
+   },
+   {
+    "enemy": "sniper",
+    "weight": 2
+   },
+   {
+    "enemy": "summoner",
+    "weight": 2
+   },
+   {
+    "enemy": "spinner",
+    "weight": 2
+   },
+   {
+    "enemy": "bomber",
+    "weight": 2
+   },
+   {
+    "enemy": "charger",
+    "weight": 2
+   },
+   {
+    "enemy": "turret",
+    "weight": 1
+   }
+  ],
+  "tint": {
+   "hue": 0.75,
+   "sat": 1.1,
+   "val": 1.0
+  }
+ }
+]
