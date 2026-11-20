@@ -95,7 +95,7 @@ public partial class MainMenu : Control
         buttons.AddThemeConstantOverride("separation", 16);
         col.AddChild(buttons);
 
-        _first = AddButton(buttons, "Graj", () => World.Sandbox.Open());
+        _first = AddButton(buttons, "Graj", () => View.RunScene.Start(new View.RunSetup()));
         AddButton(buttons, "Opcje", () => Game.I.ShowScreen(new OptionsMenu(() => Game.I.ShowScreen(new MainMenu()))));
         var ach = AddButton(buttons, "Osiągnięcia", null);
         ach.Disabled = true;

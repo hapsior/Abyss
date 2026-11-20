@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Szronowy Kolos: lodowy olbrzym z blokow niebieskiego krysztalu, z korona sopli i pekniętym rdzeniem. Boss Lodowej Krypty. -->
+  <ellipse cx="256" cy="466" rx="205" ry="22" fill="#000000" opacity="0.25"/>
+  <g stroke-linejoin="round">
+    <!-- nogi -->
+    <path d="M160 380 L 150 450 L 244 450 L 246 380 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M268 380 L 266 450 L 360 450 L 352 380 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M246 410 L 244 450 L 150 450 L 152 432 C 190 440 230 432 246 410 Z M352 410 L 360 450 L 266 450 L 266 432 C 300 440 336 432 352 410 Z" fill="#5aa8e0"/>
+    <path d="M160 380 L 150 450 L 244 450 L 246 380 Z M268 380 L 266 450 L 360 450 L 352 380 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <!-- rece (bloki) -->
+    <path d="M124 214 L 76 232 L 50 318 L 100 336 L 140 280 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M388 214 L 436 232 L 462 318 L 412 336 L 372 280 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M462 318 L 412 336 L 372 280 L 388 214 L 436 232 L 450 260 L 430 300 Z" fill="#5aa8e0"/>
+    <path d="M388 214 L 436 232 L 462 318 L 412 336 L 372 280 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M124 214 L 76 232 L 50 318 L 100 336 L 140 280 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M92 250 L 74 308" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+    <!-- piesci -->
+    <path d="M40 340 L 118 332 L 128 420 L 52 438 L 30 390 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M128 420 L 52 438 L 30 390 L 40 392 C 70 420 106 410 126 380 Z" fill="#5aa8e0"/>
+    <path d="M40 340 L 118 332 L 128 420 L 52 438 L 30 390 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M472 340 L 394 332 L 384 420 L 460 438 L 482 390 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M384 420 L 460 438 L 482 390 L 472 392 C 442 420 406 410 386 380 Z" fill="#5aa8e0"/>
+    <path d="M472 340 L 394 332 L 384 420 L 460 438 L 482 390 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M58 354 L 84 350 M56 374 L 80 376" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.6"/>
+    <path d="M64 372 L 70 396 M98 366 L 100 398 M414 366 L 412 398 M448 372 L 442 396" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+    <!-- tulow -->
+    <path d="M138 178 L 374 178 L 410 250 L 378 396 L 134 396 L 102 250 Z" fill="#9fd8ff"/>
+    <path d="M410 250 L 378 396 L 134 396 L 140 372 C 250 388 380 350 396 224 Z" fill="#5aa8e0"/>
+    <path d="M138 178 L 374 178 L 410 250 L 378 396 L 134 396 L 102 250 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M140 204 L 120 250 L 138 330" stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.65"/>
+    <path d="M110 300 L 160 290 L 190 352 L 140 392 M402 296 L 352 290 L 330 360 L 376 392 M200 178 L 190 220 L 214 244" fill="none" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+    <!-- rdzen -->
+    <circle cx="256" cy="288" r="78" fill="#e8fbff" opacity="0.3"/>
+    <path d="M256 232 L 296 270 L 284 324 L 256 344 L 226 322 L 214 268 Z" fill="#e8fbff" stroke="#1a0f1f" stroke-width="12"/>
+    <path d="M256 250 L 280 272 L 272 312 L 256 324 L 238 310 L 232 274 Z" fill="#7fe8ff"/>
+    <path d="M258 236 L 244 270 L 266 288 L 246 330" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="240" cy="258" r="5" fill="#ffffff"/>
+    <path d="M296 270 L 330 262 M214 268 L 180 280 M284 324 L 308 350" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linecap="round"/>
+    <!-- barki -->
+    <path d="M110 196 L 176 164 L 186 232 L 128 250 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="14"/>
+    <path d="M402 196 L 336 164 L 326 232 L 384 250 Z" fill="#9fd8ff" stroke="#1a0f1f" stroke-width="14"/>
+    <path d="M402 196 L 336 164 L 326 232 L 384 250 L 396 230 L 372 200 Z" fill="#5aa8e0"/>
+    <path d="M402 196 L 336 164 L 326 232 L 384 250 Z" fill="none" stroke="#1a0f1f" stroke-width="14"/>
+    <path d="M132 204 L 170 186" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.65"/>
+    <!-- glowa -->
+    <path d="M192 176 L 186 112 L 224 84 L 292 84 L 328 112 L 322 176 Z" fill="#9fd8ff"/>
+    <path d="M322 176 L 328 112 L 292 84 L 300 120 L 296 176 Z" fill="#5aa8e0"/>
+    <path d="M192 176 L 186 112 L 224 84 L 292 84 L 328 112 L 322 176 Z" fill="none" stroke="#1a0f1f" stroke-width="16"/>
+    <path d="M200 120 L 226 98" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+    <!-- korona z sopli -->
+    <path d="M186 112 L 176 50 L 208 90 L 224 36 L 240 88 L 262 30 L 282 88 L 304 44 L 312 96 L 340 62 L 328 112 Z" fill="#e8f6ff" stroke="#1a0f1f" stroke-width="12"/>
+    <path d="M262 30 L 282 88 L 272 90 Z M304 44 L 312 96 L 300 92 Z" fill="#9fd8ff"/>
+  </g>
+  <!-- twarz -->
+  <path d="M206 128 L 248 144 L 208 152 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M316 128 L 274 144 L 314 152 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="236" cy="145" r="5" fill="#2a6fb0"/><circle cx="286" cy="145" r="5" fill="#2a6fb0"/>
+  <path d="M198 120 L 250 138 M326 120 L 272 138" stroke="#1a0f1f" stroke-width="13" stroke-linecap="round"/>
+  <path d="M216 166 L 230 156 L 244 168 L 258 156 L 272 168 L 288 156 L 302 166" fill="none" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- tchnienie mrozu -->
+  <g fill="#ffffff" stroke="#9fd8ff" stroke-width="5" opacity="0.8">
+    <circle cx="352" cy="172" r="16"/><circle cx="384" cy="160" r="22"/><circle cx="420" cy="140" r="26"/><circle cx="450" cy="112" r="20"/><circle cx="410" cy="106" r="12"/>
+  </g>
+  <g fill="#ffffff" opacity="0.9"><circle cx="472" cy="82" r="5"/><circle cx="440" cy="74" r="4"/></g>
+</svg>

@@ -32,6 +32,42 @@ public partial class ScreenshotTour : Node
         GD.Print("zrzut: ", path);
     }
 
+    /// <summary>Wyprawa sterowana botem (przyspieszona): zrzuty walki, sklepu, awansu i bossa.</summary>
+    private async Task RunTour()
+    {
+        var g = Game.I;
+        var scene = View.RunScene.Start(new View.RunSetup { Chars = new() { "lowczyni" }, Seed = 4242 });
+        scene.Sim.God = true;
+        await Wait(0.2);
+        scene.Sources.Clear();
+        scene.Sources.Add(new View.BotSource());
+        View.RunScene.LevelUpFactory = (s, p) => new View.BasicLevelUp(s, p);
+        var taken = new System.Collections.Generic.HashSet<string>();
+        double t0 = Time.GetTicksMsec() / 1000.0;
+        while (Time.GetTicksMsec() / 1000.0 - t0 < 240 && taken.Count < 5)
+        {
+            var sim = scene.Sim;
+            // przyspieszenie: dodatkowe kroki symulacji między klatkami
+            if (scene.Overlay == null)
+                for (int k = 0; k < 3; k++)
+                    sim.Update(1 / 60f, new[] { scene.Sources[0].Read(scene, sim.Players[0]) });
+            string key = null;
+            if (scene.Overlay is View.BasicLevelUp && !taken.Contains("awans")) key = "awans";
+            else if (sim.Room.Kind == Sim.RoomKind.Combat && sim.Enemies.Count >= 4 && sim.Bullets.Count >= 6 && sim.Depth >= 2) key = "walka";
+            else if (sim.Room.Kind == Sim.RoomKind.Shop && sim.InteractTarget(sim.Players[0]) != null) key = "sklep";
+            else if (sim.Boss != null && sim.Boss.Intro <= 0 && sim.Bullets.Count > 12) key = "boss";
+            else if (sim.Room.Kind == Sim.RoomKind.Treasure && sim.InteractTarget(sim.Players[0]) != null) key = "skarbiec";
+            if (key != null && !taken.Contains(key))
+            {
+                taken.Add(key);
+                await Shot($"1{taken.Count}_wyprawa_{key}");
+            }
+            if (scene.Overlay is View.BasicLevelUp lu)
+                lu.CallDeferred("Pick", 0);
+            await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+        }
+    }
+
     private async Task Run()
     {
         var g = Game.I;
@@ -54,6 +90,7 @@ public partial class ScreenshotTour : Node
         g.InputMgr.SetDevice(InputDevice.Gamepad, 0);
         await Wait(0.3);
         await Shot("05_arena_pad");
+        await RunTour();
         GD.Print($"FPS na koniec: {Engine.GetFramesPerSecond()}");
         g.Quit(0);
     }

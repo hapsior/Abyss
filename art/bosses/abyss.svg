@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Serce Otchlani, Koniec Wszystkiego: gigantyczne pulsujace ciemnoczerwone serce z wieloma oczami i mackami pustki. Boss koncowy. -->
+  <circle cx="256" cy="262" r="212" fill="#c45cff" opacity="0.1"/>
+  <circle cx="256" cy="262" r="212" fill="none" stroke="#c45cff" stroke-width="10" opacity="0.5"/>
+  <circle cx="256" cy="262" r="182" fill="none" stroke="#c45cff" stroke-width="6" opacity="0.3" stroke-dasharray="40 24"/>
+  <circle cx="256" cy="262" r="238" fill="none" stroke="#c45cff" stroke-width="4" opacity="0.18"/>
+  <!-- macki -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g id="t">
+      <path d="M170 340 C 110 360 70 400 90 440 C 100 456 124 452 124 436" stroke="#1a0f1f" stroke-width="44"/>
+      <path d="M342 340 C 402 360 442 400 422 440 C 412 456 388 452 388 436" stroke="#1a0f1f" stroke-width="44"/>
+      <path d="M110 220 C 60 230 40 280 64 316 C 76 330 96 322 92 306" stroke="#1a0f1f" stroke-width="40"/>
+      <path d="M402 220 C 452 230 472 280 448 316 C 436 330 416 322 420 306" stroke="#1a0f1f" stroke-width="40"/>
+      <path d="M230 396 C 220 440 190 458 170 468" stroke="#1a0f1f" stroke-width="40"/>
+      <path d="M282 396 C 292 440 322 458 342 468" stroke="#1a0f1f" stroke-width="40"/>
+    </g>
+    <path d="M170 340 C 110 360 70 400 90 440 C 100 456 124 452 124 436" stroke="#3a1560" stroke-width="28"/>
+    <path d="M342 340 C 402 360 442 400 422 440 C 412 456 388 452 388 436" stroke="#3a1560" stroke-width="28"/>
+    <path d="M110 220 C 60 230 40 280 64 316 C 76 330 96 322 92 306" stroke="#3a1560" stroke-width="25"/>
+    <path d="M402 220 C 452 230 472 280 448 316 C 436 330 416 322 420 306" stroke="#3a1560" stroke-width="25"/>
+    <path d="M230 396 C 220 440 190 458 170 468" stroke="#3a1560" stroke-width="25"/>
+    <path d="M282 396 C 292 440 322 458 342 468" stroke="#3a1560" stroke-width="25"/>
+    <path d="M150 350 C 100 372 80 396 82 420 M362 350 C 412 372 432 396 430 420 M100 232 C 64 246 58 278 68 300 M412 232 C 448 246 454 278 444 300" stroke="#c45cff" stroke-width="5" opacity="0.6"/>
+  </g>
+  <g fill="#c45cff" stroke="#1a0f1f" stroke-width="3" opacity="0.9">
+    <circle cx="100" cy="392" r="5"/><circle cx="84" cy="424" r="5"/><circle cx="412" cy="392" r="5"/><circle cx="428" cy="424" r="5"/>
+    <circle cx="62" cy="276" r="4"/><circle cx="450" cy="276" r="4"/>
+  </g>
+  <!-- aorty -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M214 130 C 206 100 190 80 176 62" stroke="#1a0f1f" stroke-width="50"/>
+    <path d="M298 130 C 306 100 322 80 336 62" stroke="#1a0f1f" stroke-width="50"/>
+    <path d="M214 130 C 206 100 190 80 176 62" stroke="#b8284e" stroke-width="34"/>
+    <path d="M298 130 C 306 100 322 80 336 62" stroke="#b8284e" stroke-width="34"/>
+  </g>
+  <ellipse cx="174" cy="60" rx="20" ry="10" fill="#1a0f1f" transform="rotate(-30 174 60)"/>
+  <ellipse cx="338" cy="60" rx="20" ry="10" fill="#1a0f1f" transform="rotate(30 338 60)"/>
+  <!-- serce -->
+  <path d="M256 424 C 150 354 72 290 72 212 C 72 150 122 112 176 112 C 216 112 244 134 256 164 C 268 134 296 112 336 112 C 390 112 440 150 440 212 C 440 290 362 354 256 424 Z" fill="#b8284e"/>
+  <path d="M440 212 C 440 290 362 354 256 424 C 200 388 150 350 118 308 C 190 350 300 350 386 280 C 420 252 432 232 440 212 Z" fill="#8a1c3c"/>
+  <ellipse cx="124" cy="190" rx="14" ry="44" fill="#ffffff" opacity="0.45" transform="rotate(30 124 190)"/>
+  <circle cx="178" cy="142" r="9" fill="#ffffff" opacity="0.5"/>
+  <path d="M256 424 C 150 354 72 290 72 212 C 72 150 122 112 176 112 C 216 112 244 134 256 164 C 268 134 296 112 336 112 C 390 112 440 150 440 212 C 440 290 362 354 256 424 Z" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linejoin="round"/>
+  <!-- zyly -->
+  <g fill="none" stroke="#2a1040" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 164 C 250 190 262 206 256 230"/>
+    <path d="M110 250 C 140 258 160 280 164 316 M164 316 L 150 340 M164 316 L 190 330"/>
+    <path d="M402 250 C 372 258 352 280 348 316 M348 316 L 362 340 M348 316 L 322 330"/>
+    <path d="M256 370 L 256 392 M256 370 L 236 352 M256 370 L 278 352"/>
+    <path d="M96 190 C 110 176 124 176 134 188"/>
+  </g>
+  <!-- oczy -->
+  <g stroke="#1a0f1f" stroke-width="10">
+    <ellipse cx="256" cy="246" rx="52" ry="48" fill="#ffe6f0"/>
+  </g>
+  <ellipse cx="262" cy="248" rx="30" ry="34" fill="#c45cff"/>
+  <ellipse cx="262" cy="248" rx="10" ry="30" fill="#1a0f1f"/>
+  <circle cx="276" cy="232" r="7" fill="#ffffff"/>
+  <path d="M196 206 L 246 224 M316 206 L 266 224" stroke="#1a0f1f" stroke-width="16" stroke-linecap="round"/>
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="164" cy="196" rx="26" ry="28" fill="#ffe6f0"/>
+    <ellipse cx="354" cy="190" rx="30" ry="32" fill="#ffe6f0"/>
+    <ellipse cx="190" cy="318" rx="20" ry="22" fill="#ffe6f0"/>
+    <ellipse cx="326" cy="320" rx="22" ry="24" fill="#ffe6f0"/>
+  </g>
+  <circle cx="170" cy="200" r="15" fill="#c45cff"/><circle cx="362" cy="194" r="17" fill="#c45cff"/>
+  <circle cx="194" cy="322" r="12" fill="#c45cff"/><circle cx="332" cy="324" r="13" fill="#c45cff"/>
+  <ellipse cx="170" cy="200" rx="5" ry="13" fill="#1a0f1f"/><ellipse cx="362" cy="194" rx="6" ry="14" fill="#1a0f1f"/>
+  <ellipse cx="194" cy="322" rx="4" ry="10" fill="#1a0f1f"/><ellipse cx="332" cy="324" rx="4" ry="11" fill="#1a0f1f"/>
+  <g fill="#ffffff"><circle cx="176" cy="190" r="4"/><circle cx="369" cy="184" r="4.5"/><circle cx="197" cy="316" r="3"/><circle cx="336" cy="318" r="3"/></g>
+  <path d="M138 178 L 184 190 M386 170 L 336 184" stroke="#1a0f1f" stroke-width="11" stroke-linecap="round"/>
+  <path d="M170 302 L 206 312 M348 304 L 312 312" stroke="#1a0f1f" stroke-width="8" stroke-linecap="round"/>
+  <!-- iskry pustki -->
+  <g fill="#c45cff" opacity="0.8"><circle cx="40" cy="120" r="6"/><circle cx="470" cy="140" r="7"/><circle cx="60" cy="400" r="5"/><circle cx="460" cy="420" r="5"/><circle cx="256" cy="486" r="0"/></g>
+</svg>

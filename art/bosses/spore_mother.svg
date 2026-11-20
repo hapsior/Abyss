@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Matka Grzybni: gigantyczna grzybowa matrona z cetkowanym kapeluszem, gniewna twarza na trzonie i korzeniami. Boss Grzybni. -->
+  <ellipse cx="256" cy="466" rx="200" ry="20" fill="#000000" opacity="0.25"/>
+  <!-- korzenie -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M170 438 C 120 440 96 456 60 444 M190 446 C 150 470 110 474 80 464 M342 438 C 392 440 416 456 452 444 M322 446 C 362 470 402 474 432 464 M230 452 C 220 472 200 478 176 474 M284 452 C 294 472 316 478 340 474" stroke="#1a0f1f" stroke-width="26"/>
+    <path d="M170 438 C 120 440 96 456 60 444 M190 446 C 150 470 110 474 80 464 M342 438 C 392 440 416 456 452 444 M322 446 C 362 470 402 474 432 464 M230 452 C 220 472 200 478 176 474 M284 452 C 294 472 316 478 340 474" stroke="#c9b98f" stroke-width="12"/>
+  </g>
+  <!-- trzon -->
+  <path d="M196 240 C 182 320 172 390 148 440 C 200 462 312 462 364 440 C 340 390 330 320 316 240 Z" fill="#f1e6c8"/>
+  <path d="M316 262 C 326 330 338 394 364 440 C 330 456 270 462 230 458 C 300 440 326 380 316 262 Z" fill="#c9b98f"/>
+  <ellipse cx="206" cy="340" rx="8" ry="40" fill="#ffffff" opacity="0.6" transform="rotate(6 206 340)"/>
+  <path d="M196 240 C 182 320 172 390 148 440 C 200 462 312 462 364 440 C 340 390 330 320 316 240 Z" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linejoin="round"/>
+  <!-- pierscien na trzonie -->
+  <path d="M184 392 C 230 414 282 414 330 392" fill="none" stroke="#a066ff" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <!-- kapelusz: blaszki -->
+  <path d="M66 250 C 112 306 400 306 446 250 L 420 232 L 92 232 Z" fill="#55348a" stroke="#1a0f1f" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M110 262 L 112 286 M146 274 L 148 296 M184 280 L 184 300 M222 284 L 222 302 M260 285 L 260 303 M298 284 L 298 302 M336 280 L 336 300 M372 274 L 370 296 M404 262 L 400 284" stroke="#7442d1" stroke-width="6" stroke-linecap="round"/>
+  <!-- kapelusz -->
+  <path d="M56 252 C 44 122 146 48 256 48 C 366 48 468 122 456 252 C 404 286 108 286 56 252 Z" fill="#a066ff"/>
+  <path d="M456 252 C 468 190 446 132 400 96 C 420 150 420 214 388 252 C 408 262 436 262 456 252 Z" fill="#7442d1"/>
+  <path d="M456 252 C 404 286 108 286 56 252 C 120 270 330 276 400 232 C 420 220 440 236 456 252 Z" fill="#7442d1"/>
+  <!-- cetki -->
+  <g fill="#aaff78" opacity="0.3"><circle cx="150" cy="140" r="42"/><circle cx="268" cy="100" r="34"/><circle cx="356" cy="170" r="44"/><circle cx="214" cy="214" r="30"/></g>
+  <g fill="#aaff78" stroke="#1a0f1f" stroke-width="8">
+    <circle cx="150" cy="140" r="30"/><circle cx="268" cy="100" r="22"/><circle cx="356" cy="170" r="32"/><circle cx="214" cy="214" r="18"/>
+    <circle cx="112" cy="226" r="14"/><circle cx="410" cy="236" r="13"/><circle cx="318" cy="236" r="12"/>
+  </g>
+  <g fill="#ffffff" opacity="0.8"><circle cx="140" cy="130" r="8"/><circle cx="262" cy="94" r="5"/><circle cx="346" cy="160" r="8"/></g>
+  <ellipse cx="96" cy="168" rx="12" ry="40" fill="#ffffff" opacity="0.55" transform="rotate(28 96 168)"/>
+  <circle cx="200" cy="82" r="8" fill="#ffffff" opacity="0.55"/>
+  <path d="M56 252 C 44 122 146 48 256 48 C 366 48 468 122 456 252 C 404 286 108 286 56 252 Z" fill="none" stroke="#1a0f1f" stroke-width="16" stroke-linejoin="round"/>
+  <!-- twarz -->
+  <g stroke="#1a0f1f" stroke-width="9">
+    <ellipse cx="226" cy="336" rx="24" ry="28" fill="#ffffff"/>
+    <ellipse cx="294" cy="336" rx="24" ry="28" fill="#ffffff"/>
+  </g>
+  <circle cx="234" cy="340" r="13" fill="#7a1f9c"/><circle cx="302" cy="340" r="13" fill="#7a1f9c"/>
+  <circle cx="234" cy="340" r="7" fill="#1a0f1f"/><circle cx="302" cy="340" r="7" fill="#1a0f1f"/>
+  <circle cx="238" cy="335" r="3.5" fill="#ffffff"/><circle cx="306" cy="335" r="3.5" fill="#ffffff"/>
+  <path d="M192 306 L 246 326 M330 306 L 276 326" stroke="#1a0f1f" stroke-width="15" stroke-linecap="round"/>
+  <ellipse cx="190" cy="372" rx="14" ry="8" fill="#ff7fa0" opacity="0.5"/><ellipse cx="330" cy="372" rx="14" ry="8" fill="#ff7fa0" opacity="0.5"/>
+  <path d="M224 382 C 240 396 280 396 296 382 C 280 376 240 376 224 382 Z" fill="#2a1530" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M236 382 L 241 391 L 247 382 M266 382 L 272 391 L 278 382" fill="#ffffff" stroke="#1a0f1f" stroke-width="3" stroke-linejoin="round"/>
+  <!-- zarodniki -->
+  <g fill="#aaff78" stroke="#3fbf7f" stroke-width="4" opacity="0.8">
+    <circle cx="70" cy="330" r="12"/><circle cx="98" cy="388" r="8"/><circle cx="52" cy="400" r="6"/>
+    <circle cx="448" cy="320" r="12"/><circle cx="420" cy="384" r="8"/><circle cx="466" cy="392" r="6"/>
+    <circle cx="150" cy="300" r="6"/><circle cx="380" cy="306" r="7"/>
+  </g>
+  <g fill="#ffffff" opacity="0.7"><circle cx="66" cy="325" r="3.5"/><circle cx="444" cy="315" r="3.5"/></g>
+</svg>

@@ -96,8 +96,20 @@ public partial class Game : Node
             WorldRoot.AddChild(world);
     }
 
+    public override void _Notification(int what)
+    {
+        if (what == NotificationWMCloseRequest)
+        {
+            foreach (var c in WorldRoot?.GetChildren() ?? new Godot.Collections.Array<Node>())
+                if (c is View.RunScene rs) rs.SaveNow();
+            Save.Profile.P.Save();
+        }
+    }
+
     public void Quit(int code = 0)
     {
+        foreach (var c in WorldRoot?.GetChildren() ?? new Godot.Collections.Array<Node>())
+            if (c is View.RunScene rs) rs.SaveNow();
         Settings?.Save();
         GetTree().Quit(code);
     }
