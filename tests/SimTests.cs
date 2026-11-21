@@ -14,7 +14,7 @@ public static class SimTests
     {
         var db = Content.Db;
         Assert.Equal(7, db.Characters.Count);
-        Assert.Equal(44, db.Items.Count);
+        Assert.Equal(74, db.Items.Count);
         Assert.Equal(8, db.Biomes.Count);
         Assert.True(db.EnemyByKey.ContainsKey("sniper"));
         Assert.Equal("lich", db.BiomeFor(10).Boss);
