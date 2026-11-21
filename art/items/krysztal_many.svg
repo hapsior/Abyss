@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Kryształ Many - niebieski kryształ z mniejszymi odłamkami. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(3.49 6.33) scale(0.945)">
+  <path d="M16 86 L26 62 L38 72 L38 100 L24 104 Z" fill="#5b9cff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M112 90 L104 68 L92 78 L92 102 L106 106 Z" fill="#5b9cff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 10 L88 30 L88 88 L64 112 L40 88 L40 30 Z" fill="#5b9cff"/>
+  <path d="M64 10 L88 30 L64 52 L40 30 Z" fill="#a8d0ff"/>
+  <path d="M64 52 L88 30 L88 88 L64 112 Z" fill="#3f75d1"/>
+  <ellipse cx="52" cy="64" rx="3.5" ry="16" fill="#ffffff" opacity="0.65" transform="rotate(0 52 64)"/>
+  <path d="M64 10 L88 30 L88 88 L64 112 L40 88 L40 30 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M40 30 L64 52 L88 30 M64 52 L64 112" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M100 17 L102.52 23.48 L109 26 L102.52 28.52 L100 35 L97.48 28.52 L91 26 L97.48 23.48 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M24 28 L25.68 32.32 L30 34 L25.68 35.68 L24 40 L22.32 35.68 L18 34 L22.32 32.32 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

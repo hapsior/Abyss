@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Lampa Górnicza - bezpieczna lampa z siatką i płomieniem. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M64 16 m-9 8 a9 9 0 1 1 18 0" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linecap="round"/><path d="M64 16 m-9 8 a9 9 0 1 1 18 0" fill="none" stroke="#9aa6c2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M36 90 L92 90 L96 112 L32 112 Z" fill="#d9a514" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M92 90 L96 112 L74 112 L78 90Z" fill="#b8862a"/>
+  <path d="M40 38 L88 38 L88 92 L40 92 Z" fill="#fff4c0" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M88 38 L88 92 L74 92 L76 38Z" fill="#e0d090"/>
+  <path d="M66 52 C 76 62 80 72 76 82 C 74 90 54 90 52 82 C 48 72 56 66 60 56 C 62 62 62 60 66 52 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M66 70 C 72 76 72 84 66 86 C 60 86 56 80 60 74 C 62 76 64 74 66 70 Z" fill="#ffe14d"/>
+  <path d="M40 56 L88 56 M40 74 L88 74 M52 38 L52 92 M64 38 L64 92 M76 38 L76 92" fill="none" stroke="#7a6a40" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M40 38 L88 38 L88 92 L40 92 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <ellipse cx="46" cy="60" rx="2.5" ry="12" fill="#ffffff" opacity="0.7" transform="rotate(0 46 60)"/>
+  <path d="M32 40 C 34 20 94 20 96 40 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M96 40 C 94 20 80 22 76 22 C 88 26 90 34 90 40 Z" fill="#d9a514"/>
+  <ellipse cx="50" cy="31" rx="6" ry="3" fill="#ffffff" opacity="0.7" transform="rotate(-15 50 31)"/>
+</svg>

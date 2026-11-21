@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Rękawiczki Strzelca - skórzana rękawica łucznika. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M40 90 L38 70 C 30 68 20 62 20 52 C 20 44 28 42 34 48 L40 58 L40 34 C 40 24 52 24 52 34 L52 24 C 52 14 64 14 64 24 L64 28 C 64 18 76 18 76 28 L76 40 C 76 32 88 32 88 40 L88 90 Z" fill="#d9a066"/>
+  <path d="M88 40 L88 90 L60 90 C 70 80 74 66 76 40 C 80 34 88 34 88 40 Z" fill="#b07a45"/>
+  <ellipse cx="46" cy="40" rx="4" ry="9" fill="#ffffff" opacity="0.6" transform="rotate(0 46 40)"/>
+  <path d="M40 90 L38 70 C 30 68 20 62 20 52 C 20 44 28 42 34 48 L40 58 L40 34 C 40 24 52 24 52 34 L52 24 C 52 14 64 14 64 24 L64 28 C 64 18 76 18 76 28 L76 40 C 76 32 88 32 88 40 L88 90 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M52 36 L52 62 M64 30 L64 62 M76 42 L76 62" fill="none" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M34 86 L94 86 L96 110 L32 110 Z" fill="#8a5530" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M96 86 L96 110 L70 110 L74 86 Z" fill="#6b4226"/>
+  <path d="M34 86 L94 86 L96 110 L32 110 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="63" cy="98" r="6" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3.5"/>
+  <ellipse cx="60" cy="96" rx="2" ry="2" fill="#ffffff" opacity="0.8" transform="rotate(0 60 96)"/>
+</svg>

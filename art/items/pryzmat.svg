@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Pryzmat - szklany pryzmat rozszczepiający promień światła na tęczę. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(7.52 17.38) scale(0.897)">
+  <path d="M10 74 L44 62" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M80 62 L116 34" stroke="#1a0f1f" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 47" stroke="#1a0f1f" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 60" stroke="#1a0f1f" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 73" stroke="#1a0f1f" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 86" stroke="#1a0f1f" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 34" stroke="#ff4d5e" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 47" stroke="#ff9a3c" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 60" stroke="#ffd23f" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 73" stroke="#7ee05a" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M80 62 L116 86" stroke="#5b9cff" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M10 74 L44 62" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M60 16 L100 88 L20 88 Z" fill="#d9f2ff"/>
+  <path d="M60 16 L100 88 L72 88 L66 54 Z" fill="#8fc4ea"/>
+  <ellipse cx="50" cy="56" rx="3.5" ry="18" fill="#ffffff" opacity="0.8" transform="rotate(28 50 56)"/>
+  <path d="M60 16 L100 88 L20 88 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M26 27 L27.96 32.04 L33 34 L27.96 35.96 L26 41 L24.04 35.96 L19 34 L24.04 32.04 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

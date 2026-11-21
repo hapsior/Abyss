@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Zębatka - mosiężna zębatka z odliczającą strzałką. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M101.4 57.5 L113.7 59 L113.7 69 L101.4 70.5 L98.1 80.7 L107.2 89.2 L101.3 97.3 L90.4 91.3 L81.8 97.6 L84.1 109.8 L74.6 112.9 L69.4 101.6 L58.6 101.6 L53.4 112.9 L43.9 109.8 L46.2 97.6 L37.6 91.3 L26.7 97.3 L20.8 89.2 L29.9 80.7 L26.6 70.5 L14.3 69 L14.3 59 L26.6 57.5 L29.9 47.3 L20.8 38.8 L26.7 30.7 L37.6 36.7 L46.2 30.4 L43.9 18.2 L53.4 15.1 L58.6 26.4 L69.4 26.4 L74.6 15.1 L84.1 18.2 L81.8 30.4 L90.4 36.7 L101.3 30.7 L107.2 38.8 L98.1 47.3 Z" fill="#e0b040"/>
+  <g><path d="M64 64 m38 0 A38 38 0 0 1 64 102 L 64 90 A26 26 0 0 0 90 64 Z" fill="#b8862a"/></g>
+  <ellipse cx="40" cy="38" rx="5" ry="16" fill="#ffffff" opacity="0.55" transform="rotate(45 40 38)"/>
+  <path d="M101.4 57.5 L113.7 59 L113.7 69 L101.4 70.5 L98.1 80.7 L107.2 89.2 L101.3 97.3 L90.4 91.3 L81.8 97.6 L84.1 109.8 L74.6 112.9 L69.4 101.6 L58.6 101.6 L53.4 112.9 L43.9 109.8 L46.2 97.6 L37.6 91.3 L26.7 97.3 L20.8 89.2 L29.9 80.7 L26.6 70.5 L14.3 69 L14.3 59 L26.6 57.5 L29.9 47.3 L20.8 38.8 L26.7 30.7 L37.6 36.7 L46.2 30.4 L43.9 18.2 L53.4 15.1 L58.6 26.4 L69.4 26.4 L74.6 15.1 L84.1 18.2 L81.8 30.4 L90.4 36.7 L101.3 30.7 L107.2 38.8 L98.1 47.3 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="64" cy="64" r="28" fill="#f1cf6a" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="64" cy="64" r="17" fill="#3a2a48" stroke="#1a0f1f" stroke-width="4"/>
+  <path d="M54 58 C 56 50 68 48 73 56" fill="none" stroke="#ffd23f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M70 50 L80 58 L68 62 Z" fill="#ffd23f"/>
+  <circle cx="64" cy="64" r="4" fill="#ffd23f"/>
+  <path d="M64 36 L64 44 M92 64 L84 64 M64 92 L64 84 M36 64 L44 64" fill="none" stroke="#b8862a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

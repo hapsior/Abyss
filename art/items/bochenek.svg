@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Bochenek Chleba - złocisty bochen z nacięciami. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M14 80 C 12 52 36 36 64 36 C 92 36 116 52 114 80 C 114 98 96 106 64 106 C 32 106 14 98 14 80 Z" fill="#e8a84c"/>
+  <path d="M114 80 C 114 98 96 106 64 106 C 44 106 30 102 22 96 C 60 100 100 96 108 58 C 112 64 114 72 114 80 Z" fill="#bf7c2e"/>
+  <ellipse cx="34" cy="56" rx="5" ry="12" fill="#ffffff" opacity="0.55" transform="rotate(55 34 56)"/>
+  <path d="M14 80 C 12 52 36 36 64 36 C 92 36 116 52 114 80 C 114 98 96 106 64 106 C 32 106 14 98 14 80 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M40 54 C 46 60 50 68 50 78" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M40 54 C 46 60 50 68 50 78" fill="none" stroke="#f9dc9a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 48 C 70 56 72 66 72 78" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M64 48 C 70 56 72 66 72 78" fill="none" stroke="#f9dc9a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M88 54 C 92 60 94 68 92 78" fill="none" stroke="#1a0f1f" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/><path d="M88 54 C 92 60 94 68 92 78" fill="none" stroke="#f9dc9a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M104 20 L106.24 25.759999999999998 L112 28 L106.24 30.240000000000002 L104 36 L101.76 30.240000000000002 L96 28 L101.76 25.759999999999998 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

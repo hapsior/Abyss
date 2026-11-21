@@ -21,6 +21,8 @@ public sealed class Bot
     private float _strafeT;
     private int[,] _flow;
     private (int, int) _flowCell = (-1, -1);
+    private Room _flowRoom;
+    private int _flowVersion;
     private float _interactCd;
 
     public Bot(RunSim g, PlayerSim p, ulong seed)
@@ -35,13 +37,17 @@ public sealed class Bot
     private Vector2 WalkTo(Vector2 target)
     {
         var room = _g.Room;
-        if (room.Los(_p.X, _p.Y, target.X, target.Y))
+        // prosto tylko, gdy zmieści się całe ciało (cienka linia przechodzi między stykającymi się narożnikami kamieni)
+        if (room.LosThick(_p.X, _p.Y, target.X, target.Y, _p.R + 2))
             return (target - Pos).Normalized();
         var cell = (Math.Clamp(Room.ColOf(target.X), 0, C.GCols - 1), Math.Clamp(Room.RowOf(target.Y), 0, C.GRows - 1));
-        if (cell != _flowCell || _flow == null)
+        // pamięć pola przepływu: ten sam cel w INNYM pokoju (np. drzwi W) wymaga nowego pola
+        if (cell != _flowCell || _flow == null || room != _flowRoom || room.Version != _flowVersion)
         {
             _flow = room.FlowField(target.X, target.Y);
             _flowCell = cell;
+            _flowRoom = room;
+            _flowVersion = room.Version;
         }
         int c = Math.Clamp(Room.ColOf(_p.X), 0, C.GCols - 1), r = Math.Clamp(Room.RowOf(_p.Y), 0, C.GRows - 1);
         int best = _flow[r, c];
@@ -61,7 +67,7 @@ public sealed class Bot
     }
 
     /// <summary>Kierunek do drzwi prowadzących najkrótszą drogą do najbliższego nieodwiedzonego pokoju (albo wyjścia).</summary>
-    private Vector2? ExploreTarget()
+    public Vector2? ExploreTarget()
     {
         var floor = _g.Floor;
         var start = _g.Room;

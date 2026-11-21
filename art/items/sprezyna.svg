@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Sprężyna - metalowa sprężyna między płytkami. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M30 14 L98 14 L98 28 L30 28 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M98 14 L98 28 L74 28 L80 14Z" fill="#d9701b"/>
+  <path d="M64 26 L96 38 L32 52 L96 66 L32 80 L96 92 L64 100" fill="none" stroke="#1a0f1f" stroke-width="19" stroke-linejoin="round" stroke-linecap="round"/><path d="M64 26 L96 38 L32 52 L96 66 L32 80 L96 92 L64 100" fill="none" stroke="#c8d2e6" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 26 L96 38 L32 52 L96 66 L32 80 L96 92 L64 100" fill="none" stroke="#9aa6c2" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" transform="translate(2 3)" opacity="0.9"/>
+  <path d="M62 24 L92 35 L38 47" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7" transform="translate(-2 -1)"/>
+  <path d="M30 100 L98 100 L98 114 L30 114 Z" fill="#ff9a3c" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M98 100 L98 114 L74 114 L80 100Z" fill="#d9701b"/>
+  <ellipse cx="42" cy="107" rx="8" ry="2.2" fill="#ffffff" opacity="0.6" transform="rotate(0 42 107)"/>
+  <ellipse cx="42" cy="21" rx="8" ry="2.2" fill="#ffffff" opacity="0.6" transform="rotate(0 42 21)"/>
+</svg>

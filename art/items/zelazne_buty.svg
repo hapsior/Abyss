@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Żelazne Buty - stalowy but płytowy z klamrą. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(2.19 7.09) scale(0.981)">
+  <path d="M50 16 L98 16 L100 62 C 108 68 112 78 112 90 L112 106 L22 106 L14 96 C 12 84 24 78 36 74 L50 68 Z" fill="#c8d2e6"/>
+  <path d="M100 62 C 108 68 112 78 112 90 L112 106 L60 106 C 90 100 92 76 90 16 L98 16 Z" fill="#9aa6c2"/>
+  <ellipse cx="58" cy="40" rx="3.5" ry="14" fill="#ffffff" opacity="0.75" transform="rotate(0 58 40)"/>
+  <path d="M50 16 L98 16 L100 62 C 108 68 112 78 112 90 L112 106 L22 106 L14 96 C 12 84 24 78 36 74 L50 68 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 44 L99 44 M50 58 L100 58" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 82 C 34 90 34 98 28 104 M44 76 C 48 86 48 96 44 104" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M44 10 L106 10 L106 26 L44 26 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M106 10 L106 26 L84 26 L90 10 Z" fill="#d9a514"/>
+  <circle cx="58" cy="18" r="2.5" fill="#1a0f1f"/>
+  <circle cx="76" cy="18" r="2.5" fill="#1a0f1f"/>
+  <path d="M20 102 L112 102" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/><path d="M22 102 L110 102" stroke="#6b4226" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="78" cy="76" r="6" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3.5"/>
+  </g>
+</svg>

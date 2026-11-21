@@ -580,6 +580,29 @@ public sealed class RunSim
         e.HeldToken = null;
     }
 
+    /// <summary>Najbliższy punkt (środek wolnej komórki siatki) do (x, y), gdy sam punkt jest w przeszkodzie.</summary>
+    public Vector2 FreeSpotNear(float x, float y)
+    {
+        if (Room.TileAt(x, y) is not { Solid: true }) return new Vector2(x, y);
+        int c0 = Math.Clamp(Room.ColOf(x), 0, C.GCols - 1), r0 = Math.Clamp(Room.RowOf(y), 0, C.GRows - 1);
+        for (int rad = 1; rad < Math.Max(C.GCols, C.GRows); rad++)
+        {
+            Vector2? best = null;
+            float bd = float.MaxValue;
+            for (int r = r0 - rad; r <= r0 + rad; r++)
+                for (int c = c0 - rad; c <= c0 + rad; c++)
+                {
+                    if (Math.Max(Math.Abs(r - r0), Math.Abs(c - c0)) != rad) continue;
+                    if (c < 0 || c >= C.GCols || r < 0 || r >= C.GRows || Room.Solid(c, r)) continue;
+                    var cc = Room.CellCenter(c, r);
+                    float d = cc.DistanceSquaredTo(new Vector2(x, y));
+                    if (d < bd) { bd = d; best = cc; }
+                }
+            if (best is { } b) return b;
+        }
+        return new Vector2(x, y);
+    }
+
     public void ClearEnemyBullets()
     {
         foreach (var b in Bullets)
@@ -1197,12 +1220,13 @@ public sealed class RunSim
             }
         float r = R.NextFloat(), healCh = 0.16f * Diff.Heal;
         float luck = Players.Max(p => p.Luck);
+        var drop = FreeSpotNear(C.RCX, C.RCY);   // środek pokoju bywa zajęty przez kamień
         if (r < 0.22f)
-            for (int i = R.RangeInt(1, 3); i > 0; i--) Room.Pickups.Add(new Pickup(PickupKind.Coin, C.RCX, C.RCY, Cos));
+            for (int i = R.RangeInt(1, 3); i > 0; i--) Room.Pickups.Add(new Pickup(PickupKind.Coin, drop.X, drop.Y, Cos));
         else if (r < 0.22f + healCh)
-            Room.Pickups.Add(new Pickup(PickupKind.Heart, C.RCX, C.RCY, Cos));
+            Room.Pickups.Add(new Pickup(PickupKind.Heart, drop.X, drop.Y, Cos));
         else if (r < 0.22f + healCh + 0.07f + luck * 0.002f)
-            Room.Pickups.Add(new Pickup(PickupKind.Chest, C.RCX, C.RCY, Cos, pop: false));
+            Room.Pickups.Add(new Pickup(PickupKind.Chest, drop.X, drop.Y, Cos, pop: false));
         if (Room.Kind == RoomKind.Exit)
         {
             PlaceTrapdoor(new Vector2(C.RCX, C.RCY + 110));

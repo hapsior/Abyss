@@ -41,6 +41,8 @@ public sealed class Room
     public RoomKind Kind;
     public readonly Dictionary<Dir, Room> Doors = new();
     public Obstacle[,] Grid = new Obstacle[C.GRows, C.GCols];
+    /// <summary>Licznik zmian siatki (zniszczone przeszkody) – do unieważniania pól przepływu.</summary>
+    public int Version;
     public bool Visited, Seen, Cleared, RewardGiven;
     public List<List<string>> Waves = new();
     public readonly List<Pickup> Pickups = new();
@@ -189,6 +191,7 @@ public sealed class Room
     {
         if (Grid[ob.Row, ob.Col] == ob)
             Grid[ob.Row, ob.Col] = null;
+            Version++;
     }
 
     /// <summary>Pole odległości BFS do celu – wrogowie schodzą po nim do gracza omijając przeszkody.</summary>

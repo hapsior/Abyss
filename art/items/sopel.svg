@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Wieczny Sopel - kryształowy sopel lodu w gronie. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(3.49 4.44) scale(0.945)">
+  <path d="M20 18 L40 18 C 40 34 34 50 28 66 C 22 52 18 34 20 18 Z" fill="#bfe8ff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M88 18 L108 18 C 110 30 106 44 100 58 C 94 46 90 32 88 18 Z" fill="#bfe8ff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M40 16 L88 16 C 90 44 80 84 64 114 C 48 84 38 44 40 16 Z" fill="#d9f2ff"/>
+  <path d="M88 16 C 90 44 80 84 64 114 C 66 84 74 60 78 16 Z" fill="#7fb8e8"/>
+  <ellipse cx="52" cy="38" rx="4" ry="16" fill="#ffffff" opacity="0.8" transform="rotate(-4 52 38)"/>
+  <path d="M40 16 L88 16 C 90 44 80 84 64 114 C 48 84 38 44 40 16 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M14 12 L114 12 L114 26 L14 26 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M14 20 L114 20 L114 26 L14 26 Z" fill="#cdeaf9"/>
+  <path d="M96 61 L98.52 67.48 L105 70 L98.52 72.52 L96 79 L93.48 72.52 L87 70 L93.48 67.48 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 86 L31.68 90.32 L36 92 L31.68 93.68 L30 98 L28.32 93.68 L24 92 L28.32 90.32 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

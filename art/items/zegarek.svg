@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Zegarek Kieszonkowy - otwarty złoty zegarek na łańcuszku. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M92 40 C 106 40 114 54 114 70 C 114 86 106 100 92 100 Z" fill="#b8862a" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M52 26 C 30 14 14 30 18 52 C 20 64 18 78 18 90" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linecap="round"/>
+  <path d="M52 26 C 30 14 14 30 18 52 C 20 64 18 78 18 90" fill="none" stroke="#ffd23f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="18" cy="92" r="6" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3.5"/>
+  <path d="M56 14 L68 14 L68 26 L56 26 Z" fill="#d9a514" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="62" cy="72" r="38" fill="#ffd23f"/>
+  <path d="M62 110 A38 38 0 0 0 100 72 A38 38 0 0 0 92 49 C 90 84 78 104 62 110 Z" fill="#d9a514"/>
+  <ellipse cx="38" cy="50" rx="4" ry="10" fill="#ffffff" opacity="0.6" transform="rotate(40 38 50)"/>
+  <circle cx="62" cy="72" r="38" fill="none" stroke="#1a0f1f" stroke-width="7"/>
+  <circle cx="62" cy="72" r="28" fill="#fffdf4" stroke="#1a0f1f" stroke-width="4.5"/>
+  <path d="M62 48 L62 53 M62 91 L62 96 M38 72 L43 72 M81 72 L86 72" fill="none" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M62 72 L62 56" fill="none" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M62 72 L76 78" fill="none" stroke="#d82838" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="62" cy="72" r="4" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3"/>
+</svg>

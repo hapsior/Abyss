@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Błędny Ognik - niebiesko-zielony ognik z oczkami w słoiku. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <circle cx="64" cy="78" r="40" fill="#7dffe0" opacity="0.22"/>
+  <path d="M30 56 C 30 46 40 44 42 44 L42 34 L86 34 L86 44 C 88 44 98 46 98 56 L98 98 C 98 108 90 112 80 112 L48 112 C 38 112 30 108 30 98 Z" fill="#cdeeff"/>
+  <path d="M98 56 L98 98 C 98 108 90 112 80 112 L66 112 C 86 104 88 74 86 44 C 94 46 98 50 98 56 Z" fill="#9ccbe8"/>
+  <path d="M64 52 C 74 64 84 72 82 88 C 80 100 70 104 64 104 C 56 104 46 100 46 88 C 44 72 56 64 64 52 Z" fill="#4fe8c0" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M64 52 C 74 64 84 72 82 88 C 80 100 70 104 64 104 C 76 96 76 74 64 52 Z" fill="#2fb8c8"/>
+  <circle cx="56" cy="86" r="6" fill="#ffffff" stroke="#1a0f1f" stroke-width="3.5"/>
+  <circle cx="72" cy="86" r="6" fill="#ffffff" stroke="#1a0f1f" stroke-width="3.5"/>
+  <circle cx="58" cy="87" r="2.6" fill="#1a0f1f"/>
+  <circle cx="74" cy="87" r="2.6" fill="#1a0f1f"/>
+  <ellipse cx="40" cy="70" rx="3" ry="12" fill="#ffffff" opacity="0.75" transform="rotate(0 40 70)"/>
+  <path d="M30 56 C 30 46 40 44 42 44 L42 34 L86 34 L86 44 C 88 44 98 46 98 56 L98 98 C 98 108 90 112 80 112 L48 112 C 38 112 30 108 30 98 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M42 34 L86 34 L88 24 L40 24 Z" fill="#b97a4a" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M44 24 L84 24 L82 14 L46 14 Z" fill="#d9a066" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M18 28 L19.68 32.32 L24 34 L19.68 35.68 L18 40 L16.32 35.68 L12 34 L16.32 32.32 Z" fill="#7dffe0" stroke="#1a0f1f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M110 45 L111.96 50.04 L117 52 L111.96 53.96 L110 59 L108.04 53.96 L103 52 L108.04 50.04 Z" fill="#7dffe0" stroke="#1a0f1f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

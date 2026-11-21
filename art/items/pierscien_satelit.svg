@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Pierścień Satelit - złoty pierścień z klejnotem i dwoma krążącymi kryształami. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <ellipse cx="64" cy="66" rx="50" ry="20" transform="rotate(-32 64 66)" fill="none" stroke="#a066ff" stroke-width="3.5" opacity="0.8"/>
+  <circle cx="64" cy="76" r="26" fill="none" stroke="#1a0f1f" stroke-width="18"/>
+  <circle cx="64" cy="76" r="26" fill="none" stroke="#ffd23f" stroke-width="9"/>
+  <path d="M45 90 A26 26 0 0 0 90 94" fill="none" stroke="#d9a514" stroke-width="6" stroke-linecap="round" opacity="1" transform="translate(1 1)"/>
+  <path d="M44 66 A26 26 0 0 1 58 52" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <path d="M52 42 L58 28 L70 28 L76 42 Z" fill="#d9a514" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 16 L78 30 L64 48 L50 30 Z" fill="#3fd6d0" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 16 L78 30 L64 48 Z" fill="#23a5a0"/>
+  <path d="M64 16 L50 30 L64 30Z" fill="#b8fff8"/>
+  <path d="M20.5 75.1 L28 85.1 L20.5 95.1 L13 85.1 Z" fill="#a8d0ff" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M107.5 36.9 L115 46.9 L107.5 56.9 L100 46.9 Z" fill="#a8d0ff" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M110 22 L111.68 26.32 L116 28 L111.68 29.68 L110 34 L108.32 29.68 L104 28 L108.32 26.32 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

@@ -12,10 +12,18 @@ public static class Balance
     public const float EnemyHpGrowth = 1.07f;     // piętro 10: ×1.8, 20: ×3.6, 40: ×14
     public const float EnemyDmgGrowth = 1.03f;    // piętro 40: ×3.2
     public const float DeepExtraGrowth = 1.04f;   // dodatkowo w Głębi (41+), na piętro
+    // Symulator balansu (--balance): moc gracza rośnie ok. ×4.6 do piętra 10, ×11 do 20, ×27 do 30, ×115 do 40
+    // (przedmioty mnożą się), więc od 10. piętra wrogowie rosną szybciej, żeby późne krainy nie były łatwiejsze od wczesnych.
+    public const float MidHpGrowth = 1.025f;      // od piętra 10
+    public const float LateHpGrowth = 1.02f;      // od piętra 25
+
+    /// <summary>Dodatkowy mnożnik HP wrogów i bossów w środkowych i późnych krainach.</summary>
+    public static float LateHpFactor(int depth) =>
+        MathF.Pow(MidHpGrowth, Math.Max(0, depth - 10)) * MathF.Pow(LateHpGrowth, Math.Max(0, depth - 25));
 
     public static float EnemyHpScale(int depth)
     {
-        float s = MathF.Pow(EnemyHpGrowth, depth - 1);
+        float s = MathF.Pow(EnemyHpGrowth, depth - 1) * LateHpFactor(depth);
         if (depth > C.StoryFloors)
             s *= MathF.Pow(DeepExtraGrowth, depth - C.StoryFloors);
         return s;
@@ -51,13 +59,14 @@ public static class Balance
     // --- bossowie ---
     public const float BossHpBase = 700f;
     public const float BossHpGrowth = 1.075f;
-    public static float BossHp(int depth) => BossHpBase * MathF.Pow(BossHpGrowth, depth - 1) * (depth > C.StoryFloors ? MathF.Pow(DeepExtraGrowth, depth - C.StoryFloors) : 1);
+    public static float BossHp(int depth) => BossHpBase * MathF.Pow(BossHpGrowth, depth - 1) * LateHpFactor(depth) *
+        (depth > C.StoryFloors ? MathF.Pow(DeepExtraGrowth, depth - C.StoryFloors) : 1);
     public static float BossTempo(int depth) => Math.Min(1.3f, 1 + 0.008f * (depth - 5));
 
     /// <summary>Limit obrażeń na sekundę zadawanych bossowi (model Enter the Gungeon) – żeby nie znikał w 3 s.</summary>
-    public static float BossDpsCap(int depth) => 40f * MathF.Pow(1.065f, Math.Max(0, depth - 5));
+    public static float BossDpsCap(int depth) => 50f * MathF.Pow(1.07f, Math.Max(0, depth - 5));
     public const float BossCapWindow = 3.0f;
-    public const float BossCapOverflow = 0.25f;
+    public const float BossCapOverflow = 0.08f;   // nadmiar ponad limit (symulator: przy 0.25 boss 40. piętra padał w ~5 s)
     public const float BossCapMaxHit = 3.0f;
     public const float BossIntroArmor = 0.1f;
 

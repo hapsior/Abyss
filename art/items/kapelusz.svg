@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Kapelusz Wędrowca - zielony kapelusz z piórem. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(4.57 4.11) scale(0.929)">
+  <path d="M12 88 C 12 74 40 70 64 70 C 90 70 116 74 116 88 C 116 100 90 106 64 106 C 38 106 12 100 12 88 Z" fill="#2a8f5c"/>
+  <path d="M116 88 C 116 100 90 106 64 106 C 56 106 48 106 42 105 C 80 102 100 96 106 76 C 112 78 116 82 116 88 Z" fill="#1f7048"/>
+  <path d="M12 88 C 12 74 40 70 64 70 C 90 70 116 74 116 88 C 116 100 90 106 64 106 C 38 106 12 100 12 88 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M36 84 C 34 56 40 30 62 26 C 72 24 80 30 86 36 C 94 48 94 66 92 84 Z" fill="#3fbf7f"/>
+  <path d="M86 36 C 94 48 94 66 92 84 L66 84 C 80 74 84 54 80 32 Z" fill="#2a8f5c"/>
+  <ellipse cx="50" cy="50" rx="5" ry="14" fill="#ffffff" opacity="0.55" transform="rotate(12 50 50)"/>
+  <path d="M36 84 C 34 56 40 30 62 26 C 72 24 80 30 86 36 C 94 48 94 66 92 84 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M35 76 C 52 82 76 82 93 76 L92 88 C 76 94 52 94 36 88 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M93 76 L92 88 C 84 91 76 92 70 93 C 82 88 88 82 90 76 Z" fill="#d9a514"/>
+  <path d="M84 78 C 104 74 114 52 112 22 C 98 30 86 46 80 72 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M112 22 C 114 52 104 74 84 78 C 98 68 106 46 112 22 Z" fill="#e6d6ee"/>
+  <path d="M86 74 C 98 62 104 46 108 28" fill="none" stroke="#ff4d5e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

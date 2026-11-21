@@ -93,7 +93,7 @@ public static class BossTests
         foreach (var (key, depth) in Bosses)
         {
             var g = Setup(key, depth, 777);
-            g.Players[0].Damage = 500;
+            g.Players[0].Damage = 4000; // obrażenia ponad limit DPS bossa (test „da się zabić”, nie balansu)
             var boss = g.Boss;
             bool defeated = false, story = false;
             const float dt = 1f / 60;

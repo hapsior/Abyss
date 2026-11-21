@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Osełka - kamień do ostrzenia z iskrami. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(-4.00 2.50) scale(1.000)">
+  <g transform="rotate(-28 64 70)">
+  <path d="M18 62 L94 62 L94 90 L18 90 Z" fill="#d9c9a0" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M94 62 L94 90 L70 90 C 84 84 90 74 90 62 Z" fill="#b09a6a"/>
+  <ellipse cx="34" cy="70" rx="10" ry="3" fill="#ffffff" opacity="0.5" transform="rotate(0 34 70)"/>
+  <path d="M18 62 L34 48 L110 48 L94 62 Z" fill="#f0e6c4" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M94 62 L110 48 L110 76 L94 90 Z" fill="#b09a6a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M18 62 L94 62 L94 90 L18 90 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M32 74 L50 74 M60 78 L80 78 M42 82 L52 82" fill="none" stroke="#b09a6a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <path d="M100 12 L103.36 20.64 L112 24 L103.36 27.36 L100 36 L96.64 27.36 L88 24 L96.64 20.64 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 21 L31.96 26.04 L37 28 L31.96 29.96 L30 35 L28.04 29.96 L23 28 L28.04 26.04 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M114 61 L115.4 64.6 L119 66 L115.4 67.4 L114 71 L112.6 67.4 L109 66 L112.6 64.6 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

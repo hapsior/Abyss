@@ -171,7 +171,14 @@ public sealed class Pickup
             float k = MathF.Max(0, 1 - 5 * dt);
             Vx *= k; Vy *= k;
         }
+        float ox = X, oy = Y;
         X += Vx * dt; Y += Vy * dt;
+        // swobodnie toczące się znajdźki (serca, skrzynki) nie wjeżdżają w przeszkody
+        if (!Magnet && g.Room.TileAt(X, Y) is { Solid: true })
+        {
+            X = ox; Y = oy;
+            Vx = Vy = 0;
+        }
         if (Vz != 0 || Z > 0)
         {
             Vz -= 700 * dt;

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Trujący Grzyb - fioletowy kapelusz w zielone kropki, zielony jad. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(4.57 4.57) scale(0.929)">
+  <path d="M46 76 C 46 90 44 100 38 106 C 52 112 76 112 90 106 C 84 100 82 90 82 76 Z" fill="#d9f0a0" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M82 76 C 84 90 84 100 90 106 C 82 109 72 111 64 111 C 78 104 78 90 74 76 Z" fill="#a9c874"/>
+  <path d="M12 68 C 12 38 36 18 64 18 C 92 18 116 38 116 68 C 116 76 108 78 100 78 L28 78 C 20 78 12 76 12 68 Z" fill="#a066ff"/>
+  <path d="M116 68 C 116 76 108 78 100 78 L40 78 C 90 76 104 56 98 28 C 110 38 116 52 116 68 Z" fill="#7442d1"/>
+  <ellipse cx="38" cy="38" rx="6" ry="14" fill="#ffffff" opacity="0.6" transform="rotate(40 38 38)"/>
+  <path d="M12 68 C 12 38 36 18 64 18 C 92 18 116 38 116 68 C 116 76 108 78 100 78 L28 78 C 20 78 12 76 12 68 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="40" cy="56" r="8" fill="#9bf06a" stroke="#1a0f1f" stroke-width="4.5"/>
+  <circle cx="70" cy="36" r="6.5" fill="#9bf06a" stroke="#1a0f1f" stroke-width="4.5"/>
+  <circle cx="90" cy="60" r="9" fill="#9bf06a" stroke="#1a0f1f" stroke-width="4.5"/>
+  <circle cx="60" cy="64" r="4.5" fill="#9bf06a" stroke="#1a0f1f" stroke-width="3.5"/>
+  <path d="M28 80 C 26 90 22 94 22 100 C 22 106 34 106 34 100 C 34 94 30 90 28 80 Z" fill="#7ee05a" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M100 82 C 99 90 96 92 96 97 C 96 102 106 102 106 97 C 106 92 102 90 100 82 Z" fill="#7ee05a" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="112" cy="100" r="4" fill="#7ee05a" stroke="#1a0f1f" stroke-width="3"/>
+  <circle cx="16" cy="88" r="3" fill="#7ee05a" stroke="#1a0f1f" stroke-width="2.5"/>
+  </g>
+</svg>

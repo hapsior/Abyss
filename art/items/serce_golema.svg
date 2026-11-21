@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Serce Golema - kamienne serce z świecącą runą. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <path d="M64 108 C 40 90 14 70 14 46 C 14 28 28 16 44 16 C 54 16 60 22 64 30 C 68 22 74 16 84 16 C 100 16 114 28 114 46 C 114 70 88 90 64 108 Z" fill="#8e8aa6"/>
+  <path d="M114 46 C 114 70 88 90 64 108 C 54 100 44 92 36 84 C 70 92 100 70 110 34 C 113 38 114 42 114 46 Z" fill="#66627d"/>
+  <path d="M18 36 C 22 24 32 18 44 18 L52 20 C 40 28 30 40 26 54 C 20 48 16 42 18 36 Z" fill="#a9a6c2"/>
+  <path d="M64 108 C 40 90 14 70 14 46 C 14 28 28 16 44 16 C 54 16 60 22 64 30 C 68 22 74 16 84 16 C 100 16 114 28 114 46 C 114 70 88 90 64 108 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M30 22 L36 34 L28 40 M96 22 L90 36 L100 44 M70 96 L66 86 L74 78" fill="none" stroke="#1a0f1f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="64" cy="58" r="22" fill="#4a4666" stroke="#1a0f1f" stroke-width="5"/>
+  <path d="M64 42 L64 74 M52 54 L64 62 L76 54 M54 70 L64 62" fill="none" stroke="#3fd6d0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M64 42 L64 74 M52 54 L64 62 L76 54 M54 70 L64 62" fill="none" stroke="#d6fffb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 52 C 14 58 20 66 26 64 C 24 58 26 54 20 52 Z" fill="#5fc060" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M38 20 C 40 12 50 14 52 20 C 46 24 42 24 38 20 Z" fill="#5fc060" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

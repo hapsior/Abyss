@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ikona przedmiotu: Wampirzy Kieł - pojedynczy kieł z kroplą krwi. Ikony 128x128, obiekt mieści się w 12..116. -->
+  <g transform="translate(7 8) scale(0.9)">
+  <path d="M40 14 C 36 44 46 78 70 108 C 68 84 90 64 94 38 C 96 28 94 18 94 14 Z" fill="#fffdf4"/>
+  <path d="M94 14 C 94 18 96 28 94 38 C 90 64 68 84 70 108 C 84 88 90 64 90 38 C 92 28 92 20 94 14 Z" fill="#e0d6bc"/>
+  <ellipse cx="44" cy="32" rx="4" ry="12" fill="#ffffff" opacity="0.8" transform="rotate(-20 44 32)"/>
+  <path d="M40 14 C 36 44 46 78 70 108 C 68 84 90 64 94 38 C 96 28 94 18 94 14 Z" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M28 14 C 36 8 46 16 58 13 C 70 10 80 16 90 13 C 98 10 104 12 102 18 C 96 26 88 22 80 24 C 66 28 56 23 46 26 C 38 28 30 26 26 22 Z" fill="#d82838" stroke="#1a0f1f" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M102 18 C 96 26 88 22 80 24 C 66 28 56 23 46 26 C 70 30 96 28 100 14 Z" fill="#ac1f2e"/>
+  <ellipse cx="36" cy="16" rx="6" ry="2.5" fill="#ffffff" opacity="0.55" transform="rotate(-10 36 16)"/>
+  <path d="M56 30 C 54 52 60 74 70 94" fill="none" stroke="#d82838" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M96 78 C 92 86 90 90 90 94 C 90 100 104 100 104 94 C 104 90 100 86 96 78 Z" fill="#ff4d5e" stroke="#1a0f1f" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <ellipse cx="94" cy="93" rx="1.6" ry="2.6" fill="#ffffff" opacity="0.8" transform="rotate(0 94 93)"/>
+  </g>
+  <path d="M24 54 L25.68 58.32 L30 60 L25.68 61.68 L24 66 L22.32 61.68 L18 60 L22.32 58.32 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

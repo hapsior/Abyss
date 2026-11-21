@@ -10,6 +10,7 @@ namespace Otchlan.Core;
 ///   --sandbox              od razu arena testowa
 ///   --boss KLUCZ           od razu walka z bossem (np. spore_mother), bez zapisu
 ///   --boss-tour DIR        zrzuty walk z bossami (opcjonalnie --bosses k1,k2) i wyjście
+///   --balance PLIK.csv     symulacja balansu botem (opcjonalnie --chars k1,k2 --floors N --seed S), bez okna
 ///   --char-tour DIR        zrzuty postaci używających umiejętności (opcjonalnie --chars k1,k2) i wyjście
 ///   --windowed             okno zamiast pełnego ekranu
 /// </summary>
@@ -32,6 +33,13 @@ public partial class Boot : Node
         if (game.ArgValue("--boss-tour") is { } bdir)
         {
             AddChild(new ScreenshotTour(bdir) { Name = "Tour", BossesOnly = game.ArgValue("--bosses") ?? "*" });
+            return;
+        }
+        if (game.ArgValue("--balance") is { } csv)
+        {
+            Tests.BalanceRun.Run(csv, game.ArgValue("--chars") ?? "rycerz", int.Parse(game.ArgValue("--floors") ?? "45"),
+                ulong.Parse(game.ArgValue("--seed") ?? "1"));
+            game.Quit(0);
             return;
         }
         if (game.ArgValue("--char-tour") is { } cdir)
