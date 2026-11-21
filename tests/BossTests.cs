@@ -11,7 +11,7 @@ public static class BossTests
 {
     private static readonly (string key, int depth)[] Bosses =
     {
-        ("slime_king", 5), ("lich", 10), ("hive", 15), ("forge", 20), ("spore_mother", 25), ("abyss", 40),
+        ("slime_king", 5), ("lich", 10), ("hive", 15), ("forge", 20), ("spore_mother", 25), ("abyss", 40), ("clockmaker", 35),
     };
 
     /// <summary>Ataki dostępne dopiero w późniejszych fazach (poza listą z bosses.json).</summary>
