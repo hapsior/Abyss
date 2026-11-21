@@ -37,7 +37,8 @@ public sealed class RunSim
     public int DiffIdx, Seal;
     public Rng R;
     /// <summary>Losowość kosmetyczna (cząsteczki itp.) – nie wpływa na rozgrywkę ani zapis.</summary>
-    public readonly Random Cos = new();
+    /// <summary>RNG kosmetyczny (cząsteczki, rozrzut znajdziek, animacje). Ziarno z ziarna wyprawy – symulacja bez okna jest powtarzalna.</summary>
+    public readonly Random Cos;
     public IFx Fx = NullFx.I;
     public bool God, DamageNumbers = true;
 
@@ -71,6 +72,7 @@ public sealed class RunSim
         Diff = db.Difficulties[diffIdx];
         Seal = seal;
         R = new Rng(seed);
+        Cos = new Random(unchecked((int)(seed ^ (seed >> 32)) ^ 0x5bd1e995));
         for (int i = 0; i < charKeys.Count; i++)
         {
             var p = new PlayerSim(db.CharByKey[charKeys[i]], i);
