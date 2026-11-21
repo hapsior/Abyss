@@ -91,6 +91,8 @@ public sealed class PlayerSim
     public int BanishesLeft = Balance.BanishesPerRun;
     public readonly List<string> UpgradeLog = new();
     public bool HitThisRoom, HitThisFloor;
+    /// <summary>Rewolwerowiec: zabójstwa bieżącym „Ostatnim Tańcem” (zerowane przy użyciu).</summary>
+    public int DanceKills;
 
     public bool Active => !Dead && !Downed;
 
@@ -397,7 +399,11 @@ public sealed class PlayerSim
                 helped = true;
         ReviveP = helped ? ReviveP + dt / ReviveTime : MathF.Max(0, ReviveP - dt / ReviveTime * 0.5f);
         if (ReviveP >= 1)
+        {
             Revive(g, 0.35f);
+            g.Stats.PartnerRevives++;
+            g.Events.Enqueue(new RunEvent(RunEventKind.PlayerRevived, this));
+        }
     }
 
     public void Revive(RunSim g, float frac)
@@ -477,9 +483,14 @@ public sealed class PlayerSim
                     if (d < rad + e.R)
                         g.DamageEnemy(e, EffDamage() * 3 * pw, kx: dx / d * 800, ky: dy / d * 800, owner: this, source: "ability");
                 }
+                int waveKilled = 0;
                 foreach (var b in g.Bullets)
                     if (!b.Friendly && (b.X - X) * (b.X - X) + (b.Y - Y) * (b.Y - Y) < rad * 1.1f * rad * 1.1f)
+                    {
+                        if (b.Alive) waveKilled++;
                         b.Kill(g);
+                    }
+                g.Stats.WaveBest = Math.Max(g.Stats.WaveBest, waveKilled);
                 break;
             }
             case "lowczyni":
@@ -544,6 +555,7 @@ public sealed class PlayerSim
             {
                 // Wieżyczka obok gracza, strzela pociskami gracza (z jego ulepszeniami); najwyżej 2 naraz
                 var mine = g.Effects.OfType<Sentry>().Where(s => s.Owner == this && s.Alive).OrderBy(s => s.T).ToList();
+                if (mine.Count >= 1) g.Stats.TwoSentries = 1;
                 if (mine.Count >= 2) mine[0].Alive = false;
                 float a = Aim;
                 var pos = new Vector2(C.Clamp(X + MathF.Cos(a) * 46, C.RX0 + 30, C.RX1 - 30), C.Clamp(Y + MathF.Sin(a) * 46, C.RY0 + 30, C.RY1 - 30));
@@ -582,9 +594,14 @@ public sealed class PlayerSim
                     if (d < rad + e.R)
                         g.DamageEnemy(e, EffDamage() * 3.5f * pw, kx: ex / d * 700, ky: ey / d * 700, owner: this, source: "ability");
                 }
+                int kiKilled = 0;
                 foreach (var b in g.Bullets)
                     if (!b.Friendly && (b.X - X) * (b.X - X) + (b.Y - Y) * (b.Y - Y) < rad * rad)
+                    {
+                        if (b.Alive) kiKilled++;
                         b.Kill(g);
+                    }
+                g.Stats.KiBest = Math.Max(g.Stats.KiBest, kiKilled);
                 break;
             }
             case "bard":
@@ -600,6 +617,7 @@ public sealed class PlayerSim
                     if ((e.X - X) * (e.X - X) + (e.Y - Y) * (e.Y - Y) < 280 * 280)
                         e.SlowT = MathF.Max(e.SlowT, 3);
                 g.Fx.Ring(X, Y, new Color("ff9ad0"), 280, 0.5f, 6);
+                if (g.Coop && g.ActivePlayers().Count(o => o.SongT > 0) >= 2) g.Stats.BardDuo = 1;
                 g.Fx.Burst(X, Y, new Color("ff9ad0"), 26, 260, 6, 0.8f, grav: -60);
                 g.Fx.Sound("heal", 0.7f);
                 break;
@@ -607,6 +625,7 @@ public sealed class PlayerSim
             case "rewolwerowiec":
             {
                 // Ostatni Taniec: 6 krytycznych strzałów w najbliższych wrogów, pełny bębenek
+                DanceKills = 0;
                 var targets = g.Enemies.Where(e => e.Alive && !e.Invuln)
                     .OrderBy(e => (e.X - X) * (e.X - X) + (e.Y - Y) * (e.Y - Y)).Take(DrumSize).ToList();
                 for (int i = 0; i < DrumSize; i++)
@@ -614,7 +633,9 @@ public sealed class PlayerSim
                     float a = targets.Count > 0
                         ? MathF.Atan2(targets[i % targets.Count].Y - Y, targets[i % targets.Count].X - X)
                         : Aim + (i - 2.5f) * 0.12f;
-                    g.Bullets.Add(MakeBullet(g, a, 1.5f * pw, 1, 1.2f, 1.2f, forceCrit: true));
+                    var db = MakeBullet(g, a, 1.5f * pw, 1, 1.2f, 1.2f, forceCrit: true);
+                    db.Source = "last_dance";
+                    g.Bullets.Add(db);
                 }
                 Ammo = DrumSize;
                 FireCd = 0.15f;
@@ -689,6 +710,7 @@ public sealed class PlayerSim
                 g.Fx.Banner("WSKRZESZENIE!", "Pióro Feniksa spłonęło", new Color("ff963c"));
                 g.ClearEnemyBullets();
                 Items.Remove("feniks");
+                g.Stats.Phoenix++;
             }
             else
             {

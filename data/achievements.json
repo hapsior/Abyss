@@ -9,36 +9,72 @@
   "goal": null
  },
  {
-  "api": "ACH_FLOOR_2",
-  "name": "W głąb",
-  "desc": "Dotrzyj do Katakumb (piętro 2).",
+  "api": "ACH_BIOME_1",
+  "name": "Pierwszy krok",
+  "desc": "Dotrzyj do krainy: Piwnice (piętro 1).",
+  "icon": "drop",
+  "color": "#d2a064",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BIOME_2",
+  "name": "Martwa cisza",
+  "desc": "Dotrzyj do krainy: Katakumby (piętro 6).",
   "icon": "skull",
   "color": "#c8c8b4",
   "hidden": false,
   "goal": null
  },
  {
-  "api": "ACH_FLOOR_3",
-  "name": "Pod powierzchnią",
-  "desc": "Dotrzyj do Zalanych Grot (piętro 3).",
+  "api": "ACH_BIOME_3",
+  "name": "Po kostki w wodzie",
+  "desc": "Dotrzyj do krainy: Zalane Groty (piętro 11).",
   "icon": "drop",
   "color": "#5ad2dc",
   "hidden": false,
   "goal": null
  },
  {
-  "api": "ACH_FLOOR_4",
-  "name": "Żar Kuźni",
-  "desc": "Dotrzyj do Kuźni (piętro 4).",
+  "api": "ACH_BIOME_4",
+  "name": "Ogień i żelazo",
+  "desc": "Dotrzyj do krainy: Kuźnia (piętro 16).",
   "icon": "flame",
   "color": "#ff8232",
   "hidden": false,
   "goal": null
  },
  {
-  "api": "ACH_FLOOR_5",
-  "name": "Na dnie",
-  "desc": "Dotrzyj do Otchłani (piętro 5).",
+  "api": "ACH_BIOME_5",
+  "name": "Zarodniki w powietrzu",
+  "desc": "Dotrzyj do krainy: Grzybnia (piętro 21).",
+  "icon": "mushroom",
+  "color": "#aaff78",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BIOME_6",
+  "name": "Zimno aż do kości",
+  "desc": "Dotrzyj do krainy: Lodowa Krypta (piętro 26).",
+  "icon": "frost",
+  "color": "#b4e6ff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BIOME_7",
+  "name": "Tykanie w ścianach",
+  "desc": "Dotrzyj do krainy: Mechanizm (piętro 31).",
+  "icon": "gear",
+  "color": "#e6be50",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BIOME_8",
+  "name": "Brzeg przepaści",
+  "desc": "Dotrzyj do krainy: Otchłań (piętro 36).",
   "icon": "swirl",
   "color": "#c35fff",
   "hidden": false,
@@ -47,46 +83,100 @@
  {
   "api": "ACH_BOSS_1",
   "name": "Królobójca",
-  "desc": "Pokonaj Króla Glutów.",
-  "icon": "crown",
-  "color": "#78d25a",
+  "desc": "Pokonaj bossa: Król Glutów (Władca Piwnic).",
+  "icon": "boss:slime_king",
+  "color": "#64c85a",
   "hidden": false,
   "goal": null
  },
  {
   "api": "ACH_BOSS_2",
   "name": "Kości do grobu",
-  "desc": "Pokonaj Licza.",
-  "icon": "skull",
-  "color": "#be8cff",
+  "desc": "Pokonaj bossa: Licz (Pan Kości).",
+  "icon": "boss:lich",
+  "color": "#6e50a0",
   "hidden": false,
   "goal": null
  },
  {
   "api": "ACH_BOSS_3",
   "name": "Bez żądła",
-  "desc": "Pokonaj Matkę Roju.",
-  "icon": "wing",
-  "color": "#f0c846",
+  "desc": "Pokonaj bossa: Matka Roju (Królowa Grot).",
+  "icon": "boss:hive",
+  "color": "#e6be3c",
   "hidden": false,
   "goal": null
  },
  {
   "api": "ACH_BOSS_4",
   "name": "Wystygły",
-  "desc": "Pokonaj Władcę Kuźni.",
-  "icon": "shield",
-  "color": "#ff8c3c",
+  "desc": "Pokonaj bossa: Władca Kuźni (Żelazny Tyran).",
+  "icon": "boss:forge",
+  "color": "#5a555f",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_5",
+  "name": "Zgnilizna",
+  "desc": "Pokonaj bossa: Matka Grzybni (Królowa Zarodników).",
+  "icon": "boss:spore_mother",
+  "color": "#a066ff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_6",
+  "name": "Odwilż",
+  "desc": "Pokonaj bossa: Szronowy Kolos (Strażnik Wiecznej Zimy).",
+  "icon": "boss:frost_colossus",
+  "color": "#9fd8ff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_BOSS_7",
+  "name": "Rozkręcony",
+  "desc": "Pokonaj bossa: Zegarmistrz (Pan Czasu).",
+  "icon": "boss:clockmaker",
+  "color": "#e6be50",
   "hidden": false,
   "goal": null
  },
  {
   "api": "ACH_WIN",
   "name": "Serce w kawałkach",
-  "desc": "Pokonaj Serce Otchłani.",
-  "icon": "heart",
+  "desc": "Pokonaj Serce Otchłani (piętro 40) i ukończ historię.",
+  "icon": "boss:abyss",
   "color": "#e6325a",
   "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_DEPTH_45",
+  "name": "Głębia: pięć",
+  "desc": "Dotrzyj do 5. piętra Głębi (piętro 45).",
+  "icon": "swirl",
+  "color": "#b05fff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_DEPTH_50",
+  "name": "Głębia: dziesięć",
+  "desc": "Dotrzyj do 10. piętra Głębi (piętro 50).",
+  "icon": "swirl",
+  "color": "#c35fff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_DEPTH_60",
+  "name": "Bez dna",
+  "desc": "Dotrzyj do 20. piętra Głębi (piętro 60).",
+  "icon": "swirl",
+  "color": "#ff5fd2",
+  "hidden": true,
   "goal": null
  },
  {
@@ -110,25 +200,322 @@
  {
   "api": "ACH_WIN_FAST",
   "name": "Sprinter",
-  "desc": "Wygraj w mniej niż 25 minut.",
+  "desc": "Wygraj w mniej niż 75 minut.",
   "icon": "hourglass",
   "color": "#e6c878",
   "hidden": false,
   "goal": null
  },
  {
-  "api": "ACH_UNLOCK_ALCHEMIK",
-  "name": "Eureka!",
-  "desc": "Odblokuj Alchemika.",
-  "icon": "potion",
-  "color": "#96f05a",
+  "api": "ACH_SEAL_5",
+  "name": "Pięć pieczęci",
+  "desc": "Wygraj z Pieczęcią Otchłani 5 lub wyższą.",
+  "icon": "rune",
+  "color": "#ff7878",
   "hidden": false,
   "goal": null
  },
  {
+  "api": "ACH_SEAL_10",
+  "name": "Władca Otchłani",
+  "desc": "Wygraj z Pieczęcią Otchłani 10.",
+  "icon": "rune",
+  "color": "#ff3c50",
+  "hidden": true,
+  "goal": null
+ },
+ {
+  "api": "ACH_COOP_WIN",
+  "name": "Razem raźniej",
+  "desc": "Wygraj w trybie co-op.",
+  "icon": "heart",
+  "color": "#ff963c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_REVIVE",
+  "name": "Nie zostawiamy swoich",
+  "desc": "Podnieś powalonego partnera w trybie co-op.",
+  "icon": "plus",
+  "color": "#8cffa0",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_UNLOCK_ALCHEMIK",
+  "name": "Eureka!",
+  "desc": "Odblokuj postać: Alchemik. Dotrzyj do Zalanych Grot (piętro 11).",
+  "icon": "potion",
+  "color": "#ffc24a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_UNLOCK_UPADLY",
+  "name": "Upadek z łaski",
+  "desc": "Odblokuj postać: Upadły. Pokonaj Serce Otchłani (piętro 40).",
+  "icon": "skull",
+  "color": "#9b6bdb",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_UNLOCK_SZAMAN",
+  "name": "Głos burzy",
+  "desc": "Odblokuj postać: Szaman. Dotrzyj do Kuźni (piętro 16).",
+  "icon": "bolt",
+  "color": "#3fbf8f",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_UNLOCK_MNICH",
+  "name": "Spokój w lodzie",
+  "desc": "Odblokuj postać: Mnich. Dotrzyj do Lodowej Krypty (piętro 26).",
+  "icon": "ki",
+  "color": "#f2c14e",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_UNLOCK_REWOLWEROWIEC",
+  "name": "Szybki palec",
+  "desc": "Odblokuj postać: Rewolwerowiec. Dotrzyj do Mechanizmu (piętro 31).",
+  "icon": "gun",
+  "color": "#b5653a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ALL_CHARS",
+  "name": "Wszechstronny",
+  "desc": "Wygraj każdą postacią.",
+  "icon": "dice",
+  "color": "#ffffff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_RYCERZ",
+  "name": "Zwycięstwo: Rycerz",
+  "desc": "Wygraj, grając jako Rycerz.",
+  "icon": "char:rycerz",
+  "color": "#5b9cff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_LOWCZYNI",
+  "name": "Zwycięstwo: Łowczyni",
+  "desc": "Wygraj, grając jako Łowczyni.",
+  "icon": "char:lowczyni",
+  "color": "#5fcf6e",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_BERSERKER",
+  "name": "Zwycięstwo: Berserker",
+  "desc": "Wygraj, grając jako Berserker.",
+  "icon": "char:berserker",
+  "color": "#ff7a5c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_MAG",
+  "name": "Zwycięstwo: Mag",
+  "desc": "Wygraj, grając jako Mag.",
+  "icon": "char:mag",
+  "color": "#a77bff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_ZLODZIEJ",
+  "name": "Zwycięstwo: Złodziej",
+  "desc": "Wygraj, grając jako Złodziej.",
+  "icon": "char:zlodziej",
+  "color": "#8fa3c7",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_ALCHEMIK",
+  "name": "Zwycięstwo: Alchemik",
+  "desc": "Wygraj, grając jako Alchemik.",
+  "icon": "char:alchemik",
+  "color": "#ffc24a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_UPADLY",
+  "name": "Zwycięstwo: Upadły",
+  "desc": "Wygraj, grając jako Upadły.",
+  "icon": "char:upadly",
+  "color": "#9b6bdb",
+  "hidden": true,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_BARD",
+  "name": "Zwycięstwo: Bard",
+  "desc": "Wygraj, grając jako Bard.",
+  "icon": "char:bard",
+  "color": "#e05a9a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_INZYNIER",
+  "name": "Zwycięstwo: Inżynier",
+  "desc": "Wygraj, grając jako Inżynier.",
+  "icon": "char:inzynier",
+  "color": "#f0a030",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_SZAMAN",
+  "name": "Zwycięstwo: Szaman",
+  "desc": "Wygraj, grając jako Szaman.",
+  "icon": "char:szaman",
+  "color": "#3fbf8f",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_MNICH",
+  "name": "Zwycięstwo: Mnich",
+  "desc": "Wygraj, grając jako Mnich.",
+  "icon": "char:mnich",
+  "color": "#f2c14e",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_WIN_REWOLWEROWIEC",
+  "name": "Zwycięstwo: Rewolwerowiec",
+  "desc": "Wygraj, grając jako Rewolwerowiec.",
+  "icon": "char:rewolwerowiec",
+  "color": "#b5653a",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ITEMS_10",
+  "name": "Zbieracz",
+  "desc": "Zbierz 10 przedmiotów w jednej wyprawie.",
+  "icon": "gem",
+  "color": "#5aaaff",
+  "hidden": false,
+  "goal": 10
+ },
+ {
+  "api": "ACH_ITEMS_25",
+  "name": "Chomik",
+  "desc": "Zbierz 25 przedmiotów w jednej wyprawie.",
+  "icon": "gem",
+  "color": "#5adcff",
+  "hidden": false,
+  "goal": 25
+ },
+ {
+  "api": "ACH_ITEMS_50",
+  "name": "Smoczy skarbiec",
+  "desc": "Zbierz 50 przedmiotów w jednej wyprawie.",
+  "icon": "gem",
+  "color": "#78ffe6",
+  "hidden": false,
+  "goal": 50
+ },
+ {
+  "api": "ACH_LEGENDARY",
+  "name": "Legenda",
+  "desc": "Zdobądź legendarny przedmiot.",
+  "icon": "star",
+  "color": "#ff5555",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ITEMS_ALL",
+  "name": "Kolekcjoner",
+  "desc": "Znajdź każdy przedmiot w grze co najmniej raz.",
+  "icon": "book",
+  "color": "#ffc83c",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_SYNERGY",
+  "name": "Synergia",
+  "desc": "Miej jednocześnie naprowadzanie, przebicie i odbijanie pocisków.",
+  "icon": "eye",
+  "color": "#be69ff",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ABILITY_RYCERZ",
+  "name": "Mur nie do przejścia",
+  "desc": "Rycerz: Fala Uderzeniowa niszczy 15 pocisków wroga naraz.",
+  "icon": "char:rycerz",
+  "color": "#5b9cff",
+  "hidden": false,
+  "goal": 15
+ },
+ {
+  "api": "ACH_ABILITY_INZYNIER",
+  "name": "Dwie lufy",
+  "desc": "Inżynier: miej jednocześnie 2 wieżyczki.",
+  "icon": "gear",
+  "color": "#ffb050",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ABILITY_BARD",
+  "name": "Duet",
+  "desc": "Bard: obejmij Balladą Odwagi obu graczy w trybie co-op.",
+  "icon": "note",
+  "color": "#ff9ad0",
+  "hidden": false,
+  "goal": null
+ },
+ {
+  "api": "ACH_ABILITY_REWOLWEROWIEC",
+  "name": "Sześć kul, sześć trupów",
+  "desc": "Rewolwerowiec: zabij 6 wrogów jednym Ostatnim Tańcem.",
+  "icon": "gun",
+  "color": "#ffd27a",
+  "hidden": false,
+  "goal": 6
+ },
+ {
+  "api": "ACH_ABILITY_MNICH",
+  "name": "Pusta przestrzeń",
+  "desc": "Mnich: zniszcz Krokiem Ki 20 pocisków wroga naraz.",
+  "icon": "ki",
+  "color": "#fff0a0",
+  "hidden": false,
+  "goal": 20
+ },
+ {
+  "api": "ACH_ABILITY_SZAMAN",
+  "name": "Gromowładny",
+  "desc": "Szaman: zabij Totemem Burzy 10 wrogów w jednej wyprawie.",
+  "icon": "bolt",
+  "color": "#8affc8",
+  "hidden": false,
+  "goal": 10
+ },
+ {
   "api": "ACH_BOSS_NO_HIT",
   "name": "Nietykalny",
-  "desc": "Pokonaj bossa, nie otrzymując obrażeń.",
+  "desc": "Pokonaj bossa, nie otrzymując w jego pokoju obrażeń.",
   "icon": "shield",
   "color": "#78dcff",
   "hidden": false,
@@ -153,33 +540,6 @@
   "goal": null
  },
  {
-  "api": "ACH_ITEMS_10",
-  "name": "Zbieracz",
-  "desc": "Zbierz 10 przedmiotów w jednej wyprawie.",
-  "icon": "gem",
-  "color": "#5aaaff",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_ITEMS_ALL",
-  "name": "Kolekcjoner",
-  "desc": "Znajdź każdy przedmiot co najmniej raz.",
-  "icon": "book",
-  "color": "#ffc83c",
-  "hidden": false,
-  "goal": 44
- },
- {
-  "api": "ACH_LEGENDARY",
-  "name": "Legenda",
-  "desc": "Zdobądź legendarny przedmiot.",
-  "icon": "star",
-  "color": "#ff5555",
-  "hidden": false,
-  "goal": null
- },
- {
   "api": "ACH_SHRINE",
   "name": "Krwawa ofiara",
   "desc": "Złóż ofiarę na Ołtarzu Krwi.",
@@ -189,49 +549,58 @@
   "goal": null
  },
  {
+  "api": "ACH_BLOOD_CULT",
+  "name": "Krwawy kult",
+  "desc": "Złóż 3 ofiary na Ołtarzu Krwi w jednej wyprawie.",
+  "icon": "drop",
+  "color": "#a01428",
+  "hidden": false,
+  "goal": 3
+ },
+ {
   "api": "ACH_SPENDER",
   "name": "Stały klient",
-  "desc": "Wydaj 100 monet w jednej wyprawie.",
+  "desc": "Wydaj 300 monet w jednej wyprawie.",
   "icon": "coin",
   "color": "#ffc846",
   "hidden": false,
-  "goal": null
+  "goal": 300
  },
  {
   "api": "ACH_RICH",
   "name": "Skąpiec",
-  "desc": "Miej jednocześnie 150 monet.",
+  "desc": "Miej jednocześnie 400 monet.",
   "icon": "coin",
   "color": "#ffdc78",
   "hidden": false,
-  "goal": null
+  "goal": 400
  },
  {
-  "api": "ACH_LEVEL_15",
+  "api": "ACH_LEVEL_25",
   "name": "Weteran",
-  "desc": "Osiągnij 15. poziom postaci w jednej wyprawie.",
+  "desc": "Osiągnij 25. poziom postaci w jednej wyprawie.",
   "icon": "star",
   "color": "#8cff8c",
   "hidden": false,
-  "goal": null
+  "goal": 25
  },
  {
-  "api": "ACH_KILLS_1000",
+  "api": "ACH_KILLS_5000",
   "name": "Rzeźnik Otchłani",
-  "desc": "Pokonaj łącznie 1000 wrogów.",
+  "desc": "Pokonaj łącznie 5000 wrogów.",
   "icon": "blade",
   "color": "#c83c3c",
   "hidden": false,
-  "goal": 1000
+  "goal": 5000
  },
  {
-  "api": "ACH_ELITES_50",
+  "api": "ACH_ELITES_250",
   "name": "Łowca elit",
-  "desc": "Pokonaj łącznie 50 elitarnych wrogów.",
+  "desc": "Pokonaj łącznie 250 elitarnych wrogów.",
   "icon": "crown",
   "color": "#ffd246",
   "hidden": false,
-  "goal": 50
+  "goal": 250
  },
  {
   "api": "ACH_BARREL",
@@ -243,54 +612,18 @@
   "goal": null
  },
  {
-  "api": "ACH_SYNERGY",
-  "name": "Synergia",
-  "desc": "Miej jednocześnie naprowadzanie, przebicie i odbijanie pocisków.",
-  "icon": "eye",
-  "color": "#be69ff",
-  "hidden": false,
-  "goal": null
- },
- {
   "api": "ACH_PHOENIX",
   "name": "Z popiołów",
-  "desc": "Odrodź się dzięki Pióru Feniksa.",
+  "desc": "Odrodź się dzięki Piórze Feniksa.",
   "icon": "wing",
   "color": "#ff7828",
   "hidden": false,
   "goal": null
  },
  {
-  "api": "ACH_COOP_WIN",
-  "name": "Razem raźniej",
-  "desc": "Wygraj w trybie co-op.",
-  "icon": "heart",
-  "color": "#ff963c",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_REVIVE",
-  "name": "Nie zostawiamy swoich",
-  "desc": "Podnieś partnera w trybie co-op.",
-  "icon": "plus",
-  "color": "#8cffa0",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_ALL_CHARS",
-  "name": "Wszechstronny",
-  "desc": "Wygraj każdą postacią.",
-  "icon": "dice",
-  "color": "#ffffff",
-  "hidden": false,
-  "goal": 7
- },
- {
   "api": "ACH_MINIMALIST",
   "name": "Minimalista",
-  "desc": "Wygraj, mając najwyżej 5 przedmiotów.",
+  "desc": "Wygraj, mając najwyżej 8 przedmiotów.",
   "icon": "ring",
   "color": "#c8c8dc",
   "hidden": false,
@@ -303,96 +636,6 @@
   "icon": "coin",
   "color": "#9696a0",
   "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_BLOOD_CULT",
-  "name": "Krwawy kult",
-  "desc": "Złóż 3 ofiary na Ołtarzu Krwi w jednej wyprawie.",
-  "icon": "drop",
-  "color": "#a01428",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_SEAL_5",
-  "name": "Pięć pieczęci",
-  "desc": "Wygraj z Pieczęcią Otchłani 5 lub wyższą.",
-  "icon": "rune",
-  "color": "#ff7878",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_SEAL_10",
-  "name": "Władca Otchłani",
-  "desc": "Wygraj z Pieczęcią Otchłani 10.",
-  "icon": "rune",
-  "color": "#ff3c50",
-  "hidden": true,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_RYCERZ",
-  "name": "Zwycięstwo: Rycerz",
-  "desc": "Wygraj, grając jako Rycerz.",
-  "icon": "crown",
-  "color": "#78a0e1",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_LOWCZYNI",
-  "name": "Zwycięstwo: Łowczyni",
-  "desc": "Wygraj, grając jako Łowczyni.",
-  "icon": "crown",
-  "color": "#6ec378",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_BERSERKER",
-  "name": "Zwycięstwo: Berserker",
-  "desc": "Wygraj, grając jako Berserker.",
-  "icon": "crown",
-  "color": "#dc5f4b",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_MAG",
-  "name": "Zwycięstwo: Mag",
-  "desc": "Wygraj, grając jako Mag.",
-  "icon": "crown",
-  "color": "#a073e6",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_ZLODZIEJ",
-  "name": "Zwycięstwo: Złodziej",
-  "desc": "Wygraj, grając jako Złodziej.",
-  "icon": "crown",
-  "color": "#5f5f73",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_ALCHEMIK",
-  "name": "Zwycięstwo: Alchemik",
-  "desc": "Wygraj, grając jako Alchemik.",
-  "icon": "crown",
-  "color": "#ebaf46",
-  "hidden": false,
-  "goal": null
- },
- {
-  "api": "ACH_WIN_UPADLY",
-  "name": "Zwycięstwo: Upadły",
-  "desc": "Wygraj, grając jako Upadły.",
-  "icon": "crown",
-  "color": "#463255",
-  "hidden": true,
   "goal": null
  }
 ]

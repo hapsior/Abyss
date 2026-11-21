@@ -12,6 +12,19 @@ public sealed class RunStats
 {
     public int Kills, Rooms, Coins, Bosses, Elites, Shrines, Bought, Dashes, Abilities, ItemsTaken;
     public float DamageTaken, DamageDealt, Spent, GodHits, GodDmg;
+    // liczniki dla osiągnięć (nie wpływają na rozgrywkę)
+    /// <summary>Najwięcej wrogów zabitych jednym wybuchem beczki.</summary>
+    public int BarrelBest;
+    /// <summary>Ile razy gracz odrodził się dzięki Piórze Feniksa; ile razy partner podniósł powalonego gracza.</summary>
+    public int Phoenix, PartnerRevives;
+    /// <summary>Zabójstwa Totemu Burzy w tej wyprawie.</summary>
+    public int TotemKills;
+    /// <summary>Najwięcej pocisków wroga zniszczonych jednym użyciem umiejętności (Krok Ki / Fala Uderzeniowa).</summary>
+    public int KiBest, WaveBest;
+    /// <summary>Najwięcej zabójstw jednym „Ostatnim Tańcem”.</summary>
+    public int DanceBest;
+    /// <summary>Flagi 0/1: dwie wieżyczki Inżyniera naraz; pieśń Barda na obu graczach w co-op.</summary>
+    public int TwoSentries, BardDuo;
 }
 
 public sealed class SpawnMarker
@@ -41,6 +54,9 @@ public sealed class RunSim
     public readonly Random Cos;
     public IFx Fx = NullFx.I;
     public bool God, DamageNumbers = true;
+    /// <summary>Źródło i właściciel ostatniego śmiertelnego trafienia (tylko na czas <see cref="KillEnemy"/>).</summary>
+    public string KillSource;
+    public PlayerSim KillOwner;
 
     public int Depth, MaxDepth;
     public Floor Floor;
@@ -654,7 +670,15 @@ public sealed class RunSim
         }
         if (kx != 0 || ky != 0) e.Knock(kx, ky);
         if (e.Hp <= 0)
+        {
+            // atrybucja zabójstwa dla liczników osiągnięć (zagnieżdżone zabójstwa przywracają poprzednie wartości)
+            var (prevSrc, prevOwner) = (KillSource, KillOwner);
+            KillSource = source;
+            KillOwner = owner;
             KillEnemy(e);
+            KillSource = prevSrc;
+            KillOwner = prevOwner;
+        }
         else if (!dot)
             Fx.Sound(crit ? "crit" : "hit", 0.45f, 0.04f);
     }
@@ -672,6 +696,9 @@ public sealed class RunSim
         Fx.Sound("enemy_die", 0.6f, 0.03f);
         Stats.Kills++;
         if (e.Elite) Stats.Elites++;
+        if (KillSource == "totem") Stats.TotemKills++;
+        else if (KillSource == "last_dance" && KillOwner != null)
+            Stats.DanceBest = Math.Max(Stats.DanceBest, ++KillOwner.DanceKills);
         if (drops && !e.Minion && !e.IsBoss)
         {
             float xpv = e.Xp * (1 + 0.12f * (Depth - 1)) * (e.MiniBoss ? 8 : e.Elite ? 3 : 1);
@@ -810,11 +837,15 @@ public sealed class RunSim
                 Room.Pickups.Add(new Pickup(PickupKind.Heart, ob.X, ob.Y, Cos));
         }
         else
+        {
+            int kills0 = Stats.Kills;
             Explode(ob.X, ob.Y, 95, 24 * (0.5f + 0.5f * Diff.EnemyDmg) * Balance.EnemyDmgScale(Depth), hurtPlayer: true, source: "barrel");
+            Stats.BarrelBest = Math.Max(Stats.BarrelBest, Stats.Kills - kills0);
+        }
     }
 
     public void ChainLightning(float x, float y, float dmg, int jumps, float firstRange = 300, float jumpRange = 220, HashSet<int> exclude = null,
-        PlayerSim owner = null)
+        PlayerSim owner = null, string source = "chain")
     {
         var hit = exclude != null ? new HashSet<int>(exclude) : new HashSet<int>();
         float cx = x, cy = y;
@@ -825,7 +856,7 @@ public sealed class RunSim
             if (t == null) break;
             Fx.Bolt(cx, cy, t.X, t.Y);
             hit.Add(t.Id);
-            DamageEnemy(t, dmg, color: new Color("aadcff"), owner: owner, source: "chain");
+            DamageEnemy(t, dmg, color: new Color("aadcff"), owner: owner, source: source);
             cx = t.X;
             cy = t.Y;
             any = true;

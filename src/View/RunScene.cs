@@ -44,6 +44,8 @@ public partial class RunScene : Node2D
     private PromptLayer _prompts;
     public Control Overlay { get; private set; }
     private float _gameOverT = -1;
+    /// <summary>Logika osiągnięć tej wyprawy (odblokowania trafiają do profilu i na platformę).</summary>
+    public Save.AchievementTracker Achievements { get; private set; }
     private readonly Random _shakeR = new();
 
     /// <summary>Fabryka nakładek – ekrany UI mogą ją podmienić na pełne wersje (awans, pauza, sklep, wynik).</summary>
@@ -96,6 +98,7 @@ public partial class RunScene : Node2D
         Fx.OnBanner = Hud.PushBanner;
         Fx.OnSound = (n, v, p) => Audio.Sfx.Play(n, v, p);
         AssignInputs();
+        Achievements = new Save.AchievementTracker(Sim, Save.Profile.P);
         if (Sim.Floor == null)
         {
             if (Setup.StartBoss != null)
@@ -227,6 +230,7 @@ public partial class RunScene : Node2D
             Sim.Update(dt, inputs);
             HandleEvents();
             Fx.Step(dt);
+            UpdateAchievements();
         }
         _roomView.Step(dt);
         _entities.Step(dt);
@@ -295,8 +299,21 @@ public partial class RunScene : Node2D
             }
             if (ev.Kind == RunEventKind.RoomEntered)
                 Fx.Clear();
+            Achievements?.OnEvent(ev);
             RunEvents?.Invoke(ev);
         }
+    }
+
+    /// <summary>Warunki osiągnięć oparte na stanie; nowe odblokowania → toast i zapis profilu.</summary>
+    private void UpdateAchievements()
+    {
+        if (Achievements == null) return;
+        Achievements.Step();
+        var fresh = Achievements.TakeFresh();
+        if (fresh.Count == 0) return;
+        foreach (var def in fresh)
+            Hud.PushAchievement(def);
+        Save.Profile.P.Save();
     }
 
     /// <summary>Zdarzenia wyprawy dla innych systemów (osiągnięcia, zapis, statystyki).</summary>

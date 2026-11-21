@@ -20,6 +20,9 @@ public partial class RunHud : Control
     private RunSim G => _scene.Sim;
     private readonly List<(string title, string sub, Color color, float t, float dur)> _banners = new();
     private float _t;
+    /// <summary>Kolejka toastów osiągnięć (wyświetlane po jednym, w lewym dolnym rogu).</summary>
+    private readonly List<(AchievementDef def, float t)> _toasts = new();
+    private const float ToastDur = 4.2f;
 
     public RunHud(RunScene scene)
     {
@@ -41,9 +44,23 @@ public partial class RunHud : Control
             _banners.Add(b);
     }
 
+    /// <summary>Toast „Osiągnięcie odblokowane” (nie zasłania paska u góry, banera piętra ani paska bossa).</summary>
+    public void PushAchievement(AchievementDef def)
+    {
+        _toasts.Add((def, 0f));
+        Audio.Sfx.Play("levelup", 0.6f);
+    }
+
     public void Step(float dt)
     {
         _t += dt;
+        if (_scene.Overlay == null && _toasts.Count > 0)
+        {
+            var (def, t) = _toasts[0];
+            t += dt * (_toasts.Count > 1 ? 1.5f : 1f);   // przy kolejce toasty zmieniają się szybciej
+            if (t > ToastDur) _toasts.RemoveAt(0);
+            else _toasts[0] = (def, t);
+        }
         if (_scene.Overlay == null && _banners.Count > 0)
         {
             var b = _banners[0];
@@ -113,6 +130,7 @@ public partial class RunHud : Control
         Minimap(new Vector2(size.X - (g.Coop ? 210 : 30), g.Coop ? 120 : 112), g.Coop);
         if (g.Boss is { } boss && boss.Alive) BossBar(boss, size);
         Banner(size);
+        Toast(size);
 
         // przyciemnienie przy obrażeniach
         if (_scene.Fx.HurtFlashT > 0)
@@ -224,6 +242,28 @@ public partial class RunHud : Control
             float x = r.Position.X + 4 + (r.Size.X - 8) * th;
             DrawLine(new Vector2(x, r.Position.Y + 2), new Vector2(x, r.End.Y - 2), Ink, 3);
         }
+    }
+
+    private void Toast(Vector2 size)
+    {
+        if (_toasts.Count == 0 || _scene.Overlay != null) return;
+        var (def, t) = _toasts[0];
+        float slide = Mathf.Clamp(t / 0.35f, 0, 1), fade = Mathf.Clamp((ToastDur - t) / 0.4f, 0, 1);
+        slide = 1 - (1 - slide) * (1 - slide);
+        float a = MathF.Min(fade, Mathf.Clamp(t / 0.2f, 0, 1));
+        var tint = AchievementIcons.Tint(def);
+        const float w = 560, h = 104;
+        var r = new Rect2(new Vector2(28 - (1 - slide) * (w + 40), size.Y - 232), new Vector2(w, h));
+        DrawStyleBox(UiTheme.Box(new Color(0.12f, 0.08f, 0.18f, 0.94f * a), 18, 5, 5, new Color(tint.R, tint.G, tint.B, a)), r);
+        var icon = new Rect2(r.Position + new Vector2(14, 12), new Vector2(80, 80));
+        DrawRect(icon, new Color(tint.R * 0.35f, tint.G * 0.35f, tint.B * 0.35f, a));
+        var tex = AchievementIcons.Texture(def);
+        if (tex != null) DrawTextureRect(tex, icon.Grow(-6), false, new Color(1, 1, 1, a));
+        float x = r.Position.X + 110;
+        Text("OSIĄGNIĘCIE ODBLOKOWANE", new Vector2(x, r.Position.Y + 30), 19, new Color(UiTheme.Accent, a), outline: 4);
+        Text(def.Name, new Vector2(x, r.Position.Y + 62), 32, new Color(UiTheme.Text, a), HorizontalAlignment.Left, null, 8);
+        string d = def.Desc.Length > 52 ? def.Desc[..49] + "…" : def.Desc;
+        Text(d, new Vector2(x, r.Position.Y + 88), 18, new Color(UiTheme.TextDim, a), outline: 4);
     }
 
     private void Banner(Vector2 size)
