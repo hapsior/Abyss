@@ -244,8 +244,8 @@
   "unlock": null,
   "weapon": "lutnia",
   "weapon_pivot": [
-   60,
-   52
+   80,
+   50
   ]
  },
  {
@@ -274,8 +274,8 @@
   "unlock": null,
   "weapon": "nitownica",
   "weapon_pivot": [
-   52,
-   56
+   56,
+   68
   ]
  },
  {
@@ -308,7 +308,7 @@
   },
   "weapon": "kij_duchow",
   "weapon_pivot": [
-   40,
+   34,
    52
   ]
  },
@@ -343,7 +343,7 @@
   "weapon": "rekawica_ki",
   "weapon_pivot": [
    44,
-   48
+   50
   ]
  },
  {
@@ -375,8 +375,8 @@
   },
   "weapon": "rewolwer",
   "weapon_pivot": [
-   48,
-   58
+   50,
+   62
   ]
  }
 ]

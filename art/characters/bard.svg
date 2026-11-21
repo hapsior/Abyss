@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Bard: różowe ciało-fasolka, beret z długim piórem, żabot, zawadiacki uśmiech, lutnia na plecach. Patrzy w prawo. -->
   <!-- lutnia na plecach (za ciałem) -->
-  <g transform="rotate(-24 44 160)">
+  <g transform="translate(26 6) rotate(-16 44 160)">
     <rect x="36" y="44" width="12" height="80" rx="5" fill="#8a5530" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
     <rect x="30" y="30" width="24" height="22" rx="7" fill="#b97a4a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
     <circle cx="33" cy="38" r="4" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3"/>

@@ -616,7 +616,7 @@ public sealed class RunSim
         if (e.FlashCd <= 0)
         {
             e.Flash = dot ? 0.04f : 0.07f;
-            e.FlashCd = e.IsBoss ? 0.16f : 0.11f;
+            e.FlashCd = e.IsBoss ? 0.3f : 0.11f;
         }
         Stats.DamageDealt += dmg;
         if (DamageNumbers)

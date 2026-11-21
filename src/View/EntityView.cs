@@ -178,9 +178,13 @@ public partial class EntityView : Node2D
         var n = Get(e, () =>
         {
             var nn = Make(e, tex, scale, new Vector2(0, -texW * 0.05f), tint: true);
-            nn.Mat.SetShaderParameter("hue", tint.Hue);
-            nn.Mat.SetShaderParameter("sat", tint.Sat);
-            nn.Mat.SetShaderParameter("val", tint.Val);
+            // bossowie mają własne grafiki pod swój biom – bez przebarwienia
+            if (!boss)
+            {
+                nn.Mat.SetShaderParameter("hue", tint.Hue);
+                nn.Mat.SetShaderParameter("sat", tint.Sat);
+                nn.Mat.SetShaderParameter("val", tint.Val);
+            }
             if (e.Elite)
             {
                 nn.Badge = new Sprite2D { Texture = Art.Tex("res://art/enemies/_elite_crown.svg"), Scale = new Vector2(0.35f, 0.35f) * (e.MiniBoss ? 1.5f : 1) };
@@ -204,7 +208,8 @@ public partial class EntityView : Node2D
         n.Body.Scale = new Vector2(scale * (left ? -1 : 1) * e.SquashX * (2 - wob), scale * e.SquashY * wob);
         n.Body.Position = new Vector2(0, -lift + hover);
         n.Body.Rotation = e.Tilt;
-        n.Mat.SetShaderParameter("flash", e.Flash > 0 ? 0.85f : MathF.Min(0.5f, e.Charge * 0.45f));
+        // boss pod ciągłym ostrzałem nie może „wybielać się” – słabszy błysk
+        n.Mat.SetShaderParameter("flash", e.Flash > 0 ? (boss ? 0.45f : 0.85f) : MathF.Min(0.5f, e.Charge * 0.45f));
         n.Mat.SetShaderParameter("alpha_mul", e.Alpha);
         if (n.Badge != null)
             n.Badge.Position = new Vector2(0, -lift + hover - e.R * 1.55f);
@@ -289,9 +294,10 @@ public partial class EntityView : Node2D
         const string key = "shopkeeper";
         var n = Get(key, () =>
         {
-            var tex = Art.Character("zlodziej");
-            var nn = Make(key, tex, 0.36f, new Vector2(0, -19), tint: true);
-            nn.Mat.SetShaderParameter("hue", 0.12f);
+            bool own = ResourceLoader.Exists("res://art/characters/sklepikarz.svg");
+            var tex = Art.Character(own ? "sklepikarz" : "zlodziej");
+            var nn = Make(key, tex, own ? 0.4f : 0.36f, new Vector2(0, -21), tint: true);
+            if (!own) nn.Mat.SetShaderParameter("hue", 0.12f);
             nn.ShadowW = 40;
             nn.ShadowH = 14;
             nn.ShadowY = 18;

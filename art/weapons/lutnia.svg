@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 96" width="192" height="96">
+  <!-- Lutnia: lutnia Barda trzymana jak broń, gryf w prawo, z różowymi nutkami. -->
+  <!-- pivot: 80,50 -->
+  <!-- gryf -->
+  <rect x="78" y="42" width="84" height="16" rx="4" fill="#8a5530" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M96 43 L 96 57 M 112 43 L 112 57 M 128 43 L 128 57 M 144 43 L 144 57" stroke="#f1e6c8" stroke-width="3" stroke-linecap="round"/>
+  <!-- główka i kołki -->
+  <path d="M158 38 L 182 30 L 184 44 L 178 62 L 158 62 Z" fill="#b97a4a" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="170" cy="40" r="4" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3"/>
+  <circle cx="172" cy="54" r="4" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3"/>
+  <!-- wstążka -->
+  <path d="M162 60 C 158 72 164 80 154 88 C 168 86 174 74 170 62 Z" fill="#e05a9a" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <!-- pudło -->
+  <ellipse cx="46" cy="50" rx="36" ry="32" fill="#c68a52"/>
+  <path d="M80 46 C 82 68 66 82 44 82 C 66 74 74 62 72 44 Z" fill="#8a5530"/>
+  <ellipse cx="28" cy="36" rx="7" ry="12" fill="#ffffff" opacity="0.5" transform="rotate(40 28 36)"/>
+  <ellipse cx="46" cy="50" rx="36" ry="32" fill="none" stroke="#1a0f1f" stroke-width="9"/>
+  <circle cx="50" cy="50" r="12" fill="#3a2214" stroke="#1a0f1f" stroke-width="4"/>
+  <circle cx="50" cy="50" r="15" fill="none" stroke="#ffd23f" stroke-width="3" opacity="0.9"/>
+  <rect x="66" y="44" width="6" height="12" rx="2" fill="#3a2214" stroke="#1a0f1f" stroke-width="3"/>
+  <!-- struny -->
+  <path d="M70 47 L 164 44 M 70 53 L 164 56" stroke="#f1e6c8" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <!-- nutki -->
+  <g fill="#e05a9a" stroke="#1a0f1f" stroke-width="3.5" stroke-linejoin="round">
+    <ellipse cx="116" cy="26" rx="5" ry="4" transform="rotate(-20 116 26)"/>
+    <ellipse cx="138" cy="20" rx="5" ry="4" transform="rotate(-20 138 20)"/>
+  </g>
+  <path d="M120 25 L 120 10 L 128 12 M 142 19 L 142 7 L 150 9" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 25 L 120 10 L 128 12 M 142 19 L 142 7 L 150 9" fill="none" stroke="#e05a9a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

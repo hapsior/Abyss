@@ -16,16 +16,16 @@
   <!-- kołnierz szaty -->
   <path d="M52 156 L 128 200 L 204 156" fill="none" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
   <!-- szarfa przez ciało -->
-  <path d="M66 140 L 88 126 L 196 186 L 178 206 Z" fill="#c8402a" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M82 138 L 182 192" stroke="#ff8a6a" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M66 178 L 84 170 L 192 200 L 170 214 Z" fill="#c8402a" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M88 178 L 176 206" stroke="#ff8a6a" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
   <!-- koraliki -->
-  <path d="M70 168 C 90 206 166 206 186 168" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M74 168 C 94 204 162 204 182 168" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
   <g stroke="#1a0f1f" stroke-width="4" fill="#8a5530">
-    <circle cx="76" cy="176" r="6"/><circle cx="86" cy="190" r="6"/><circle cx="102" cy="199" r="6"/>
-    <circle cx="154" cy="199" r="6"/><circle cx="170" cy="190" r="6"/><circle cx="180" cy="176" r="6"/>
+    <circle cx="80" cy="174" r="6"/><circle cx="90" cy="187" r="6"/><circle cx="106" cy="196" r="6"/>
+    <circle cx="150" cy="196" r="6"/><circle cx="166" cy="187" r="6"/><circle cx="176" cy="174" r="6"/>
   </g>
-  <circle cx="128" cy="206" r="9" fill="#b97a4a" stroke="#1a0f1f" stroke-width="5"/>
-  <circle cx="125" cy="203" r="2.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="128" cy="202" r="9" fill="#b97a4a" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="125" cy="199" r="2.5" fill="#ffffff" opacity="0.8"/>
   <!-- znak na czole -->
   <circle cx="128" cy="96" r="9" fill="#e0303f" stroke="#1a0f1f" stroke-width="5"/>
   <circle cx="125" cy="93" r="2.5" fill="#ffffff"/>
