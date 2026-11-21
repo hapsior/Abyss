@@ -32,6 +32,7 @@ public partial class CharSelect : MenuScreen
 
     protected override string Header => _flow.Coop ? $"Gracz {_player + 1} – wybierz bohatera" : "Wybierz bohatera";
     protected override Color? HeaderColor => _flow.Coop ? Ui.PlayerColor(_player) : null;
+    protected override bool Parade => false;
 
     protected override void OnBack()
     {
@@ -111,7 +112,7 @@ public partial class CharSelect : MenuScreen
             holder.AddChild(lockIcon);
         }
         col.AddChild(holder);
-        col.AddChild(Ui.Lbl(def.Name, 28, unlocked ? UiTheme.Text : UiTheme.TextDim, HorizontalAlignment.Center));
+        col.AddChild(Ui.Lbl(def.Name, def.Name.Length > 10 ? 22 : 28, unlocked ? UiTheme.Text : UiTheme.TextDim, HorizontalAlignment.Center));
         var bg = unlocked ? UiTheme.PanelBg2 : new Color("221a30");
         var hov = unlocked ? UiTheme.ButtonHover : new Color("2c2340");
         var b = CardButton(new Vector2(TileW, TileH), col, UiTheme.Box(bg, 20, 5, 6, unlocked ? new Color(def.Accent).Darkened(0.55f) : null), UiTheme.Box(hov, 20, 5, 6));

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Godot;
 using Otchlan.Core;
 using Otchlan.Input;
@@ -11,6 +12,8 @@ public partial class MenuBackground : Control
 {
     private Texture2D _floor;
     private readonly List<(Texture2D tex, float x, float phase)> _heroes = new();
+    /// <summary>Pochód bohaterów u dołu ekranu (wyłączany na ekranach z dużą siatką, np. wyborze postaci).</summary>
+    public bool Parade = true;
     private float _t;
 
     public override void _Ready()
@@ -19,7 +22,7 @@ public partial class MenuBackground : Control
         UiTheme.Fill(this);
         const string floorPath = "res://art/tiles/otchlan_floor.svg";
         _floor = ResourceLoader.Exists(floorPath) ? GD.Load<Texture2D>(floorPath) : null;
-        string[] keys = { "lowczyni", "rycerz", "mag", "berserker", "zlodziej", "alchemik", "upadly" };
+        var keys = Sim.Content.Db.Characters.Select(c => c.Key).ToArray();
         for (int i = 0; i < keys.Length; i++)
         {
             var p = $"res://art/characters/{keys[i]}.svg";
@@ -58,6 +61,7 @@ public partial class MenuBackground : Control
             DrawRect(new Rect2(size.X * (1 - m * 0.6f), 0, size.X * m * 0.6f, size.Y), c);
         }
         // bohaterowie
+        if (!Parade) return;
         float hs = Mathf.Min(150, size.X / (_heroes.Count + 1));
         foreach (var (tex, fx, ph) in _heroes)
         {

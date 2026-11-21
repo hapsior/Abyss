@@ -378,10 +378,12 @@ public abstract partial class MenuScreen : Control
     protected virtual (string action, string text)[] Prompts => new[] { (Act.Accept, "Wybierz"), (Act.Cancel, "Wróć") };
     protected abstract void Build(VBoxContainer body);
     protected abstract void OnBack();
+    /// <summary>Czy tło ma pochód bohaterów (ekrany z wysoką siatką go wyłączają).</summary>
+    protected virtual bool Parade => true;
 
     public override void _Ready()
     {
-        AddChild(new MenuBackground());
+        AddChild(new MenuBackground { Parade = Parade });
         _margin = new MarginContainer();
         UiTheme.Fill(_margin);
         AddChild(_margin);
