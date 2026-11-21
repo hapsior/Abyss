@@ -128,6 +128,121 @@ public partial class ScreenshotTour : Node
         }
     }
 
+    private static T Find<T>(Node root, Func<T, bool> pred = null) where T : Node
+    {
+        foreach (var c in root.GetChildren())
+        {
+            if (c is T t && (pred == null || pred(t))) return t;
+            var r = Find(c, pred);
+            if (r != null) return r;
+        }
+        return null;
+    }
+
+    private static void PressButton(Node root, string text) =>
+        Find<Button>(root, b => b.Text == text)?.EmitSignal(BaseButton.SignalName.Pressed);
+
+    /// <summary>Ekrany menu (slot, tryb, postać, trudność) i nakładki wyprawy (awans, sklep, pauza, wynik).</summary>
+    private async Task UiTour()
+    {
+        var g = Game.I;
+        g.InputMgr.SetDevice(InputDevice.KeyboardMouse, -1);
+        Save.Profile.Override(new Save.Profile { SealMax = 3 });
+        var demo = new Sim.RunSim(new[] { "lowczyni", "mag" }, 2, 77, 1);
+        Save.SaveSystem.Save(2, demo);
+        Save.SaveSystem.Delete(1);
+        Save.SaveSystem.Delete(3);
+
+        g.ShowScreen(new SlotSelect());
+        await Wait(0.5);
+        await Shot("10_sloty");
+        PressButton(g.CurrentScreen, "Usuń");
+        await Wait(0.4);
+        await Shot("11_sloty_usun");
+        g.ShowScreen(new ModeSelect(new NewRunFlow()));
+        await Wait(0.4);
+        await Shot("12_tryb");
+        g.ShowScreen(new CharSelect(new NewRunFlow(), 0));
+        await Wait(0.5);
+        await Shot("13_postac");
+        g.InputMgr.SetDevice(InputDevice.Gamepad, 0);
+        var lastBtn = Find<Button>(g.CurrentScreen, b => b.Text == "" && b.CustomMinimumSize.X == 200 && b.GetIndex() == b.GetParent().GetChildCount() - 1);
+        lastBtn?.GrabFocus();
+        await Wait(0.4);
+        await Shot("14_postac_zablokowana_pad");
+        g.InputMgr.SetDevice(InputDevice.KeyboardMouse, -1);
+        g.ShowScreen(new CharSelect(new NewRunFlow { Coop = true, Chars = new() { "rycerz" } }, 1));
+        await Wait(0.4);
+        await Shot("15_postac_p2");
+        var df = new DiffSelect(new NewRunFlow { Coop = true, Chars = new() { "rycerz", "mag" } });
+        g.ShowScreen(df);
+        await Wait(0.4);
+        var seal = Find<SealRow>(df);
+        for (int i = 0; i < 3; i++)
+            seal?.EmitSignal(BaseButton.SignalName.Pressed);
+        await Wait(0.3);
+        await Shot("16_trudnosc");
+
+        // --- nakładki wyprawy
+        var scene = View.RunScene.Start(new View.RunSetup { Chars = new() { "rycerz", "mag" }, Seed = 31, Slot = 0, Difficulty = 2, Seal = 1 });
+        await Wait(0.4);
+        var sim = scene.Sim;
+        sim.Coins = 63;
+        sim.Depth = 43;
+        var items = Sim.Content.Db.Items;
+        for (int i = 0; i < 46; i++) sim.Players[0].Items.Add(items[i % items.Count].Key);
+        sim.Players[0].Items.Add(items[0].Key);
+        for (int i = 0; i < 9; i++) sim.Players[1].Items.Add(items[(i * 7) % items.Count].Key);
+        sim.Players[0].Level = 5;
+        sim.Players[0].PendingLevelUps = 1;
+        sim.Players[1].Hp = 40;
+        scene.OpenOverlay(new LevelUpOverlay(scene, sim.Players[0]));
+        await Wait(0.6);
+        await Shot("20_awans");
+        var lu = (LevelUpOverlay)scene.Overlay;
+        lu.Banish();
+        await Wait(0.3);
+        lu.Reroll();
+        await Wait(0.4);
+        await Shot("21_awans_po_losowaniu");
+        sim.Players[0].PendingLevelUps = 0;
+        scene.CloseOverlay();
+
+        var room = sim.Room;
+        room.Pedestals.Clear();
+        var rar = items.OrderBy(i => i.Rarity).ToList();
+        room.Pedestals.Add(new Sim.Pedestal(500, 400, rar[2], 14, Sim.PedestalKind.Shop));
+        room.Pedestals.Add(new Sim.Pedestal(600, 400, rar[items.Count / 2], 29, Sim.PedestalKind.Shop));
+        room.Pedestals.Add(new Sim.Pedestal(700, 400, rar[items.Count - 2], 140, Sim.PedestalKind.Shop));
+        room.Pedestals.Add(new Sim.Pedestal(800, 400, null, 6, Sim.PedestalKind.HeartShop, heal: 0.35f));
+        scene.OpenOverlay(new ShopMenu(scene, sim.Players[1]));
+        await Wait(0.5);
+        await Shot("22_sklep");
+        scene.CloseOverlay();
+
+        scene.OpenOverlay(View.RunScene.PauseFactory(scene));
+        await Wait(0.5);
+        await Shot("23_pauza");
+        PressButton(scene.Overlay, "Statystyki");
+        await Wait(0.5);
+        await Shot("24_pauza_statystyki");
+        scene.CloseOverlay();
+        scene.OpenOverlay(View.RunScene.PauseFactory(scene));
+        await Wait(0.3);
+        PressButton(scene.Overlay, "Opcje");
+        await Wait(0.5);
+        await Shot("25_pauza_opcje");
+        scene.CloseOverlay();
+
+        sim.Stats.Kills = 412; sim.Stats.DamageDealt = 88123; sim.Stats.Bosses = 8; sim.Stats.Coins = 530;
+        sim.RunTime = 1834;
+        scene.OpenOverlay(View.RunScene.ResultFactory(scene));
+        await Wait(0.5);
+        await Shot("26_wynik");
+        scene.CloseOverlay();
+        Save.SaveSystem.Delete(2);
+    }
+
     private async Task Run()
     {
         var g = Game.I;
@@ -152,6 +267,12 @@ public partial class ScreenshotTour : Node
         g.ShowScreen(new OptionsMenu(() => { }));
         await Wait(0.5);
         await Shot("03_opcje");
+        await UiTour();
+        if (OS.GetCmdlineUserArgs().Contains("--uionly"))
+        {
+            g.Quit(0);
+            return;
+        }
         World.Sandbox.Open();
         g.InputMgr.SetDevice(InputDevice.KeyboardMouse, -1);
         await Wait(1.0);
