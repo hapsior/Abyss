@@ -177,11 +177,25 @@ public partial class OptionsMenu : Control
 {
     private readonly Action _back;
 
-    public OptionsMenu(Action back) => _back = back;
+    private readonly bool _inGame;
+
+    /// <param name="inGame">Otwarte z pauzy: zamiast tła menu półprzezroczyste przyciemnienie (widać zatrzymaną grę).</param>
+    public OptionsMenu(Action back, bool inGame = false)
+    {
+        _back = back;
+        _inGame = inGame;
+    }
 
     public override void _Ready()
     {
-        AddChild(new MenuBackground());
+        if (_inGame)
+        {
+            var dim = new ColorRect { Color = new Color(0.04f, 0.02f, 0.07f, 0.72f), MouseFilter = MouseFilterEnum.Stop };
+            UiTheme.Fill(dim);
+            AddChild(dim);
+        }
+        else
+            AddChild(new MenuBackground());
         var s = Game.I.Settings;
 
         var center = new CenterContainer();

@@ -84,7 +84,7 @@ public partial class PauseMenu : Control
     {
         _mode = Mode.Options;
         Clear();
-        var o = new OptionsMenu(ShowMain);
+        var o = new OptionsMenu(ShowMain, inGame: true);
         UiTheme.Fill(o);
         _holder.AddChild(o);
     }
