@@ -723,5 +723,574 @@
    }
   ],
   "special": null
+ },
+ {
+  "key": "rekawiczki",
+  "name": "Rękawiczki Strzelca",
+  "desc": "+10% szybkostrzelności, +1 obrażeń",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.1
+   },
+   {
+    "stat": "damage",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "bochenek",
+  "name": "Bochenek Chleba",
+  "desc": "+15 maks. HP, +0.3 HP/s regeneracji",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "max_hp",
+    "op": "+",
+    "value": 15
+   },
+   {
+    "stat": "regen",
+    "op": "+",
+    "value": 0.3
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kompas",
+  "name": "Kompas",
+  "desc": "+20% zasięgu, +10 szczęścia",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "range",
+    "op": "*",
+    "value": 1.2
+   },
+   {
+    "stat": "luck",
+    "op": "+",
+    "value": 10
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "zajecza_lapka",
+  "name": "Zajęcza Łapka",
+  "desc": "+8% uniku",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "dodge",
+    "op": "+",
+    "value": 0.08
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "oselka",
+  "name": "Osełka",
+  "desc": "+6% szansy na krytyka, +25% obrażeń krytycznych",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "crit",
+    "op": "+",
+    "value": 0.06
+   },
+   {
+    "stat": "crit_mult",
+    "op": "+",
+    "value": 0.25
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kapelusz",
+  "name": "Kapelusz Wędrowca",
+  "desc": "+10% szybkości ruchu, +40% zasięgu zbierania",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.1
+   },
+   {
+    "stat": "pickup",
+    "op": "*",
+    "value": 1.4
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "zelazne_buty",
+  "name": "Żelazne Buty",
+  "desc": "+10% pancerza, -5% szybkości ruchu",
+  "rarity": 0,
+  "fx": [
+   {
+    "stat": "armor",
+    "op": "+",
+    "value": 0.1
+   },
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 0.95
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "sakiewka",
+  "name": "Sakiewka",
+  "desc": "+30 monet od razu",
+  "rarity": 0,
+  "fx": [],
+  "special": "coins30"
+ },
+ {
+  "key": "trujacy_grzyb",
+  "name": "Trujący Grzyb",
+  "desc": "Pociski zatruwają wrogów, +10% szybkostrzelności",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "poison",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "sopel",
+  "name": "Wieczny Sopel",
+  "desc": "Pociski spowalniają wrogów, +15% prędkości pocisków",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "slow",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "shot_speed",
+    "op": "*",
+    "value": 1.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "zebatka",
+  "name": "Zębatka",
+  "desc": "-20% odnowienia umiejętności, +10% szybkostrzelności",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "ability_cd_mult",
+    "op": "*",
+    "value": 0.8
+   },
+   {
+    "stat": "fire_mult",
+    "op": "*",
+    "value": 1.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "lampa",
+  "name": "Lampa Górnicza",
+  "desc": "Pociski przebijają +1 wroga, +15% zasięgu",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "pierce",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "range",
+    "op": "*",
+    "value": 1.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "bumerang",
+  "name": "Bumerang",
+  "desc": "+1 odbicie od ścian, +1 przebicie",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "bounce",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "pierce",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "pancerz_zuka",
+  "name": "Pancerz Żuka",
+  "desc": "+12% pancerza, wrogowie dotykający cię obrywają",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "armor",
+    "op": "+",
+    "value": 0.12
+   },
+   {
+    "stat": "thorns",
+    "op": "+",
+    "value": 15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "krysztal_many",
+  "name": "Kryształ Many",
+  "desc": "+40% mocy umiejętności, -15% odnowienia umiejętności",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "ability_power",
+    "op": "+",
+    "value": 0.4
+   },
+   {
+    "stat": "ability_cd_mult",
+    "op": "*",
+    "value": 0.85
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "wampirzy_kiel",
+  "name": "Wampirzy Kieł",
+  "desc": "+3% kradzieży życia, +3 obrażeń",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "lifesteal",
+    "op": "+",
+    "value": 0.03
+   },
+   {
+    "stat": "damage",
+    "op": "+",
+    "value": 3
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "bledny_ognik",
+  "name": "Błędny Ognik",
+  "desc": "Towarzysz, który strzela do wrogów, +5% szybkości ruchu",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "familiars",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.05
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "podkowa",
+  "name": "Podkowa",
+  "desc": "+25 szczęścia, +10% monet",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "luck",
+    "op": "+",
+    "value": 25
+   },
+   {
+    "stat": "coin_mult",
+    "op": "+",
+    "value": 0.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "sprezyna",
+  "name": "Sprężyna",
+  "desc": "+1 ładunek zrywu, -20% odnowienia zrywu",
+  "rarity": 1,
+  "fx": [
+   {
+    "stat": "dash_charges",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "dash_cd",
+    "op": "*",
+    "value": 0.8
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "zegarek",
+  "name": "Zegarek Kieszonkowy",
+  "desc": "Po oczyszczeniu pokoju umiejętność jest od razu gotowa, +15% mocy umiejętności",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "room_ability",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "ability_power",
+    "op": "+",
+    "value": 0.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "rog_wojenny",
+  "name": "Róg Wojenny",
+  "desc": "Na początku każdej walki wpadasz w szał na 2.5 s (+obrażenia, +szybkostrzelność, +szybkość)",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "war_horn",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "serce_wulkanu",
+  "name": "Serce Wulkanu",
+  "desc": "+40% szans na podpalenie, +10% obrażeń",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "burn",
+    "op": "+",
+    "value": 0.4
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 1.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "pierscien_satelit",
+  "name": "Pierścień Satelit",
+  "desc": "Dwa kryształy krążą wokół ciebie i ranią wrogów",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "orbitals",
+    "op": "+",
+    "value": 2
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "pryzmat",
+  "name": "Pryzmat",
+  "desc": "+1 pocisk, pociski rozpadają się na odłamki, -15% obrażeń",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "projectiles",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "split",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 0.85
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "plaszcz_cieni",
+  "name": "Płaszcz Cieni",
+  "desc": "+12% uniku, +15% szybkości ruchu",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "dodge",
+    "op": "+",
+    "value": 0.12
+   },
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.15
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "serce_golema",
+  "name": "Serce Golema",
+  "desc": "+60 maks. HP, +10% pancerza, -10% szybkości ruchu",
+  "rarity": 2,
+  "fx": [
+   {
+    "stat": "max_hp",
+    "op": "+",
+    "value": 60
+   },
+   {
+    "stat": "armor",
+    "op": "+",
+    "value": 0.1
+   },
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 0.9
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "oko_otchlani",
+  "name": "Oko Otchłani",
+  "desc": "+2 pociski, +1 przebicie, naprowadzanie",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "projectiles",
+    "op": "+",
+    "value": 2
+   },
+   {
+    "stat": "pierce",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "homing",
+    "op": "+",
+    "value": 1.5
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "skrzydla",
+  "name": "Skrzydła Serafina",
+  "desc": "+25% szybkości ruchu, +2 ładunki zrywu, +10% uniku",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "speed",
+    "op": "*",
+    "value": 1.25
+   },
+   {
+    "stat": "dash_charges",
+    "op": "+",
+    "value": 2
+   },
+   {
+    "stat": "dodge",
+    "op": "+",
+    "value": 0.1
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "kamien_filozoficzny",
+  "name": "Kamień Filozoficzny",
+  "desc": "+50% monet, każda podniesiona moneta leczy 1 HP, +30 szczęścia",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "coin_mult",
+    "op": "+",
+    "value": 0.5
+   },
+   {
+    "stat": "coin_heal",
+    "op": "+",
+    "value": 1
+   },
+   {
+    "stat": "luck",
+    "op": "+",
+    "value": 30
+   }
+  ],
+  "special": null
+ },
+ {
+  "key": "bebenek_burzy",
+  "name": "Bęben Burzy",
+  "desc": "+30% wyładowań łańcuchowych, wybuchające pociski",
+  "rarity": 3,
+  "fx": [
+   {
+    "stat": "chain",
+    "op": "+",
+    "value": 0.3
+   },
+   {
+    "stat": "explode",
+    "op": "+",
+    "value": 1
+   }
+  ],
+  "special": null
  }
 ]

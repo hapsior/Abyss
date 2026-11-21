@@ -24,6 +24,8 @@ public sealed class PlayerSim
     public float ShotSize = 1, Knockback = 1, DashCharges = 1, DashCd = 1.1f, AbilityCdMult = 1, AbilityPower = 1;
     public float Thorns, CoinMult = 1, Orbitals, Familiars, Revives, Eshield, Blackhole, PriceMult = 1, RoomShield;
     public float Rage, PoisonBurst, XpMult = 1;
+    /// <summary>Przedmioty specjalne: reset umiejętności po pokoju, róg wojenny (szał na start walki), leczenie z monet.</summary>
+    public float RoomAbility, WarHorn, CoinHeal;
 
     public static readonly Dictionary<string, FieldInfo> StatFields = BuildStatMap();
 
@@ -176,6 +178,7 @@ public sealed class PlayerSim
         switch (item.Special)
         {
             case "coins15": g.Coins += 15; break;
+            case "coins30": g.Coins += 30; break;
             case "chaos": g.GiveRandomItems(2, this); break;
         }
         ClampStats();

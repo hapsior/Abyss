@@ -174,6 +174,13 @@ public sealed class RunSim
         {
             foreach (var p in Players)
                 if (p.RoomShield > 0) p.ShieldUp = true;
+            if (room.Kind is RoomKind.Combat or RoomKind.Exit or RoomKind.Boss)
+                foreach (var p in ActivePlayers())
+                    if (p.WarHorn > 0)
+                    {
+                        p.RageT = MathF.Max(p.RageT, 2.5f * p.WarHorn);
+                        Fx.Ring(p.X, p.Y, new Color("ff4632"), 90, 0.35f, 5);
+                    }
             if (room.Kind is RoomKind.Combat or RoomKind.Exit)
             {
                 WaveIdx = 0;
@@ -852,6 +859,8 @@ public sealed class RunSim
             case PickupKind.Coin:
                 Coins += (int)pk.Value;
                 Stats.Coins += (int)pk.Value;
+                foreach (var o in ActivePlayers())
+                    if (o.CoinHeal > 0) o.Heal(o.CoinHeal * pk.Value, this, false);
                 Fx.Sound("coin", 0.5f, 0.04f);
                 return true;
             case PickupKind.Xp:
@@ -1178,6 +1187,12 @@ public sealed class RunSim
         Fx.Sound("door_open", 0.8f);
         foreach (var p in Players)
             if (p.Downed) p.Revive(this, 0.35f);
+        foreach (var p in ActivePlayers())
+            if (p.RoomAbility > 0 && p.AbilityT > 0)
+            {
+                p.AbilityT = 0;
+                Fx.Text(p.X, p.Y - 44, "Umiejętność gotowa!", new Color("ffd246"), 18);
+            }
         float r = R.NextFloat(), healCh = 0.16f * Diff.Heal;
         float luck = Players.Max(p => p.Luck);
         if (r < 0.22f)
