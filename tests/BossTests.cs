@@ -65,8 +65,10 @@ public static class BossTests
             float t = 0;
             while (t < 120)
             {
-                // wymuszanie kolejnych faz (bez obrażeń od gracza): co 30 s niższe HP
-                float frac = key == "abyss" ? (t < 30 ? 1f : t < 60 ? 0.6f : 0.3f) : (t < 30 ? 1f : 0.45f);
+                // wymuszanie kolejnych faz (bez obrażeń od gracza): co 30 s HP tuż pod kolejnym progiem
+                var th = boss.BDef.Phases.OrderByDescending(x => x).ToArray();
+                int seg = Math.Min((int)(t / 30), th.Length);
+                float frac = seg == 0 ? 1f : th[seg - 1] - 0.04f;
                 if (boss.Frac > frac) boss.Hp = boss.MaxHp * frac;
                 g.Update(dt, new[] { Strafe(g, t, false) });
                 t += dt;
