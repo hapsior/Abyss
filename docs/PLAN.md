@@ -59,6 +59,11 @@
 
 Limit DPS bossa: 50·1.07^(piętro−5) na sekundę, nadmiar zadaje 8% obrażeń.
 
+## Do zrobienia później
+
+- **Angielska wersja gry**: wszystkie teksty interfejsu i danych (`data/*.json`: postacie, przedmioty, ulepszenia, bossowie, krainy, osiągnięcia) przez system tłumaczeń Godota (CSV/PO + `tr()`), przełącznik języka w opcjach, domyślnie język systemu. Fonty mają już potrzebne znaki.
+- Commity i opisy zmian w repo piszemy po angielsku.
+
 ## Podział pracy
 
 Opus projektuje i robi rzeczy najtrudniejsze, a resztę deleguje do agentów Sonnet i odbiera ich wyniki.
