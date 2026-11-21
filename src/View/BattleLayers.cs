@@ -120,6 +120,52 @@ public partial class GroundFxView : Node2D
                     }
                     break;
                 }
+                case Totem to:
+                {
+                    var c0 = new Vector2(to.X, to.Y);
+                    float left = 1 - to.T / to.Dur;
+                    DrawCircle(c0 + new Vector2(0, 4), 22, new Color(0, 0, 0, 0.25f));
+                    DrawArc(c0, 30, -Mathf.Pi / 2, -Mathf.Pi / 2 + Mathf.Tau * left, 32, new Color("8affc8", 0.8f), 3);
+                    if (to.Pulse > 0)
+                        DrawCircle(c0 + new Vector2(0, -34), 18 * to.Pulse + 6, new Color("8affc8", 0.35f * to.Pulse));
+                    var tex = Art.Prop("totem");
+                    float sz = 72 * (1 + 0.06f * to.Pulse);
+                    if (tex != null)
+                        DrawTextureRect(tex, new Rect2(c0 - new Vector2(sz / 2, sz * 0.92f), new Vector2(sz, sz)), false);
+                    else
+                    {
+                        DrawRect(new Rect2(c0 - new Vector2(12, 58), new Vector2(24, 58)), ink);
+                        DrawRect(new Rect2(c0 - new Vector2(9, 55), new Vector2(18, 52)), new Color("8a5a32"));
+                        DrawCircle(c0 + new Vector2(0, -42), 5, new Color("8affc8"));
+                    }
+                    break;
+                }
+                case Sentry se:
+                {
+                    var c0 = new Vector2(se.X, se.Y);
+                    float left = 1 - se.T / se.Dur;
+                    DrawCircle(c0 + new Vector2(0, 6), 20, new Color(0, 0, 0, 0.25f));
+                    DrawArc(c0, 28, -Mathf.Pi / 2, -Mathf.Pi / 2 + Mathf.Tau * left, 32, new Color("ffb050", 0.8f), 3);
+                    var tex = Art.Prop("wiezyczka");
+                    float sz = 60;
+                    bool flip = MathF.Cos(se.Aim) < 0;
+                    if (tex != null)
+                    {
+                        var size = new Vector2(flip ? -sz : sz, sz);
+                        DrawSetTransform(c0 + new Vector2(0, -sz * 0.35f) - new Vector2(MathF.Cos(se.Aim), MathF.Sin(se.Aim)) * 3 * se.Recoil, 0, Vector2.One);
+                        DrawTextureRect(tex, new Rect2(new Vector2(flip ? sz / 2 : -sz / 2, -sz / 2), size), false);
+                        DrawSetTransform(Vector2.Zero, 0, Vector2.One);
+                    }
+                    else
+                    {
+                        var head = c0 + new Vector2(0, -14);
+                        DrawLine(head, head + new Vector2(MathF.Cos(se.Aim), MathF.Sin(se.Aim)) * 24, ink, 9);
+                        DrawLine(head, head + new Vector2(MathF.Cos(se.Aim), MathF.Sin(se.Aim)) * 22, new Color("5aa0e6"), 5);
+                        DrawCircle(head, 14, ink);
+                        DrawCircle(head, 11, new Color("ffb050"));
+                    }
+                    break;
+                }
                 case Telegraph tg:
                 {
                     float f = 1 - tg.T / tg.Dur;

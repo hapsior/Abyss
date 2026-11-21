@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Bard: różowe ciało-fasolka, beret z długim piórem, żabot, zawadiacki uśmiech, lutnia na plecach. Patrzy w prawo. -->
+  <!-- lutnia na plecach (za ciałem) -->
+  <g transform="rotate(-24 44 160)">
+    <rect x="36" y="44" width="12" height="80" rx="5" fill="#8a5530" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+    <rect x="30" y="30" width="24" height="22" rx="7" fill="#b97a4a" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="33" cy="38" r="4" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3"/>
+    <circle cx="51" cy="38" r="4" fill="#ffd23f" stroke="#1a0f1f" stroke-width="3"/>
+    <ellipse cx="42" cy="158" rx="34" ry="42" fill="#c68a52" stroke="#1a0f1f" stroke-width="9"/>
+    <path d="M72 150 C 74 180 62 196 42 200 C 60 190 66 172 62 150 Z" fill="#8a5530"/>
+    <circle cx="42" cy="148" r="11" fill="#3a2214" stroke="#1a0f1f" stroke-width="4"/>
+  </g>
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#4a2fa0"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#4a2fa0"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#e05a9a"/>
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#b83c78"/>
+  <ellipse cx="68" cy="150" rx="9" ry="16" fill="#ffffff" opacity="0.5" transform="rotate(18 68 150)"/>
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- pióro -->
+  <path d="M170 62 C 190 22 216 14 238 22 C 232 34 224 40 214 42 C 222 46 218 56 206 60 C 196 62 184 70 170 76 Z" fill="#fff2c8" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M176 66 C 192 40 212 28 232 24" fill="none" stroke="#e0a030" stroke-width="5" stroke-linecap="round"/>
+  <!-- beret -->
+  <path d="M62 102 C 56 66 92 46 134 48 C 176 50 204 70 196 98 C 168 86 100 84 62 102 Z" fill="#6a48c8"/>
+  <path d="M196 98 C 204 76 188 58 168 52 C 184 66 184 84 180 94 Z" fill="#4a2fa0"/>
+  <path d="M76 82 C 88 68 106 60 126 58" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.5"/>
+  <path d="M62 102 C 56 66 92 46 134 48 C 176 50 204 70 196 98 C 168 86 100 84 62 102 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M62 100 C 100 84 168 86 196 96" fill="none" stroke="#ffd23f" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="134" cy="46" r="7" fill="#6a48c8" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="172" cy="92" r="7" fill="#ffd23f" stroke="#1a0f1f" stroke-width="4"/>
+  <!-- oczy -->
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="102" cy="134" rx="15" ry="17" fill="#ffffff"/>
+    <ellipse cx="156" cy="134" rx="15" ry="17" fill="#ffffff"/>
+  </g>
+  <circle cx="108" cy="137" r="8" fill="#1a0f1f"/><circle cx="162" cy="137" r="8" fill="#1a0f1f"/>
+  <circle cx="105" cy="133" r="3" fill="#ffffff"/><circle cx="159" cy="133" r="3" fill="#ffffff"/>
+  <!-- brwi: jedna uniesiona -->
+  <path d="M88 110 L 116 112" stroke="#1a0f1f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M140 108 C 150 98 164 98 172 104" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linecap="round"/>
+  <!-- zawadiacki uśmiech -->
+  <path d="M110 166 C 124 180 148 178 160 160 C 150 166 124 168 110 166 Z" fill="#ffffff" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M160 160 L 166 154" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="84" cy="162" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+  <!-- żabot -->
+  <g stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round" fill="#ffffff">
+    <circle cx="82" cy="196" r="14"/><circle cx="104" cy="206" r="15"/><circle cx="128" cy="210" r="16"/>
+    <circle cx="152" cy="206" r="15"/><circle cx="174" cy="196" r="14"/>
+  </g>
+  <path d="M92 206 C 100 214 110 216 118 214 M 140 214 C 148 216 158 214 164 206" fill="none" stroke="#c8c0e0" stroke-width="4" stroke-linecap="round"/>
+</svg>

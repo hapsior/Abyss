@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Godot;
 
@@ -67,6 +68,12 @@ public sealed class PlayerSim
     public float FireCd, IFrames, DashT, DashRecharge, DashDx = 1, DashDy, AbilityT, AbilityCd, RageT, InvisT;
     /// <summary>Spowolnienie gracza (szron, zarodniki) – czas w sekundach.</summary>
     public float SlowT;
+    /// <summary>Bard: czas trwania „Ballady Odwagi” (szybkostrzelność, szybkość, leczenie).</summary>
+    public float SongT;
+    /// <summary>Rewolwerowiec: naboje w bębenku i czas bez strzelania (po 1.2 s bębenek się ładuje). Bard: licznik strzałów.</summary>
+    public int Ammo = DrumSize, ShotCount;
+    public float FireIdle;
+    public const int DrumSize = 6;
     public int DashLeft;
     public int Level = 1;
     public float Xp;
@@ -145,6 +152,7 @@ public sealed class PlayerSim
     {
         float fr = FireRate * FireMult;
         if (RageT > 0) fr *= 1.6f;
+        if (SongT > 0) fr *= 1.35f;
         return MathF.Max(0.05f, 1f / fr);
     }
 
@@ -153,6 +161,7 @@ public sealed class PlayerSim
         float s = Speed;
         if (RageT > 0) s *= 1.4f;
         if (InvisT > 0) s *= 1.4f;
+        if (SongT > 0) s *= 1.15f;
         if (SlowT > 0) s *= 0.6f;
         return s;
     }
@@ -269,6 +278,14 @@ public sealed class PlayerSim
         Trail.Add(new Vector2(X, Y));
         if (Trail.Count > 90) Trail.RemoveAt(0);
 
+        if (SongT > 0)
+        {
+            SongT -= dt;
+            if (Hp < MaxHp) Hp = MathF.Min(MaxHp, Hp + 3 * dt);
+            if (g.Cos.NextDouble() < dt * 6)
+                g.Fx.Burst(X + g.CosRange(-16, 16), Y - 20, new Color("ff9ad0"), 1, 30, 5, 0.7f, grav: -90);
+        }
+
         // celowanie i strzał
         Aim = inp.Aim;
         FireCd -= dt;
@@ -276,6 +293,14 @@ public sealed class PlayerSim
         {
             Shoot(g);
             FireCd = FireInterval();
+            FireIdle = 0;
+            if (Key == "rewolwerowiec" && --Ammo <= 0)
+                Reload(g);
+        }
+        else if (!inp.Fire && Key == "rewolwerowiec" && Ammo < DrumSize)
+        {
+            FireIdle += dt;
+            if (FireIdle > 1.2f) { Ammo = DrumSize; g.Fx.Sound("thunk", 0.4f); }
         }
         if (FireCd < -1) FireCd = 0;
 
@@ -388,14 +413,14 @@ public sealed class PlayerSim
 
     // ------------------------------------------------------------------ strzelanie
     public Bullet MakeBullet(RunSim g, float a, float dmgMult = 1, int pierceBonus = 0, float rangeMult = 1, float speedMult = 1,
-        bool fx = true, bool small = false)
+        bool fx = true, bool small = false, bool forceCrit = false, float sizeMult = 1, float? ox = null, float? oy = null)
     {
         float sp = ShotSpeed * speedMult;
-        bool crit = g.R.NextFloat() < Crit || InvisT > 0;
+        bool crit = forceCrit || g.R.NextFloat() < Crit || InvisT > 0;
         float dmg = EffDamage() * dmgMult;
         if (crit) dmg *= CritMult;
-        float r = 6.5f * ShotSize * (small ? 0.6f : 1);
-        float mx = X + MathF.Cos(a) * (R + 10), my = Y + MathF.Sin(a) * (R + 10) - 4;
+        float r = 6.5f * ShotSize * (small ? 0.6f : 1) * sizeMult;
+        float mx = (ox ?? X) + MathF.Cos(a) * (R + 10), my = (oy ?? Y) + MathF.Sin(a) * (R + 10) - 4;
         return new Bullet(mx, my, MathF.Cos(a) * sp, MathF.Sin(a) * sp, dmg, r, Def.BulletCol, true, Range * rangeMult, Def.Bullet,
             pierce: (int)Pierce + pierceBonus, bounce: (int)Bounce, homing: Homing, spectral: Spectral > 0, crit: crit, fx: fx,
             knock: Knockback, source: "player") { Owner = this };
@@ -406,16 +431,31 @@ public sealed class PlayerSim
         int n = Math.Max(1, (int)Projectiles);
         float spread = n > 1 ? Mathf.DegToRad(MathF.Min(11 * (n - 1), 70)) : 0;
         float jitter = FireMult * FireRate > 6 ? 0.04f : 0.015f;
+        // Bard: co 4. strzał – nuta o podwójnej sile, przebijająca; Rewolwerowiec: ostatni nabój w bębenku zawsze krytyczny
+        bool melody = Key == "bard" && ++ShotCount % 4 == 0;
+        bool lastRound = Key == "rewolwerowiec" && Ammo == 1;
         for (int i = 0; i < n; i++)
         {
             float off = n > 1 ? -spread / 2 + spread * i / (n - 1) : 0;
-            g.Bullets.Add(MakeBullet(g, Aim + off + g.CosRange(-jitter, jitter)));
+            g.Bullets.Add(melody
+                ? MakeBullet(g, Aim + off, 2f, 2, 1.1f, 0.9f, sizeMult: 1.5f)
+                : MakeBullet(g, Aim + off + g.CosRange(-jitter, jitter), forceCrit: lastRound));
         }
+        if (melody) g.Fx.Ring(X, Y, new Color("ff9ad0"), 40, 0.2f, 3);
         for (int k = 0; k < (int)Backshot; k++)
             g.Bullets.Add(MakeBullet(g, Aim + MathF.PI + (k - (Backshot - 1) / 2) * 0.25f));
         float mx = X + MathF.Cos(Aim) * (R + 14), my = Y + MathF.Sin(Aim) * (R + 14) - 4;
         g.Fx.Spark(mx, my, Def.BulletCol, 3, 200, Aim, 0.6f, 0.12f);
         g.Fx.Sound(Def.Sound, 0.55f, 0.045f);
+    }
+
+    /// <summary>Rewolwerowiec: przeładowanie bębenka (szybsze z większą szybkostrzelnością).</summary>
+    public void Reload(RunSim g)
+    {
+        Ammo = DrumSize;
+        FireCd = MathF.Max(FireCd, 1.0f / MathF.Sqrt(MathF.Max(0.5f, FireMult)));
+        g.Fx.Sound("thunk", 0.5f);
+        g.Fx.Text(X, Y - 38, "przeładowanie", new Color("ffd27a"), 15, 0.6f);
     }
 
     // ------------------------------------------------------------------ umiejętności
@@ -491,10 +531,108 @@ public sealed class PlayerSim
                 }
                 break;
             }
+            case "szaman":
+            {
+                // Totem Burzy w miejscu celowania (max 380 px), co 0.6 s razi piorunem do 3 wrogów
+                var t = ClampTarget(inp.Target, 380);
+                g.Effects.Add(new Totem(this, t.X, t.Y, EffDamage() * 1.5f * pw, 7 * (1 + 0.25f * (pw - 1))));
+                g.Fx.Ring(t.X, t.Y, new Color("8affc8"), 90, 0.35f, 6);
+                g.Fx.Burst(t.X, t.Y, new Color("8affc8"), 18, 220, 6, 0.6f, glow: true);
+                break;
+            }
+            case "inzynier":
+            {
+                // Wieżyczka obok gracza, strzela pociskami gracza (z jego ulepszeniami); najwyżej 2 naraz
+                var mine = g.Effects.OfType<Sentry>().Where(s => s.Owner == this && s.Alive).OrderBy(s => s.T).ToList();
+                if (mine.Count >= 2) mine[0].Alive = false;
+                float a = Aim;
+                var pos = new Vector2(C.Clamp(X + MathF.Cos(a) * 46, C.RX0 + 30, C.RX1 - 30), C.Clamp(Y + MathF.Sin(a) * 46, C.RY0 + 30, C.RY1 - 30));
+                if (g.Room.TileAt(pos.X, pos.Y) is { Solid: true }) pos = new Vector2(X, Y);
+                g.Effects.Add(new Sentry(this, pos.X, pos.Y, 12 * (1 + 0.25f * (pw - 1)), 0.55f * pw));
+                g.Fx.Burst(pos.X, pos.Y, new Color("ffb050"), 14, 200, 5, 0.5f);
+                g.Fx.Sound("block", 0.6f);
+                break;
+            }
+            case "mnich":
+            {
+                // Krok Ki: błysk do 230 px (w stronę ruchu lub celowania), fala uderzeniowa w miejscu lądowania
+                float dx = inp.Move.LengthSquared() > 0.04f ? inp.Move.X : MathF.Cos(Aim);
+                float dy = inp.Move.LengthSquared() > 0.04f ? inp.Move.Y : MathF.Sin(Aim);
+                float dl = MathF.Max(0.001f, MathF.Sqrt(dx * dx + dy * dy));
+                dx /= dl; dy /= dl;
+                float bx = X, by = Y;
+                for (float d = 10; d <= 230; d += 10)
+                {
+                    float nx = X + dx * d, ny = Y + dy * d;
+                    if (nx < C.RX0 + R || nx > C.RX1 - R || ny < C.RY0 + R || ny > C.RY1 - R) break;
+                    if (g.Room.TileAt(nx, ny) is { Solid: true }) break;
+                    bx = nx; by = ny;
+                    if ((int)d % 40 == 0) Ghosts.Add((nx, ny, 0.25f));
+                }
+                X = bx; Y = by;
+                IFrames = MathF.Max(IFrames, 0.45f);
+                float rad = 150 * (1 + 0.2f * (pw - 1));
+                g.Fx.Ring(X, Y, new Color("fff0a0"), rad, 0.35f, 7);
+                g.Fx.Burst(X, Y, new Color("fff0a0"), 24, 300, 6, 0.5f, glow: true);
+                g.Fx.Shake(6);
+                g.Fx.Sound("dash", 0.7f);
+                foreach (var e in g.Enemies.ToArray())
+                {
+                    float ex = e.X - X, ey = e.Y - Y, d = MathF.Max(1, MathF.Sqrt(ex * ex + ey * ey));
+                    if (d < rad + e.R)
+                        g.DamageEnemy(e, EffDamage() * 3.5f * pw, kx: ex / d * 700, ky: ey / d * 700, owner: this, source: "ability");
+                }
+                foreach (var b in g.Bullets)
+                    if (!b.Friendly && (b.X - X) * (b.X - X) + (b.Y - Y) * (b.Y - Y) < rad * rad)
+                        b.Kill(g);
+                break;
+            }
+            case "bard":
+            {
+                // Ballada Odwagi: wszyscy aktywni gracze dostają pieśń, wrogowie wokół barda zwalniają
+                float dur = 6 * (1 + 0.25f * (pw - 1));
+                foreach (var o in g.ActivePlayers())
+                {
+                    o.SongT = MathF.Max(o.SongT, dur);
+                    g.Fx.Ring(o.X, o.Y, new Color("ff9ad0"), 70, 0.4f, 5);
+                }
+                foreach (var e in g.Enemies)
+                    if ((e.X - X) * (e.X - X) + (e.Y - Y) * (e.Y - Y) < 280 * 280)
+                        e.SlowT = MathF.Max(e.SlowT, 3);
+                g.Fx.Ring(X, Y, new Color("ff9ad0"), 280, 0.5f, 6);
+                g.Fx.Burst(X, Y, new Color("ff9ad0"), 26, 260, 6, 0.8f, grav: -60);
+                g.Fx.Sound("heal", 0.7f);
+                break;
+            }
+            case "rewolwerowiec":
+            {
+                // Ostatni Taniec: 6 krytycznych strzałów w najbliższych wrogów, pełny bębenek
+                var targets = g.Enemies.Where(e => e.Alive && !e.Invuln)
+                    .OrderBy(e => (e.X - X) * (e.X - X) + (e.Y - Y) * (e.Y - Y)).Take(DrumSize).ToList();
+                for (int i = 0; i < DrumSize; i++)
+                {
+                    float a = targets.Count > 0
+                        ? MathF.Atan2(targets[i % targets.Count].Y - Y, targets[i % targets.Count].X - X)
+                        : Aim + (i - 2.5f) * 0.12f;
+                    g.Bullets.Add(MakeBullet(g, a, 1.5f * pw, 1, 1.2f, 1.2f, forceCrit: true));
+                }
+                Ammo = DrumSize;
+                FireCd = 0.15f;
+                g.Fx.Spark(X, Y, new Color("ffd27a"), 12, 320, Aim, 3.14f, 0.2f);
+                g.Fx.Sound("shoot_heavy", 0.9f);
+                g.Fx.Shake(4);
+                break;
+            }
             default:
-                // nowe postacie (etap 3) dopiszą tu swoje umiejętności
                 break;
         }
+    }
+
+    private Vector2 ClampTarget(Vector2 t, float maxD)
+    {
+        float dx = t.X - X, dy = t.Y - Y, d = MathF.Sqrt(dx * dx + dy * dy);
+        if (d > maxD) t = new Vector2(X + dx / d * maxD, Y + dy / d * maxD);
+        return new Vector2(C.Clamp(t.X, C.RX0 + 30, C.RX1 - 30), C.Clamp(t.Y, C.RY0 + 30, C.RY1 - 30));
     }
 
     // ------------------------------------------------------------------ obrażenia / leczenie

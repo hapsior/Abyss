@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Inżynier: pomarańczowe ciało-fasolka, żółty kask z goglami spawalniczymi, ogrodniczki z kieszenią, smar na policzku. Patrzy w prawo. -->
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#5a4a3a"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#5a4a3a"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#f0a030"/>
+  <!-- ogrodniczki -->
+  <path d="M52 188 C 90 198 166 198 204 188 C 200 208 170 224 128 224 C 86 224 56 208 52 188 Z" fill="#4a78c8"/>
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#c47a18" opacity="0.9"/>
+  <ellipse cx="68" cy="140" rx="9" ry="16" fill="#ffffff" opacity="0.5" transform="rotate(18 68 140)"/>
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M54 190 C 90 200 166 200 202 190" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linecap="round"/>
+  <!-- szelki -->
+  <path d="M72 194 L 68 164 L 84 162 L 90 196 Z" fill="#4a78c8" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M184 194 L 188 164 L 172 162 L 166 196 Z" fill="#4a78c8" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="78" cy="176" r="5" fill="#c8d2e6" stroke="#1a0f1f" stroke-width="4"/>
+  <circle cx="178" cy="176" r="5" fill="#c8d2e6" stroke="#1a0f1f" stroke-width="4"/>
+  <!-- kieszeń z narzędziem -->
+  <path d="M104 202 L 152 202 L 150 220 C 140 224 116 224 106 220 Z" fill="#6a96e0" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M112 206 L 144 206" stroke="#2f5aa6" stroke-width="3" stroke-dasharray="5 4" stroke-linecap="round"/>
+  <rect x="136" y="188" width="8" height="20" rx="3" fill="#c8d2e6" stroke="#1a0f1f" stroke-width="4" transform="rotate(14 140 198)"/>
+  <!-- kask -->
+  <path d="M60 106 C 56 70 88 46 128 46 C 168 46 200 70 196 106 Z" fill="#ffd23f"/>
+  <path d="M196 106 C 198 80 188 62 170 54 C 182 74 184 92 178 106 Z" fill="#d9a514"/>
+  <path d="M108 46 L 108 74 C 108 78 148 78 148 74 L 148 46 C 140 44 116 44 108 46 Z" fill="#ffe27a" stroke="#1a0f1f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M72 84 C 80 68 96 58 112 54" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  <path d="M60 106 C 56 70 88 46 128 46 C 168 46 200 70 196 106 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- rondel daszka -->
+  <path d="M48 106 C 80 114 176 114 208 106 C 210 100 200 94 196 96 L 60 96 C 54 94 46 100 48 106 Z" fill="#ffd23f" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- gogle na kasku -->
+  <path d="M62 74 C 90 90 166 90 194 74" fill="none" stroke="#1a0f1f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M62 74 C 90 90 166 90 194 74" fill="none" stroke="#5a4a3a" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#1a0f1f" stroke-width="6">
+    <circle cx="104" cy="78" r="17" fill="#8a96b0"/>
+    <circle cx="152" cy="78" r="17" fill="#8a96b0"/>
+  </g>
+  <circle cx="104" cy="78" r="10" fill="#7fe3ff"/><circle cx="152" cy="78" r="10" fill="#7fe3ff"/>
+  <circle cx="100" cy="74" r="3.5" fill="#ffffff"/><circle cx="148" cy="74" r="3.5" fill="#ffffff"/>
+  <!-- oczy -->
+  <g stroke="#1a0f1f" stroke-width="7">
+    <ellipse cx="102" cy="142" rx="15" ry="17" fill="#ffffff"/>
+    <ellipse cx="156" cy="142" rx="15" ry="17" fill="#ffffff"/>
+  </g>
+  <circle cx="107" cy="145" r="8" fill="#1a0f1f"/><circle cx="161" cy="145" r="8" fill="#1a0f1f"/>
+  <circle cx="104" cy="141" r="3" fill="#ffffff"/><circle cx="158" cy="141" r="3" fill="#ffffff"/>
+  <!-- usta -->
+  <path d="M116 174 C 124 184 140 184 148 172" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <!-- smar na policzku -->
+  <path d="M164 160 C 172 154 184 158 186 166 C 178 170 170 172 164 168 Z" fill="#3a2a22" opacity="0.75"/>
+  <path d="M172 164 L 182 163" stroke="#6a5444" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <ellipse cx="86" cy="168" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+</svg>

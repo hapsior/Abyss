@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 96" width="192" height="96">
+  <!-- Kij duchów: krótki drewniany kij Szamana z rzeźbioną czaszką, piórami i zielonym płomykiem ducha. -->
+  <!-- pivot: 34,52 -->
+  <ellipse cx="146" cy="40" rx="30" ry="32" fill="#3fbf8f" opacity="0.28"/>
+  <!-- pióra -->
+  <path d="M104 52 C 98 64 92 76 84 86 C 100 84 112 72 116 56 Z" fill="#3fd6d0" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M112 54 C 112 68 108 80 104 88 C 120 82 128 68 126 56 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="7" stroke-linejoin="round"/>
+  <!-- kij -->
+  <path d="M16 46 L 126 42 L 126 62 L 16 58 Z" fill="#b97a4a"/>
+  <path d="M16 54 L 126 54 L 126 62 L 16 58 Z" fill="#8a5530"/>
+  <path d="M26 49 L 112 46" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M16 46 L 126 42 L 126 62 L 16 58 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- owinięcia chwytu -->
+  <path d="M26 45 L 22 59 M 36 45 L 32 59 M 46 44 L 42 58" stroke="#3fbf8f" stroke-width="5" stroke-linecap="round"/>
+  <path d="M78 44 L 78 60 M 88 44 L 88 60" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round"/>
+  <!-- płomyk ducha -->
+  <path d="M142 24 C 128 14 138 6 142 4 C 142 12 152 12 154 18 C 160 12 164 8 164 6 C 174 18 170 28 160 30 Z" fill="#3fbf8f" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M148 26 C 144 20 148 16 152 14 C 154 18 158 20 158 26 Z" fill="#c8ffe6"/>
+  <!-- czaszka-totem -->
+  <path d="M170 56 L 170 68 C 170 72 150 74 142 72 L 134 66 L 128 56 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="142" cy="46" r="23" fill="#f1e6c8"/>
+  <path d="M158 32 C 168 46 164 64 148 69 C 158 58 160 44 158 32 Z" fill="#c9b98f"/>
+  <ellipse cx="130" cy="36" rx="5" ry="9" fill="#ffffff" opacity="0.7" transform="rotate(30 130 36)"/>
+  <path d="M170 56 L 170 68 C 170 72 150 74 142 72 L 134 66" fill="none" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="142" cy="46" r="23" fill="none" stroke="#1a0f1f" stroke-width="8"/>
+  <circle cx="148" cy="46" r="8" fill="#1a0f1f"/>
+  <circle cx="148" cy="46" r="4.5" fill="#7dffc8"/>
+  <path d="M138 56 L 142 62 L 146 56" fill="#1a0f1f"/>
+  <path d="M154 62 L 154 70 M 162 62 L 162 70" stroke="#1a0f1f" stroke-width="4" stroke-linecap="round"/>
+</svg>

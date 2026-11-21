@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Mnich: złote ciało-fasolka, szafranowa szata z szarfą, koraliki modlitewne, spokojne oczy, czerwona kropka na czole. Patrzy w prawo. -->
+  <!-- stopy -->
+  <g stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="100" cy="222" rx="24" ry="15" fill="#c8402a"/>
+    <ellipse cx="158" cy="222" rx="24" ry="15" fill="#c8402a"/>
+  </g>
+  <!-- ciało -->
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="#f2c14e"/>
+  <!-- szata -->
+  <path d="M52 156 L 128 200 L 204 156 C 204 198 172 224 128 224 C 84 224 52 198 52 156 Z" fill="#f07a1f"/>
+  <!-- cień -->
+  <path d="M205 150 C 204 196 172 222 128 222 C 100 222 78 212 64 196 C 98 208 152 204 180 178 C 194 166 202 156 205 150 Z" fill="#d09a28" opacity="0.85"/>
+  <ellipse cx="68" cy="130" rx="9" ry="16" fill="#ffffff" opacity="0.5" transform="rotate(18 68 130)"/>
+  <path d="M128 70 C 184 70 206 112 205 156 C 204 198 172 224 128 224 C 84 224 52 198 51 156 C 50 112 72 70 128 70 Z" fill="none" stroke="#1a0f1f" stroke-width="10" stroke-linejoin="round"/>
+  <!-- kołnierz szaty -->
+  <path d="M52 156 L 128 200 L 204 156" fill="none" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- szarfa przez ciało -->
+  <path d="M66 140 L 88 126 L 196 186 L 178 206 Z" fill="#c8402a" stroke="#1a0f1f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M82 138 L 182 192" stroke="#ff8a6a" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  <!-- koraliki -->
+  <path d="M70 168 C 90 206 166 206 186 168" fill="none" stroke="#1a0f1f" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#1a0f1f" stroke-width="4" fill="#8a5530">
+    <circle cx="76" cy="176" r="6"/><circle cx="86" cy="190" r="6"/><circle cx="102" cy="199" r="6"/>
+    <circle cx="154" cy="199" r="6"/><circle cx="170" cy="190" r="6"/><circle cx="180" cy="176" r="6"/>
+  </g>
+  <circle cx="128" cy="206" r="9" fill="#b97a4a" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="125" cy="203" r="2.5" fill="#ffffff" opacity="0.8"/>
+  <!-- znak na czole -->
+  <circle cx="128" cy="96" r="9" fill="#e0303f" stroke="#1a0f1f" stroke-width="5"/>
+  <circle cx="125" cy="93" r="2.5" fill="#ffffff"/>
+  <!-- brwi spokojne -->
+  <path d="M86 118 C 96 112 108 112 118 116 M 138 116 C 148 112 160 112 170 118" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linecap="round"/>
+  <!-- oczy półprzymknięte -->
+  <g stroke="#1a0f1f" stroke-width="6">
+    <ellipse cx="102" cy="138" rx="15" ry="13" fill="#ffffff"/>
+    <ellipse cx="156" cy="138" rx="15" ry="13" fill="#ffffff"/>
+  </g>
+  <circle cx="108" cy="140" r="7" fill="#1a0f1f"/><circle cx="162" cy="140" r="7" fill="#1a0f1f"/>
+  <circle cx="105" cy="137" r="2.5" fill="#ffffff"/><circle cx="159" cy="137" r="2.5" fill="#ffffff"/>
+  <path d="M85 138 C 85 122 119 122 119 138 Z" fill="#f2c14e" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M139 138 C 139 122 173 122 173 138 Z" fill="#f2c14e" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <!-- uśmiech -->
+  <path d="M116 164 C 124 172 138 172 146 163" fill="none" stroke="#1a0f1f" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="86" cy="158" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+  <ellipse cx="172" cy="158" rx="10" ry="6" fill="#ff7fa0" opacity="0.55"/>
+</svg>

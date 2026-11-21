@@ -413,6 +413,82 @@ public sealed class HazardZone : Effect
     }
 }
 
+// ====================================================================== PRZYWOŁAŃCE GRACZY
+/// <summary>Totem Burzy Szamana: stoi w miejscu i co <see cref="Every"/> s razi piorunem łańcuchowym najbliższych wrogów.</summary>
+public sealed class Totem : Effect
+{
+    public readonly PlayerSim Owner;
+    public float T, Dur, Dmg, Cd = 0.3f, Every = 0.6f, Pulse;
+
+    public Totem(PlayerSim owner, float x, float y, float dmg, float duration)
+    {
+        Owner = owner; X = x; Y = y; Dmg = dmg; Dur = duration;
+    }
+
+    public override void Update(float dt, RunSim g)
+    {
+        T += dt;
+        Pulse = MathF.Max(0, Pulse - dt * 4);
+        if (T >= Dur)
+        {
+            Alive = false;
+            g.Fx.Burst(X, Y - 20, new Color("8affc8"), 14, 180, 5, 0.5f);
+            return;
+        }
+        Cd -= dt;
+        if (Cd > 0) return;
+        if (g.NearestEnemy(X, Y, 320) == null) { Cd = 0.1f; return; }
+        Cd = Every;
+        Pulse = 1;
+        g.ChainLightning(X, Y - 34, Dmg, 3, 320, 220, owner: Owner);
+    }
+}
+
+/// <summary>Wieżyczka Inżyniera: celuje w najbliższego widocznego wroga i strzela pociskami właściciela (z jego ulepszeniami).</summary>
+public sealed class Sentry : Effect
+{
+    public readonly PlayerSim Owner;
+    public float T, Dur, DmgMult, Cd = 0.4f, Aim, Recoil;
+
+    public Sentry(PlayerSim owner, float x, float y, float duration, float dmgMult)
+    {
+        Owner = owner; X = x; Y = y; Dur = duration; DmgMult = dmgMult; Aim = owner.Aim;
+    }
+
+    public override void Update(float dt, RunSim g)
+    {
+        T += dt;
+        Recoil = MathF.Max(0, Recoil - dt * 6);
+        if (T >= Dur)
+        {
+            Alive = false;
+            g.Fx.Burst(X, Y, new Color("ffb050"), 12, 180, 5, 0.5f);
+            g.Fx.Sound("break", 0.4f);
+            return;
+        }
+        Cd -= dt;
+        Enemy best = null;
+        float bd = 520 * 520;
+        foreach (var e in g.Enemies)
+        {
+            if (!e.Alive || e.Invuln) continue;
+            float d = (e.X - X) * (e.X - X) + (e.Y - Y) * (e.Y - Y);
+            if (d < bd && g.Room.Los(X, Y, e.X, e.Y)) { bd = d; best = e; }
+        }
+        if (best == null) return;
+        float want = MathF.Atan2(best.Y - Y, best.X - X);
+        Aim += Mathf.Wrap(want - Aim, -MathF.PI, MathF.PI) * MathF.Min(1, dt * 14);
+        if (Cd > 0) return;
+        Cd = 0.25f / MathF.Max(0.3f, Owner.FireMult);
+        Recoil = 1;
+        var b = Owner.MakeBullet(g, Aim, DmgMult, ox: X, oy: Y - 10);
+        b.Source = "sentry";
+        g.Bullets.Add(b);
+        g.Fx.Spark(X + MathF.Cos(Aim) * 26, Y - 10 + MathF.Sin(Aim) * 26, new Color("ffb050"), 2, 160, Aim, 0.5f, 0.1f);
+        g.Fx.Sound("shoot", 0.25f, 0.05f);
+    }
+}
+
 // ====================================================================== TOWARZYSZ
 public sealed class Familiar
 {

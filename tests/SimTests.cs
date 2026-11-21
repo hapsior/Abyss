@@ -13,7 +13,7 @@ public static class SimTests
     public static void ContentLoads()
     {
         var db = Content.Db;
-        Assert.Equal(7, db.Characters.Count);
+        Assert.Equal(12, db.Characters.Count);
         Assert.Equal(74, db.Items.Count);
         Assert.Equal(8, db.Biomes.Count);
         Assert.True(db.EnemyByKey.ContainsKey("sniper"));

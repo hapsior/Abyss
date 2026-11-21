@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 96" width="192" height="96">
+  <!-- Rękawica ki: owinięta bandażami pięść Mnicha w złotej, świecącej aurze. -->
+  <!-- pivot: 44,50 -->
+  <!-- aura -->
+  <ellipse cx="108" cy="48" rx="76" ry="40" fill="#ffd23f" opacity="0.22"/>
+  <ellipse cx="116" cy="48" rx="56" ry="32" fill="#ffe680" opacity="0.3"/>
+  <path d="M150 18 C 166 26 172 38 170 48 C 172 58 166 70 150 78" fill="none" stroke="#fff2c8" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M164 12 C 182 24 186 38 184 48 C 186 58 182 72 164 84" fill="none" stroke="#ffd23f" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <!-- przedramię/bandaż -->
+  <path d="M18 34 L 66 32 L 66 66 L 18 64 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M30 34 L 26 64 M 44 33 L 40 65 M 58 32 L 54 66" stroke="#c9b98f" stroke-width="5" stroke-linecap="round"/>
+  <path d="M22 40 L 60 38" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <!-- pięść -->
+  <path d="M62 30 C 90 20 126 22 136 34 C 146 44 146 58 136 68 C 124 78 90 78 62 68 Z" fill="#f1e6c8"/>
+  <path d="M62 56 C 90 66 126 66 142 56 C 142 62 138 66 136 68 C 124 78 90 78 62 68 Z" fill="#c9b98f"/>
+  <path d="M72 34 C 92 28 116 28 128 34" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M62 30 C 90 20 126 22 136 34 C 146 44 146 58 136 68 C 124 78 90 78 62 68 Z" fill="none" stroke="#1a0f1f" stroke-width="9" stroke-linejoin="round"/>
+  <!-- palce -->
+  <path d="M112 26 L 108 72 M 124 30 L 120 72" stroke="#1a0f1f" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  <!-- bandaże ukośne -->
+  <path d="M74 28 L 92 72 M 90 26 L 106 72" stroke="#c9b98f" stroke-width="5" stroke-linecap="round"/>
+  <!-- kciuk -->
+  <path d="M128 62 C 142 62 150 54 146 46 C 140 52 132 52 126 50 Z" fill="#f1e6c8" stroke="#1a0f1f" stroke-width="6" stroke-linejoin="round"/>
+  <!-- złote knykcie -->
+  <g fill="#ffd23f" stroke="#1a0f1f" stroke-width="5">
+    <circle cx="140" cy="38" r="6"/><circle cx="142" cy="50" r="6"/>
+  </g>
+  <!-- iskry ki -->
+  <path d="M176 20 L 178 26 L 184 28 L 178 30 L 176 36 L 174 30 L 168 28 L 174 26 Z" fill="#ffffff" stroke="#ffd23f" stroke-width="2"/>
+  <path d="M100 10 L 102 15 L 107 17 L 102 19 L 100 24 L 98 19 L 93 17 L 98 15 Z" fill="#ffffff" stroke="#ffd23f" stroke-width="2"/>
+  <circle cx="86" cy="84" r="3.5" fill="#fff2c8"/>
+  <circle cx="160" cy="86" r="3" fill="#ffd23f"/>
+</svg>

@@ -219,5 +219,164 @@
    44,
    70
   ]
+ },
+ {
+  "key": "bard",
+  "name": "Bard",
+  "title": "Pieśniarz wędrowny",
+  "color": "#e05a9a",
+  "accent": "#ffc8e6",
+  "bullet": "note",
+  "bullet_color": "#ff9ad0",
+  "sound": "shoot_magic",
+  "passive": "Melodia: co 4. strzał to wielka nuta o podwójnej sile, przebijająca 2 wrogów.",
+  "ability": "Ballada Odwagi",
+  "ability_desc": "Wszyscy gracze na 6 s: +35% szybkostrzelności, +15% szybkości i leczenie 3 HP/s. Wrogowie wokół zwalniają.",
+  "ability_cd": 13.0,
+  "stats": {
+   "max_hp": 95,
+   "damage": 9,
+   "fire_rate": 3.0,
+   "speed": 245,
+   "range": 460,
+   "shot_speed": 500
+  },
+  "unlock": null,
+  "weapon": "lutnia",
+  "weapon_pivot": [
+   60,
+   52
+  ]
+ },
+ {
+  "key": "inzynier",
+  "name": "Inżynier",
+  "title": "Mistrz konstrukcji",
+  "color": "#f0a030",
+  "accent": "#ffe0a0",
+  "bullet": "bolt",
+  "bullet_color": "#ffb050",
+  "sound": "shoot_heavy",
+  "passive": "Złomiarz: +25% monet i +5% pancerza. Wieżyczki strzelają twoimi pociskami ze wszystkimi ulepszeniami.",
+  "ability": "Wieżyczka",
+  "ability_desc": "Stawia wieżyczkę na 12 s, która sama strzela do wrogów (najwyżej 2 naraz).",
+  "ability_cd": 14.0,
+  "stats": {
+   "max_hp": 105,
+   "damage": 9,
+   "fire_rate": 3.4,
+   "speed": 230,
+   "range": 420,
+   "shot_speed": 600,
+   "armor": 0.05,
+   "coin_mult": 1.25
+  },
+  "unlock": null,
+  "weapon": "nitownica",
+  "weapon_pivot": [
+   52,
+   56
+  ]
+ },
+ {
+  "key": "szaman",
+  "name": "Szaman",
+  "title": "Wołający duchy",
+  "color": "#3fbf8f",
+  "accent": "#c8ffe6",
+  "bullet": "spirit",
+  "bullet_color": "#8affc8",
+  "sound": "shoot_magic",
+  "passive": "Więź duchów: zaczyna z duszkiem-towarzyszem, a jego pociski lekko się naprowadzają.",
+  "ability": "Totem Burzy",
+  "ability_desc": "Stawia totem w miejscu celowania, który przez 7 s razi piorunami do 3 wrogów naraz.",
+  "ability_cd": 12.0,
+  "stats": {
+   "max_hp": 95,
+   "damage": 8,
+   "fire_rate": 3.2,
+   "speed": 240,
+   "range": 440,
+   "shot_speed": 480,
+   "homing": 1.2,
+   "familiars": 1
+  },
+  "unlock": {
+   "kind": "floor",
+   "value": 16,
+   "text": "Dotrzyj do Kuźni (piętro 16)"
+  },
+  "weapon": "kij_duchow",
+  "weapon_pivot": [
+   40,
+   52
+  ]
+ },
+ {
+  "key": "mnich",
+  "name": "Mnich",
+  "title": "Pięść spokoju",
+  "color": "#f2c14e",
+  "accent": "#fff2c8",
+  "bullet": "ki",
+  "bullet_color": "#fff0a0",
+  "sound": "shoot",
+  "passive": "Spokój ducha: +12% uniku, silny odrzut. Krótki zasięg, ale ciężkie ciosy.",
+  "ability": "Krok Ki",
+  "ability_desc": "Błyskawiczny skok do 230 px (z nietykalnością) i fala uderzeniowa, która rani wrogów i niszczy pociski.",
+  "ability_cd": 7.0,
+  "stats": {
+   "max_hp": 100,
+   "damage": 13,
+   "fire_rate": 3.6,
+   "speed": 255,
+   "range": 270,
+   "shot_speed": 620,
+   "dodge": 0.12,
+   "knockback": 1.8
+  },
+  "unlock": {
+   "kind": "floor",
+   "value": 26,
+   "text": "Dotrzyj do Lodowej Krypty (piętro 26)"
+  },
+  "weapon": "rekawica_ki",
+  "weapon_pivot": [
+   44,
+   48
+  ]
+ },
+ {
+  "key": "rewolwerowiec",
+  "name": "Rewolwerowiec",
+  "title": "Szybki spust",
+  "color": "#b5653a",
+  "accent": "#ffd9a8",
+  "bullet": "slug",
+  "bullet_color": "#ffd27a",
+  "sound": "shoot_heavy",
+  "passive": "Bębenek: 6 szybkich strzałów, potem przeładowanie. Szósty nabój zawsze trafia krytycznie.",
+  "ability": "Ostatni Taniec",
+  "ability_desc": "Natychmiast oddaje 6 krytycznych strzałów w najbliższych wrogów i ładuje bębenek.",
+  "ability_cd": 10.0,
+  "stats": {
+   "max_hp": 100,
+   "damage": 14,
+   "fire_rate": 4.5,
+   "speed": 240,
+   "range": 520,
+   "shot_speed": 760,
+   "crit": 0.08
+  },
+  "unlock": {
+   "kind": "floor",
+   "value": 31,
+   "text": "Dotrzyj do Mechanizmu (piętro 31)"
+  },
+  "weapon": "rewolwer",
+  "weapon_pivot": [
+   48,
+   58
+  ]
  }
 ]

@@ -31,7 +31,9 @@ public sealed class Profile
 
     public void Add(string stat, long v = 1) => Stats[stat] = Stats.GetValueOrDefault(stat) + v;
 
-    public bool IsUnlocked(string charKey) => Unlocked.Contains(charKey);
+    /// <summary>Postać bez warunku odblokowania (unlock: null w data/characters.json) jest zawsze dostępna.</summary>
+    public bool IsUnlocked(string charKey) =>
+        Unlocked.Contains(charKey) || Content.Db.Characters.Any(c => c.Key == charKey && c.Unlock == null);
 
     public void Unlock(string charKey)
     {
