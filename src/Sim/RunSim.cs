@@ -681,6 +681,8 @@ public sealed class RunSim
             Fx.Ring(boss.X, boss.Y, new Color("ffdc78"), 120 + i * 80, 0.5f + i * 0.15f, 8);
         Fx.Burst(boss.X, boss.Y, new Color("ffe696"), 50, 600, 8, 1.2f, glow: true);
         ClearEnemyBullets();
+        foreach (var ef in Effects)
+            if (ef is Telegraph or HazardZone or FirePool) ef.Alive = false;
         foreach (var e in Enemies.ToList())
             KillEnemy(e, false);
         Room.Cleared = true;

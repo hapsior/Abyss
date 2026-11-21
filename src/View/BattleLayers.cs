@@ -102,10 +102,22 @@ public partial class GroundFxView : Node2D
                 }
                 case HazardZone hz:
                 {
-                    float f = MathF.Min(1, MathF.Min(hz.T / 0.4f, (hz.Dur - hz.T) / 0.3f + 0.2f));
-                    float warm = hz.Warm > 0 ? 0.45f : 1f;
-                    DrawCircle(new Vector2(hz.X, hz.Y), hz.R, new Color(hz.Color, 0.3f * f * warm));
-                    DrawArc(new Vector2(hz.X, hz.Y), hz.R, 0, Mathf.Tau, 40, new Color(hz.Color, 0.7f * f), hz.Warm > 0 ? 2 : 3);
+                    // wyraźna na każdym podłożu: ciemna obwódka + kolorowe wypełnienie + wirujące drobinki
+                    float f = MathF.Min(1, MathF.Min((hz.Dur - hz.T) / 0.4f, hz.T / 0.3f + 0.2f));
+                    float warm = hz.Warm > 0 ? 0.5f : 1f;
+                    var c0 = new Vector2(hz.X, hz.Y);
+                    float rr = hz.R * (0.97f + 0.03f * MathF.Sin(t * 4 + hz.X));
+                    DrawCircle(c0, rr, new Color(hz.Color, 0.34f * f * warm));
+                    DrawCircle(c0, rr * 0.6f, new Color(hz.Color, 0.16f * f * warm));
+                    DrawArc(c0, rr, 0, Mathf.Tau, 48, new Color(ink, 0.55f * f), 6);
+                    DrawArc(c0, rr, 0, Mathf.Tau, 48, new Color(hz.Color, 0.9f * f), hz.Warm > 0 ? 2 : 3);
+                    int dots = Math.Clamp((int)(hz.R / 12), 3, 9);
+                    for (int i = 0; i < dots; i++)
+                    {
+                        float a = i * Mathf.Tau / dots + t * (i % 2 == 0 ? 0.8f : -0.6f);
+                        float d = rr * (0.35f + 0.4f * ((i * 37 % 10) / 10f));
+                        DrawCircle(c0 + new Vector2(MathF.Cos(a), MathF.Sin(a)) * d, 3.2f, new Color(hz.Color.Lightened(0.4f), 0.8f * f));
+                    }
                     break;
                 }
                 case Telegraph tg:

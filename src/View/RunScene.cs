@@ -17,6 +17,8 @@ public sealed class RunSetup
     public int Seal;
     public int Slot = 1;
     public ulong Seed = Rng.RandomSeed();
+    /// <summary>Tryb deweloperski: start od razu w pokoju tego bossa (piętro jego biomu, bez zapisu).</summary>
+    public string StartBoss;
 }
 
 /// <summary>
@@ -95,7 +97,29 @@ public partial class RunScene : Node2D
         Fx.OnSound = (n, v, p) => Audio.Sfx.Play(n, v, p);
         AssignInputs();
         if (Sim.Floor == null)
-            Sim.NewFloor(1);
+        {
+            if (Setup.StartBoss != null)
+                JumpToBoss(Setup.StartBoss);
+            else
+                Sim.NewFloor(1);
+        }
+    }
+
+    /// <summary>Piętro z bossem o danym kluczu (pierwsze wystąpienie w cyklu biomów).</summary>
+    public static int DepthForBoss(string key)
+    {
+        var biomes = global::Otchlan.Sim.Content.Db.Biomes;
+        for (int i = 0; i < biomes.Count; i++)
+            if (biomes[i].Boss == key) return (i + 1) * C.FloorsPerBiome;
+        return C.FloorsPerBiome;
+    }
+
+    /// <summary>Tryb deweloperski: nowe piętro bossa i od razu wejście do jego pokoju.</summary>
+    public void JumpToBoss(string key)
+    {
+        Sim.NewFloor(DepthForBoss(key));
+        var room = Sim.Floor.Rooms.Values.First(r => r.Kind == RoomKind.Boss);
+        Sim.EnterRoom(room, null);
     }
 
     /// <summary>Przypisanie urządzeń: solo – klawiatura+mysz i pad; co-op – zależnie od liczby padów.</summary>

@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Godot;
 using Otchlan.Core;
@@ -12,6 +14,8 @@ namespace Otchlan.UI;
 public partial class ScreenshotTour : Node
 {
     private readonly string _dir;
+    /// <summary>Gdy ustawione: tylko zrzuty walk z bossami ("*" = wszyscy, albo lista kluczy po przecinku).</summary>
+    public string BossesOnly;
 
     public ScreenshotTour(string dir) => _dir = dir;
 
@@ -68,9 +72,74 @@ public partial class ScreenshotTour : Node
         }
     }
 
+    /// <summary>Walki z bossami (bot, nieśmiertelność): zrzut fazy 1 i fazy 2 każdego bossa.</summary>
+    private async Task BossTour()
+    {
+        var keys = BossesOnly == "*"
+            ? Sim.Content.Db.Bosses.Select(b => b.Key).Where(Sim.EnemyFactory.Has).ToList()
+            : BossesOnly.Split(',').Select(k => k.Trim()).ToList();
+        foreach (var key in keys)
+        {
+            var scene = View.RunScene.Start(new View.RunSetup { Chars = new() { "rycerz" }, Seed = 99, StartBoss = key, Slot = 0 });
+            scene.Sim.God = true;
+            await Wait(0.2);
+            scene.Sources.Clear();
+            scene.Sources.Add(new View.BotSource());
+            View.RunScene.LevelUpFactory = (s, p) => new View.BasicLevelUp(s, p);
+            // zrzut każdego ataku (1.2 s po jego rozpoczęciu), najpierw w fazie 1, potem w ostatniej fazie
+            var shot = new System.Collections.Generic.HashSet<string>();
+            for (int phase = 1; phase <= 2; phase++)
+            {
+                var sim = scene.Sim;
+                if (sim.Boss == null) break;
+                var b = sim.Boss;
+                if (phase == 2)
+                {
+                    if (b.BDef.Phases.Length == 0) break;
+                    b.Hp = MathF.Min(b.Hp, b.MaxHp * (b.BDef.Phases.Min() - 0.02f));
+                }
+                double t0 = Time.GetTicksMsec() / 1000.0;
+                string cur = null;
+                float since = 0;
+                int shotsThisPhase = 0;
+                while (Time.GetTicksMsec() / 1000.0 - t0 < 45 && sim.Boss != null && shotsThisPhase < 6)
+                {
+                    if (scene.Overlay is View.BasicLevelUp lu) lu.CallDeferred("Pick", 0);
+                    if (scene.Overlay == null)
+                        for (int k = 0; k < 2; k++)
+                        {
+                            sim.Update(1 / 60f, new[] { scene.Sources[0].Read(scene, sim.Players[0]) });
+                            since += 1 / 60f;
+                        }
+                    if (sim.Boss == null) break;
+                    float floor = phase == 1 && b.BDef.Phases.Length > 0 ? b.BDef.Phases.Max() + 0.03f : 0.15f;
+                    if (b.Hp < b.MaxHp * floor) b.Hp = b.MaxHp * floor;
+                    if (b.LastAttack != cur) { cur = b.LastAttack; since = 0; }
+                    string tag = $"f{b.Phase}_{cur}";
+                    if (cur != null && b.Intro <= 0 && since > 1.2f && !shot.Contains(tag))
+                    {
+                        shot.Add(tag);
+                        shotsThisPhase++;
+                        await Shot($"boss_{key}_{tag}");
+                    }
+                    await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
+                }
+            }
+        }
+    }
+
     private async Task Run()
     {
         var g = Game.I;
+        if (BossesOnly != null)
+        {
+            g.Settings.ShowFps = true;
+            g.OnSettingsChanged();
+            g.InputMgr.SetDevice(InputDevice.Gamepad, 0);
+            await BossTour();
+            g.Quit(0);
+            return;
+        }
         g.Settings.ShowFps = true;
         g.OnSettingsChanged();
         g.InputMgr.SetDevice(InputDevice.KeyboardMouse, -1);
