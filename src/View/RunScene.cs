@@ -47,10 +47,10 @@ public partial class RunScene : Node2D
     private readonly Random _shakeR = new();
 
     /// <summary>Fabryka nakładek – ekrany UI mogą ją podmienić na pełne wersje (awans, pauza, sklep, wynik).</summary>
-    public static Func<RunScene, PlayerSim, Control> LevelUpFactory = (s, p) => new BasicLevelUp(s, p);
-    public static Func<RunScene, Control> PauseFactory = s => new BasicPause(s);
-    public static Func<RunScene, PlayerSim, Control> ShopFactory = null;
-    public static Func<RunScene, Control> ResultFactory = s => new BasicResult(s);
+    public static Func<RunScene, PlayerSim, Control> LevelUpFactory = (s, p) => new LevelUpOverlay(s, p);
+    public static Func<RunScene, Control> PauseFactory = s => new PauseMenu(s);
+    public static Func<RunScene, PlayerSim, Control> ShopFactory = (s, p) => new ShopMenu(s, p);
+    public static Func<RunScene, Control> ResultFactory = s => new ResultScreen(s);
 
     public static RunScene Start(RunSetup setup, RunSim sim = null)
     {
