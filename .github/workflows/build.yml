@@ -43,8 +43,13 @@ jobs:
       - name: Eksport Windows
         run: |
           mkdir -p build/windows
-          godot --headless --path . --export-release "Windows" build/windows/Otchlan.exe
-          cp CZYTAJ_MNIE.txt build/windows/ 2>/dev/null || true
+          godot --headless --path . --export-release "Windows" build/windows/Otchlan.exe 2>&1 | tee export.log
+          # Godot kończy eksport kodem 0 nawet po błędzie kompilacji C# – sprawdzamy wynik sami
+          if grep -q "^ERROR" export.log; then echo "::error::Eksport zgłosił błędy"; exit 1; fi
+          test -f build/windows/Otchlan.exe
+          test -f build/windows/Otchlan.pck
+          test -f build/windows/data_Otchlan_windows_x86_64/Otchlan.dll || { echo "::error::Brak skompilowanego C# (Otchlan.dll)"; ls -R build/windows | head -50; exit 1; }
+          ls -la build/windows build/windows/data_Otchlan_windows_x86_64 | head -30
 
       - uses: actions/upload-artifact@v4
         with:
