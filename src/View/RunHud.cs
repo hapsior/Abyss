@@ -172,6 +172,14 @@ public partial class RunHud : Control
                 DrawCircle(c, 6 * p.DashRecharge / p.DashCd, new Color("78a0c8"));
             }
         }
+        // Rewolwerowiec: naboje w bębenku
+        if (p.Key == "rewolwerowiec")
+            for (int i = 0; i < PlayerSim.DrumSize; i++)
+            {
+                var r = new Rect2(bx + bw - 14 - (PlayerSim.DrumSize - i) * 15, 78, 10, 17);
+                DrawRect(r.Grow(2), Ink);
+                DrawRect(r, i < p.Ammo ? (i == p.Ammo - 1 && p.Ammo == 1 ? new Color("ff8a3c") : new Color("ffd27a")) : new Color("4a3a2a"));
+            }
     }
 
     private void Minimap(Vector2 topRight, bool below)
