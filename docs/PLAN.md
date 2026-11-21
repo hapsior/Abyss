@@ -46,7 +46,7 @@
 1. **Fundament.** Projekt Godot C#, ekran i FPS, wejście z glifami Xbox, motyw UI, przewodnik stylu i grafika bazowa, testy, zrzuty ekranu. *(gotowe)*
 2. **Port wersji 1.1.** Postacie, wrogowie z SI szukającą linii strzału, bossowie, przedmioty, co-op, sloty zapisu, sklep z menu. *(gotowe)*
 3. **Nowa zawartość.** 40 pięter, Głębia, 3 nowych bossów (Matka Grzybni, Szronowy Kolos, Zegarmistrz), 5 nowych postaci, 30 nowych przedmiotów, wrogowie przebarwieni pod krainę, muzyka. *(gotowe; nowi wrogowie dla nowych krain – opcjonalnie)*
-4. **Wydanie.** Balans z symulatora *(zrobiony pierwszy przebieg)*, nowe osiągnięcia *(w toku)*, Steam (Steamworks.NET), eksport na Windows, testy końcowe.
+4. **Wydanie.** Balans z symulatora *(zrobiony pierwszy przebieg)*, nowe osiągnięcia *(gotowe: 71, ekran i toast, interfejs pod Steam)*, Steam (Steamworks.NET), eksport na Windows, testy końcowe.
 
 ### Balans (symulator `--balance`, bot nieśmiertelny, 8 postaci)
 
