@@ -43,10 +43,21 @@
 
 ## Etapy
 
-1. **Fundament.** Projekt Godot C#, ekran i FPS, wejście z glifami Xbox, motyw UI, przewodnik stylu i grafika bazowa, testy, zrzuty ekranu. *(w toku)*
-2. **Port wersji 1.1.** Postacie, wrogowie z SI szukającą linii strzału, bossowie, przedmioty, co-op, sloty zapisu, sklep z menu, osiągnięcia.
-3. **Nowa zawartość.** 40 pięter, Głębia, nowi bossowie, postacie, przedmioty i wrogowie.
-4. **Wydanie.** Balans, nowe osiągnięcia, Steam (Steamworks.NET), eksport na Windows, testy końcowe.
+1. **Fundament.** Projekt Godot C#, ekran i FPS, wejście z glifami Xbox, motyw UI, przewodnik stylu i grafika bazowa, testy, zrzuty ekranu. *(gotowe)*
+2. **Port wersji 1.1.** Postacie, wrogowie z SI szukającą linii strzału, bossowie, przedmioty, co-op, sloty zapisu, sklep z menu. *(gotowe)*
+3. **Nowa zawartość.** 40 pięter, Głębia, 3 nowych bossów (Matka Grzybni, Szronowy Kolos, Zegarmistrz), 5 nowych postaci, 30 nowych przedmiotów, wrogowie przebarwieni pod krainę, muzyka. *(gotowe; nowi wrogowie dla nowych krain – opcjonalnie)*
+4. **Wydanie.** Balans z symulatora *(zrobiony pierwszy przebieg)*, nowe osiągnięcia *(w toku)*, Steam (Steamworks.NET), eksport na Windows, testy końcowe.
+
+### Balans (symulator `--balance`, bot nieśmiertelny, 8 postaci)
+
+| Piętro | Czas piętra | Walka z bossem | Uwagi |
+|---|---|---|---|
+| 5 | ~90 s | ~25 s | najtrudniejszy moment wczesnej gry |
+| 10–35 | ~60 s | 24–30 s | moc gracza rośnie przez przedmioty, wrogowie od piętra 10 rosną szybciej (`LateHpFactor`) |
+| 40 | ~55 s | ~35–40 s | finał: Serce Otchłani (`hp_mult` 1.5) |
+| 41+ | 25–50 s | – | Głębia: dodatkowy wzrost HP/obrażeń wrogów na piętro |
+
+Limit DPS bossa: 50·1.07^(piętro−5) na sekundę, nadmiar zadaje 8% obrażeń.
 
 ## Podział pracy
 
