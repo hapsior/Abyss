@@ -98,8 +98,7 @@ public partial class MainMenu : Control
 
         _first = AddButton(buttons, "Graj", () => Game.I.ShowScreen(new SlotSelect()));
         AddButton(buttons, "Opcje", () => Game.I.ShowScreen(new OptionsMenu(() => Game.I.ShowScreen(new MainMenu()))));
-        var ach = AddButton(buttons, "Osiągnięcia", null);
-        ach.Disabled = true;
+        AddButton(buttons, "Osiągnięcia", () => Game.I.ShowScreen(new AchievementsScreen()));
         AddButton(buttons, "Wyjdź", () => Game.I.Quit());
 
         var ver = UiTheme.MakeLabel($"v{ProjectSettings.GetSetting("application/config/version")}", "DimLabel");

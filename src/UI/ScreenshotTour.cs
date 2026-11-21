@@ -183,6 +183,29 @@ public partial class ScreenshotTour : Node
         await Wait(0.3);
         await Shot("16_trudnosc");
 
+        // --- ekran osiągnięć (częściowo odblokowany profil: ukryte, postęp, odblokowane)
+        var ap = new Save.Profile { SealMax = 3 };
+        foreach (var a in Sim.Content.Db.Achievements.Take(22).Where((_, i) => i % 3 != 1))
+            ap.Achievements[a.Api] = true;
+        ap.Stats["tot_kills"] = 3421;
+        ap.Stats["tot_elites"] = 88;
+        ap.AchProgress["ACH_ITEMS_25"] = 17;
+        ap.WinsByChar["rycerz"] = 1;
+        ap.WinsByChar["mag"] = 2;
+        ap.SeenItems.AddRange(Sim.Content.Db.Items.Take(31).Select(i => i.Key));
+        Save.Profile.Override(ap);
+        g.ShowScreen(new AchievementsScreen());
+        await Wait(0.6);
+        await Shot("17_osiagniecia");
+        g.InputMgr.SetDevice(InputDevice.Gamepad, 0);
+        await Wait(0.2);
+        for (int i = 0; i < 7; i++)
+            Godot.Input.ParseInputEvent(new InputEventAction { Action = "ui_down", Pressed = true });
+        await Wait(0.5);
+        await Shot("18_osiagniecia_pad");
+        g.InputMgr.SetDevice(InputDevice.KeyboardMouse, -1);
+        Save.Profile.Override(new Save.Profile { SealMax = 3 });
+
         // --- nakładki wyprawy
         var scene = View.RunScene.Start(new View.RunSetup { Chars = new() { "rycerz", "mag" }, Seed = 31, Slot = 0, Difficulty = 2, Seal = 1 });
         await Wait(0.4);
@@ -194,8 +217,11 @@ public partial class ScreenshotTour : Node
         sim.Players[0].Items.Add(items[0].Key);
         for (int i = 0; i < 9; i++) sim.Players[1].Items.Add(items[(i * 7) % items.Count].Key);
         sim.Players[0].Level = 5;
-        sim.Players[0].PendingLevelUps = 1;
         sim.Players[1].Hp = 40;
+        scene.Hud.PushAchievement(Sim.Content.Db.Achievements.First(a => a.Api == "ACH_BOSS_3"));
+        await Wait(1.0);
+        await Shot("19_toast_osiagniecia");
+        sim.Players[0].PendingLevelUps = 1;
         scene.OpenOverlay(new LevelUpOverlay(scene, sim.Players[0]));
         await Wait(0.6);
         await Shot("20_awans");

@@ -447,7 +447,7 @@ public sealed class Totem : Effect
         if (g.NearestEnemy(X, Y, 320) == null) { Cd = 0.1f; return; }
         Cd = Every;
         Pulse = 1;
-        g.ChainLightning(X, Y - 34, Dmg, 3, 320, 220, owner: Owner);
+        g.ChainLightning(X, Y - 34, Dmg, 3, 320, 220, owner: Owner, source: "totem");
     }
 }
 
