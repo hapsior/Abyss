@@ -61,7 +61,7 @@ public sealed class Settings
         DisplayServer.WindowSetVsyncMode(VSync ? DisplayServer.VSyncMode.Enabled : DisplayServer.VSyncMode.Disabled);
         // Z vsync tempo wyznacza monitor (144/165/240 Hz); limit dodatkowo ogranicza, jeśli gracz chce.
         Engine.MaxFps = MaxFps;
-        AudioServer.SetBusVolumeDb(0, Mathf.LinearToDb(Mathf.Max(0.0001f, SfxVolume)));
+        // głośność: efekty – mnożnik w Sfx.Play, muzyka – w Audio.Music (szyna główna zostaje na 0 dB)
     }
 
     public static string FpsLabel(int fps) => fps == 0 ? "Bez limitu" : fps.ToString();

@@ -79,6 +79,7 @@ public partial class MainMenu : Control
     public override void _Ready()
     {
         AddChild(new MenuBackground());
+        Audio.Music.Play("menu");
 
         var col = new VBoxContainer { Alignment = BoxContainer.AlignmentMode.Center };
         UiTheme.Fill(col);

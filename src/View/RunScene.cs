@@ -218,6 +218,7 @@ public partial class RunScene : Node2D
     public override void _Process(double delta)
     {
         float dt = MathF.Min((float)delta, 1 / 30f);
+        Audio.Music.Play(Sim.State == RunState.Dying || Sim.Players.All(p => p.Dead) ? null : Sim.Boss != null ? "boss" : "explore");
         if (Overlay == null)
         {
             var inputs = new List<SimInput>(Sim.Players.Count);

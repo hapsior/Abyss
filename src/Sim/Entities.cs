@@ -402,7 +402,7 @@ public sealed class HazardZone : Effect
             bool inside = (p.X - X) * (p.X - X) + (p.Y - Y) * (p.Y - Y) < (R + p.R * 0.5f) * (R + p.R * 0.5f);
             if (!inside) continue;
             if (Slow > 0) p.SlowT = MathF.Max(p.SlowT, Slow);
-            if (_tick <= 0) p.Hurt(Dmg, g, X, Y, Kind);
+            if (_tick <= 0 && Dmg > 0) p.Hurt(Dmg, g, X, Y, Kind);
         }
         if (_tick <= 0) _tick = TickEvery;
         if (g.Cos.NextDouble() < dt * 8)

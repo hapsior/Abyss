@@ -65,7 +65,23 @@ public partial class Game : Node
         _fps = new FpsOverlay { Name = "Fps" };
         overlay.AddChild(_fps);
         _fps.Visible = Settings.ShowFps;
+        AddChild(new Audio.Music { Name = "Music" });
+
+        // dźwięki menu: przesunięcie fokusu i wciśnięcie dowolnego przycisku
+        GetViewport().GuiFocusChanged += _ =>
+        {
+            if (Time.GetTicksMsec() > _quietUntil) Audio.Sfx.Play("select", 0.35f);
+        };
+        GetTree().NodeAdded += n =>
+        {
+            if (n is BaseButton b && !b.HasMeta("silent"))
+                b.Pressed += () => Audio.Sfx.Play("confirm", 0.5f);
+            if (n is Control)
+                _quietUntil = Time.GetTicksMsec() + 120; // nowy ekran ustawia fokus – bez „kliku”
+        };
     }
+
+    private ulong _quietUntil;
 
     public void OnSettingsChanged()
     {
