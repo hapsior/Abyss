@@ -19,6 +19,8 @@ public sealed class Bullet
     public float Life = 9, Accel, Turn, MinSpeed = 40, MaxSpeed = 900, Knock = 1, TrailT;
     public string Source;
     public PlayerSim Owner;
+    /// <summary>Pocisk wroga spowalnia trafionego gracza (szron, zarodniki).</summary>
+    public float Chill;
 
     public Bullet(float x, float y, float vx, float vy, float dmg, float r, Color color, bool friendly, float range = 600,
         string style = "orb", int pierce = 0, int bounce = 0, float homing = 0, bool spectral = false, bool crit = false,
@@ -368,6 +370,45 @@ public sealed class Telegraph : Effect
         {
             Alive = false;
             Callback(g);
+        }
+    }
+}
+
+/// <summary>
+/// Wroga strefa na ziemi (zarodniki, szron, kolce): po rozgrzaniu (Warm) rani graczy w środku co Tick sekund
+/// i opcjonalnie ich spowalnia. Rysowana kolorem <see cref="Color"/>.
+/// </summary>
+public sealed class HazardZone : Effect
+{
+    public float R, Dmg, T, Dur, Warm, TickEvery = 0.5f, Slow;
+    private float _tick;
+    public Color Color;
+    public string Kind;
+
+    public HazardZone(float x, float y, float r, float dmg, float duration, Color color, float warm = 0.4f, float slow = 0, string kind = "spores")
+    {
+        X = x; Y = y; R = r; Dmg = dmg; T = Dur = duration; Color = color; Warm = warm; Slow = slow; Kind = kind;
+    }
+
+    public override void Update(float dt, RunSim g)
+    {
+        T -= dt;
+        Warm -= dt;
+        if (T <= 0) { Alive = false; return; }
+        if (Warm > 0) return;
+        _tick -= dt;
+        foreach (var p in g.ActivePlayers())
+        {
+            bool inside = (p.X - X) * (p.X - X) + (p.Y - Y) * (p.Y - Y) < (R + p.R * 0.5f) * (R + p.R * 0.5f);
+            if (!inside) continue;
+            if (Slow > 0) p.SlowT = MathF.Max(p.SlowT, Slow);
+            if (_tick <= 0) p.Hurt(Dmg, g, X, Y, Kind);
+        }
+        if (_tick <= 0) _tick = TickEvery;
+        if (g.Cos.NextDouble() < dt * 8)
+        {
+            float a = (float)g.Cos.NextDouble() * C.Tau, d = (float)g.Cos.NextDouble() * R;
+            g.Fx.Burst(X + MathF.Cos(a) * d, Y + MathF.Sin(a) * d, Color, 1, 25, 4, 0.6f, grav: -50);
         }
     }
 }

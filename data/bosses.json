@@ -7,7 +7,6 @@
   "radius": 46,
   "speed": 0,
   "contact": 16,
-  "hp": 750,
   "flying": false,
   "color": "#64c85a",
   "attacks": [
@@ -21,7 +20,8 @@
   "rest": [
    0.7,
    1.1
-  ]
+  ],
+  "hp_mult": 0.9
  },
  {
   "key": "lich",
@@ -31,7 +31,6 @@
   "radius": 34,
   "speed": 0,
   "contact": 14,
-  "hp": 1150,
   "flying": true,
   "color": "#6e50a0",
   "attacks": [
@@ -45,7 +44,8 @@
   "rest": [
    0.7,
    1.1
-  ]
+  ],
+  "hp_mult": 1.0
  },
  {
   "key": "hive",
@@ -55,7 +55,6 @@
   "radius": 44,
   "speed": 70,
   "contact": 16,
-  "hp": 1550,
   "flying": false,
   "color": "#e6be3c",
   "attacks": [
@@ -70,7 +69,8 @@
   "rest": [
    0.7,
    1.1
-  ]
+  ],
+  "hp_mult": 1.0
  },
  {
   "key": "forge",
@@ -80,7 +80,6 @@
   "radius": 44,
   "speed": 80,
   "contact": 18,
-  "hp": 2050,
   "flying": false,
   "color": "#5a555f",
   "attacks": [
@@ -94,7 +93,8 @@
   "rest": [
    0.7,
    1.1
-  ]
+  ],
+  "hp_mult": 1.05
  },
  {
   "key": "abyss",
@@ -104,7 +104,6 @@
   "radius": 54,
   "speed": 50,
   "contact": 20,
-  "hp": 3300,
   "flying": true,
   "color": "#96285a",
   "attacks": [
@@ -119,6 +118,83 @@
   "rest": [
    0.5,
    0.9
-  ]
+  ],
+  "hp_mult": 1.3
+ },
+ {
+  "key": "spore_mother",
+  "cls": "SporeMother",
+  "name": "Matka Grzybni",
+  "title": "Królowa Zarodników",
+  "radius": 50,
+  "speed": 0,
+  "contact": 18,
+  "flying": false,
+  "color": "#a066ff",
+  "attacks": [
+   "spores",
+   "bloom",
+   "roots",
+   "brood"
+  ],
+  "phases": [
+   0.5
+  ],
+  "rest": [
+   0.6,
+   1.0
+  ],
+  "hp_mult": 1.05
+ },
+ {
+  "key": "frost_colossus",
+  "cls": "FrostColossus",
+  "name": "Szronowy Kolos",
+  "title": "Strażnik Wiecznej Zimy",
+  "radius": 52,
+  "speed": 70,
+  "contact": 20,
+  "flying": false,
+  "color": "#9fd8ff",
+  "attacks": [
+   "slam",
+   "icicles",
+   "breath",
+   "slide"
+  ],
+  "phases": [
+   0.6,
+   0.3
+  ],
+  "rest": [
+   0.6,
+   1.0
+  ],
+  "hp_mult": 1.1
+ },
+ {
+  "key": "clockmaker",
+  "cls": "Clockmaker",
+  "name": "Zegarmistrz",
+  "title": "Pan Czasu",
+  "radius": 46,
+  "speed": 60,
+  "contact": 18,
+  "flying": true,
+  "color": "#e6be50",
+  "attacks": [
+   "hands",
+   "gears",
+   "stop",
+   "turrets"
+  ],
+  "phases": [
+   0.5
+  ],
+  "rest": [
+   0.5,
+   0.9
+  ],
+  "hp_mult": 1.1
  }
 ]

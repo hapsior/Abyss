@@ -100,6 +100,14 @@ public partial class GroundFxView : Node2D
                     DrawArc(new Vector2(bh.X, bh.Y), MathF.Max(3, r), 0, Mathf.Tau, 32, new Color("c882ff"), 3);
                     break;
                 }
+                case HazardZone hz:
+                {
+                    float f = MathF.Min(1, MathF.Min(hz.T / 0.4f, (hz.Dur - hz.T) / 0.3f + 0.2f));
+                    float warm = hz.Warm > 0 ? 0.45f : 1f;
+                    DrawCircle(new Vector2(hz.X, hz.Y), hz.R, new Color(hz.Color, 0.3f * f * warm));
+                    DrawArc(new Vector2(hz.X, hz.Y), hz.R, 0, Mathf.Tau, 40, new Color(hz.Color, 0.7f * f), hz.Warm > 0 ? 2 : 3);
+                    break;
+                }
                 case Telegraph tg:
                 {
                     float f = 1 - tg.T / tg.Dur;

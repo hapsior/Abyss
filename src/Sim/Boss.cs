@@ -51,7 +51,7 @@ public abstract class Boss : Enemy
         X = x;
         Y = y;
         R = def.Radius;
-        float hp = Balance.BossHp(g.Depth) * (def.Hp / 900f) * g.Diff.EnemyHp * g.SealMod("boss_hp") * g.CoopBossMult();
+        float hp = Balance.BossHp(g.Depth) * def.HpMult * g.Diff.EnemyHp * g.SealMod("boss_hp") * g.CoopBossMult();
         MaxHp = Hp = hp;
         DmgScale = Balance.EnemyDmgScale(g.Depth) * g.Diff.EnemyDmg * g.SealMod("enemy_dmg");
         ContactDmg = def.Contact * DmgScale;

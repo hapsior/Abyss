@@ -208,7 +208,7 @@ public sealed class RunSim
             def = Content.Db.BossByKey["slime_king"] is { } sk ? new BossDef
             {
                 Key = def.Key, Cls = sk.Cls, Name = def.Name, Title = def.Title, Color = def.Color, Radius = sk.Radius, Speed = sk.Speed,
-                Contact = sk.Contact, Hp = def.Hp, Flying = sk.Flying, Attacks = sk.Attacks, Phases = sk.Phases, Rest = sk.Rest,
+                Contact = sk.Contact, HpMult = def.HpMult, Flying = sk.Flying, Attacks = sk.Attacks, Phases = sk.Phases, Rest = sk.Rest,
             } : def;
         }
         b.InitBoss(this, def, x, y);
@@ -1066,6 +1066,7 @@ public sealed class RunSim
                     float rr = p.R * 0.6f + b.R;
                     if ((p.X - b.X) * (p.X - b.X) + (p.Y - b.Y) * (p.Y - b.Y) < rr * rr && p.Hurt(b.Dmg, this, b.X, b.Y, b.Source))
                     {
+                        if (b.Chill > 0) p.SlowT = MathF.Max(p.SlowT, b.Chill);
                         b.Kill(this);
                         break;
                     }

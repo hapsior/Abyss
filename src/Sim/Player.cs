@@ -63,6 +63,8 @@ public sealed class PlayerSim
     public float Hp;
     public float X = C.RCX, Y = C.RCY, R = 17, Vx, Vy, Aim;
     public float FireCd, IFrames, DashT, DashRecharge, DashDx = 1, DashDy, AbilityT, AbilityCd, RageT, InvisT;
+    /// <summary>Spowolnienie gracza (szron, zarodniki) – czas w sekundach.</summary>
+    public float SlowT;
     public int DashLeft;
     public int Level = 1;
     public float Xp;
@@ -149,6 +151,7 @@ public sealed class PlayerSim
         float s = Speed;
         if (RageT > 0) s *= 1.4f;
         if (InvisT > 0) s *= 1.4f;
+        if (SlowT > 0) s *= 0.6f;
         return s;
     }
 
@@ -190,6 +193,7 @@ public sealed class PlayerSim
             return;
         }
         IFrames = MathF.Max(0, IFrames - dt);
+        SlowT = MathF.Max(0, SlowT - dt);
         AbilityT = MathF.Max(0, AbilityT - dt);
         LsCd = MathF.Max(0, LsCd - dt);
         if (RageT > 0)

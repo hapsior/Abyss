@@ -69,7 +69,7 @@ public sealed class EnemyDef
 public sealed class BossDef
 {
     public string Key, Cls, Name, Title, Color;
-    public float Radius, Speed, Contact, Hp;
+    public float Radius, Speed, Contact, HpMult = 1;
     public bool Flying;
     public string[] Attacks;
     public float[] Phases, Rest;
