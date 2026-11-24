@@ -66,7 +66,7 @@ public sealed class Floor
     private void Build(DifficultyDef diff, Rng rng, float countMult)
     {
         var start = (4, 4);
-        bool wantShrine = Depth >= 2 && rng.Chance(0.6f);
+        bool wantShrine = Depth >= Balance.ShrineMinDepth && rng.Chance(Balance.ShrineChance);   // ołtarz krwi: rzadko
         int need = 3 + (wantShrine ? 1 : 0);               // wyjście/boss + skarbiec + sklep (+ ołtarz)
         int target = Math.Min(6 + rng.RangeInt(0, 2) + (IsBossFloor ? 1 : 0) + (wantShrine ? 1 : 0), 11);
         HashSet<(int x, int y)> cells = null;
@@ -107,7 +107,6 @@ public sealed class Floor
         {
             // awaryjny układ, zawsze poprawny
             cells = new HashSet<(int, int)> { start, (5, 4), (6, 4), (7, 4), (8, 4), (4, 3), (4, 5), (3, 4), (2, 4), (6, 3), (6, 5) };
-            wantShrine = true;
         }
         var dist = Bfs(cells, start);
         var dead = cells.Where(c => c != start && Neighbors(cells, c) == 1).OrderByDescending(c => dist[c]).ToList();

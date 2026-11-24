@@ -2,13 +2,13 @@
  {
   "key": "ostry_kamien",
   "name": "Ostry Kamień",
-  "desc": "+3 obrażeń",
+  "desc": "+2 obrażeń",
   "rarity": 0,
   "fx": [
    {
     "stat": "damage",
     "op": "+",
-    "value": 3
+    "value": 2
    }
   ],
   "special": null
@@ -16,13 +16,13 @@
  {
   "key": "kawa",
   "name": "Kubek Kawy",
-  "desc": "+15% szybkostrzelności, +5% szybkości ruchu",
+  "desc": "+10% szybkostrzelności, +5% szybkości ruchu",
   "rarity": 0,
   "fx": [
    {
     "stat": "fire_mult",
     "op": "*",
-    "value": 1.15
+    "value": 1.1
    },
    {
     "stat": "speed",
@@ -49,13 +49,13 @@
  {
   "key": "serce",
   "name": "Serce Golema",
-  "desc": "+25 maks. HP",
+  "desc": "+20 maks. HP",
   "rarity": 0,
   "fx": [
    {
     "stat": "max_hp",
     "op": "+",
-    "value": 25
+    "value": 20
    }
   ],
   "special": null
@@ -129,13 +129,13 @@
  {
   "key": "bandaz",
   "name": "Bandaż",
-  "desc": "+0.6 HP/s regeneracji",
+  "desc": "+0.4 HP/s regeneracji",
   "rarity": 0,
   "fx": [
    {
     "stat": "regen",
     "op": "+",
-    "value": 0.6
+    "value": 0.4
    }
   ],
   "special": null
@@ -143,13 +143,13 @@
  {
   "key": "noz",
   "name": "Nóż Rzeźnika",
-  "desc": "+2 obrażeń, +5% szansy na krytyka",
+  "desc": "+1 obrażeń, +5% szansy na krytyka",
   "rarity": 0,
   "fx": [
    {
     "stat": "damage",
     "op": "+",
-    "value": 2
+    "value": 1
    },
    {
     "stat": "crit",
@@ -190,18 +190,13 @@
  {
   "key": "podwojny",
   "name": "Podwójny Strzał",
-  "desc": "+1 pocisk, -10% obrażeń",
+  "desc": "+1 pocisk",
   "rarity": 1,
   "fx": [
    {
     "stat": "projectiles",
     "op": "+",
     "value": 1
-   },
-   {
-    "stat": "dmg_mult",
-    "op": "*",
-    "value": 0.9
    }
   ],
   "special": null
@@ -543,23 +538,18 @@
  {
   "key": "trzecie_oko",
   "name": "Trzecie Oko",
-  "desc": "+2 pociski, lekkie naprowadzanie, -15% obrażeń",
+  "desc": "+1 pocisk, lekkie naprowadzanie",
   "rarity": 2,
   "fx": [
    {
     "stat": "projectiles",
     "op": "+",
-    "value": 2
+    "value": 1
    },
    {
     "stat": "homing",
     "op": "+",
-    "value": 1.2
-   },
-   {
-    "stat": "dmg_mult",
-    "op": "*",
-    "value": 0.85
+    "value": 1.0
    }
   ],
   "special": null
@@ -581,18 +571,18 @@
  {
   "key": "rekawica",
   "name": "Rękawica Tytana",
-  "desc": "+5 obrażeń, silniejszy odrzut",
+  "desc": "+3 obrażeń, silniejszy odrzut",
   "rarity": 2,
   "fx": [
    {
     "stat": "damage",
     "op": "+",
-    "value": 5
+    "value": 3
    },
    {
     "stat": "knockback",
     "op": "*",
-    "value": 1.6
+    "value": 1.5
    }
   ],
   "special": null
@@ -665,13 +655,13 @@
  {
   "key": "krwawy_pakt",
   "name": "Krwawy Pakt",
-  "desc": "+80% obrażeń, -25 maks. HP",
+  "desc": "+60% obrażeń, -25 maks. HP",
   "rarity": 3,
   "fx": [
    {
     "stat": "dmg_mult",
     "op": "*",
-    "value": 1.8
+    "value": 1.6
    },
    {
     "stat": "max_hp",
@@ -708,18 +698,18 @@
  {
   "key": "kielich",
   "name": "Kielich Nieśmiertelności",
-  "desc": "+50 maks. HP, +1 HP/s regeneracji",
+  "desc": "+40 maks. HP, +0.6 HP/s regeneracji",
   "rarity": 3,
   "fx": [
    {
     "stat": "max_hp",
     "op": "+",
-    "value": 50
+    "value": 40
    },
    {
     "stat": "regen",
     "op": "+",
-    "value": 1.0
+    "value": 0.6
    }
   ],
   "special": null
@@ -727,13 +717,13 @@
  {
   "key": "rekawiczki",
   "name": "Rękawiczki Strzelca",
-  "desc": "+10% szybkostrzelności, +1 obrażeń",
+  "desc": "+8% szybkostrzelności, +1 obrażeń",
   "rarity": 0,
   "fx": [
    {
     "stat": "fire_mult",
     "op": "*",
-    "value": 1.1
+    "value": 1.08
    },
    {
     "stat": "damage",
@@ -746,18 +736,18 @@
  {
   "key": "bochenek",
   "name": "Bochenek Chleba",
-  "desc": "+15 maks. HP, +0.3 HP/s regeneracji",
+  "desc": "+10 maks. HP, +0.25 HP/s regeneracji",
   "rarity": 0,
   "fx": [
    {
     "stat": "max_hp",
     "op": "+",
-    "value": 15
+    "value": 10
    },
    {
     "stat": "regen",
     "op": "+",
-    "value": 0.3
+    "value": 0.25
    }
   ],
   "special": null
@@ -863,7 +853,7 @@
  {
   "key": "trujacy_grzyb",
   "name": "Trujący Grzyb",
-  "desc": "Pociski zatruwają wrogów, +10% szybkostrzelności",
+  "desc": "Pociski zatruwają wrogów, +5% szybkostrzelności",
   "rarity": 1,
   "fx": [
    {
@@ -874,7 +864,7 @@
    {
     "stat": "fire_mult",
     "op": "*",
-    "value": 1.1
+    "value": 1.05
    }
   ],
   "special": null
@@ -939,7 +929,7 @@
  {
   "key": "bumerang",
   "name": "Bumerang",
-  "desc": "+1 odbicie od ścian, +1 przebicie",
+  "desc": "+1 odbicie od ścian, +1 przebicie, -15% obrażeń",
   "rarity": 1,
   "fx": [
    {
@@ -951,6 +941,11 @@
     "stat": "pierce",
     "op": "+",
     "value": 1
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 0.85
    }
   ],
   "special": null
@@ -958,13 +953,13 @@
  {
   "key": "pancerz_zuka",
   "name": "Pancerz Żuka",
-  "desc": "+12% pancerza, wrogowie dotykający cię obrywają",
+  "desc": "+10% pancerza, wrogowie dotykający cię obrywają",
   "rarity": 1,
   "fx": [
    {
     "stat": "armor",
     "op": "+",
-    "value": 0.12
+    "value": 0.1
    },
    {
     "stat": "thorns",
@@ -996,7 +991,7 @@
  {
   "key": "wampirzy_kiel",
   "name": "Wampirzy Kieł",
-  "desc": "+3% kradzieży życia, +3 obrażeń",
+  "desc": "+3% kradzieży życia, +2 obrażeń",
   "rarity": 1,
   "fx": [
    {
@@ -1007,7 +1002,7 @@
    {
     "stat": "damage",
     "op": "+",
-    "value": 3
+    "value": 2
    }
   ],
   "special": null
@@ -1138,7 +1133,7 @@
  {
   "key": "pryzmat",
   "name": "Pryzmat",
-  "desc": "+1 pocisk, pociski rozpadają się na odłamki, -15% obrażeń",
+  "desc": "+1 pocisk, pociski rozpadają się na odłamki, -20% obrażeń",
   "rarity": 2,
   "fx": [
    {
@@ -1154,7 +1149,7 @@
    {
     "stat": "dmg_mult",
     "op": "*",
-    "value": 0.85
+    "value": 0.8
    }
   ],
   "special": null
@@ -1181,18 +1176,18 @@
  {
   "key": "serce_golema",
   "name": "Serce Golema",
-  "desc": "+60 maks. HP, +10% pancerza, -10% szybkości ruchu",
+  "desc": "+45 maks. HP, +8% pancerza, -10% szybkości ruchu",
   "rarity": 2,
   "fx": [
    {
     "stat": "max_hp",
     "op": "+",
-    "value": 60
+    "value": 45
    },
    {
     "stat": "armor",
     "op": "+",
-    "value": 0.1
+    "value": 0.08
    },
    {
     "stat": "speed",
@@ -1205,13 +1200,13 @@
  {
   "key": "oko_otchlani",
   "name": "Oko Otchłani",
-  "desc": "+2 pociski, +1 przebicie, naprowadzanie",
+  "desc": "+1 pocisk, +1 przebicie, naprowadzanie, -10% obrażeń",
   "rarity": 3,
   "fx": [
    {
     "stat": "projectiles",
     "op": "+",
-    "value": 2
+    "value": 1
    },
    {
     "stat": "pierce",
@@ -1222,6 +1217,11 @@
     "stat": "homing",
     "op": "+",
     "value": 1.5
+   },
+   {
+    "stat": "dmg_mult",
+    "op": "*",
+    "value": 0.9
    }
   ],
   "special": null

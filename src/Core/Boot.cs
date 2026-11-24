@@ -35,6 +35,14 @@ public partial class Boot : Node
             AddChild(new ScreenshotTour(bdir) { Name = "Tour", BossesOnly = game.ArgValue("--bosses") ?? "*" });
             return;
         }
+        if (game.ArgValue("--item-bench") is { } bcsv)
+        {
+            Tests.ItemBench.Verbose = game.HasArg("--verbose");
+            Tests.ItemBench.Run(bcsv, game.ArgValue("--items") ?? "*", game.ArgValue("--chars") ?? "rycerz,lowczyni",
+                int.Parse(game.ArgValue("--seeds") ?? "3"));
+            game.Quit(0);
+            return;
+        }
         if (game.ArgValue("--balance") is { } csv)
         {
             Tests.BalanceRun.Run(csv, game.ArgValue("--chars") ?? "rycerz", int.Parse(game.ArgValue("--floors") ?? "45"),

@@ -264,7 +264,7 @@ public partial class EntityView : Node2D
             {
                 var lbl = new Label
                 {
-                    Text = pd.HpCost > 0 ? $"-{pd.HpCost} maks. HP" : $"{pd.Price}",
+                    Text = pd.HpCost > 0 ? $"-{pd.HpCost}% HP" : $"{pd.Price}",
                     HorizontalAlignment = HorizontalAlignment.Center,
                     Position = new Vector2(-40, 18),
                     Size = new Vector2(80, 20),

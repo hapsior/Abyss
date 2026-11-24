@@ -60,10 +60,10 @@ public static class SimTests
         var g = new RunSim(new[] { "mag" }, 1, 5, startFloor: false);
         float dmg0 = p.Damage;
         p.ApplyItem(Content.Db.ItemByKey["ostry_kamien"], g);
-        Assert.Near(dmg0 + 3, p.Damage, 1e-4);
+        Assert.Near(dmg0 + 2, p.Damage, 1e-4);
         float hp0 = p.MaxHp;
         p.ApplyItem(Content.Db.ItemByKey["serce"], g);
-        Assert.Near(hp0 + 25, p.MaxHp, 1e-4);
+        Assert.Near(hp0 + 20, p.MaxHp, 1e-4);
         var ups = Items.RollUpgrades(new Rng(3), 0, 5);
         Assert.Equal(3, ups.Count);
         Assert.True(ups.All(u => u.Rarity >= 1), "co 5. poziom ulepszenia co najmniej niezwykłe");

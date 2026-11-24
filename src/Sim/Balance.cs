@@ -66,6 +66,18 @@ public static class Balance
     /// <summary>Limit obrażeń na sekundę zadawanych bossowi (model Enter the Gungeon) – żeby nie znikał w 3 s.</summary>
     public static float BossDpsCap(int depth) => 50f * MathF.Pow(1.07f, Math.Max(0, depth - 5));
     public const float BossCapWindow = 3.0f;
+    // ---- przedmioty (wyniki tests/ItemBench: --item-bench) ----
+    /// <summary>Obrażenia jednego pocisku przy n pociskach: łącznie 1 + 0.45·(n−1) zamiast n (dodatkowy pocisk ≈ +45%, a nie +100%).</summary>
+    public static float ProjectileDmgMult(int n) => n <= 1 ? 1 : (1 + 0.45f * (n - 1)) / n;
+    public const float PoisonDpsMult = 0.35f;     // trucizna: DPS = 35% obrażeń gracza na poziom
+    public const float ChainDmgMult = 0.45f;      // piorun łańcuchowy: 45% obrażeń pocisku na skok
+    public const float ExplodeDmgMult = 0.4f;     // wybuchowe pociski: 40% obrażeń w promieniu
+    // ---- ołtarz krwi ----
+    public const int ShrineMinDepth = 3;
+    public const float ShrineChance = 0.25f;      // było 0.6 od piętra 2
+    public const int ShrineHpCostPct = 40;        // % maks. HP zabierany z bieżącego życia
+    public const float ShrineMaxHpLoss = 0.1f;    // i trwale -10% maks. HP
+
     public const float BossCapOverflow = 0.08f;   // nadmiar ponad limit (symulator: przy 0.25 boss 40. piętra padał w ~5 s)
     public const float BossCapMaxHit = 3.0f;
     public const float BossIntroArmor = 0.1f;

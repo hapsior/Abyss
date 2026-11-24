@@ -325,7 +325,7 @@ public sealed class PlayerSim
         if (Eshield > 0 && !EshieldUp)
         {
             EshieldT += dt;
-            if (EshieldT >= 12f / (1 + 0.35f * (Eshield - 1)))
+            if (EshieldT >= 15f / (1 + 0.35f * (Eshield - 1)))
             {
                 EshieldUp = true;
                 EshieldT = 0;
@@ -452,12 +452,13 @@ public sealed class PlayerSim
         // Bard: co 4. strzał – nuta o podwójnej sile, przebijająca; Rewolwerowiec: ostatni nabój w bębenku zawsze krytyczny
         bool melody = Key == "bard" && ++ShotCount % 4 == 0;
         bool lastRound = Key == "rewolwerowiec" && Ammo == 1;
+        float pm = Balance.ProjectileDmgMult(n);
         for (int i = 0; i < n; i++)
         {
             float off = n > 1 ? -spread / 2 + spread * i / (n - 1) : 0;
             g.Bullets.Add(melody
-                ? MakeBullet(g, Aim + off, 2f, 2, 1.1f, 0.9f, sizeMult: 1.5f)
-                : MakeBullet(g, Aim + off + g.CosRange(-jitter, jitter), forceCrit: lastRound));
+                ? MakeBullet(g, Aim + off, 2f * pm, 2, 1.1f, 0.9f, sizeMult: 1.5f)
+                : MakeBullet(g, Aim + off + g.CosRange(-jitter, jitter), pm, forceCrit: lastRound));
         }
         if (melody) g.Fx.Ring(X, Y, new Color("ff9ad0"), 40, 0.2f, 3);
         for (int k = 0; k < (int)Backshot; k++)
@@ -709,6 +710,11 @@ public sealed class PlayerSim
         g.Fx.Text(X, Y - 34, $"-{d}", new Color("ff505a"), 22);
         g.Fx.Burst(X, Y, new Color("e63c46"), 12, 250, 5, 0.5f);
         g.Stats.DamageTaken += d;
+        if (g.Bench && Hp < MaxHp * 0.5f)
+        {
+            g.BenchRefill += MaxHp - Hp;
+            Hp = MaxHp;
+        }
         if (Hp <= 0)
         {
             if (Revives > 0)

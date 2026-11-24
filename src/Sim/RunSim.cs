@@ -52,6 +52,10 @@ public sealed class RunSim
     /// <summary>Losowość kosmetyczna (cząsteczki itp.) – nie wpływa na rozgrywkę ani zapis.</summary>
     /// <summary>RNG kosmetyczny (cząsteczki, rozrzut znajdziek, animacje). Ziarno z ziarna wyprawy – symulacja bez okna jest powtarzalna.</summary>
     public readonly Random Cos;
+    /// <summary>Tryb pomiaru balansu (tests/ItemBench): gracz nie ginie – gdy HP spadnie poniżej połowy, jest uzupełniane,
+    /// a ubytek liczony w <see cref="BenchRefill"/>; <see cref="BenchDealt"/> to obrażenia bez nadmiaru ponad HP wroga.</summary>
+    public bool Bench;
+    public float BenchRefill, BenchDealt;
     public IFx Fx = NullFx.I;
     public bool God, DamageNumbers = true;
     /// <summary>Źródło i właściciel ostatniego śmiertelnego trafienia (tylko na czas <see cref="KillEnemy"/>).</summary>
@@ -269,7 +273,8 @@ public sealed class RunSim
                 break;
             case RoomKind.Shrine:
             {
-                int cost = DiffIdx < 3 ? 20 : 25;
+                // koszt w % maksymalnego HP, zabierany z bieżącego życia (+ trwała utrata maks. HP) – ryzyko na kolejną planszę
+                int cost = DiffIdx < 3 ? Balance.ShrineHpCostPct : Balance.ShrineHpCostPct + 10;
                 foreach (var x in new[] { C.RCX - 120, C.RCX + 120 })
                     room.Pedestals.Add(new Pedestal(x, C.RCY + 10, RollNewItem(2), 0, PedestalKind.Shrine, group: 1, hpCost: cost));
                 break;
@@ -672,6 +677,7 @@ public sealed class RunSim
             capped = f < dmg * 0.99f;
             dmg = f;
         }
+        if (Bench) BenchDealt += MathF.Min(dmg, MathF.Max(0, e.Hp));
         e.Hp -= dmg;
         if (e.FlashCd <= 0)
         {
@@ -895,7 +901,7 @@ public sealed class RunSim
             if (p.Poison > 0)
             {
                 e.PoisonT = 3;
-                e.PoisonDps = MathF.Max(e.PoisonDps, p.EffDamage() * 0.45f * p.Poison);
+                e.PoisonDps = MathF.Max(e.PoisonDps, p.EffDamage() * Balance.PoisonDpsMult * p.Poison);
             }
             if (p.Burn > 0 && R.NextFloat() < p.Burn)
             {
@@ -904,9 +910,9 @@ public sealed class RunSim
             }
             if (p.Slow > 0) e.SlowT = e.IsBoss ? 0.5f : 1.5f;
             if (p.Chain > 0 && R.NextFloat() < p.Chain)
-                ChainLightning(e.X, e.Y, b.Dmg * 0.6f, 3 + (int)(p.Chain * 4), 240, 220, new HashSet<int> { e.Id }, p);
+                ChainLightning(e.X, e.Y, b.Dmg * Balance.ChainDmgMult, 2 + (int)(p.Chain * 4), 240, 220, new HashSet<int> { e.Id }, p);
             if (p.Explode > 0)
-                Explode(b.X, b.Y, 48 + 14 * (p.Explode - 1), b.Dmg * 0.55f, small: true, owner: p);
+                Explode(b.X, b.Y, 44 + 12 * (p.Explode - 1), b.Dmg * Balance.ExplodeDmgMult, small: true, owner: p);
             if (p.Split > 0 && !b.IsSplit)
             {
                 int n = 2 + (int)p.Split;
@@ -1029,9 +1035,12 @@ public sealed class RunSim
                 Fx.Burst(pd.X, pd.Y - 18, new Color("ff6478"), 16, 200, 5, 0.5f);
                 return true;
             case PedestalKind.Shrine:
-                if (p.MaxHp - pd.HpCost < 10) { Deny(pd, "Za mało życia!"); return false; }
-                p.MaxHp -= pd.HpCost;
+                float hpCost = p.MaxHp * pd.HpCost / 100f;
+                if (p.Hp <= hpCost + 1) { Deny(pd, "Za mało życia!"); return false; }
+                p.Hp -= hpCost;
+                p.MaxHp = MathF.Max(10, MathF.Round(p.MaxHp * (1 - Balance.ShrineMaxHpLoss)));
                 p.Hp = MathF.Min(p.Hp, p.MaxHp);
+                Fx.Text(p.X, p.Y - 40, $"-{(int)hpCost} HP", new Color("ff3c50"), 26);
                 Fx.Burst(p.X, p.Y, new Color("c81428"), 30, 300, 6, 0.7f);
                 Stats.Shrines++;
                 TakeItem(pd, p);

@@ -428,7 +428,7 @@ public partial class PedestalPrompt : Node2D
                 verb = pd.Kind switch
                 {
                     PedestalKind.Shop => g.Coins >= pd.Price ? $"Kup za {pd.Price}" : $"Za mało monet ({pd.Price})",
-                    PedestalKind.Shrine => $"Złóż ofiarę (-{pd.HpCost} maks. HP)",
+                    PedestalKind.Shrine => $"Złóż ofiarę (-{pd.HpCost}% życia, -{Sim.Balance.ShrineMaxHpLoss * 100:0}% maks. HP)",
                     _ => "Weź",
                 };
                 break;
