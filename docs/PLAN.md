@@ -59,6 +59,15 @@
 
 Limit DPS bossa: 50·1.07^(piętro−5) na sekundę, nadmiar zadaje 8% obrażeń.
 
+### Balans przedmiotów (bot `--item-bench`, 24.11)
+
+Bot walczy na arenie z ciągle uzupełnianą falą wrogów (piętro 3 / 15 / 30) z przedmiotem i bez niego. Po pierwszych testach gracza (przedmioty za mocne) wprowadzone zmiany:
+- dodatkowy pocisk daje +45% obrażeń zamiast pełnego pocisku; słabsze trucizna, piorun łańcuchowy i wybuchy;
+- 18 przedmiotów osłabionych – najmocniejsze dawały +90–170% ataku, teraz +25–60% (legendarne), zwykłe ok. +10–15%;
+- ołtarz krwi: 25% szans od piętra 3, kosztuje 40% maks. HP z bieżącego życia i trwale −10% maks. HP;
+- mali wrogowie szybsi (nietoperz, bombowiec, glut, chochlik, duch), ok. 30% więcej wrogów w pokoju.
+
+
 ## Do zrobienia później
 
 - **Angielska wersja gry**: wszystkie teksty interfejsu i danych (`data/*.json`: postacie, przedmioty, ulepszenia, bossowie, krainy, osiągnięcia) przez system tłumaczeń Godota (CSV/PO + `tr()`), przełącznik języka w opcjach, domyślnie język systemu. Fonty mają już potrzebne znaki.
