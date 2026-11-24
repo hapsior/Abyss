@@ -83,6 +83,7 @@ godot --path . -- --windowed --boss-tour shots/ --bosses clockmaker   # a screen
 godot --path . -- --windowed --char-tour shots/ --chars bard,mnich    # characters using their abilities
 godot --path . -- --boss spore_mother                         # straight into a boss fight (no saving)
 godot --headless --path . -- --balance out.csv --chars rycerz,mag --floors 45   # balance simulator
+godot --headless --path . -- --item-bench items.csv --chars rycerz,lowczyni,mag --seeds 8   # power gain of every item (early/mid/late)
 ```
 
 ### Export (Windows)
@@ -171,6 +172,7 @@ godot --path . -- --windowed --boss-tour zrzuty/ --bosses clockmaker   # zrzuty 
 godot --path . -- --windowed --char-tour zrzuty/ --chars bard,mnich    # zrzuty postaci używających umiejętności
 godot --path . -- --boss spore_mother                         # od razu walka z bossem (bez zapisu)
 godot --headless --path . -- --balance wynik.csv --chars rycerz,mag --floors 45   # symulator balansu
+godot --headless --path . -- --item-bench przedmioty.csv --chars rycerz,lowczyni,mag --seeds 8   # siła każdego przedmiotu (wczesna/środkowa/późna gra)
 ```
 
 ### Eksport (Windows)
