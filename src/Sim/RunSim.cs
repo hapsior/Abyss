@@ -458,6 +458,25 @@ public sealed class RunSim
         return best;
     }
 
+    /// <summary>Najbliższy wróg w stożku ±<paramref name="cone"/> rad wokół kierunku <paramref name="heading"/> (dla naprowadzania).</summary>
+    public Enemy NearestEnemyAhead(float x, float y, float heading, float cone, float maxd, HashSet<int> exclude = null)
+    {
+        if (cone >= MathF.PI) return NearestEnemy(x, y, maxd, exclude);
+        Enemy best = null;
+        float bd = maxd * maxd;
+        foreach (var e in Enemies)
+        {
+            if (!e.Alive || e.Invuln || exclude != null && exclude.Contains(e.Id)) continue;
+            float d = (e.X - x) * (e.X - x) + (e.Y - y) * (e.Y - y);
+            if (d >= bd) continue;
+            float off = MathF.Abs(Mathf.Wrap(MathF.Atan2(e.Y - y, e.X - x) - heading, -MathF.PI, MathF.PI));
+            if (off > cone) continue;
+            bd = d;
+            best = e;
+        }
+        return best;
+    }
+
     private void RecomputeFlows()
     {
         _flows.Clear();

@@ -17,6 +17,10 @@ public abstract class InputSource
 
     public abstract InputDevice Device { get; }
     public abstract SimInput Read(RunScene scene, PlayerSim p);
+    /// <summary>Auto-celowanie jest włączone, ale gracz właśnie celuje sam (HUD pokazuje to przy napisie AUTO-CEL).</summary>
+    public bool ManualOverride { get; protected set; }
+    /// <summary>Jak długo po ostatnim ruchu myszy / gałki celowanie zostaje ręczne, zanim wróci auto-celowanie.</summary>
+    public const ulong ManualHoldMs = 1500;
 
     protected bool JustPressed(string action, bool now)
     {
@@ -41,6 +45,8 @@ public sealed class KeyboardMouseSource : InputSource
 {
     public override InputDevice Device => InputDevice.KeyboardMouse;
     public bool AutoAimOn;
+    private Vector2 _lastMouse = new(float.NaN, float.NaN);
+    private ulong _manualUntil;
 
     public static bool KbPressed(string action)
     {
@@ -65,16 +71,35 @@ public sealed class KeyboardMouseSource : InputSource
         var mouse = scene.MouseWorld();
         inp.Target = mouse;
         inp.Aim = MathF.Atan2(mouse.Y - p.Y, mouse.X - p.X);
-        inp.Fire = KbPressed(Act.Fire);
+        bool held = KbPressed(Act.Fire);
+        inp.Fire = held;
+        // ruch myszy = gracz chce celować sam: auto-celowanie ustępuje na ManualHoldMs od ostatniego ruchu
+        ulong now = Time.GetTicksMsec();
+        var ms = scene.GetViewport().GetMousePosition();
+        if (!float.IsNaN(_lastMouse.X) && (ms - _lastMouse).LengthSquared() > 36) _manualUntil = now + ManualHoldMs;
+        _lastMouse = ms;
+        bool manualWindow = now < _manualUntil;
         var shoot = new Vector2((KbPressed(Act.ShootRight) ? 1 : 0) - (KbPressed(Act.ShootLeft) ? 1 : 0),
             (KbPressed(Act.ShootDown) ? 1 : 0) - (KbPressed(Act.ShootUp) ? 1 : 0));
+        ManualOverride = false;
         if (shoot.LengthSquared() > 0)
         {
             inp.Aim = shoot.Angle();
+            inp.Target = new Vector2(p.X + MathF.Cos(inp.Aim) * 220, p.Y + MathF.Sin(inp.Aim) * 220);
             inp.Fire = true;
+            inp.Manual = true;
         }
-        else if (AutoAimOn && !inp.Fire && AutoAim(g, p, inp))
+        else if (AutoAimOn && (held || manualWindow))
+        {
+            // celowanie ręczne przy włączonym auto-celu: strzał tam, gdzie mysz (bez przycisku – tylko gdy są wrogowie)
+            inp.Manual = true;
+            ManualOverride = true;
+            if (!held && g.Enemies.Count > 0) inp.Fire = true;
+        }
+        else if (AutoAimOn && AutoAim(g, p, inp))
             inp.Fire = true;
+        else
+            inp.Manual = !AutoAimOn;
         inp.Dash = JustPressed(Act.Dash, KbPressed(Act.Dash));
         inp.Ability = JustPressed(Act.Ability, KbPressed(Act.Ability));
         inp.Interact = JustPressed(Act.Interact, KbPressed(Act.Interact));
@@ -99,7 +124,9 @@ public sealed class KeyboardRightSource : InputSource
         if (shoot.LengthSquared() > 0)
         {
             inp.Aim = shoot.Angle();
+            inp.Target = new Vector2(p.X + MathF.Cos(inp.Aim) * 220, p.Y + MathF.Sin(inp.Aim) * 220);
             inp.Fire = true;
+            inp.Manual = true;
         }
         else if (AutoAim(scene.Sim, p, inp))
             inp.Fire = true;
@@ -116,6 +143,7 @@ public sealed class GamepadSource : InputSource
     public int Joypad;
     public bool AutoAimOn;
     private float _lastAim;
+    private ulong _manualUntil;
 
     public GamepadSource(int joypad) => Joypad = joypad;
     public override InputDevice Device => InputDevice.Gamepad;
@@ -149,20 +177,26 @@ public sealed class GamepadSource : InputSource
             (Godot.Input.IsJoyButtonPressed(Joypad, JoyButton.DpadDown) ? 1 : 0) - (Godot.Input.IsJoyButtonPressed(Joypad, JoyButton.DpadUp) ? 1 : 0));
         inp.Move = ls.LengthSquared() > 0 ? ls : dpad.Normalized();
         var rs = Stick(Joypad, JoyAxis.RightX, JoyAxis.RightY, 0.3f);
+        ulong now = Time.GetTicksMsec();
         if (rs.LengthSquared() > 0)
         {
             _lastAim = rs.Angle();
             inp.Fire = true;
+            _manualUntil = now + 400;   // krótka pamięć kierunku po puszczeniu gałki, żeby celownik nie skakał
         }
         else if (inp.Move.LengthSquared() > 0.04f && !PadPressed(Act.Fire))
             _lastAim = Mathf.LerpAngle(_lastAim, inp.Move.Angle(), 0.15f);
         inp.Aim = _lastAim;
         if (PadPressed(Act.Fire)) inp.Fire = true;
-        if (AutoAimOn && rs.LengthSquared() == 0 && AutoAim(scene.Sim, p, inp))
+        bool manual = now < _manualUntil;
+        ManualOverride = AutoAimOn && manual;
+        if (AutoAimOn && !manual && AutoAim(scene.Sim, p, inp))
         {
             _lastAim = inp.Aim;
             inp.Fire = true;
         }
+        else
+            inp.Manual = true;
         inp.Target = new Vector2(p.X + MathF.Cos(inp.Aim) * 220, p.Y + MathF.Sin(inp.Aim) * 220);
         inp.Dash = JustPressed(Act.Dash, PadPressed(Act.Dash));
         inp.Ability = JustPressed(Act.Ability, PadPressed(Act.Ability));
@@ -196,9 +230,11 @@ public sealed class SoloSource : InputSource
             g.Dash |= k.Dash;
             g.Ability |= k.Ability;
             g.Interact |= k.Interact;
+            ManualOverride = _pad.ManualOverride;
             return g;
         }
         _pad.Read(scene, p); // aktualizuje stany „wciśnięte przed chwilą”
+        ManualOverride = _kb.ManualOverride;
         return k;
     }
 }

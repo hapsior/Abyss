@@ -125,7 +125,11 @@ public partial class RunHud : Control
         if (clock != null) DrawTextureRect(clock, new Rect2(cx + 20, 54, 28, 28), false);
         Text($"{m:00}:{s:00}", new Vector2(cx + 54, 78), 24, g.Diff.Color != null ? new Color(g.Diff.Color) : UiTheme.Text);
         if (_scene.AutoAimToggled || Game.I.Settings.AutoAimP1)
-            Text("AUTO-CEL", new Vector2(cx, 120), 18, new Color("96dcff"), HorizontalAlignment.Center);
+        {
+            bool manual = _scene.Sources.Count > 0 && _scene.Sources[0].ManualOverride;
+            Text(manual ? "AUTO-CEL · celujesz sam" : "AUTO-CEL", new Vector2(cx, 120), 18,
+                manual ? new Color("96dcff", 0.55f) : new Color("96dcff"), HorizontalAlignment.Center);
+        }
 
         Minimap(new Vector2(size.X - (g.Coop ? 210 : 30), g.Coop ? 120 : 112), g.Coop);
         if (g.Boss is { } boss && boss.Alive) BossBar(boss, size);

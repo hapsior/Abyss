@@ -14,6 +14,9 @@ public sealed class Bullet
     public string Style;           // gracz: orb/arrow/disc/magic/dagger/drop/dark; wróg: orb/needle/fire/skull
     public int Pierce, Bounce;
     public float Homing;
+    /// <summary>Naprowadzanie działa dopiero po przeleceniu tylu jednostek (celowanie ręczne: do punktu celowania)
+    /// i tylko na wrogów w stożku ±HomeCone wokół kierunku lotu.</summary>
+    public float HomeAfter, HomeCone = MathF.PI;
     public bool Spectral, Crit, Alive = true, Fx, IsSplit;
     public HashSet<int> Hit;
     public float Life = 9, Accel, Turn, MinSpeed = 40, MaxSpeed = 900, Knock = 1, TrailT;
@@ -44,9 +47,9 @@ public sealed class Bullet
 
     public void Update(float dt, RunSim g)
     {
-        if (Friendly && Homing > 0)
+        if (Friendly && Homing > 0 && Dist >= HomeAfter)
         {
-            var tgt = g.NearestEnemy(X, Y, 380, Hit);
+            var tgt = g.NearestEnemyAhead(X, Y, Angle, HomeCone, 380, Hit);
             if (tgt != null)
             {
                 float desired = MathF.Atan2(tgt.Y - Y, tgt.X - X), cur = Angle;

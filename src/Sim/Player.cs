@@ -13,6 +13,9 @@ public sealed class SimInput
     public float Aim;
     public bool Fire, Dash, Ability, Interact;
     public Vector2 Target = C.RoomCenter;
+    /// <summary>Gracz celuje sam (mysz, prawa gałka, strzałki). Pociski lecą wtedy tam, gdzie celuje – naprowadzanie
+    /// włącza się dopiero za punktem celowania (<see cref="Target"/>) i tylko na wrogów przed pociskiem.</summary>
+    public bool Manual;
 }
 
 /// <summary>Postać gracza: statystyki, ruch, strzał, zryw, umiejętności. Port player.py z wersji 1.x + co-op.</summary>
@@ -68,6 +71,9 @@ public sealed class PlayerSim
     public float FireCd, IFrames, DashT, DashRecharge, DashDx = 1, DashDy, AbilityT, AbilityCd, RageT, InvisT;
     /// <summary>Spowolnienie gracza (szron, zarodniki) – czas w sekundach.</summary>
     public float SlowT;
+    /// <summary>Ostatnie wejście: czy celowanie było ręczne i dokąd (dla naprowadzania pocisków).</summary>
+    public bool ManualAim;
+    public Vector2 AimPoint;
     /// <summary>Bard: czas trwania „Ballady Odwagi” (szybkostrzelność, szybkość, leczenie).</summary>
     public float SongT;
     /// <summary>Rewolwerowiec: naboje w bębenku i czas bez strzelania (po 1.2 s bębenek się ładuje). Bard: licznik strzałów.</summary>
@@ -290,6 +296,8 @@ public sealed class PlayerSim
 
         // celowanie i strzał
         Aim = inp.Aim;
+        ManualAim = inp.Manual;
+        AimPoint = inp.Target;
         FireCd -= dt;
         if (inp.Fire && FireCd <= 0)
         {
@@ -427,9 +435,13 @@ public sealed class PlayerSim
         if (crit) dmg *= CritMult;
         float r = 6.5f * ShotSize * (small ? 0.6f : 1) * sizeMult;
         float mx = (ox ?? X) + MathF.Cos(a) * (R + 10), my = (oy ?? Y) + MathF.Sin(a) * (R + 10) - 4;
+        // celowanie ręczne: naprowadzanie dopiero za punktem, w który gracz celuje (np. beczka), i tylko na wrogów przed pociskiem
+        float homeAfter = 0;
+        if (ManualAim && Homing > 0 && ox == null)
+            homeAfter = MathF.Min(Range * rangeMult, MathF.Max(0, new Vector2(AimPoint.X - mx, AimPoint.Y - my).Length()));
         return new Bullet(mx, my, MathF.Cos(a) * sp, MathF.Sin(a) * sp, dmg, r, Def.BulletCol, true, Range * rangeMult, Def.Bullet,
             pierce: (int)Pierce + pierceBonus, bounce: (int)Bounce, homing: Homing, spectral: Spectral > 0, crit: crit, fx: fx,
-            knock: Knockback, source: "player") { Owner = this };
+            knock: Knockback, source: "player") { Owner = this, HomeAfter = homeAfter, HomeCone = ManualAim ? 0.7f : MathF.PI };
     }
 
     public void Shoot(RunSim g)
