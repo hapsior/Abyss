@@ -45,8 +45,8 @@ public static class Balance
     public const float SpawnGrace = 0.8f;
 
     // --- liczba wrogów w pokoju (budżet „kosztu” wrogów) ---
-    public const float RoomBudgetBase = 4.5f;
-    public const float RoomBudgetRandom = 2.5f;
+    public const float RoomBudgetBase = 6f;      // więcej wrogów w pokoju (było 4.5) – „hordy” jak w Brotato
+    public const float RoomBudgetRandom = 3f;
 
     public static float RoomBudget(int depth, float rnd01, int roomDist)
     {
