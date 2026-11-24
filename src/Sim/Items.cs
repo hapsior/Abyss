@@ -59,7 +59,7 @@ public static class Items
     public static int Price(ItemDef item, int depth, float priceMult)
     {
         float baseP = new[] { 12f, 18f, 27f, 38f }[item.Rarity];
-        return Math.Max(3, (int)MathF.Round(baseP * (1 + 0.03f * (depth - 1)) * priceMult));
+        return Math.Max(3, (int)MathF.Round(baseP * (1 + Balance.PriceGrowth * (depth - 1)) * priceMult));
     }
 
     /// <summary>Minimalna rzadkość ulepszeń przy awansie: co 5. poziom niezwykłe, co 10. rzadkie.</summary>

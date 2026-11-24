@@ -8,6 +8,23 @@ using Otchlan.Sim;
 namespace Otchlan.Tests;
 
 /// <summary>
+/// Umiejętności bota. „idealny” widzi każdy pocisk od razu i zawsze robi unik; profile „ludzkie” mają czas reakcji,
+/// część pocisków przeoczą, celują z błędem i co jakiś czas „zachłannie” stoją i strzelają, nie uważając na nic.
+/// </summary>
+public sealed record BotProfile(string Name, float Reaction, float Notice, float Awareness, float AimError,
+    float GreedyEvery, float GreedyDur, float Dodge, float DashChance, float KeepDist)
+{
+    public static readonly BotProfile Ideal = new("idealny", 0f, 1f, 120f, 0f, 0f, 0f, 1.4f, 0.15f, 200f);
+    public static readonly BotProfile Human = new("czlowiek", 0.22f, 0.75f, 115f, 0.06f, 4f, 0.6f, 1.2f, 0.06f, 185f);
+    public static readonly BotProfile Casual = new("niedzielny", 0.3f, 0.55f, 95f, 0.1f, 2.5f, 0.9f, 1.0f, 0.03f, 165f);
+    public static readonly BotProfile[] All = { Ideal, Human, Casual };
+
+    public static BotProfile ByName(string name) =>
+        All.FirstOrDefault(p => p.Name == name || name == "ideal" && p == Ideal || name == "human" && p == Human || name == "casual" && p == Casual)
+        ?? throw new ArgumentException($"nieznany profil bota: {name} (idealny|czlowiek|niedzielny)");
+}
+
+/// <summary>
 /// Prosty bot do testów i symulacji balansu: walczy (dystans + unikanie pocisków), zbiera przedmioty,
 /// zwiedza piętro i schodzi włazem. Steruje symulacją tak jak gracz (przez SimInput).
 /// </summary>
@@ -16,7 +33,9 @@ public sealed class Bot
     private readonly RunSim _g;
     private readonly PlayerSim _p;
     private readonly Rng _rng;
-    public float Skill = 1f;
+    public BotProfile Profile = BotProfile.Ideal;
+    private readonly Dictionary<Bullet, bool> _noticed = new();
+    private float _greedyIn = 3, _greedyLeft, _aimErr, _aimErrT, _cleanT;
     private Vector2 _strafe = Vector2.Right;
     private float _strafeT;
     private int[,] _flow;
@@ -25,11 +44,22 @@ public sealed class Bot
     private int _flowVersion;
     private float _interactCd;
 
-    public Bot(RunSim g, PlayerSim p, ulong seed)
+    public Bot(RunSim g, PlayerSim p, ulong seed, BotProfile profile = null)
     {
         _g = g;
         _p = p;
         _rng = new Rng(seed);
+        Profile = profile ?? BotProfile.Ideal;
+        if (Profile.GreedyEvery > 0) _greedyIn = _rng.Range(0.5f, 1.5f) * Profile.GreedyEvery;
+    }
+
+    /// <summary>Czy bot w ogóle zauważył ten pocisk (decyzja raz na pocisk).</summary>
+    private bool Noticed(Bullet b)
+    {
+        if (Profile.Notice >= 1) return true;
+        if (!_noticed.TryGetValue(b, out bool n))
+            _noticed[b] = n = _rng.Chance(Profile.Notice);
+        return n;
     }
 
     private Vector2 Pos => new(_p.X, _p.Y);
@@ -126,14 +156,37 @@ public sealed class Bot
             return inp;
         var enemy = g.NearestEnemy(_p.X, _p.Y);
         Vector2 move = Vector2.Zero;
+        var pr = Profile;
+        // „ludzkie” niedoskonałości: błąd celowania zmieniany co 0.25 s, okresy zachłanności (bez uników)
+        _aimErrT -= g.FrameDt;
+        if (_aimErrT <= 0)
+        {
+            _aimErrT = 0.25f;
+            _aimErr = (_rng.Range(-1, 1) + _rng.Range(-1, 1)) * pr.AimError;
+        }
+        bool greedy = false;
+        if (pr.GreedyEvery > 0 && enemy != null)
+        {
+            if (_greedyLeft > 0) { _greedyLeft -= g.FrameDt; greedy = true; }
+            else if ((_greedyIn -= g.FrameDt) <= 0)
+            {
+                _greedyLeft = _rng.Range(0.5f, 1.5f) * pr.GreedyDur;
+                _greedyIn = _rng.Range(0.5f, 1.5f) * pr.GreedyEvery;
+            }
+        }
+        if ((_cleanT -= g.FrameDt) <= 0)
+        {
+            _cleanT = 2;
+            foreach (var dead in _noticed.Keys.Where(b => !b.Alive).ToList()) _noticed.Remove(dead);
+        }
         if (enemy != null)
         {
             var ep = new Vector2(enemy.X, enemy.Y);
             float d = Pos.DistanceTo(ep);
-            inp.Aim = (ep - Pos).Angle();
+            inp.Aim = (ep - Pos).Angle() + _aimErr;
             inp.Fire = true;
             inp.Target = ep;
-            float want = enemy.IsBoss ? 260 : 200;
+            float want = enemy.IsBoss ? pr.KeepDist + 60 : pr.KeepDist;
             if (d > want + 60) move = WalkTo(ep);
             else if (d < want - 40) move = (Pos - ep).Normalized();
             _strafeT -= g.FrameDt;
@@ -143,19 +196,21 @@ public sealed class Bot
                 _strafe = _rng.Chance(0.5f) ? Vector2.Right : Vector2.Left;
             }
             var perp = (ep - Pos).Normalized().Orthogonal() * (_strafe.X > 0 ? 1 : -1);
-            move += perp * 0.6f;
-            // unik pocisków
-            foreach (var b in g.Bullets)
-            {
-                if (b.Friendly) continue;
-                var bp = new Vector2(b.X, b.Y);
-                float bd = bp.DistanceTo(Pos);
-                if (bd > 120 * Skill) continue;
-                var bv = new Vector2(b.Vx, b.Vy);
-                if (bv.Dot(Pos - bp) <= 0) continue;
-                move += (Pos - bp).Normalized().Orthogonal() * (bv.Cross(Pos - bp) > 0 ? -1 : 1) * 1.4f * Skill;
-                if (bd < 50 && _p.DashLeft > 0 && _rng.Chance(0.15f * Skill)) inp.Dash = true;
-            }
+            if (!greedy) move += perp * 0.6f;
+            // unik pocisków (z czasem reakcji i przeoczeniami w profilach „ludzkich”)
+            if (!greedy)
+                foreach (var b in g.Bullets)
+                {
+                    if (b.Friendly || b.Age < pr.Reaction) continue;
+                    var bp = new Vector2(b.X, b.Y);
+                    float bd = bp.DistanceTo(Pos);
+                    if (bd > pr.Awareness) continue;
+                    var bv = new Vector2(b.Vx, b.Vy);
+                    if (bv.Dot(Pos - bp) <= 0) continue;
+                    if (!Noticed(b)) continue;
+                    move += (Pos - bp).Normalized().Orthogonal() * (bv.Cross(Pos - bp) > 0 ? -1 : 1) * pr.Dodge;
+                    if (bd < 50 && _p.DashLeft > 0 && _rng.Chance(pr.DashChance)) inp.Dash = true;
+                }
             if (_p.AbilityT <= 0 && d < 260) inp.Ability = true;
         }
         else if (g.Room.Pedestals.Count > 0 && g.Room.Pedestals.Any(pd => pd.Kind == PedestalKind.Item || pd.Kind == PedestalKind.Shop && g.Coins >= pd.Price))

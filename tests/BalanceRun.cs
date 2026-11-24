@@ -16,26 +16,48 @@ namespace Otchlan.Tests;
 /// </summary>
 public static class BalanceRun
 {
-    public static void Run(string outPath, string chars, int floors, ulong seed)
+    /// <param name="mode">god – nieśmiertelny (stary pomiar „obrażeń boga”), bench – prawdziwe obrażenia, ale bez śmierci
+    /// (HP uzupełniane poniżej połowy), mortal – zwykła gra do śmierci (zapisuje piętro i przyczynę).</param>
+    /// <summary>Gdy ustawione: wszystkie wpisy telemetrii (pokój po pokoju) trafiają do tego pliku JSONL – ten sam format co u gracza.</summary>
+    public static string TelemetryOut;
+    private static readonly List<RoomLog> _logs = new();
+
+    public static void Run(string outPath, string chars, int floors, ulong seed, BotProfile profile = null, string mode = "god")
     {
         var keys = chars.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
         var ci = CultureInfo.InvariantCulture;
-        var sb = new StringBuilder("char,depth,biome,floor_time_s,kills,god_dmg_pct_hp,level,items,dps,enemy_hp_scale,boss_time_s,coins\n");
+        profile ??= BotProfile.Ideal;
+        var sb = new StringBuilder("char,bot,mode,depth,biome,floor_time_s,kills,god_dmg_pct_hp,level,items,dps,enemy_hp_scale,boss_time_s,coins,real_dmg_pct_hp,hits,died\n");
         foreach (var key in keys)
         {
-            var g = new RunSim(new[] { key }, 1, seed) { God = true };
+            var g = new RunSim(new[] { key }, 1, seed) { God = mode == "god", Bench = mode == "bench" };
             var p = g.Players[0];
-            var bot = new Bot(g, p, seed + 3);
+            var bot = new Bot(g, p, seed + 3, profile);
+            int tel0 = 0;
+            float dealt0 = 0, combatT = 0;
             const float dt = 1f / 60;
             int depth = g.Depth, kills0 = 0;
             float floorT = 0, god0 = 0, bossT = 0, total = 0;
             bool bossAlive = false;
             while (g.Depth <= floors && total < 60 * 60 * 3)
             {
+                if (g.State == RunState.Dying || p.Dead)
+                {
+                    _logs.AddRange(g.Telemetry.All.Select(r => { r.Run = $"bot-{profile.Name}-{seed}"; return r; }));
+                    var last = g.Telemetry.All.LastOrDefault();
+                    float rd = g.Telemetry.All.Skip(tel0).Sum(r => r.Damage);
+                    sb.AppendLine(string.Join(",", key, profile.Name, mode, depth, Content.Db.BiomeFor(depth).Key, floorT.ToString("0", ci),
+                        g.Stats.Kills - kills0, "", p.Level, p.Items.Count, "", Balance.EnemyHpScale(depth).ToString("0.00", ci),
+                        bossAlive ? bossT.ToString("0", ci) : "", g.Coins, (rd / p.MaxHp * 100).ToString("0", ci),
+                        g.Telemetry.All.Skip(tel0).Sum(r => r.Hits), 1));
+                    GD.Print($"  {key} [{profile.Name}] ZGINĄŁ na piętrze {depth} ({last?.Room}, przyczyna: {last?.DeathCause}) po {g.RunTime / 60:0.0} min");
+                    break;
+                }
                 g.Update(dt, new[] { bot.Input() });
                 floorT += dt;
                 total += dt;
                 if (g.Boss != null) { bossT += dt; bossAlive = true; }
+                if (g.Enemies.Count > 0) combatT += dt;
                 while (g.Events.Count > 0)
                 {
                     var ev = g.Events.Dequeue();
@@ -78,23 +100,36 @@ public static class BalanceRun
                 }
                 if (g.Depth != depth)
                 {
-                    float dps = p.EffDamage() / p.FireInterval() * MathF.Max(1, p.Projectiles);
-                    sb.AppendLine(string.Join(",", key, depth, Content.Db.BiomeFor(depth).Key,
+                    float dps = (g.Stats.DamageDealt - dealt0) / MathF.Max(1, combatT);   // rzeczywiste obrażenia na sekundę walki
+                    float realDmg = g.Telemetry.All.Skip(tel0).Sum(r => r.Damage);
+                    int hits = g.Telemetry.All.Skip(tel0).Sum(r => r.Hits);
+                    tel0 = g.Telemetry.All.Count;
+                    sb.AppendLine(string.Join(",", key, profile.Name, mode, depth, Content.Db.BiomeFor(depth).Key,
                         floorT.ToString("0", ci), g.Stats.Kills - kills0, ((g.Stats.GodDmg - god0) / p.MaxHp * 100).ToString("0", ci),
                         p.Level, p.Items.Count, dps.ToString("0", ci), Balance.EnemyHpScale(depth).ToString("0.00", ci),
-                        bossAlive ? bossT.ToString("0", ci) : "", g.Coins));
-                    GD.Print($"  {key} piętro {depth}: {floorT:0} s, dmg {(g.Stats.GodDmg - god0) / p.MaxHp * 100:0}% HP, poz. {p.Level}, przedm. {p.Items.Count}, dps {dps:0}{(bossAlive ? $", boss {bossT:0} s" : "")}");
+                        bossAlive ? bossT.ToString("0", ci) : "", g.Coins, (realDmg / p.MaxHp * 100).ToString("0", ci), hits, 0));
+                    GD.Print($"  {key} piętro {depth}: {floorT:0} s, dmg {(mode == "god" ? (g.Stats.GodDmg - god0) : realDmg) / p.MaxHp * 100:0}% HP, trafień {hits}, poz. {p.Level}, przedm. {p.Items.Count}, dps {dps:0}{(bossAlive ? $", boss {bossT:0} s" : "")}");
                     depth = g.Depth;
                     floorT = 0;
                     bossT = 0;
                     bossAlive = false;
                     kills0 = g.Stats.Kills;
                     god0 = g.Stats.GodDmg;
+                    dealt0 = g.Stats.DamageDealt;
+                    combatT = 0;
                 }
             }
+            if (!(g.State == RunState.Dying || p.Dead))
+                _logs.AddRange(g.Telemetry.All.Select(r => { r.Run = $"bot-{profile.Name}-{seed}"; return r; }));
         }
         using var f = FileAccess.Open(outPath, FileAccess.ModeFlags.Write);
         f.StoreString(sb.ToString());
         GD.Print("zapisano: ", outPath);
+        if (TelemetryOut != null)
+        {
+            var opt = new System.Text.Json.JsonSerializerOptions { PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.SnakeCaseLower };
+            System.IO.File.WriteAllLines(TelemetryOut, _logs.Select(l => System.Text.Json.JsonSerializer.Serialize(l, opt)));
+            GD.Print("telemetria: ", TelemetryOut);
+        }
     }
 }

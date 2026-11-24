@@ -117,7 +117,12 @@ public partial class Game : Node
         if (what == NotificationWMCloseRequest)
         {
             foreach (var c in WorldRoot?.GetChildren() ?? new Godot.Collections.Array<Node>())
-                if (c is View.RunScene rs) rs.SaveNow();
+                if (c is View.RunScene rs)
+                {
+                    rs.SaveNow();
+                    rs.Sim.Telemetry.EndRoom(rs.Sim, "quit");
+                    Save.TelemetryWriter.Flush(rs.Sim.Telemetry);
+                }
             Save.Profile.P.Save();
         }
     }

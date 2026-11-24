@@ -30,6 +30,7 @@ You can edit the code in Visual Studio, Rider or VS Code (Godot → Editor Setti
 - **12 characters**: Rycerz (Knight), Łowczyni (Huntress), Berserker, Mag (Mage), Złodziej (Thief), Alchemik (Alchemist), Upadły (Fallen), plus new ones: Bard, Inżynier (Engineer – turrets), Szaman (Shaman – storm totem), Mnich (Monk – Ki Step), Rewolwerowiec (Gunslinger – 6-round cylinder).
 - **74 items**, level-ups with reroll and banish, a shop opened by talking to the shopkeeper (interact button); items on pedestals are picked up with a button press.
 - **71 achievements** with an in-game toast and an achievements screen (ready to be connected to Steam).
+- **Local telemetry** for balancing: every run writes a room-by-room log (time, HP lost, hits by enemy, kills) to `%APPDATA%\Otchlan\telemetry\` – nothing is sent anywhere.
 - **3 save slots**: the game saves automatically when moving between rooms and on exit; death deletes the slot.
 - **Local co-op** on one screen (keyboard + mouse, the other half of the keyboard, or gamepads).
 - **Gamepad**: once a pad is detected, prompts show Xbox buttons (A/B/X/Y, LB/RB, LT/RT); touching the keyboard or mouse switches them back to keys.
@@ -83,6 +84,8 @@ godot --path . -- --windowed --boss-tour shots/ --bosses clockmaker   # a screen
 godot --path . -- --windowed --char-tour shots/ --chars bard,mnich    # characters using their abilities
 godot --path . -- --boss spore_mother                         # straight into a boss fight (no saving)
 godot --headless --path . -- --balance out.csv --chars rycerz,mag --floors 45   # balance simulator
+godot --headless --path . -- --balance out.csv --bot czlowiek --mode mortal --telemetry bot.jsonl   # human-like bot (idealny|czlowiek|niedzielny), real deaths
+python3 tools/telemetry_report.py bot.jsonl "%APPDATA%/Otchlan/telemetry/run_*.jsonl"            # compare bot and player telemetry
 godot --headless --path . -- --item-bench items.csv --chars rycerz,lowczyni,mag --seeds 8   # power gain of every item (early/mid/late)
 ```
 
@@ -119,6 +122,7 @@ Kod możesz edytować w Visual Studio, Riderze albo VS Code. Godot → Editor Se
 - **12 postaci**: Rycerz, Łowczyni, Berserker, Mag, Złodziej, Alchemik, Upadły oraz nowe: Bard, Inżynier (wieżyczki), Szaman (totem burzy), Mnich (Krok Ki), Rewolwerowiec (bębenek na 6 naboi).
 - **74 przedmioty**, awanse z losowaniem ponownie i odrzucaniem, sklep otwierany rozmową ze sklepikarzem (przycisk interakcji), przedmioty na piedestałach bierze się przyciskiem.
 - **71 osiągnięć** z powiadomieniem w grze i ekranem osiągnięć (gotowe do podpięcia pod Steam).
+- **Lokalna telemetria** do balansu: każda wyprawa zapisuje dziennik pokój po pokoju (czas, utracone HP, trafienia według wroga, zabójstwa) w `%APPDATA%\Otchlan\telemetry\` – nic nie jest wysyłane.
 - **3 sloty zapisu**: gra zapisuje się sama przy przejściu między pokojami i przy wyjściu; śmierć kasuje slot.
 - **Co-op na jednym ekranie** (klawiatura + mysz, druga połowa klawiatury albo pady).
 - **Pad**: po wykryciu pada podpowiedzi pokazują przyciski Xbox (A/B/X/Y, LB/RB, LT/RT); po dotknięciu klawiatury lub myszy wracają klawisze.
@@ -172,6 +176,8 @@ godot --path . -- --windowed --boss-tour zrzuty/ --bosses clockmaker   # zrzuty 
 godot --path . -- --windowed --char-tour zrzuty/ --chars bard,mnich    # zrzuty postaci używających umiejętności
 godot --path . -- --boss spore_mother                         # od razu walka z bossem (bez zapisu)
 godot --headless --path . -- --balance wynik.csv --chars rycerz,mag --floors 45   # symulator balansu
+godot --headless --path . -- --balance wynik.csv --bot czlowiek --mode mortal --telemetry bot.jsonl   # bot „ludzki” (idealny|czlowiek|niedzielny), prawdziwe zgony
+python3 tools/telemetry_report.py bot.jsonl "%APPDATA%/Otchlan/telemetry/run_*.jsonl"            # porównanie telemetrii bota i gracza
 godot --headless --path . -- --item-bench przedmioty.csv --chars rycerz,lowczyni,mag --seeds 8   # siła każdego przedmiotu (wczesna/środkowa/późna gra)
 ```
 

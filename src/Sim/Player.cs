@@ -120,8 +120,8 @@ public sealed class PlayerSim
     // ------------------------------------------------------------------ statystyki pochodne
     public void ClampStats()
     {
-        Armor = C.Clamp(Armor, -0.5f, 0.7f);
-        Dodge = C.Clamp(Dodge, 0, 0.6f);
+        Armor = C.Clamp(Armor, -0.5f, Balance.ArmorCap);
+        Dodge = C.Clamp(Dodge, 0, Balance.DodgeCap);
         Crit = C.Clamp(Crit, 0, 1);
         MaxHp = MathF.Max(10, MathF.Round(MaxHp));
         Hp = MathF.Min(Hp, MaxHp);
@@ -683,6 +683,7 @@ public sealed class PlayerSim
         }
         if (g.R.NextFloat() < Dodge)
         {
+            g.Telemetry.Dodge();
             g.Fx.Text(X, Y - 30, "UNIK", new Color("b4e6ff"), 18);
             IFrames = 0.35f;
             g.Fx.Sound("dodge");
@@ -693,6 +694,7 @@ public sealed class PlayerSim
             if (ShieldUp) ShieldUp = false;
             else { EshieldUp = false; EshieldT = 0; }
             IFrames = 0.8f;
+            g.Telemetry.Block();
             g.Fx.Sound("block");
             g.Fx.Ring(X, Y, new Color("78dcff"), 50, 0.3f, 5);
             g.Fx.Text(X, Y - 30, "BLOK", new Color("78dcff"), 18);
@@ -710,6 +712,8 @@ public sealed class PlayerSim
         g.Fx.Text(X, Y - 34, $"-{d}", new Color("ff505a"), 22);
         g.Fx.Burst(X, Y, new Color("e63c46"), 12, 250, 5, 0.5f);
         g.Stats.DamageTaken += d;
+        g.Telemetry.Hit(d, source);
+        if (Hp <= 0) g.Telemetry.Death(source);
         if (g.Bench && Hp < MaxHp * 0.5f)
         {
             g.BenchRefill += MaxHp - Hp;

@@ -56,6 +56,8 @@ public sealed class RunSim
     /// a ubytek liczony w <see cref="BenchRefill"/>; <see cref="BenchDealt"/> to obrażenia bez nadmiaru ponad HP wroga.</summary>
     public bool Bench;
     public float BenchRefill, BenchDealt;
+    /// <summary>Telemetria pokój po pokoju (do porównania gry człowieka z botem).</summary>
+    public readonly RunTelemetry Telemetry = new();
     public IFx Fx = NullFx.I;
     public bool God, DamageNumbers = true;
     /// <summary>Źródło i właściciel ostatniego śmiertelnego trafienia (tylko na czas <see cref="KillEnemy"/>).</summary>
@@ -150,6 +152,7 @@ public sealed class RunSim
     public void EnterRoom(Room room, Dir? cameThrough)
     {
         bool first = !room.Visited;
+        Telemetry.BeginRoom(this, room, first);
         PrevRoom = Room;
         Room = room;
         room.Visited = room.Seen = true;
@@ -408,6 +411,7 @@ public sealed class RunSim
         p.Dead = true;
         foreach (var o in Players)
             if (o.Downed) { o.Downed = false; o.Dead = true; }
+        Telemetry.EndRoom(this, "death");
         State = RunState.Dying;
         StateT = 0;
         Fx.Sound("gameover");
@@ -604,7 +608,8 @@ public sealed class RunSim
         if (_tokens.TryGetValue(e, out var cur) && cur.kind == kind)
             return true;
         int di = Math.Clamp(DiffIdx, 0, 3);
-        int limit = (kind == "charge" ? Balance.ChargeTokens[di] : Balance.AttackTokens[di]) + (Coop ? Balance.CoopTokens : 0);
+        int limit = (kind == "charge" ? Balance.ChargeTokens[di] + Depth / Balance.ChargeTokenEvery : Balance.AttackTokens[di] + Depth / Balance.AttackTokenEvery)
+                    + (Coop ? Balance.CoopTokens : 0);
         if (e.Elite) limit++;
         int used = _tokens.Count(kv => kv.Value.kind == kind);
         if (used >= limit)
@@ -734,7 +739,7 @@ public sealed class RunSim
                 xpv -= v;
             }
             float coinMult = Players.Max(p => p.CoinMult);
-            float ch = e.Coin * coinMult;
+            float ch = e.Coin * coinMult * Balance.CoinPerKill;
             int n = (int)ch + (R.NextFloat() < ch - (int)ch ? 1 : 0) + (e.MiniBoss ? 8 : e.Elite ? 3 : 0);
             for (int i = 0; i < n; i++)
                 Room.Pickups.Add(new Pickup(PickupKind.Coin, e.X, e.Y, Cos));
@@ -1240,7 +1245,8 @@ public sealed class RunSim
         // czyszczenie pokoju
         if (!Room.Cleared && Spawns.Count == 0 && Room.Kind is RoomKind.Combat or RoomKind.Exit)
         {
-            if (WaveIdx < Room.Waves.Count - 1 && Enemies.Count <= 1)
+            int waveSize = WaveIdx < Room.Waves.Count ? Room.Waves[WaveIdx].Count : 0;
+            if (WaveIdx < Room.Waves.Count - 1 && Enemies.Count <= Math.Max(1, (int)(waveSize * Balance.NextWaveAt)))
             {
                 WaveIdx++;
                 SpawnWave(Room.Waves[WaveIdx]);

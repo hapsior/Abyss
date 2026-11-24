@@ -201,6 +201,8 @@ public partial class RunScene : Node2D
 
     public void QuitToMenu()
     {
+        Sim.Telemetry.EndRoom(Sim, "quit");
+        Save.TelemetryWriter.Flush(Sim.Telemetry);
         CloseOverlay();
         Game.I.SetWorld(null);
         Game.I.ShowScreen(new MainMenu());
@@ -229,6 +231,7 @@ public partial class RunScene : Node2D
                 inputs.Add(i < Sources.Count ? Sources[i].Read(this, Sim.Players[i]) : new SimInput());
             Sim.Update(dt, inputs);
             HandleEvents();
+            Save.TelemetryWriter.Flush(Sim.Telemetry);
             Fx.Step(dt);
             UpdateAchievements();
         }

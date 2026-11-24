@@ -98,3 +98,11 @@ Opus projektuje i robi rzeczy najtrudniejsze, a resztę deleguje do agentów Son
 - HUD gracza 2 nie może nachodzić na inne elementy. Tytuł pauzy nie może zasłaniać HUD.
 - Komunikaty nie mogą prześwitywać przez ekran awansu. Na ekranie wyniku potrzebny jest wskaźnik „+N” dla przedmiotów, które się nie mieszczą.
 - Fonty muszą mieć wszystkie używane znaki. Teraz używamy Titan One i Baloo 2 z pełnym polskim.
+
+### Bot „ludzki” i telemetria (24.11)
+
+- Profile bota: `idealny` (widzi każdy pocisk), `czlowiek` (reakcja 0.22 s, przeocza 25% pocisków, błąd celowania, co ~4 s chwila „zachłanności” bez uników), `niedzielny` (0.3 s, przeocza 45%).
+- Tryby symulacji: `god` (nieśmiertelny), `bench` (prawdziwe obrażenia, HP uzupełniane), `mortal` (do śmierci).
+- Wniosek: nawet `niedzielny` traci w zwykłych pokojach 1–6% HP, groźni są tylko bossowie. Zmiany: hordy w 1–3 nachodzących falach, szybszy wzrost HP wrogów (1.085 na piętro), więcej wrogów atakuje naraz głębiej, pancerz max 50%, unik max 40%, droższy sklep, mniej monet i wolniejsze awanse.
+- Następny krok: telemetria i nagranie z gry człowieka (`%APPDATA%\Otchlan\telemetry`) → kalibracja profili bota i trudności.
+

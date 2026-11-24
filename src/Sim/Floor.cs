@@ -146,14 +146,11 @@ public sealed class Floor
                 {
                     Layouts.Make(room, rng);
                     float budget = Balance.RoomBudget(Depth, rng.NextFloat(), room.Dist) * diff.EnemyCount * countMult;
-                    if (budget > 9)
-                    {
-                        float b1 = budget * 0.6f;
-                        room.Waves.Add(RollWave(rng, Biome, b1));
-                        room.Waves.Add(RollWave(rng, Biome, budget - b1));
-                    }
-                    else
-                        room.Waves.Add(RollWave(rng, Biome, budget));
+                    // hordy w 1–3 falach (kolejna wchodzi, zanim poprzednia zginie – Balance.NextWaveAt)
+                    int waves = budget > 18 ? 3 : budget > 9 ? 2 : 1;
+                    float[] share = waves switch { 3 => new[] { 0.4f, 0.32f, 0.28f }, 2 => new[] { 0.58f, 0.42f }, _ => new[] { 1f } };
+                    foreach (var sh in share)
+                        room.Waves.Add(RollWave(rng, Biome, budget * sh));
                     break;
                 }
                 case RoomKind.Exit:

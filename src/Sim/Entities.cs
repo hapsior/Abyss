@@ -20,6 +20,8 @@ public sealed class Bullet
     public bool Spectral, Crit, Alive = true, Fx, IsSplit;
     public HashSet<int> Hit;
     public float Life = 9, Accel, Turn, MinSpeed = 40, MaxSpeed = 900, Knock = 1, TrailT;
+    /// <summary>Czas życia pocisku w sekundach (bot „ludzki” reaguje dopiero po czasie reakcji).</summary>
+    public float Age;
     public string Source;
     public PlayerSim Owner;
     /// <summary>Pocisk wroga spowalnia trafionego gracza (szron, zarodniki).</summary>
@@ -47,6 +49,7 @@ public sealed class Bullet
 
     public void Update(float dt, RunSim g)
     {
+        Age += dt;
         if (Friendly && Homing > 0 && Dist >= HomeAfter)
         {
             var tgt = g.NearestEnemyAhead(X, Y, Angle, HomeCone, 380, Hit);
